@@ -1,103 +1,150 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      {/* Hero Section */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="/* Tạo khoảng trống tránh header, nếu cần */ relative h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
+        {/* Cha chứa 2 khối (Text và Form), chiếm toàn bộ chiều cao */}
+        <div className="mx-auto flex h-full w-full flex-col items-start justify-between py-8 pl-8">
+          {/* Khối trên: Text (nằm góc trên trái) */}
+          <div className="max-w-xl text-white drop-shadow-md">
+            <p className="my-4 text-sm">Market entry, simplified.</p>
+            <h1 className="mb-4 text-5xl leading-tight font-bold">
+              Expansion consultant & Marketing agency.
+              <br className="hidden sm:block" />
+              All in one.
+            </h1>
+          </div>
+
+          {/* Khối dưới: Form (nằm góc dưới phải) */}
+          <div className="flex h-1/2 w-2/3 flex-col justify-between self-end rounded bg-teal-500 p-6 shadow-lg">
+            <h2 className="mb-6 text-xl font-medium text-white">
+              SET AN INTRODUCTION MEETING TODAY
+            </h2>
+
+            {/* Form chia 2 cột trên màn hình >= md */}
+            <form className="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2">
+              {/* Name */}
+              <div className="flex flex-col">
+                <label htmlFor="name" className="mb-1 text-sm font-light text-white">
+                  Your Name <span className="text-red-400">*</span>
+                </label>
+                <div className="border-b border-white">
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
+                    placeholder="Enter your name"
+                  />
+                </div>
+              </div>
+
+              {/* Company */}
+              <div className="flex flex-col">
+                <label htmlFor="company" className="mb-1 text-sm font-light text-white">
+                  Company <span className="text-red-400">*</span>
+                </label>
+                <div className="border-b border-white">
+                  <input
+                    type="text"
+                    id="company"
+                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
+                    placeholder="Your company"
+                  />
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex flex-col">
+                <label htmlFor="email" className="mb-1 text-sm font-light text-white">
+                  Email <span className="text-red-400">*</span>
+                </label>
+                <div className="border-b border-white">
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex flex-col">
+                <label htmlFor="phone" className="mb-1 text-sm font-light text-white">
+                  Phone <span className="text-red-400">*</span>
+                </label>
+                <div className="border-b border-white">
+                  <input
+                    type="text"
+                    id="phone"
+                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
+                    placeholder="Your phone"
+                  />
+                </div>
+              </div>
+
+              {/* Nút Submit (full width 2 cột, canh phải) */}
+              <div className="mt-4 flex justify-end md:col-span-2">
+                {/* Bạn có thể đổi style để thành dạng outline hoặc solid */}
+                <button
+                  type="submit"
+                  className="rounded border border-white px-6 py-2 text-white transition hover:bg-white hover:text-teal-500"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="bg-[#19202c] py-16 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+            {/* Cột trái: Tiêu đề, mô tả, câu hỏi */}
+            <div>
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+                We champion the bold to achieve the extraordinary.
+              </h2>
+
+              {/* Phần mô tả thêm (nếu có) */}
+              <p className="mb-6 text-gray-200">
+                Answer this question and put our thinking to work on your challenges.
+              </p>
+
+              <p className="mb-4 text-lg font-medium">
+                Which country are you looking forward to expanding to?
+              </p>
+
+              {/* Nhóm nút quốc gia */}
+              <div className="flex flex-wrap gap-3">
+                {["Vietnam", "Thailand", "Japan", "China"].map((country) => (
+                  <button
+                    key={country}
+                    className="rounded border border-white px-5 py-2 transition hover:bg-white hover:text-black"
+                  >
+                    {country}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Cột phải: Ảnh */}
+            <div className="flex justify-center md:justify-end">
+              <Image
+                src="/images/body.avif"
+                alt="Market scene"
+                width={500} // Bạn có thể chỉnh
+                height={300} // theo kích thước mong muốn
+                className="rounded shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
