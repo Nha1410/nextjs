@@ -1,7 +1,13 @@
-// import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 // app/layout.js
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-sans",
+});
 
 export const metadata = {
   title: "MintoMarkets Landing",
@@ -10,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <body className="font-sans text-gray-800">
         {/* HEADER */}
         <header className="absolute top-0 left-0 z-50 w-full border-b border-white/50 bg-[#000000]/20">
