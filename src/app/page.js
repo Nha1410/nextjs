@@ -1,7 +1,11 @@
+
 import Image from "next/image";
 import ClientsSection from "@/components/ClientsSection";
 
 export default function HomePage() {
+
+  
+
   return (
     <main>
       <section className="relative h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
