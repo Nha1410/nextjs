@@ -20,7 +20,7 @@ export default function useInView(threshold = 0.1) {
     observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return { ref, isInView };
 }

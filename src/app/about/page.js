@@ -245,13 +245,13 @@ export default function About() {
               <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-gray-100">
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
-              <p className="text-center text-base font-medium">{stat.label}</p>
-              <p className="text-left text-3xl font-extrabold text-[var(--color-main-400)]">
+              <div className="text-center text-base font-medium">{stat.label}</div>
+              <div className="text-left text-3xl font-extrabold text-[var(--color-main-400)]">
                 {idx === 0 && <StatCount end={90} suffix="%" />}
                 {idx === 1 && <StatCount end={8} suffix=" years" />}
                 {idx === 2 && <StatCount end={100} suffix="+" />}
                 {idx === 3 && <StatCount end={30} prefix="+" suffix=" people" />}
-              </p>
+              </div>
             </div>
           ))}
         </div>
