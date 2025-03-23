@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 import useInView from "../hooks/useInView";
-import StatCount from "../components/StatCount";
+import StatCount from "../../components/StatCount";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -241,10 +241,7 @@ export default function About() {
               label: "Our Team",
             },
           ].map((stat, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-start space-y- text-white"
-            >
+            <div key={idx} className="space-y- flex flex-col items-start text-white">
               <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-gray-100">
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>

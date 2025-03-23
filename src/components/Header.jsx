@@ -25,8 +25,8 @@ export default function Header() {
           <a href="#" className="text-white transition hover:text-gray-200">Market</a>
           <a href="#" className="text-white transition hover:text-gray-200">Service</a>
           <a href="#" className="text-white transition hover:text-gray-200">Project</a>
-          <a href="#" className="text-white transition hover:text-gray-200">Report & Insight</a>
           <Link href="/about" className="text-white transition hover:text-gray-200">About Us</Link>
+          <Link href="/why" className="text-white transition hover:text-gray-200">Why Choose Us</Link>
           <a href="#" className="text-white transition hover:text-gray-200">More</a>
         </nav>
 

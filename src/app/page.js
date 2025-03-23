@@ -1,10 +1,13 @@
+
 import Image from "next/image";
 
 export default function HomePage() {
+
+  
+
   return (
     <main>
       {/* Hero Section */}
-
       <section className="/* Tạo khoảng trống tránh header, nếu cần */ relative h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
         {/* Cha chứa 2 khối (Text và Form), chiếm toàn bộ chiều cao */}
         <div className="mx-auto flex h-full w-full flex-col items-start justify-between py-8 pl-8">
