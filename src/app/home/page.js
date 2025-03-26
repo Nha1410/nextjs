@@ -4,26 +4,27 @@ import Image from "next/image";
 import ClientsSection from "@/components/ClientsSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
+import NewsRecruitment from "@/components/NewsRecruitment";
 
 export default function Home() {
   return (
     <main>
-      <section className="relative h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
+      <section className="relative min-h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
         {/* Cha chứa 2 khối (Text và Form), chiếm toàn bộ chiều cao */}
-        <div className="mx-auto flex h-full w-full flex-col items-start justify-between py-8 pl-8">
+        <div className="mx-auto flex min-h-full w-full flex-col items-start justify-between p-4 md:p-8">
           {/* Khối trên: Text (nằm góc trên trái) */}
           <div className="max-w-xl text-white drop-shadow-md">
-            <p className="my-4 text-sm">Market entry, simplified.</p>
-            <h1 className="mb-4 text-5xl leading-tight font-bold">
+            <p className="my-2 text-xs md:my-4 md:text-sm">Market entry, simplified.</p>
+            <h1 className="mb-4 text-3xl leading-tight font-bold md:text-5xl">
               Expansion consultant & Marketing agency.
               <br className="hidden sm:block" />
               All in one.
             </h1>
           </div>
 
-          {/* Khối dưới: Form (nằm góc dưới phải) */}
-          <div className="flex h-1/2 w-2/3 flex-col justify-between self-end rounded bg-teal-500 p-6 shadow-lg">
-            <h2 className="mb-6 text-xl font-medium text-white">
+          {/* Khối dưới: Form (nằm góc dưới phải trên desktop) */}
+          <div className="mt-6 w-full rounded bg-teal-500 p-6 shadow-lg md:mt-0 md:w-2/3 md:self-end">
+            <h2 className="mb-6 text-lg font-medium text-white md:text-xl">
               SET AN INTRODUCTION MEETING TODAY
             </h2>
 
@@ -148,14 +149,17 @@ export default function Home() {
           {/* --- PHẦN “OUR SOLUTIONS” TÁCH RIÊNG 2 CỘT --- */}
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-3 text-4xl leading-tight font-bold">Our solutions</h2>
+              <h2 className="mb-3 text-4xl leading-tight font-normal">
+                <span className="text-blue-600">_ </span>
+                Our solutions
+              </h2>
               <button className="rounded bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700">
                 Xem thêm
               </button>
             </div>
             <div className="flex justify-center md:justify-end">
               <div>
-                <p className="mb-6 text-xl leading-relaxed text-gray-700">
+                <p className="mb-6 leading-relaxed text-gray-700 md:text-xl">
                   Người dùng muốn trải nghiệm đa dạng, nhận hàng cận xuất hiện đa kênh, Think
                   Digital chuyển mình đa dạng hoá.
                   <br />
@@ -389,6 +393,7 @@ export default function Home() {
       </section>
 
       <ClientsSection />
+      <NewsRecruitment />
     </main>
   );
 }
