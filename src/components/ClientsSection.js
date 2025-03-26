@@ -1,4 +1,3 @@
-// src/components/ClientsSection.js
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -6,13 +5,13 @@ import { useInView } from "@/hooks/useInView"; // Đường dẫn tuỳ bạn
 
 export default function ClientsSection() {
   return (
-    <section className="w-full bg-[#03052e] py-20 text-white">
+    <section className="w-full bg-[#03052e] py-16 text-white">
       {/* PHẦN TRÊN: Arrow + text */}
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           {/* Cột trái */}
           <div className="flex flex-col">
-            <p className="mb-10 text-xl font-medium tracking-wide text-gray-400 uppercase">
+            <p className="mb-6 text-lg font-medium tracking-wide text-gray-400 uppercase sm:text-xl">
               We work with top notch clients
             </p>
             <div>
@@ -20,8 +19,8 @@ export default function ClientsSection() {
                 preserveAspectRatio="none"
                 data-bbox="19.588 20.146 159.561 159.541"
                 viewBox="19.588 20.146 159.561 159.541"
-                height="75"
-                width="75"
+                height="60"
+                width="60"
                 xmlns="http://www.w3.org/2000/svg"
                 data-type="shape"
                 role="presentation"
@@ -38,9 +37,9 @@ export default function ClientsSection() {
             </div>
           </div>
 
-          {/* Cột phải (text lệch phải) */}
-          <div className="text-right">
-            <h3 className="text-xl font-semibold md:text-2xl">
+          {/* Cột phải (text căn giữa trên mobile) */}
+          <div className="text-center md:text-right">
+            <h3 className="text-lg font-semibold sm:text-2xl">
               Partners who understand your business
             </h3>
           </div>
@@ -48,7 +47,7 @@ export default function ClientsSection() {
       </div>
 
       {/* PHẦN GRID CÁC Ô LOGO */}
-      <div className="mt-10 grid w-full grid-cols-5">
+      <div className="mt-10 grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
         {/* Row 1 */}
         <LogoCell src="/images/krungsri.png" alt="Krungsri" />
         <LogoCell src="/images/nSys.png" alt="nSys" />
@@ -78,9 +77,9 @@ function LogoCell({ src, alt }) {
       <Image
         src={src}
         alt={alt}
-        width={200}
-        height={80}
-        className={`object-contain transition-all duration-2000 ease-out ${isInView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"} `}
+        width={150}
+        height={60}
+        className={`object-contain transition-all duration-1000 ease-out ${isInView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"} `}
       />
     </div>
   );
