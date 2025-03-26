@@ -35,20 +35,20 @@ export default function About() {
   }, [charIndex, topRef.isInView]);
 
   return (
-    <section className="relative w-full bg-[var(--color-bg-main)] bg-cover bg-center pt-24">
+    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center pt-24">
       {/* Section Title */}
-      <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
+      <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
-          <p className="mb-4 text-sm font-light tracking-wide text-white uppercase">_ WHO WE ARE</p>
+          <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">_ WHO WE ARE</p>
           <h2
-            className={`text-3xl font-light text-white md:text-5xl lg:text-6xl ${inter.variable}`}
+            className={`text-3xl font-light text-black md:text-5xl lg:text-6xl ${inter.variable}`}
           >
             About us
           </h2>
         </div>
 
         {/* 🔼 Top Section */}
-        <div ref={topRef.ref} className="mt-10 flex flex-col items-center gap-10 md:flex-row">
+        <div ref={topRef.ref} className="mt-8 flex flex-col items-center gap-10 md:flex-row">
           {/* Image */}
           <div
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${
@@ -74,7 +74,7 @@ export default function About() {
               {displayedText}
               <span className="animate-pulse">|</span>
             </h3>
-            <p className="text-justify text-sm text-white md:text-base">
+            <p className="text-justify text-sm text-black md:text-base">
               Our mission is to build an ecosystem of digital products & services to help customers
               be more innovative, effective, and successful in Marketing & Sales.
             </p>
@@ -105,7 +105,7 @@ export default function About() {
 
             {/* Line 2: Paragraph 1 */}
             <p
-              className={`text-justify text-sm text-white transition-all delay-300 duration-700 md:text-base ${
+              className={`text-justify text-sm text-black transition-all delay-300 duration-700 md:text-base ${
                 bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
               }`}
             >
@@ -117,7 +117,7 @@ export default function About() {
 
             {/* Line 3: Paragraph 2 */}
             <p
-              className={`text-justify text-sm text-white transition-all delay-600 duration-700 md:text-base ${
+              className={`text-justify text-sm text-black transition-all delay-600 duration-700 md:text-base ${
                 bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
               }`}
             >
@@ -125,7 +125,7 @@ export default function About() {
               <span className="font-bold text-[var(--color-main-500)]">
                 đề cao tính đổi mới và hiệu quả trong công việc
               </span>
-              , cùng với tinh thần cầu tiến và không ngừng học hỏi để nâng cao chất lượng sản phẩm
+              , không ngừng học hỏi để nâng cao chất lượng sản phẩm
               và dịch vụ của chúng tôi.
             </p>
           </div>
@@ -152,8 +152,8 @@ export default function About() {
       {/* Our Mission & Core Values */}
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-light tracking-wide text-white uppercase">_ OUR VALUES</p>
-          <h2 className="text-2xl font-light text-white md:text-3xl">
+          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">_ OUR VALUES</p>
+          <h2 className="text-2xl font-light text-black md:text-3xl">
             Sứ mệnh và các giá trị cốt lõi tại Think Digital
           </h2>
         </div>
@@ -241,7 +241,7 @@ export default function About() {
               label: "Our Team",
             },
           ].map((stat, idx) => (
-            <div key={idx} className="space-y- flex flex-col items-start text-white">
+            <div key={idx} className="space-y- flex flex-col items-start text-black">
               <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-gray-100">
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>

@@ -28,11 +28,8 @@ export default function Header() {
           <Link href="/solution" className="text-white transition hover:text-gray-200">
             Our solutions
           </Link>
-          <a href="#" className="text-white transition hover:text-gray-200">
-            Service
-          </a>
-          <a href="#" className="text-white transition hover:text-gray-200">
-            Project
+          <a href="/portfolio" className="text-white transition hover:text-gray-200">
+            Our Portfolio
           </a>
           <Link href="/about" className="text-white transition hover:text-gray-200">
             About Us
@@ -40,9 +37,6 @@ export default function Header() {
           <Link href="/why" className="text-white transition hover:text-gray-200">
             Why Choose Us
           </Link>
-          <a href="#" className="text-white transition hover:text-gray-200">
-            More
-          </a>
         </nav>
 
         <div className="flex items-center space-x-4">
