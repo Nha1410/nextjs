@@ -28,27 +28,27 @@ export default function Home() {
   const features = [
     {
       number: "01",
-      title: "Our Model",
+      title: "Mô hình",
       description:
-        "NWA's service-breadth provides clients with end-to-end marketing solutions across Strategy, Creatives, Media and PR. A true One-Stop solution.",
+        "Mô hình tích hợp từ retainer, sản xuất nội dung đến media planning giúp tối ưu chi phí, đảm bảo thông điệp xuyên suốt và triển khai nhanh chóng.",
     },
     {
       number: "02",
-      title: "Our People",
+      title: "Con người",
       description:
-        "The team has been trained by an International Communications group, to exacting international standards. Many have had long tenures with the agencies and very grounded in Vietnamese consumer behaviour.",
+        "Đội ngũ chuyên gia từ planner, producer đến media buyer đều có kinh nghiệm sâu, trực tiếp triển khai và am hiểu từng nền tảng số.",
     },
     {
       number: "03",
-      title: "International Quality Practices",
+      title: "Thực chiến",
       description:
-        "NWA prides itself with adhering to international standards in processes and delivering international quality work output accruing to its global agency heritage.",
+        "Chúng tôi đã đồng hành cùng nhiều thương hiệu đa ngành với quy trình triển khai rõ ràng, kiểm thử hiệu quả và báo cáo minh bạch.",
     },
     {
       number: "04",
-      title: "Deep Understanding Of Local Insights",
+      title: "Thấu hiểu",
       description:
-        "By understanding deeply nuanced insights of the market, NWA adds value to domestic international and local clients as an agency that deeply understands the Vietnamese consumer and how business is conducted here while the international-standards of outputs are guaranteed.",
+        "Chiến dịch được cá nhân hoá theo vùng miền, độ tuổi và hành vi, đảm bảo đúng thông điệp – đúng người – đúng thời điểm.",
     },
   ];
 
@@ -67,11 +67,8 @@ export default function Home() {
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="text-balance text-2xl text-gray-600">
-                Networld Asia&apos;s digital communications group is at the epicenter where
-                international standards meet local insights that power these 6 key competitive
-                advantages:
-              </p>
+              <p className="text-2xl text-gray-600">
+              Chúng tôi đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 lợi thế sau:</p>
             </div>
           </div>
 
@@ -102,7 +99,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="absolute top-0 right-0 z-0 h-5/7 w-full rounded-tl-[100px] bg-blue-600 md:h-5/7 md:w-5/6 lg:h-5/7"
+          className="absolute top-0 right-0 z-0 h-5/7 w-full rounded-tl-[100px] bg-blue-600 md:h-5/7 md:w-5/6 lg:h-9/13"
         ></motion.div>
 
         <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-6 md:flex-row md:justify-between md:px-12">
@@ -132,7 +129,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="z-30 flex w-full -translate-y-6 flex-col justify-center text-center text-white md:w-1/2 md:-translate-y-12 md:pl-16 md:text-left"
+            className="z-30 flex w-full -translate-y-6 flex-col justify-center text-center text-white md:w-1/2 md:-translate-y-12 md:pl-16 md:text-left "
           >
             {/* Line: Our [>] */}
             <div className="flex items-center justify-center gap-4 md:justify-start">
@@ -158,7 +155,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 text-lg font-medium text-white md:text-xl"
               >
                 <Rounded >
-                  Read now <span className="text-2xl">→</span>
+                  <p>Read now <span className="text-2xl">→</span></p>
                 </Rounded>
               </a>
             </div>
