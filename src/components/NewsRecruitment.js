@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const categories = [
   "Tất cả",
@@ -74,7 +75,7 @@ export default function NewsRecruitment() {
   return (
     <section className="container mx-auto px-4 py-8">
       <p className="mb-2 text-sm font-light tracking-wide text-gray-500 uppercase">
-        _ DON'T MISS OUT
+        _ DON&lsquo;T MISS OUT
       </p>
       <h2 className="text-2xl font-bold text-slate-800">Tin tức và tuyển dụng</h2>
 
@@ -195,10 +196,12 @@ export default function NewsRecruitment() {
                 key={article.title}
                 className="flex items-center space-x-4 rounded-lg bg-white p-4 shadow"
               >
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
                   className="h-24 w-32 rounded object-cover"
+                  width={128}
+                  height={96}
                 />
                 <div>
                   <p className="text-sm text-gray-500">
