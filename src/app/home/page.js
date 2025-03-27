@@ -23,7 +23,7 @@ export default function Home() {
           </div>
 
           {/* Khối dưới: Form (nằm góc dưới phải trên desktop) */}
-          <div className="mt-6 w-full rounded bg-teal-500 p-6 shadow-lg md:mt-0 md:w-2/3 md:self-end">
+          <div className="mt-6 w-full rounded bg-[var(--color-main-500)] p-6 shadow-lg md:mt-0 md:w-2/3 md:self-end">
             <h2 className="mb-6 text-lg font-medium text-white md:text-xl">
               SET AN INTRODUCTION MEETING TODAY
             </h2>
@@ -95,7 +95,7 @@ export default function Home() {
                 {/* Bạn có thể đổi style để thành dạng outline hoặc solid */}
                 <button
                   type="submit"
-                  className="rounded border border-white px-6 py-2 text-white transition hover:bg-white hover:text-teal-500"
+                  className="rounded border border-white px-6 py-2 text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]"
                 >
                   Submit
                 </button>
@@ -113,8 +113,10 @@ export default function Home() {
             </p>
             <h2 className="mb-4 text-2xl leading-snug font-bold text-slate-800 md:text-3xl lg:text-4xl">
               We help customers be more{" "}
-              <span className="text-blue-600">innovative, effective, successful</span> in Marketing
-              &amp; Sales.
+              <span className="text-[var(--color-main-500)]">
+                innovative, effective, successful
+              </span>{" "}
+              in Marketing &amp; Sales.
             </h2>
             <p className="mb-6 text-gray-600">
               Think Digital với định vị là một Innovative Digital Company tập trung vào các giải
@@ -125,7 +127,7 @@ export default function Home() {
               Think Digital đang là đối tác uy tín và vững chắc cho Marketing, Branding,
               Communication cho hơn 100+ nhãn hiệu lớn trong và ngoài nước.
             </p>
-            <button className="rounded bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700">
+            <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
               See our profile
             </button>
           </div>
@@ -150,10 +152,10 @@ export default function Home() {
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <h2 className="mb-3 text-4xl leading-tight font-normal">
-                <span className="text-blue-600">_ </span>
+                <span className="text-[var(--color-main-500)]">_ </span>
                 Our solutions
               </h2>
-              <button className="rounded bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700">
+              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
                 Xem thêm
               </button>
             </div>
@@ -190,7 +192,7 @@ export default function Home() {
                   <strong>Đội ngũ</strong> Marketing in-house, từ tư vấn đến triển khai
                 </li>
               </ul>
-              <button className="rounded bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700">
+              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
                 Xem thêm
               </button>
             </div>
@@ -224,7 +226,7 @@ export default function Home() {
                 <li>Media Alliance</li>
                 <li>Manage Campaign</li>
               </ul>
-              <button className="rounded bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700">
+              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
                 Xem thêm
               </button>
             </div>
@@ -244,7 +246,7 @@ export default function Home() {
                 <li>Đào tạo doanh nghiệp</li>
                 <li>More</li>
               </ul>
-              <button className="rounded bg-blue-600 px-6 py-3 text-white shadow-md transition hover:bg-blue-700">
+              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
                 Xem thêm
               </button>
             </div>
@@ -281,7 +283,7 @@ export default function Home() {
                 {["Vietnam", "Thailand", "Japan", "China"].map((country) => (
                   <button
                     key={country}
-                    className="rounded border border-white px-5 py-2 transition hover:bg-white hover:text-black"
+                    className="rounded border border-white px-5 py-2 transition hover:cursor-pointer hover:bg-white hover:text-black"
                   >
                     {country}
                   </button>
@@ -355,14 +357,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-teal-400 py-16 text-white">
+      <section className="bg-[var(--color-main-500)] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             <div className="flex flex-col items-center justify-center px-5 text-center">
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Discovering where to expand?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:bg-white hover:text-teal-400">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
@@ -373,7 +375,7 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Decided on a market?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:bg-white hover:text-teal-400">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
@@ -384,7 +386,7 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Know exactly what you need?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:bg-white hover:text-teal-400">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
