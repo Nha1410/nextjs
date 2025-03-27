@@ -97,7 +97,7 @@ export default function Footer() {
               <div className="mt-2 flex justify-start md:col-span-2">
                 <button
                   type="submit"
-                  className="max-w-[350px] rounded bg-[#00b2a9] px-20 py-6 font-medium text-white shadow hover:bg-[#00968f] focus:outline-none"
+                  className="max-w-[350px] rounded bg-[var(--color-main-500)] px-20 py-6 font-medium text-white shadow hover:bg-[var(--color-main-400)] hover:cursor-pointer focus:outline-none"
                 >
                   Submit
                 </button>

@@ -125,8 +125,7 @@ export default function About() {
               <span className="font-bold text-[var(--color-main-500)]">
                 đề cao tính đổi mới và hiệu quả trong công việc
               </span>
-              , không ngừng học hỏi để nâng cao chất lượng sản phẩm
-              và dịch vụ của chúng tôi.
+              , không ngừng học hỏi để nâng cao chất lượng sản phẩm và dịch vụ của chúng tôi.
             </p>
           </div>
 
@@ -160,7 +159,7 @@ export default function About() {
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
           {/* Mission */}
-          <div className="flex-1 space-y-4 rounded-lg bg-[#002D6A] p-6 text-justify text-white md:p-8">
+          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-main-500)] p-6 text-justify text-white md:p-8">
             <h3 className="text-xl font-semibold">Our Mission</h3>
             <h2 className="text-2xl leading-snug font-bold">Make Marketing Better for People.</h2>
             <p>

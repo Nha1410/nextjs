@@ -1,30 +1,11 @@
 // components/FeatureBlock.jsx
 "use client";
 import Image from "next/image";
-import Preloader from "../../components/Preloader";
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
 import FeatureBlock from "../../components/FeatureBlock";
 import { motion } from "framer-motion";
-import FramerMagnetic from "../../components/framer";
-import Rounded from '../../components/RoundedButton';
+import Rounded from "../../components/RoundedButton";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 2000);
-    })();
-  }, []);
-
   const features = [
     {
       number: "01",
@@ -55,20 +36,22 @@ export default function Home() {
   return (
     <>
       <section className="relative w-full bg-white bg-cover bg-center pt-24 pb-16">
-        <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
-
         <div className="container mx-auto px-8 py-16 sm:px-12 md:px-20 lg:px-32 xl:px-48">
           {/* Section Title */}
           <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
             <div className="w-full max-w-xl md:w-1/2">
               <h1 className="text-left">
                 <span className="block text-6xl font-bold text-gray-900">Why</span>
-                <span className="block text-7xl font-bold text-blue-600">Choose Us</span>
+                <span className="block text-7xl font-bold text-[var(--color-main-500)]">
+                  Choose Us
+                </span>
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
               <p className="text-2xl text-gray-600">
-              Chúng tôi đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 lợi thế sau:</p>
+                Chúng tôi đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai thực
+                chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 lợi thế sau:
+              </p>
             </div>
           </div>
 
@@ -99,7 +82,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="absolute top-0 right-0 z-0 h-5/7 w-full rounded-tl-[100px] bg-blue-600 md:h-5/7 md:w-5/6 lg:h-9/13"
+          className="absolute top-0 right-0 z-0 h-5/7 w-full rounded-tl-[100px] bg-[var(--color-main-500)] md:h-5/7 md:w-5/6 lg:h-9/13"
         ></motion.div>
 
         <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-6 md:flex-row md:justify-between md:px-12">
@@ -129,7 +112,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="z-30 flex w-full -translate-y-6 flex-col justify-center text-center text-white md:w-1/2 md:-translate-y-12 md:pl-16 md:text-left "
+            className="z-30 flex w-full -translate-y-6 flex-col justify-center text-center text-white md:w-1/2 md:-translate-y-12 md:pl-16 md:text-left"
           >
             {/* Line: Our [>] */}
             <div className="flex items-center justify-center gap-4 md:justify-start">
@@ -154,8 +137,10 @@ export default function Home() {
                 href="#"
                 className="inline-flex items-center gap-2 text-lg font-medium text-white md:text-xl"
               >
-                <Rounded >
-                  <p>Read now <span className="text-2xl">→</span></p>
+                <Rounded>
+                  <p>
+                    Read now <span className="text-2xl">→</span>
+                  </p>
                 </Rounded>
               </a>
             </div>

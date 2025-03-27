@@ -82,7 +82,7 @@ export default function NewsRecruitment() {
       <div className="mt-4 flex space-x-4">
         <button
           className={`rounded px-4 py-2 ${
-            activeTab === "Tin tức" ? "bg-blue-600 text-white" : "bg-gray-200"
+            activeTab === "Tin tức" ? "bg-[var(--color-main-500)] text-white" : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("Tin tức")}
         >
@@ -90,7 +90,7 @@ export default function NewsRecruitment() {
         </button>
         <button
           className={`rounded px-4 py-2 ${
-            activeTab === "Tuyển dụng" ? "bg-blue-600 text-white" : "bg-gray-200"
+            activeTab === "Tuyển dụng" ? "bg-[var(--color-main-500)] text-white" : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("Tuyển dụng")}
         >
@@ -139,7 +139,7 @@ export default function NewsRecruitment() {
                   </label>
                 </div>
 
-                <button className="mt-3 rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700">
+                <button className="mt-3 rounded bg-[var(--color-main-500)] px-4 py-2 text-white transition hover:bg-blue-700">
                   Search Jobs
                 </button>
 
@@ -168,7 +168,7 @@ export default function NewsRecruitment() {
                     </label>
                   </div>
                   <div>
-                    <a href="#" className="text-sm text-blue-600 hover:underline">
+                    <a href="#" className="text-sm text-[var(--color-main-500)] hover:underline">
                       RSS
                     </a>
                   </div>
@@ -213,7 +213,7 @@ export default function NewsRecruitment() {
 
       {/* Nút xem tất cả */}
       <div className="mt-6 flex justify-center">
-        <button className="rounded bg-blue-600 px-6 py-3 text-white shadow-md hover:bg-blue-700">
+        <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md hover:cursor-pointer hover:bg-[var(--color-main-400)]">
           Xem tất cả
         </button>
       </div>
