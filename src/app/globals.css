@@ -29,3 +29,19 @@ body {
   color: var(--foreground);
   font-family: Avar(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  @keyframes pulse-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+  }
+
+  .animate-pulse-scale {
+    animation: pulse-scale 2s ease-in-out infinite;
+    animation-delay: 2s; /* Delay mỗi lần lặp */
+  }
+}
