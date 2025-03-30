@@ -210,9 +210,9 @@ export default function About() {
                 }`}
                 style={{ transitionDelay: `${idx * 200}ms` }} // Tailwind doesn't support dynamic delay classes
               >
-                <p className="mb-2 text-sm font-semibold text-gray-500">{val.number}</p>
-                <h4 className="mb-1 text-lg font-bold">{val.title}</h4>
-                <p className="text-sm">{val.desc}</p>
+                <p className="mb-2 text-sm font-semibold text-black">{val.number}</p>
+                <h4 className="mb-1 text-lg font-bold text-black">{val.title}</h4>
+                <p className="text-sm text-black">{val.desc}</p>
               </div>
             ))}
           </div>

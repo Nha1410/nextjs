@@ -19,9 +19,7 @@ export default function Header() {
     <>
       {/* Header */}
       <header
-        className={`absolute top-0 left-0 z-50 w-full border-b border-white/50 ${
-          isHome || isSolution ? "bg-[#000000]/20" : "bg-[#000000]"
-        }`}
+        className="sticky top-0 z-50 bg-black shadow-md"
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-4">
           <div className="flex items-center">
@@ -31,8 +29,11 @@ export default function Header() {
           </div>
 
           <nav className="hidden space-x-6 md:flex">
-            <Link href="/" className="text-white transition hover:text-gray-200">
-              Home
+            <Link href="/about" className="text-white transition hover:text-gray-200">
+              About Us
+            </Link>
+            <Link href="/why" className="text-white transition hover:text-gray-200">
+              Why Choose Us
             </Link>
             <Link href="/solution" className="text-white transition hover:text-gray-200">
               Our solutions
@@ -40,12 +41,6 @@ export default function Header() {
             <a href="/portfolio" className="text-white transition hover:text-gray-200">
               Our Portfolio
             </a>
-            <Link href="/about" className="text-white transition hover:text-gray-200">
-              About Us
-            </Link>
-            <Link href="/why" className="text-white transition hover:text-gray-200">
-              Why Choose Us
-            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -123,10 +118,10 @@ export default function Header() {
           <nav className="flex flex-col space-y-6 px-6 py-4">
             {[
               { label: "Home", href: "/" },
-              { label: "Our solutions", href: "/solution" },
-              { label: "Our Portfolio", href: "/portfolio" },
               { label: "About Us", href: "/about" },
               { label: "Why Choose Us", href: "/why" },
+              { label: "Our solutions", href: "/solution" },
+              { label: "Our Portfolio", href: "/portfolio" },
             ].map((link) => (
               <Link
                 key={link.href}

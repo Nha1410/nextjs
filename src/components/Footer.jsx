@@ -26,88 +26,6 @@ export default function Footer() {
             <h2 className="mb-6 text-2xl font-semibold text-[#03052e] md:text-3xl">
               Reach out with any questions or inquiries
             </h2>
-
-            <form className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {/* First Name */}
-              <div className="flex flex-col">
-                <label htmlFor="firstName" className="mb-2 text-base font-thin text-[#03052e]">
-                  First Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
-                  placeholder="First Name"
-                />
-              </div>
-
-              {/* Last Name */}
-              <div className="flex flex-col">
-                <label htmlFor="lastName" className="mb-2 text-base font-thin text-[#03052e]">
-                  Last Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  className="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
-                  placeholder="Last Name"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="flex flex-col">
-                <label htmlFor="email" className="mb-2 text-base font-thin text-[#03052e]">
-                  Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
-                  placeholder="Email"
-                />
-              </div>
-
-              {/* Phone */}
-              <div className="flex flex-col">
-                <label htmlFor="phone" className="mb-2 text-base font-thin text-[#03052e]">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  id="phone"
-                  className="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
-                  placeholder="Phone"
-                />
-              </div>
-
-              {/* Message (full width) */}
-              <div className="md:col-span-2">
-                <label htmlFor="message" className="blockbaseext-smthinfont-medium text-[#03052e]">
-                  Leave us a message...
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
-                  placeholder="Type your message here"
-                />
-              </div>
-
-              {/* Submit button (full width) */}
-              <div className="mt-2 flex justify-start md:col-span-2">
-                <button
-                  type="submit"
-                  className="max-w-[350px] rounded bg-[var(--color-main-500)] px-20 py-6 font-medium text-white shadow hover:bg-[var(--color-main-400)] hover:cursor-pointer focus:outline-none"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* CỘT PHẢI: Địa chỉ, liên hệ */}
-          <div className="ml-10 flex h-full flex-col justify-between">
-            {/* Khối trên: Địa chỉ */}
             <div>
               <h3 className="mb-2 text-xl tracking-wide text-gray-500 uppercase">ADDRESS</h3>
               <p className="text-sm leading-relaxed text-[#03052e]">
@@ -126,15 +44,24 @@ export default function Footer() {
                 </p>
               </div>
             </div>
+            </div>
 
-            {/* Khối giữa: Phone, Email */}
-
-            {/* (Tuỳ ý) Chèn icon mạng xã hội nếu cần */}
+          {/* CỘT PHẢI: Địa chỉ, liên hệ */}
+          <div className="ml-10 flex h-full flex-col justify-between">
+            {/* Khối trên: Địa chỉ */}
+            <div>
+              <h3 className="mb-2 text-xl tracking-wide text-gray-500 uppercase">SOCIAL</h3>
+              {/* (Tuỳ ý) Chèn icon mạng xã hội nếu cần */}
             <div className="mt-4 flex space-x-4">
               <img src="/images/icons/facebook.avif" alt="Facebook" className="h-10 w-10" />
               <img src="/images/icons/linkedin.avif" alt="LinkedIn" className="h-10 w-10" />
               <img src="/images/icons/instagram.avif" alt="Instagram" className="h-10 w-10" />
             </div>
+            </div>
+
+            {/* Khối giữa: Phone, Email */}
+
+            
 
             {/* Khối dưới: Bản quyền */}
             <div className="mt-8">
