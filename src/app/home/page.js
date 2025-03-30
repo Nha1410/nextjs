@@ -9,98 +9,21 @@ import NewsRecruitment from "@/components/NewsRecruitment";
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center pt-24">
-        {/* Cha chứa 2 khối (Text và Form), chiếm toàn bộ chiều cao */}
-        <div className="mx-auto flex min-h-full w-full flex-col items-start justify-between p-4 md:p-8">
-          {/* Khối trên: Text (nằm góc trên trái) */}
-          <div className="max-w-xl text-white drop-shadow-md">
-            <p className="my-2 text-xs md:my-4 md:text-sm">Market entry, simplified.</p>
-            <h1 className="mb-4 text-3xl leading-tight font-bold md:text-5xl">
+      <section className="relative -mt-16 h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center">
+        <div className="flex h-full w-full items-center justify-center px-4">
+          <div className="max-w-3xl text-center text-white drop-shadow-md">
+            <p className="mb-4 text-sm md:text-base">Market entry, simplified.</p>
+            <h1 className="mb-6 text-4xl leading-tight font-bold md:text-6xl">
               Expansion consultant & Marketing agency.
-              <br className="hidden sm:block" />
+              <br />
               All in one.
             </h1>
-          </div>
-
-          {/* Khối dưới: Form (nằm góc dưới phải trên desktop) */}
-          <div className="mt-6 w-full rounded bg-[var(--color-main-500)] p-6 shadow-lg md:mt-0 md:w-2/3 md:self-end">
-            <h2 className="mb-6 text-lg font-medium text-white md:text-xl">
-              SET AN INTRODUCTION MEETING TODAY
-            </h2>
-
-            {/* Form chia 2 cột trên màn hình >= md */}
-            <form className="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2">
-              {/* Name */}
-              <div className="flex flex-col">
-                <label htmlFor="name" className="mb-1 text-sm font-light text-white">
-                  Your Name <span className="text-red-400">*</span>
-                </label>
-                <div className="border-b border-white">
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
-                    placeholder="Enter your name"
-                  />
-                </div>
-              </div>
-
-              {/* Company */}
-              <div className="flex flex-col">
-                <label htmlFor="company" className="mb-1 text-sm font-light text-white">
-                  Company <span className="text-red-400">*</span>
-                </label>
-                <div className="border-b border-white">
-                  <input
-                    type="text"
-                    id="company"
-                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
-                    placeholder="Your company"
-                  />
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex flex-col">
-                <label htmlFor="email" className="mb-1 text-sm font-light text-white">
-                  Email <span className="text-red-400">*</span>
-                </label>
-                <div className="border-b border-white">
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
-                    placeholder="Enter your email"
-                  />
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex flex-col">
-                <label htmlFor="phone" className="mb-1 text-sm font-light text-white">
-                  Phone <span className="text-red-400">*</span>
-                </label>
-                <div className="border-b border-white">
-                  <input
-                    type="text"
-                    id="phone"
-                    className="w-full bg-transparent px-2 py-2 text-white placeholder-white/70 focus:outline-none"
-                    placeholder="Your phone"
-                  />
-                </div>
-              </div>
-
-              {/* Nút Submit (full width 2 cột, canh phải) */}
-              <div className="mt-4 flex justify-end md:col-span-2">
-                {/* Bạn có thể đổi style để thành dạng outline hoặc solid */}
-                <button
-                  type="submit"
-                  className="rounded border border-white px-6 py-2 text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+            <button className="group inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-xl font-medium text-white shadow-md transition hover:bg-white hover:text-black">
+              Contact Us
+              <span className=" text-4xl transform transition-transform duration-300 group-hover:rotate-[45deg]">
+                ↗
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -134,11 +57,11 @@ export default function Home() {
 
           <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
             <Image
-              src="/images/who_we_are.png"
+              src="/images/home_solution.avif"
               alt="We help customers"
               width={500}
               height={500}
-              className="h-auto w-auto"
+              className="rounded-lg shadow-lg"
             />
           </div>
         </div>

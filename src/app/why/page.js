@@ -4,6 +4,7 @@ import Image from "next/image";
 import FeatureBlock from "../../components/FeatureBlock";
 import { motion } from "framer-motion";
 import Rounded from "../../components/RoundedButton";
+import Link from "next/link";
 
 export default function Home() {
   const features = [
@@ -75,14 +76,14 @@ export default function Home() {
       </section>
 
       {/* Evolution Section with rounded corner background */}
-      <section className="relative overflow-visible py-24">
+      <section className="relative overflow-visible bg-white py-24">
         {/* Background with animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="absolute top-0 right-0 z-0 h-5/7 w-full rounded-tl-[100px] bg-[var(--color-main-500)] md:h-5/7 md:w-5/6 lg:h-9/13"
+          className="absolute top-0 right-0 z-0 h-full w-full rounded-tl-[100px] bg-[var(--color-main-500)] md:h-5/7 md:w-5/6 lg:h-9/13"
         ></motion.div>
 
         <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-6 md:flex-row md:justify-between md:px-12">
@@ -117,13 +118,16 @@ export default function Home() {
             {/* Line: Our [>] */}
             <div className="flex items-center justify-center gap-4 md:justify-start">
               <h2 className="text-5xl leading-tight font-extrabold md:text-6xl">Our</h2>
-              <motion.div
-                animate={{ x: [0, 20, 0, 4, 0] }}
-                transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400 md:h-12 md:w-12"
-              >
-                <div className="h-2 w-2 rotate-135 border-t-2 border-l-2 border-white"></div>
-              </motion.div>
+
+              <Link href="/solution">
+                <motion.div
+                  animate={{ x: [0, 20, 0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400 hover:bg-orange-500 md:h-12 md:w-12"
+                >
+                  <div className="h-2 w-2 rotate-135 border-t-2 border-l-2 border-white" />
+                </motion.div>
+              </Link>
             </div>
 
             {/* Line: Evolution */}
@@ -133,8 +137,8 @@ export default function Home() {
 
             {/* CTA */}
             <div className="mt-4">
-              <a
-                href="#"
+              <Link
+                href="/solution"
                 className="inline-flex items-center gap-2 text-lg font-medium text-white md:text-xl"
               >
                 <Rounded>
@@ -142,7 +146,7 @@ export default function Home() {
                     Read now <span className="text-2xl">→</span>
                   </p>
                 </Rounded>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
