@@ -10,27 +10,27 @@ export default function Home() {
   const features = [
     {
       number: "01",
-      title: "Mô hình",
+      title: "Model",
       description:
-        "Mô hình tích hợp từ retainer, sản xuất nội dung đến media planning giúp tối ưu chi phí, đảm bảo thông điệp xuyên suốt và triển khai nhanh chóng.",
+        "Tại ANN Multimedia, mọi thứ đều bắt đầu từ một nền tảng chiến lược chắc tay, được nâng tầm bằng sáng tạo phá cách và lan tỏa nhờ truyền thông đúng điểm chạm. Đây là mô hình giúp thương hiệu không chỉ xuất hiện trên thị trường, mà còn thành hình – có tiếng nói – có sức bật.",
     },
     {
       number: "02",
-      title: "Con người",
+      title: "People",
       description:
-        "Đội ngũ chuyên gia từ planner, producer đến media buyer đều có kinh nghiệm sâu, trực tiếp triển khai và am hiểu từng nền tảng số.",
+        "Dữ liệu là ngôn ngữ, chiến lược là tư duy, sáng tạo là phong cách. ANN là nơi mọi cá nhân đều có chất riêng, nhưng cùng nhìn về một hướng: biến áp lực thành cảm hứng, và biến ý tưởng thành tầm ảnh hưởng. Mỗi tư duy sáng tạo bắt nhịp cùng logic thị trường, nơi mỗi cá nhân là một đường nét riêng trong bức tranh khác biệt mà ANN vẽ nên.",
     },
     {
       number: "03",
-      title: "Thực chiến",
+      title: "Well-practiced experiences",
       description:
-        "Chúng tôi đã đồng hành cùng nhiều thương hiệu đa ngành với quy trình triển khai rõ ràng, kiểm thử hiệu quả và báo cáo minh bạch.",
+        "Kinh nghiệm ở ANN không nằm trên hồ sơ – mà nằm trong từng chiến dịch đã bứt phá. Mỗi dự án là một cú bật thương hiệu, một lần dữ liệu lên tiếng, một lần khách hàng nhận lại giá trị thật. Kết quả không nằm trên giấy, mà nằm trong từng dấu ấn thị trường – và danh sách ấy vẫn đang viết tiếp.",
     },
     {
       number: "04",
-      title: "Thấu hiểu",
+      title: "In-depth insight into the local market",
       description:
-        "Chiến dịch được cá nhân hoá theo vùng miền, độ tuổi và hành vi, đảm bảo đúng thông điệp – đúng người – đúng thời điểm.",
+        "Không nhìn thị trường từ sau bàn làm việc. Mọi thấu hiểu đều đến từ việc sống cùng người dùng – lắng nghe, quan sát và cảm nhận từng chuyển động nhỏ nhất. ANN chọn cách “ở giữa dòng chảy” để hiểu thị trường, và để giúp thương hiệu không nói như một kẻ ngoài cuộc – mà là như một người bạn đáng tin.",
     },
   ];
 

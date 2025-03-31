@@ -17,13 +17,13 @@ const FeatureBlock = ({ number, title, description }) => {
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-xl"
+      className="flex flex-col space-y-4"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-8xl font-extrabold text-gray-900 mb-2"
+        className="text-5xl md:text-6xl font-extrabold text-[var(--color-main-500)]"
       >
         {number}
       </motion.h2>
@@ -32,23 +32,18 @@ const FeatureBlock = ({ number, title, description }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-4xl font-semibold text-gray-800 mb-2"
+        className="text-xl md:text-2xl font-bold text-black leading-snug border-b-2 border-[var(--color-main-200)] pb-1 w-fit"
       >
         {title}
       </motion.h3>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.3, delay: 0.5 }}
-        className="w-12 h-0.5 bg-gray-300 mb-4"
-      />
+      
 
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="text-lg text-gray-600"
+        className="text-justify text-base md:text-lg text-gray-800 leading-relaxed tracking-wide whitespace-pre-line"
       >
         {description}
       </motion.p>
