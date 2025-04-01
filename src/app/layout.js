@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -8,7 +7,7 @@ import Footer from "../components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 
 const poppins = Poppins({
-  subsets: ["latin"],
+  subsets: ["vietnamese"],
   weight: ["400", "600", "700"],
   variable: "--font-sans",
 });
@@ -19,8 +18,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
-
   return (
     <html lang="en" className={poppins.variable}>
       <body className="font-sans text-gray-800">

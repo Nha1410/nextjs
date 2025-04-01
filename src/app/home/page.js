@@ -6,180 +6,177 @@ import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
 import NewsRecruitment from "@/components/NewsRecruitment";
 
+const SolutionBlock = ({ title, description, items, reverse }) => (
+  <div
+    className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
+  >
+    <div className="flex justify-center">
+      <div className="max-w-2xl rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+        <MySwiper />
+      </div>
+    </div>
+    <div className="text-white">
+      <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme)]">
+        {title}
+      </h3>
+      <p className="mb-5 text-xl leading-relaxed">{description}</p>
+      <ul className="mb-5 list-disc space-y-2 pl-5">
+        {items.map((item, index) => (
+          <li key={index} className="text-gray-300">
+            {item}
+          </li>
+        ))}
+      </ul>
+      <button className="rounded bg-[var(--color-text-red-theme)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme)]">
+        Xem thêm
+      </button>
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <main>
       <section className="relative -mt-16 h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center">
         <div className="flex h-full w-full items-center justify-center px-4">
           <div className="max-w-3xl text-center text-white drop-shadow-md">
-            <p className="mb-4 text-sm md:text-base">Market entry, simplified.</p>
             <h1 className="mb-6 text-4xl leading-tight font-bold md:text-6xl">
-              Expansion consultant & Marketing agency.
+              ANN Multimedia -{" "}
+              <span className="text-[var(--color-text-red-theme)]">Asking for the name.</span>
               <br />
-              All in one.
+              <span className="text-[var(--color-text-red-theme)]">Your brand</span> be noticed.
             </h1>
-            <button className="group inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-xl font-medium text-white shadow-md transition hover:bg-white hover:text-black">
+            <p className="mb-6 text-lg text-gray-300 md:text-xl">
+              ANN không chạy theo sự chú ý - ANN thiết kế nó. Một cú chạm{" "}
+              <span className="font-semibold text-[var(--color-text-red-theme)]">đúng cảm xúc</span>
+              , một hình ảnh
+              <span className="font-semibold text-[var(--color-text-red-theme)]">đúng tâm lý</span>,
+              và một chiến dịch khiến thương hiệu không chỉ được nhắc đến mà còn ghi dấu ấn sâu đậm.
+              <br />
+              <span className="font-bold tracking-wide text-[var(--color-text-red-theme)] uppercase">
+                Be the name. Be noticed.
+              </span>
+            </p>
+            <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:bg-white hover:text-red-600">
               Contact Us
-              <span className=" text-4xl transform transition-transform duration-300 group-hover:rotate-[45deg]">
+              <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
                 ↗
               </span>
             </button>
           </div>
         </div>
       </section>
-
-      <section className="overflow-hidden bg-[#dfeaff] py-16">
+      <section className="overflow-hidden bg-[var(--color-bg-main)] py-16">
         <div className="container mx-auto flex flex-col items-start px-4 md:flex-row md:items-center">
+          {/* Left Content */}
           <div className="md:w-1/2">
-            <p className="mb-2 text-sm font-semibold tracking-wide text-gray-500 uppercase">
-              — WHO WE ARE
+            <p className="mb-2 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme)] uppercase">
+              — Let your brand speak in feelings!!
             </p>
-            <h2 className="mb-4 text-2xl leading-snug font-bold text-slate-800 md:text-3xl lg:text-4xl">
-              We help customers be more{" "}
-              <span className="text-[var(--color-main-500)]">
-                innovative, effective, successful
-              </span>{" "}
-              in Marketing &amp; Sales.
+            <h2 className="mb-4 text-3xl leading-snug font-bold text-white md:text-4xl lg:text-5xl">
+              ANN Multimedia -{" "}
+              <span className="text-[var(--color-text-red-theme)]">
+                Không chỉ nhìn, mà còn cảm.
+              </span>
             </h2>
-            <p className="mb-6 text-gray-600">
-              Think Digital với định vị là một Innovative Digital Company tập trung vào các giải
-              pháp mang tính đổi mới sáng tạo và hiệu quả cho các chiến dịch Marketing.
+            <p className="mb-6 text-lg text-gray-300">
+              ANN không chỉ giúp thương hiệu <strong>trông đẹp</strong> – mà còn giúp khách hàng{" "}
+              <strong>cảm nhận được</strong>. Chiến lược độc đáo, hình ảnh ấn tượng, nội dung sâu
+              sắc - tất cả tạo nên <strong>khoảnh khắc chạm</strong>, nơi khách hàng{" "}
+              <strong>không chỉ thấy</strong>, mà còn muốn <strong>tin tưởng</strong> và{" "}
+              <strong>thuộc về thương hiệu của bạn</strong>.
             </p>
-            <p className="mb-6 text-gray-600">
-              Với năng lực cốt lõi từ Strategy Planning, Media Booking đến Creative Production,
-              Think Digital đang là đối tác uy tín và vững chắc cho Marketing, Branding,
-              Communication cho hơn 100+ nhãn hiệu lớn trong và ngoài nước.
+            <p className="mb-6 text-lg text-gray-300">
+              Với sức mạnh đa nền tảng – từ{" "}
+              <strong>visual, motion, production đến chiến lược</strong> – ANN tạo nên một{" "}
+              <strong>ngôn ngữ riêng</strong> cho thương hiệu, một <strong>cảm xúc riêng</strong>,
+              và một <strong>chỗ đứng đáng nhớ</strong>
+              trong lòng khách hàng.
             </p>
-            <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
-              See our profile
+            <button className="rounded-full bg-[var(--color-text-red-theme)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:bg-white hover:text-[var(--color-text-red-theme)]">
+              Discover More
             </button>
           </div>
 
+          {/* Right Image */}
           <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
             <Image
               src="/images/home_solution.avif"
-              alt="We help customers"
+              alt="Let your brand speak"
               width={500}
               height={500}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-xl"
             />
           </div>
         </div>
       </section>
-
       {/* SECTION 2: OUR SOLUTIONS */}
-      <section className="overflow-hidden bg-[#dfeaff] py-16 text-[#03052e]">
+      <section className="bg-[var(--color-bg-main)] py-16 text-white">
         <div className="container mx-auto px-4">
-          {/* Dùng cùng container + px-4 */}
-          {/* --- PHẦN “OUR SOLUTIONS” TÁCH RIÊNG 2 CỘT --- */}
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-3 text-4xl leading-tight font-normal">
-                <span className="text-[var(--color-main-500)]">_ </span>
-                Our solutions
+              <h2 className="mb-3 text-4xl leading-tight font-normal text-[var(--color-text-red-theme)]">
+                _ Our solutions
               </h2>
-              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
+              <button className="rounded bg-[var(--color-text-red-theme)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme)]">
                 Xem thêm
               </button>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div>
-                <p className="mb-6 leading-relaxed text-gray-700 md:text-xl">
-                  Người dùng muốn trải nghiệm đa dạng, nhận hàng cận xuất hiện đa kênh, Think
-                  Digital chuyển mình đa dạng hoá.
-                  <br />
-                  Chúng tôi đưa ra các giải pháp cụ thể tập trung vào Marketing cho doanh nghiệp,
-                  với các tập đoàn lớn để thúc đẩy mức tăng trưởng và hiệu quả hoạt động.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 1. Marketing & Communication */}
-          <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
-            <div>
-              <h3 className="mb-4 text-3xl leading-tight font-semibold">
-                1. Marketing &amp; Communication
-              </h3>
-              <p className="mb-5 text-xl leading-relaxed text-gray-700">
-                Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital.
+              <p className="mb-6 leading-relaxed text-gray-300 md:text-xl">
+                ANN Multimedia tạo nên các giải pháp digital & multimedia giúp thương hiệu không bị
+                lẫn - mà được nhận diện rõ ràng, truyền tải đúng vibe, và để lại ấn tượng lâu dài.
               </p>
-              <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-gray-700">
-                <li>
-                  <strong>Thiết kế, sản xuất</strong> các nội dung số trên Digital
-                </li>
-                <li>
-                  <strong>Paid Media Booking</strong> trên đa kênh Digital
-                </li>
-                <li>
-                  <strong>Đội ngũ</strong> Marketing in-house, từ tư vấn đến triển khai
-                </li>
-              </ul>
-              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
-                Xem thêm
-              </button>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="max-w-2xl rounded-lg shadow-lg">
-                <MySwiper />
-              </div>
             </div>
           </div>
 
-          {/* 2. Media Buying Platform */}
-          <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
-            <div className="order-2 flex justify-center md:order-1">
-              <div className="max-w-2xl rounded-lg shadow-lg">
-                <MySwiper />
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <h3 className="mb-4 text-3xl leading-tight font-semibold">
-                2. Media Buying Platform
-              </h3>
-              <p className="mb-5 leading-relaxed text-gray-700">
-                Dễ dàng khám phá &amp; đặt mua hàng ngàn các quảng cáo đa dạng từ các kênh targeting
-                qua cổng, influencers, website hàng đầu Việt Nam.
-              </p>
-              <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-gray-700">
-                <li>Media Discover</li>
-                <li>Media Buying</li>
-                <li>Marketplace</li>
-                <li>Media Alliance</li>
-                <li>Manage Campaign</li>
-              </ul>
-              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
-                Xem thêm
-              </button>
-            </div>
-          </div>
+          <SolutionBlock
+            title="Marketing & Communication"
+            description="Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital."
+            items={[
+              "Thiết kế, sản xuất các nội dung số trên Digital",
+              "Paid Media Booking trên đa kênh Digital",
+              "Đội ngũ Marketing in-house, từ tư vấn đến triển khai",
+            ]}
+          />
 
-          {/* 3. Training & Consultancy */}
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
-            <div>
-              <h3 className="mb-4 text-3xl leading-tight font-semibold">
-                3. Training &amp; Consultancy
-              </h3>
-              <p className="mb-5 leading-relaxed text-gray-700">
-                Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital.
-              </p>
-              <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-gray-700">
-                <li>Tư vấn doanh nghiệp</li>
-                <li>Đào tạo doanh nghiệp</li>
-                <li>More</li>
-              </ul>
-              <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-[var(--color-main-400)]">
-                Xem thêm
-              </button>
-            </div>
+          <SolutionBlock
+            title="Media Buying Platform"
+            description="Dễ dàng khám phá & đặt mua hàng ngàn các quảng cáo đa dạng từ các kênh targeting qua cổng, influencers, website hàng đầu Việt Nam."
+            items={[
+              "Media Discover",
+              "Media Buying",
+              "Marketplace",
+              "Media Alliance",
+              "Manage Campaign",
+            ]}
+            reverse={true}
+          />
 
-            <div className="flex justify-center">
-              <div className="max-w-2xl rounded-lg shadow-lg">
-                <MySwiper />
-              </div>
-            </div>
-          </div>
+          <SolutionBlock
+            title="Training & Consultancy"
+            description="Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital."
+            items={["Tư vấn doanh nghiệp", "Đào tạo doanh nghiệp", "More"]}
+          />
+
+          <SolutionBlock
+            title="Social Advertisement"
+            description="Định dạng quảng cáo sáng tạo, hiệu quả trên đa nền tảng mạng xã hội."
+            items={["Banner Standard", "Video Ad", "Native Ad", "Action Ad"]}
+            reverse={true}
+          />
+
+          <SolutionBlock
+            title="Branding Solution"
+            description="Tạo dựng thương hiệu mạnh với chiến lược toàn diện từ online đến offline."
+            items={[
+              "Social Media Ads",
+              "Kenh 14",
+              "Grab, Be, Xanh SM",
+              "Billboard, LCD",
+              "Car Branding",
+            ]}
+          />
         </div>
       </section>
 
@@ -227,7 +224,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-white py-20 text-[#03052e]">
         <div className="container mx-auto px-4">
           {/* Tiêu đề ABOUT US riêng, ở trên cùng */}
@@ -279,7 +275,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-[var(--color-main-500)] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
@@ -316,7 +311,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <ClientsSection />
       <NewsRecruitment />
     </main>
