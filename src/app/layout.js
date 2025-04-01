@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 
 const poppins = Poppins({
-  subsets: ["vietnamese"],
+  subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-sans",
 });
