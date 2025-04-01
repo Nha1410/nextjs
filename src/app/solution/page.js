@@ -1,3 +1,4 @@
+import OurSolutions from "@/components/OurSolution";
 import Image from "next/image";
 
 export default function Solution() {
@@ -50,14 +51,14 @@ export default function Solution() {
       </section>
 
       {/* Business Section */}
-      <section className="w-screen justify-center bg-white py-16 md:py-24">
+      <OurSolutions />
+      {/* <section className="w-screen justify-center py-16 md:py-24">
         <div className="container mx-auto w-4/5">
           <h2 className="mb-12 text-center text-5xl font-bold md:text-6xl">
             our <span className="text-[var(--color-main-500)]">business</span>
           </h2>
 
-          {/* Grid container */}
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-2">
+          <div className="grid grid-cols-1 items-start gap-2 md:grid-cols-3 md:gap-2">
             {[
               {
                 img: "/images/business_1.png",
@@ -89,34 +90,38 @@ export default function Solution() {
                 ],
               },
             ].map((service, index) => (
-              <div key={index} className="relative flex flex-col items-start p-6">
-                {/* Image */}
-                <div className="flex w-full justify-center">
+              <div
+                key={index}
+                className={`flex flex-col items-center p-6 md:items-start ${
+                  index === 1 ? "md:flex-col-reverse" : ""
+                }`}
+              >
+                <div className="relative flex h-60 w-full justify-center bg-transparent">
                   <Image
                     src={service.img}
                     alt={service.title}
-                    width={280}
-                    height={280}
-                    className="rounded-lg shadow-lg"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: "contain" }}
+                    className=""
                   />
                 </div>
 
-                {/* Title */}
-                <h3 className="mt-6 text-2xl font-semibold text-[var(--color-main-500)] md:text-3xl">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <ul className="mt-4 space-y-2 text-lg text-gray-700">
-                  {service.desc.map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
-                </ul>
+                <div className="mt-6 text-center md:text-left">
+                  <h3 className="text-2xl font-semibold text-[var(--color-main-500)] md:text-3xl">
+                    {service.title}
+                  </h3>
+                  <ul className="mt-4 space-y-2 text-lg text-gray-700">
+                    {service.desc.map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

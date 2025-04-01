@@ -27,7 +27,7 @@ export default function Header() {
                 src="/images/logo_ann.jpg"
                 alt="Logo"
                 width={140}
-                height={60}
+                height={0}
                 className="mr-2"
               />
             </Link>
