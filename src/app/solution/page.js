@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Solution() {
   return (
     <main>
@@ -43,6 +45,75 @@ export default function Solution() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Section */}
+      <section className="w-screen justify-center bg-white py-16 md:py-24">
+        <div className="container mx-auto w-4/5">
+          <h2 className="mb-12 text-center text-5xl font-bold md:text-6xl">
+            our <span className="text-[var(--color-main-500)]">business</span>
+          </h2>
+
+          {/* Grid container */}
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-2">
+            {[
+              {
+                img: "/images/business_1.png",
+                title: "multi-channel network (MCN)",
+                desc: [
+                  "Creator incubation, training & promotion",
+                  "Tiktok content & ecom affiliate strategy",
+                  "Livestream operations",
+                  "PR & crisis Management",
+                ],
+              },
+              {
+                img: "/images/business_2.png",
+                title: "influencer marketing",
+                desc: [
+                  "Strategy & Planning",
+                  "KOL Booking",
+                  "Affiliate marketing",
+                  "Communication Strategy",
+                ],
+              },
+              {
+                img: "/images/business_3.png",
+                title: "production house",
+                desc: [
+                  "Expert short video production",
+                  "Compelling tailored storytelling for impact",
+                  "Fast turnaround time with efficient workflow",
+                ],
+              },
+            ].map((service, index) => (
+              <div key={index} className="relative flex flex-col items-start p-6">
+                {/* Image */}
+                <div className="flex w-full justify-center">
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    width={280}
+                    height={280}
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className="mt-6 text-2xl font-semibold text-[var(--color-main-500)] md:text-3xl">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <ul className="mt-4 space-y-2 text-lg text-gray-700">
+                  {service.desc.map((item, i) => (
+                    <li key={i}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

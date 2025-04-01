@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname();
@@ -18,13 +19,17 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header
-        className="sticky top-0 z-50 bg-black shadow-md"
-      >
+      <header className="sticky top-0 z-50 bg-black shadow-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-4">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-white">
-              MintoMarkets
+              <Image
+                src="/images/logo_ann.jpg"
+                alt="Logo"
+                width={140}
+                height={60}
+                className="mr-2"
+              />
             </Link>
           </div>
 
@@ -84,7 +89,7 @@ export default function Header() {
       {/* Overlay and Menu always mounted */}
       <div
         className={`fixed inset-0 z-60 transition-opacity duration-300 ${
-          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isMobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
         {/* Dimmed Background */}
@@ -95,7 +100,7 @@ export default function Header() {
 
         {/* Slide-in Panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-full sm:w-3/4 max-w-xs transform transition-transform duration-300 bg-[#111]/90 text-white shadow-lg ${
+          className={`absolute top-0 right-0 h-full w-full max-w-xs transform bg-[#111]/90 text-white shadow-lg transition-transform duration-300 sm:w-3/4 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
