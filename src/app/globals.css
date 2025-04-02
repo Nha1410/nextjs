@@ -15,7 +15,10 @@
   --color-main-500: #2f4fbf;
   --color-bg-gray: #f5f5f5;
   --color-bg-main: #19202c;
-  --color-text-red-theme: #aa1226;
+  --color-text-red-theme-400: #d54c5e;
+  --color-text-red-theme-200: #f2a9b3;
+  --color-text-red-theme-300: #e97a8a;
+  --color-text-red-theme-500: #aa1226;
 }
 
 @media (prefers-color-scheme: dark) {

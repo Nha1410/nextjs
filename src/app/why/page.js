@@ -36,14 +36,14 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative w-full bg-white bg-cover bg-center pt-24 pb-16">
+      <section className="relative w-full bg-white bg-cover bg-center pb-16">
         <div className="container mx-auto px-8 py-16 sm:px-12 md:px-20 lg:px-32 xl:px-48">
           {/* Section Title */}
           <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
             <div className="w-full max-w-xl md:w-1/2">
               <h1 className="text-left">
                 <span className="block text-6xl font-bold text-gray-900">Why</span>
-                <span className="block text-7xl font-bold text-[var(--color-main-500)]">
+                <span className="block text-7xl font-bold text-[var(--color-text-red-theme-500)]">
                   Choose Us
                 </span>
               </h1>
@@ -83,7 +83,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="absolute top-0 right-0 z-0 h-full w-full rounded-tl-[100px] bg-[var(--color-main-500)] md:h-5/7 md:w-5/6 lg:h-9/13"
+          className="absolute top-0 right-0 z-0 h-full w-full rounded-tl-[100px] bg-[var(--color-text-red-theme-500)] md:h-5/7 md:w-5/6 lg:h-9/13"
         ></motion.div>
 
         <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-6 md:flex-row md:justify-between md:px-12">
@@ -123,7 +123,7 @@ export default function Home() {
                 <motion.div
                   animate={{ x: [0, 20, 0, 4, 0] }}
                   transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400 hover:bg-orange-500 md:h-12 md:w-12"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-black hover:bg-[#4b4b4b] md:h-12 md:w-12"
                 >
                   <div className="h-2 w-2 rotate-135 border-t-2 border-l-2 border-white" />
                 </motion.div>

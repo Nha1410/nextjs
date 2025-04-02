@@ -16,7 +16,7 @@ const SolutionBlock = ({ title, description, items, reverse }) => (
       </div>
     </div>
     <div className="text-white">
-      <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme)]">
+      <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
       <p className="mb-5 text-xl leading-relaxed">{description}</p>
@@ -27,7 +27,7 @@ const SolutionBlock = ({ title, description, items, reverse }) => (
           </li>
         ))}
       </ul>
-      <button className="rounded bg-[var(--color-text-red-theme)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme)]">
+      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
       </button>
     </div>
@@ -42,22 +42,27 @@ export default function Home() {
           <div className="max-w-3xl text-center text-white drop-shadow-md">
             <h1 className="mb-6 text-4xl leading-tight font-bold md:text-6xl">
               ANN Multimedia -{" "}
-              <span className="text-[var(--color-text-red-theme)]">Asking for the name.</span>
+              <span className="text-[var(--color-text-red-theme-500)]">Asking for the name.</span>
               <br />
-              <span className="text-[var(--color-text-red-theme)]">Your brand</span> be noticed.
+              <span className="text-[var(--color-text-red-theme-500)]">Your brand</span> be noticed.
             </h1>
             <p className="mb-6 text-lg text-gray-300 md:text-xl">
               ANN không chạy theo sự chú ý - ANN thiết kế nó. Một cú chạm{" "}
-              <span className="font-semibold text-[var(--color-text-red-theme)]">đúng cảm xúc</span>
+              <span className="font-semibold text-[var(--color-text-red-theme-500)]">
+                đúng cảm xúc
+              </span>
               , một hình ảnh
-              <span className="font-semibold text-[var(--color-text-red-theme)]">đúng tâm lý</span>,
-              và một chiến dịch khiến thương hiệu không chỉ được nhắc đến mà còn ghi dấu ấn sâu đậm.
+              <span className="font-semibold text-[var(--color-text-red-theme-500)]">
+                đúng tâm lý
+              </span>
+              , và một chiến dịch khiến thương hiệu không chỉ được nhắc đến mà còn ghi dấu ấn sâu
+              đậm.
               <br />
-              <span className="font-bold tracking-wide text-[var(--color-text-red-theme)] uppercase">
+              <span className="font-bold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
                 Be the name. Be noticed.
               </span>
             </p>
-            <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:bg-white hover:text-red-600">
+            <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
               Contact Us
               <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
                 ↗
@@ -70,12 +75,12 @@ export default function Home() {
         <div className="container mx-auto flex flex-col items-start px-4 md:flex-row md:items-center">
           {/* Left Content */}
           <div className="md:w-1/2">
-            <p className="mb-2 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme)] uppercase">
+            <p className="mb-2 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
               — Let your brand speak in feelings!!
             </p>
             <h2 className="mb-4 text-3xl leading-snug font-bold text-white md:text-4xl lg:text-5xl">
               ANN Multimedia -{" "}
-              <span className="text-[var(--color-text-red-theme)]">
+              <span className="text-[var(--color-text-red-theme-500)]">
                 Không chỉ nhìn, mà còn cảm.
               </span>
             </h2>
@@ -93,7 +98,7 @@ export default function Home() {
               và một <strong>chỗ đứng đáng nhớ</strong>
               trong lòng khách hàng.
             </p>
-            <button className="rounded-full bg-[var(--color-text-red-theme)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:bg-white hover:text-[var(--color-text-red-theme)]">
+            <button className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
               Discover More
             </button>
           </div>
@@ -115,10 +120,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-3 text-4xl leading-tight font-normal text-[var(--color-text-red-theme)]">
+              <h2 className="mb-3 text-4xl leading-tight font-normal text-[var(--color-text-red-theme-500)]">
                 _ Our solutions
               </h2>
-              <button className="rounded bg-[var(--color-text-red-theme)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme)]">
+              <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 Xem thêm
               </button>
             </div>
@@ -275,14 +280,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[var(--color-main-500)] py-16 text-white">
+      <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             <div className="flex flex-col items-center justify-center px-5 text-center">
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Discovering where to expand?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
@@ -293,7 +298,7 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Decided on a market?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
@@ -304,7 +309,7 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Know exactly what you need?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-main-500)]">
+              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
               </button>
             </div>
