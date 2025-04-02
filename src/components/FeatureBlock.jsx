@@ -23,7 +23,7 @@ const FeatureBlock = ({ number, title, description }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-5xl md:text-6xl font-extrabold text-[var(--color-main-500)]"
+        className="text-5xl md:text-6xl font-extrabold text-[var(--color-text-red-theme-500)]"
       >
         {number}
       </motion.h2>

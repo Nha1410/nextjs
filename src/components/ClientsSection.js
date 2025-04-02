@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView"; // Đường dẫn tuỳ bạn
 
 export default function ClientsSection() {
   return (
-    <section className="w-full bg-[#03052e] py-16 text-white">
+    <section className="w-full bg-[var(--color-bg-main)] py-16 text-white">
       {/* PHẦN TRÊN: Arrow + text */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">

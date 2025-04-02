@@ -34,7 +34,7 @@ export default function About() {
   }, [charIndex, topRef.isInView]);
 
   return (
-    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center pt-24">
+    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
           <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">_ WHO WE ARE</p>
@@ -61,7 +61,7 @@ export default function About() {
           <div
             className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
           >
-            <h3 className="text-4xl leading-tight font-extrabold text-[var(--color-main-500)] md:text-6xl">
+            <h3 className="text-4xl leading-tight font-extrabold text-[var(--color-text-red-theme-500)] md:text-6xl">
               {displayedText.split("-").map((part, idx) => (
                 <span key={idx}>
                   {part}
@@ -92,11 +92,11 @@ export default function About() {
             className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
           >
             <h3
-              className={`text-3xl leading-snug font-bold text-[var(--color-main-500)] transition-all duration-700 md:text-4xl ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+              className={`text-3xl leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-4xl ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
               Branded with reason.
               <br />
-              <span className="text-[var(--color-main-400)]">Executed with edge.</span>
+              <span className="text-[var(--color-text-red-theme-500)]">Executed with edge.</span>
             </h3>
             <p
               className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-lg ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
@@ -134,7 +134,7 @@ export default function About() {
         </div>
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
-          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-main-500)] p-6 text-justify text-white md:p-8">
+          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-text-red-theme-500)] p-6 text-justify text-white md:p-8">
             <h3 className="text-xl font-semibold">Our Mission</h3>
             <h2 className="text-2xl leading-snug font-bold md:text-3xl">
               Make brands matter —<br />
@@ -181,7 +181,7 @@ export default function About() {
             ].map((val, idx) => (
               <div
                 key={idx}
-                className={`rounded-lg bg-[var(--color-main-200)] p-6 transition-all duration-700 ease-out ${valueRef.isInView ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
+                className={`rounded-lg bg-[var(--color-text-red-theme-200)] p-6 transition-all duration-700 ease-out ${valueRef.isInView ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
                 style={{ transitionDelay: `${idx * 200}ms` }}
               >
                 <p className="mb-2 text-sm font-semibold text-black">{val.number}</p>
@@ -223,7 +223,7 @@ export default function About() {
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
               <div className="text-base font-medium">{stat.label}</div>
-              <div className="text-3xl font-extrabold text-[var(--color-main-400)]">
+              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-400)]">
                 {idx === 0 && <StatCount end={90} suffix="%" />}
                 {idx === 1 && <StatCount end={8} suffix=" years" />}
                 {idx === 2 && <StatCount end={100} suffix="+" />}

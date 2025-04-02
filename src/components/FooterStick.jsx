@@ -71,17 +71,17 @@ export default function Footer() {
             <div className="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-2 md:pt-0">
               {/* Navigation */}
               <div className="flex flex-col gap-2">
-                {["Home", "About Us", "Why Choose Us", "Our Solutions", "Our Portfolio"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="text-sm hover:underline"
-                    >
-                      {item}
-                    </Link>
-                  )
-                )}
+                {[
+                  { label: "Home", path: "home" },
+                  { label: "About Us", path: "about" },
+                  { label: "Why Choose Us", path: "why" },
+                  { label: "Our Solutions", path: "solution" },
+                  { label: "Our Portfolio", path: "portfolio" },
+                ].map(({ label, path }) => (
+                  <Link key={path} href={`/${path}`} className="text-sm hover:underline">
+                    {label}
+                  </Link>
+                ))}
               </div>
 
               {/* Social Links */}
