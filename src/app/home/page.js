@@ -1,6 +1,7 @@
 // src/app/home/page.js
 
 import Image from "next/image";
+import Link from "next/link";
 import ClientsSection from "@/components/ClientsSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
@@ -62,12 +63,14 @@ export default function Home() {
                 Be the name. Be noticed.
               </span>
             </p>
-            <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
-              Contact Us
-              <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
-                ↗
-              </span>
-            </button>
+            <Link href="/contact">
+              <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
+                Contact Us
+                <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
+                  ↗
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
