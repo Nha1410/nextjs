@@ -6,21 +6,21 @@ import MySwiper from "@/components/MySwiper";
 export default function SolutionsSection() {
   return (
     <section className="overflow-hidden bg-[#dfeaff] py-16 text-[#03052e]">
-      <div className="container mx-auto max-w-screen-xl items-start px-6 md:px-8">
-        {/* --- PHẦN “OUR SOLUTIONS” TÁCH RIÊNG 2 CỘT --- */}
+      <div className="container mx-auto max-w-screen-xl items-start px-4 sm:px-6 md:px-8">
+        {/* --- PHẦN “OUR SOLUTIONS” --- */}
         <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Cột trái: Tiêu đề, mô tả, nút */}
           <div>
-            <h2 className="mb-3 text-4xl leading-tight font-bold">Our solutions</h2>
+            <h2 className="mb-3 text-3xl sm:text-4xl font-bold leading-tight">Our solutions</h2>
             <button className="rounded bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700">
               Xem thêm
             </button>
           </div>
 
-          {/* Cột phải: Ảnh minh hoạ (tuỳ ý) */}
+          {/* Cột phải: Mô tả ngắn */}
           <div className="flex justify-center md:justify-end">
             <div>
-              <p className="mb-6 text-lg leading-relaxed text-gray-700">
+              <p className="mb-6 text-base sm:text-lg leading-relaxed text-gray-700">
                 Người dùng muốn trải nghiệm đa dạng, nhận hàng cận xuất hiện đa kênh, Think Digital
                 chuyển mình đa dạng hoá. <br />
                 Chúng tôi đưa ra các giải pháp cụ thể tập trung vào Marketing cho doanh nghiệp, với
@@ -31,16 +31,16 @@ export default function SolutionsSection() {
         </div>
 
         {/* --- 1. Marketing & Communication --- */}
-        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+        <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
           {/* Cột trái: Text + bullet */}
           <div>
-            <h3 className="mb-4 text-2xl leading-tight font-semibold">
+            <h3 className="mb-4 text-xl sm:text-2xl font-semibold leading-tight">
               1. Marketing &amp; Communication
             </h3>
-            <p className="mb-5 leading-relaxed text-gray-700">
+            <p className="mb-5 text-base leading-relaxed text-gray-700">
               Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital.
             </p>
-            <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-gray-700">
+            <ul className="mb-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-gray-700">
               <li>
                 <strong>Thiết kế, sản xuất</strong> các nội dung số trên Digital
               </li>
@@ -58,29 +58,31 @@ export default function SolutionsSection() {
 
           {/* Cột phải: Swiper */}
           <div className="flex justify-center">
-            <div className="max-w-sm rounded-lg bg-white p-3 shadow-lg">
+            <div className="w-full max-w-md rounded-lg bg-white p-3 shadow-lg">
               <MySwiper />
             </div>
           </div>
         </div>
 
         {/* --- 2. Media Buying Platform --- */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
           {/* Cột trái: Swiper (đảo thứ tự trên desktop) */}
-          <div className="order-2 flex justify-center md:order-1">
-            <div className="max-w-sm rounded-lg bg-white p-3 shadow-lg">
+          <div className="order-2 md:order-1 flex justify-center">
+            <div className="w-full max-w-md rounded-lg bg-white p-3 shadow-lg">
               <MySwiper />
             </div>
           </div>
 
           {/* Cột phải: Text + bullet */}
           <div className="order-1 md:order-2">
-            <h3 className="mb-4 text-2xl leading-tight font-semibold">2. Media Buying Platform</h3>
-            <p className="mb-5 leading-relaxed text-gray-700">
+            <h3 className="mb-4 text-xl sm:text-2xl font-semibold leading-tight">
+              2. Media Buying Platform
+            </h3>
+            <p className="mb-5 text-base leading-relaxed text-gray-700">
               Dễ dàng khám phá &amp; đặt mua hàng ngàn các quảng cáo đa dạng từ các kênh targeting
               qua cổng, influencers, website hàng đầu Việt Nam.
             </p>
-            <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-gray-700">
+            <ul className="mb-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-gray-700">
               <li>Media Discover</li>
               <li>Media Buying</li>
               <li>Marketplace</li>

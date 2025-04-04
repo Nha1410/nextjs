@@ -121,23 +121,35 @@ export default function Header() {
 
           {/* Navigation Items */}
           <nav className="flex flex-col space-y-6 px-6 py-4">
-            {[
-              { label: "Home", href: "/" },
-              { label: "About Us", href: "/about" },
-              { label: "Why Choose Us", href: "/why" },
-              { label: "Our solutions", href: "/solution" },
-              { label: "Our Portfolio", href: "/portfolio" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-lg hover:text-gray-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+  {/* Các navigation link */}
+  {[
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Why Choose Us", href: "/why" },
+    { label: "Our solutions", href: "/solution" },
+    { label: "Our Portfolio", href: "/portfolio" },
+  ].map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className="text-lg hover:text-gray-300"
+      onClick={() => setIsMobileMenuOpen(false)}
+    >
+      {link.label}
+    </Link>
+  ))}
+
+  {/* Nút Contact Us ngay sau các nav item */}
+  <Link
+    href="/contact"
+    onClick={() => setIsMobileMenuOpen(false)}
+    className="mt-2 inline-block w-fit rounded-md bg-[var(--color-text-red-theme-500)] px-6 py-2 text-white font-medium hover:bg-white hover:text-[var(--color-text-red-theme-500)] transition"
+  >
+    Contact Us ↗
+  </Link>
+</nav>
+
+
         </div>
       </div>
     </>
