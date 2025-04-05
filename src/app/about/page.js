@@ -61,28 +61,13 @@ export default function About() {
           <div
             className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
           >
-            <h3 className="text-4xl leading-tight font-extrabold text-[var(--color-text-red-theme-500)] md:text-6xl">
-              {displayedText.split("-").map((part, idx) => (
-                <span key={idx}>
-                  {part}
-                  {idx < displayedText.split("-").length - 1 && (
-                    <>
-                      <span> -</span>
-                      <br />
-                    </>
-                  )}
-                </span>
-              ))}
-              <span className="animate-pulse">|</span>
+            <h3 className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]" style={{width:'max-content'}}>
+              <span className="text-[#fffffffff] text-[20px] md:text-[40px]">Mark your brand name</span>
+              <br/>
+              <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
             </h3>
             <p className="text-justify text-base leading-relaxed text-black md:text-lg">
-              Đúng người, đúng lúc, đúng thông điệp – đó không phải là may mắn.
-              <br />
-              Đó là chiến lược.
-              <br />
-              ANN tinh chỉnh thông điệp như một cú chạm cảm xúc:
-              <br />
-              nhẹ nhưng thấm, ngắn nhưng đọng, và đủ để thay đổi cách thương hiệu được cảm nhận.
+            Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng.
             </p>
           </div>
         </div>
@@ -92,19 +77,19 @@ export default function About() {
             className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
           >
             <h3
-              className={`text-3xl leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-4xl ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+              className={`text-[20px] md:text-[40px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
-              Branded with reason.
+              Build brand with trust.
               <br />
-              <span className="text-[var(--color-text-red-theme-500)]">Executed with edge.</span>
+              <span className="text-[var(--color-text-red-theme-500)]">Execute with heart.</span>
             </h3>
             <p
               className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-lg ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
               ANN làm việc với một nguyên tắc rõ ràng: mọi quyết định đều phải mang lại giá trị thực
-              cho thương hiệu. Không chạy theo công thức, không lặp lại lối mòn – mỗi giải pháp đều
-              được tinh chỉnh dựa trên insight, hành vi số và bản sắc riêng của từng khách hàng.
-              Luôn cập nhật, luôn đặt câu hỏi, luôn tiến về phía trước – đó là DNA cốt lõi của ANN
+              cho thương hiệu. Không chạy theo công thức, không lặp lại lối mòn, mỗi giải pháp đều
+              được tinh chỉnh dựa trên sự thấu hiểu sâu sắc về khách hàng, hành vi số và bản sắc riêng của từng khách hàng.
+              Luôn cập nhật, luôn đặt câu hỏi, luôn tiến về phía trước, đó là DNA cốt lõi của ANN
               Multimedia.
             </p>
           </div>
@@ -127,7 +112,7 @@ export default function About() {
 
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">_ OUR VALUES</p>
+          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">_ Our Mission</p>
           <h2 className="text-2xl font-light text-black md:text-3xl">
             Sứ mệnh và các giá trị cốt lõi tại ANN
           </h2>
@@ -135,48 +120,46 @@ export default function About() {
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
           <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-text-red-theme-500)] p-6 text-justify text-white md:p-8">
-            <h3 className="text-xl font-semibold">Our Mission</h3>
             <h2 className="text-2xl leading-snug font-bold md:text-3xl">
-              Make brands matter —<br />
-              <span className="text-white">in the right way, at the right time.</span>
+              {/* Make brands matter —<br /> */}
+              Build brand with trust.
+              <br />
+              Execute with heart.
+              {/* <span className="text-white">in the right way, at the right time.</span> */}
             </h2>
             <p>
-              ANN không muốn thương hiệu chỉ hiện diện – tụi mình muốn thương hiệu có lý do để người
-              ta nhớ đến.
-            </p>
-            <p>
               Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời
-              và dùng digital lẫn multimedia như công cụ kể chuyện – một cách sống động, có chiến
+              và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống động, có chiến
               lược và đúng vibe.
             </p>
             <p>
-              Không lạm dụng công cụ, không cố “viral”. Làm đúng insight, dùng đúng nền tảng, sáng
-              tạo đúng chất riêng – đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh
+              Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng
+              tạo đúng chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh
               hưởng lâu dài hơn.
             </p>
           </div>
 
-          <div ref={valueRef.ref} className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-2">
+          <div ref={valueRef.ref} className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-2 text-justify">
             {[
               {
                 number: "01",
                 title: "Think Clear",
-                desc: "Làm việc gì cũng bắt đầu từ một câu hỏi rõ ràng. Không làm vì “phải làm”, mà vì nó đúng với mục tiêu thương hiệu – và xứng đáng để người khác dừng lại.",
+                desc: "Làm việc gì cũng bắt đầu từ một câu hỏi rõ ràng. Làm vì nó đúng với mục tiêu thương hiệu và xứng đáng để ghi dấu."
               },
               {
                 number: "02",
                 title: "Design Smart",
-                desc: "Từ chiến lược đến hình ảnh, từ nội dung đến trải nghiệm – mọi thứ đều phải có mục tiêu rõ ràng và gu riêng. Đẹp thôi chưa đủ, phải đúng – và phải tạo cảm xúc thật.",
+                desc: "Từ chiến lược đến đến trải nghiệm, mọi thứ đều phải có mục tiêu rõ ràng , phải đúng và phải tạo cảm xúc thật.",
               },
               {
                 number: "03",
                 title: "Stay Agile",
-                desc: "Thị trường thay đổi từng ngày – ANN cũng vậy. Luôn học, luôn lắng nghe, luôn cập nhật để không chỉ theo kịp mà còn đón đầu những thứ mới.",
+                desc: "Luôn học, luôn lắng nghe, luôn cập nhật để không chỉ theo kịp mà còn đón đầu những thứ mới.",
               },
               {
                 number: "04",
-                title: "Work with Soul",
-                desc: "Không làm hời hợt. Mỗi dự án là một phần tinh thần của team – được làm bằng sự hiểu, bằng sự thích và bằng sự tự hào khi nhìn lại.",
+                title: "Always Strive",
+                desc: "Mỗi dự án là một phần tinh thần của team, được làm bằng sự hiểu, bằng sự thích và bằng sự tự hào khi nhìn lại.",
               },
             ].map((val, idx) => (
               <div

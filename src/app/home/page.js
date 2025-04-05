@@ -6,7 +6,16 @@ import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
 import NewsRecruitment from "@/components/NewsRecruitment";
 
-const SolutionBlock = ({ title, description, items, reverse }) => (
+const SolutionBlock = ({
+  title,
+  description,
+  items,
+  reverse,
+  secondItems = [],
+  appendTitle = "",
+  secondApppendTitle,
+  thirdItems = [],
+}) => (
   <div
     className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
   >
@@ -19,14 +28,96 @@ const SolutionBlock = ({ title, description, items, reverse }) => (
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-xl leading-relaxed">{description}</p>
-      <ul className="mb-5 list-disc space-y-2 pl-5">
-        {items.map((item, index) => (
-          <li key={index} className="text-gray-300">
-            {item}
-          </li>
-        ))}
-      </ul>
+      <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl">{description}</p>
+      <p className="text-lg md:text-xl">{appendTitle}</p>
+      
+      {/* Sử dụng grid thay cho flex */}
+      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 md:gap-18 lg:grid-cols-2 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {items.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <ul className="ml[-2px] mb-5 list-disc space-y-2 pl-5">
+          {secondItems.map((item, idx) => (
+            <li key={idx} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p className="text-justify text-lg md:text-xl">{secondApppendTitle}</p>
+
+      {/* Sử dụng grid thay cho flex */}
+      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 md:gap-18 lg:grid-cols-2 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {thirdItems[0]?.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {thirdItems[1]?.map((item, idx) => (
+            <li key={idx} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        Xem thêm
+      </button>
+    </div>
+  </div>
+);
+
+const CustomSolutionBlock = ({
+  title,
+  description,
+  items,
+  reverse,
+  secondTitle = "",
+  thirdTitle = "",
+  secondItems = [],
+}) => (
+  <div
+    className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
+  >
+    <div className="flex justify-center">
+      <div className="max-w-2xl rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+        <MySwiper />
+      </div>
+    </div>
+    <div className="text-white">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+        {title}
+      </h3>
+      <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
+      <p className="text-lg md:text-xl">{secondTitle}</p>
+      <div className="mt-2 flex text-lg md:gap-18 md:text-xl lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {items.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="text-lg md:text-xl">{thirdTitle}</p>
+      <div className="mt-2 flex text-lg md:gap-18 md:text-xl lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {secondItems.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
       <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
       </button>
@@ -40,26 +131,19 @@ export default function Home() {
       <section className="relative -mt-16 h-screen w-full bg-[url('/images/home.png')] bg-cover bg-center">
         <div className="flex h-full w-full items-center justify-center px-4">
           <div className="max-w-3xl text-center text-white drop-shadow-md">
-            <h1 className="mb-6 text-4xl leading-tight font-bold md:text-6xl">
-              ANN Multimedia -{" "}
-              <span className="text-[var(--color-text-red-theme-500)]">Asking for the name.</span>
+            <h1 className="mb-6 leading-tight font-bold">
+              <span className="text-[20px] text-[#fffffffff] md:text-[40px]">
+                Mark your brand name
+              </span>
               <br />
-              <span className="text-[var(--color-text-red-theme-500)]">Your brand</span> be noticed.
+              <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
             </h1>
-            <p className="mb-6 text-lg text-gray-300 md:text-xl">
-              ANN không chạy theo sự chú ý - ANN thiết kế nó. Một cú chạm{" "}
-              <span className="font-semibold text-[var(--color-text-red-theme-500)]">
-                đúng cảm xúc
-              </span>
-              , một hình ảnh
-              <span className="font-semibold text-[var(--color-text-red-theme-500)]">
-                đúng tâm lý
-              </span>
-              , và một chiến dịch khiến thương hiệu không chỉ được nhắc đến mà còn ghi dấu ấn sâu
-              đậm.
-              <br />
-              <span className="font-bold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
-                Be the name. Be noticed.
+            <p className="mb-6 text-justify text-lg">
+              <span className="font-semibold text-gray-300">
+                Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
+                tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
+                một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của
+                bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng.
               </span>
             </p>
             <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
@@ -75,13 +159,12 @@ export default function Home() {
         <div className="container mx-auto flex flex-col items-start px-4 md:flex-row md:items-center">
           {/* Left Content */}
           <div className="md:w-1/2">
-            <p className="mb-2 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
-              — Let your brand speak in feelings!!
+            <p className="mb-2 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
+              — WHO WE ARE
             </p>
-            <h2 className="mb-4 text-3xl leading-snug font-bold text-white md:text-4xl lg:text-5xl">
-              ANN Multimedia -{" "}
+            <h2 className="mb-4 text-2xl leading-snug font-bold text-white lg:text-5xl">
               <span className="text-[var(--color-text-red-theme-500)]">
-                Không chỉ nhìn, mà còn cảm.
+                Let your brand speak in feelings!!
               </span>
             </h2>
             <p className="mb-6 text-lg text-gray-300">
@@ -120,115 +203,72 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-3 text-4xl leading-tight font-normal text-[var(--color-text-red-theme-500)]">
-                _ Our solutions
-              </h2>
-              <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
-                Xem thêm
-              </button>
+              <p className="mb-3 text-xl leading-tight font-normal font-semibold text-[var(--color-text-red-theme-500)] uppercase">
+                - WHAT WE DO
+              </p>
             </div>
-            <div className="flex justify-center md:justify-end">
-              <p className="mb-6 leading-relaxed text-gray-300 md:text-xl">
-                ANN Multimedia tạo nên các giải pháp digital & multimedia giúp thương hiệu không bị
-                lẫn - mà được nhận diện rõ ràng, truyền tải đúng vibe, và để lại ấn tượng lâu dài.
+            <div className="flex flex-col justify-center md:justify-end">
+              <p className="mb-4 text-justify leading-relaxed text-gray-300 md:text-xl">
+                Thương hiệu cần nổi bật? Phải khác biệt – đủ sáng tạo – và lan xa.
+                <br />
+              </p>
+              <p className="mb-6 text-justify leading-relaxed text-gray-300 md:text-xl">
+                ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu
+                nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và
+                ghi dấu ấn bền vững trong tâm trí người tiêu dùng.
               </p>
             </div>
           </div>
-
-          <SolutionBlock
-            title="Marketing & Communication"
-            description="Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital."
-            items={[
-              "Thiết kế, sản xuất các nội dung số trên Digital",
-              "Paid Media Booking trên đa kênh Digital",
-              "Đội ngũ Marketing in-house, từ tư vấn đến triển khai",
-            ]}
-          />
-
-          <SolutionBlock
-            title="Media Buying Platform"
-            description="Dễ dàng khám phá & đặt mua hàng ngàn các quảng cáo đa dạng từ các kênh targeting qua cổng, influencers, website hàng đầu Việt Nam."
-            items={[
-              "Media Discover",
-              "Media Buying",
-              "Marketplace",
-              "Media Alliance",
-              "Manage Campaign",
-            ]}
-            reverse={true}
-          />
-
-          <SolutionBlock
-            title="Training & Consultancy"
-            description="Đối tác đột phá toàn diện cho doanh nghiệp, tập trung vào mảng Digital."
-            items={["Tư vấn doanh nghiệp", "Đào tạo doanh nghiệp", "More"]}
-          />
 
           <SolutionBlock
             title="Social Advertisement"
-            description="Định dạng quảng cáo sáng tạo, hiệu quả trên đa nền tảng mạng xã hội."
-            items={["Banner Standard", "Video Ad", "Native Ad", "Action Ad"]}
+            description="Linh hoạt triển khai quảng cáo trên nhiều nền tảng với đa dạng định dạng sáng tạo"
+            items={[
+              "Banner Standard",
+              "Video Ad",
+              "Native Ad",
+              "Action Ad",
+              "Animated 3D Cubes Interactive ",
+              "Dancing 3D",
+            ]}
+            secondItems={[
+              "Glitch",
+              "Carousel",
+              "Card Swipe",
+              "Countdown ",
+              "Scratch to Reveal",
+              "Shake & Brake",
+            ]}
+            thirdItems={[
+              ["Facebook", "Instagram", "Linked In"],
+              ["Twitter", "Tiktok", "Zalo"],
+            ]}
+            appendTitle="Advertisement Formats:"
+            secondApppendTitle="Advertisement Placement:"
+          />
+
+          <CustomSolutionBlock
+            title="Branding Solution"
+            description="Giải pháp thương hiệu đồng bộ, tối ưu cả online và offline"
+            items={[
+              "Social Media Ads",
+              "Sites: E-news, Kenh14,...",
+              "Apps: Grab, Be, Xanh SM, Bee Taskee,..",
+            ]}
             reverse={true}
+            secondTitle="Online:"
+            thirdTitle="Offline:"
+            secondItems={["Out - of - home: Bill - board, LCD, Car Branding,..."]}
           />
 
           <SolutionBlock
-            title="Branding Solution"
-            description="Tạo dựng thương hiệu mạnh với chiến lược toàn diện từ online đến offline."
-            items={[
-              "Social Media Ads",
-              "Kenh 14",
-              "Grab, Be, Xanh SM",
-              "Billboard, LCD",
-              "Car Branding",
-            ]}
+            title="Creative Planning & Deployment"
+            description="Lên ý tưởng, thống nhất chiến lược, triển khai chi tiết – đảm bảo sáng tạo đi đôi với hiệu quả"
+            items={["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"]}
           />
         </div>
       </section>
 
-      <section className="bg-(--color-bg-main) py-16 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            {/* Cột trái: Tiêu đề, mô tả, câu hỏi */}
-            <div>
-              <h2 className="my-6 text-4xl font-medium md:text-4xl">
-                We champion the bold to achieve the extraordinary.
-              </h2>
-
-              {/* Phần mô tả thêm (nếu có) */}
-              <p className="my-6 text-gray-200">
-                Answer this question and put our thinking to work on your challenges.
-              </p>
-
-              <p className="my-4 text-xl font-medium">
-                Which country are you looking forward to expanding to?
-              </p>
-
-              {/* Nhóm nút quốc gia */}
-              <div className="flex flex-wrap gap-3">
-                {["Vietnam", "Thailand", "Japan", "China"].map((country) => (
-                  <button
-                    key={country}
-                    className="rounded border border-white px-5 py-2 transition hover:cursor-pointer hover:bg-white hover:text-black"
-                  >
-                    {country}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Cột phải: Ảnh */}
-            <div className="flex justify-center md:justify-end">
-              <Image
-                src="/images/body.avif"
-                alt="Market scene"
-                width={500} // Bạn có thể chỉnh
-                height={300} // theo kích thước mong muốn
-                className="rounded shadow-md"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="bg-white py-20 text-[#03052e]">
         <div className="container mx-auto px-4">
           {/* Tiêu đề ABOUT US riêng, ở trên cùng */}
