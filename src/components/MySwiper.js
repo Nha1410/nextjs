@@ -19,17 +19,6 @@ export default function MySwiper() {
             pagination={{ clickable: true }}
             slidesPerView={1} // Mặc định là 1 slide
             spaceBetween={10} // Khoảng cách giữa các slide
-            breakpoints={{
-              640: {
-                slidesPerView: 1, // Hiển thị 1 slide khi màn hình có chiều rộng >= 640px
-              },
-              768: {
-                slidesPerView: 2, // Hiển thị 2 slide khi màn hình có chiều rộng >= 768px
-              },
-              1024: {
-                slidesPerView: 3, // Hiển thị 3 slide khi màn hình có chiều rộng >= 1024px
-              },
-            }}
             className="h-auto w-full" // Tự động điều chỉnh chiều cao và chiều rộng cho Swiper
           >
             {/* Slide 1 */}
