@@ -38,16 +38,15 @@ export default function Contact() {
           <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">
             _ DO YOU HAVE ANY QUESTIONS?
           </p>
-          <h2 className={`text-3xl font-light text-black md:text-5xl lg:text-6xl ${inter.variable}`}>
-          Contact us
+          <h2
+            className={`text-3xl font-light text-black md:text-5xl lg:text-6xl ${inter.variable}`}
+          >
+            Contact us
           </h2>
         </div>
 
         {/* Main content with image and form */}
-        <div
-          ref={topRef.ref}
-          className="mt-8 flex flex-col items-center gap-10 md:flex-row"
-        >
+        <div ref={topRef.ref} className="mt-8 flex flex-col items-center gap-10 md:flex-row">
           {/* Left image */}
           <div
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${
@@ -65,11 +64,11 @@ export default function Contact() {
 
           {/* Right form */}
           <div
-            className={`order-2 flex-1 w-full max-w-full space-y-6 transition-all duration-1000 ease-out ${
+            className={`order-2 w-full max-w-full flex-1 space-y-6 transition-all duration-1000 ease-out ${
               topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
           >
-            <h3 className="text-3xl sm:text-4xl font-extrabold text-[var(--color-text-red-theme-500)] md:text-6xl">
+            <h3 className="text-3xl font-extrabold text-[var(--color-text-red-theme-500)] sm:text-4xl md:text-6xl">
               {displayedText.split("-").map((part, idx) => (
                 <span key={idx}>
                   {part}
@@ -85,13 +84,13 @@ export default function Contact() {
             </h3>
 
             {/* FORM */}
-            <form className="space-y-4 text-[#03052e] w-full pb-20">
+            <form className="w-full space-y-4 pb-20 text-[#03052e]">
               <div>
                 <label className="text-sm font-semibold">Quý danh của bạn *</label>
                 <input
                   type="text"
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 mt-1"
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-2"
                 />
               </div>
 
@@ -100,7 +99,7 @@ export default function Contact() {
                 <input
                   type="email"
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 mt-1"
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-2"
                 />
               </div>
 
@@ -108,7 +107,7 @@ export default function Contact() {
                 <label className="text-sm font-semibold">Phone number</label>
                 <input
                   type="tel"
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 mt-1"
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-2"
                 />
               </div>
 
@@ -117,7 +116,7 @@ export default function Contact() {
                 <textarea
                   rows={4}
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 mt-1"
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-2"
                 />
               </div>
 
@@ -125,11 +124,9 @@ export default function Contact() {
                 <label className="text-sm font-semibold">Ngân sách Marketing dự kiến *</label>
                 <select
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 mt-1"
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-4 py-2"
                 >
-                  <option value="">
-                    Ngân sách dự kiến
-                  </option>
+                  <option value="">Ngân sách dự kiến</option>
                   <option value="under-200m">Dưới 200 triệu</option>
                   <option value="200-500m">Từ 200 - 500 triệu</option>
                   <option value="500-1B">Từ 500 - 1 tỷ</option>
@@ -139,7 +136,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full sm:w-auto rounded-md bg-[var(--color-text-red-theme-500)] px-6 py-3 font-semibold text-white hover:bg-white hover:text-[var(--color-text-red-theme-500)] transition border border-transparent hover:border-[var(--color-text-red-theme-500)]"
+                className="w-full rounded-md border border-transparent bg-[var(--color-text-red-theme-500)] px-6 py-3 font-semibold text-white transition hover:border-[var(--color-text-red-theme-500)] hover:bg-white hover:text-[var(--color-text-red-theme-500)] sm:w-auto"
               >
                 Gửi yêu cầu
               </button>

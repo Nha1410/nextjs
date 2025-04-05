@@ -34,7 +34,7 @@ export default function About() {
   }, [charIndex, topRef.isInView]);
 
   return (
-    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center">
+    <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
           <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">_ WHO WE ARE</p>
@@ -61,13 +61,21 @@ export default function About() {
           <div
             className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
           >
-            <h3 className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]" style={{width:'max-content'}}>
-              <span className="text-[#fffffffff] text-[20px] md:text-[40px]">Mark your brand name</span>
-              <br/>
+            <h3
+              className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
+              style={{ width: "max-content" }}
+            >
+              <span className="text-[20px] text-[#fffffffff] md:text-[40px]">
+                Mark your brand name
+              </span>
+              <br />
               <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
             </h3>
             <p className="text-justify text-base leading-relaxed text-black md:text-lg">
-            Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng.
+              Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
+              tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
+              một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn:
+              đánh dấu tên tuổi - thành công trong lòng khách hàng.
             </p>
           </div>
         </div>
@@ -77,7 +85,7 @@ export default function About() {
             className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
           >
             <h3
-              className={`text-[20px] md:text-[40px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+              className={`text-[20px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-[40px] ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
               Build brand with trust.
               <br />
@@ -88,9 +96,9 @@ export default function About() {
             >
               ANN làm việc với một nguyên tắc rõ ràng: mọi quyết định đều phải mang lại giá trị thực
               cho thương hiệu. Không chạy theo công thức, không lặp lại lối mòn, mỗi giải pháp đều
-              được tinh chỉnh dựa trên sự thấu hiểu sâu sắc về khách hàng, hành vi số và bản sắc riêng của từng khách hàng.
-              Luôn cập nhật, luôn đặt câu hỏi, luôn tiến về phía trước, đó là DNA cốt lõi của ANN
-              Multimedia.
+              được tinh chỉnh dựa trên sự thấu hiểu sâu sắc về khách hàng, hành vi số và bản sắc
+              riêng của từng khách hàng. Luôn cập nhật, luôn đặt câu hỏi, luôn tiến về phía trước,
+              đó là DNA cốt lõi của ANN Multimedia.
             </p>
           </div>
 
@@ -112,7 +120,9 @@ export default function About() {
 
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">_ Our Mission</p>
+          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">
+            _ Our Mission
+          </p>
           <h2 className="text-2xl font-light text-black md:text-3xl">
             Sứ mệnh và các giá trị cốt lõi tại ANN
           </h2>
@@ -129,22 +139,25 @@ export default function About() {
             </h2>
             <p>
               Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời
-              và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống động, có chiến
-              lược và đúng vibe.
+              và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống
+              động, có chiến lược và đúng vibe.
             </p>
             <p>
-              Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng
-              tạo đúng chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh
-              hưởng lâu dài hơn.
+              Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng tạo đúng
+              chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh hưởng lâu
+              dài hơn.
             </p>
           </div>
 
-          <div ref={valueRef.ref} className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-2 text-justify">
+          <div
+            ref={valueRef.ref}
+            className="grid flex-1 grid-cols-1 gap-6 text-justify lg:grid-cols-2"
+          >
             {[
               {
                 number: "01",
                 title: "Think Clear",
-                desc: "Làm việc gì cũng bắt đầu từ một câu hỏi rõ ràng. Làm vì nó đúng với mục tiêu thương hiệu và xứng đáng để ghi dấu."
+                desc: "Làm việc gì cũng bắt đầu từ một câu hỏi rõ ràng. Làm vì nó đúng với mục tiêu thương hiệu và xứng đáng để ghi dấu.",
               },
               {
                 number: "02",
@@ -202,7 +215,7 @@ export default function About() {
               key={idx}
               className="flex flex-col items-center space-y-2 text-center text-black md:items-start md:text-left"
             >
-              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-gray-100">
+              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border-1 border-gray-200 bg-gray-100 shadow-md">
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
               <div className="text-base font-medium">{stat.label}</div>
