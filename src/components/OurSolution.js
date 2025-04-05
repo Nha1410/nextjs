@@ -8,14 +8,25 @@ export default function OurSolutions() {
       desc: [
         {
           label: "Advertisement Formats",
-          value: "Banner Standard, Video Ad, Native Ad, Action Ad",
+          value: [
+            "Banner Standard",
+            "Glitch",
+            "Video Ad",
+            "Carousel",
+            "Native Ad",
+            "Card Swipe",
+            "Action Ad",
+            "Countdown",
+            "Animated 3D Cubes Interactive",
+            "Scratch to Reveal",
+            "Dancing 3D",
+            "Shake & Brake",
+          ],
         },
         {
-          label: "Animated 3D Cubes Interactive",
-          value:
-            "Dancing 3D, Glitch, Carousel, Card Swipe, Countdown, Scratch to Reveal, Shake & Brake",
+          label: "Advertisement Placement",
+          value: ["Facebook", "Instagram", "Linked In", "Twitter", "Tiktok", "Zalo"],
         },
-        { label: "Ads Placement", value: "Facebook, LinkedIn, Twitter, Tiktok, Zalo" },
       ],
     },
     {
@@ -24,19 +35,25 @@ export default function OurSolutions() {
       desc: [
         {
           label: "Online",
-          value: "Social Media Ads, Sites, Kenh 14, E-news, Apps, Grab, Be, Xanh SM, Bee Taskee",
+          value: [
+            "Social Media Ads",
+            "Sites: E-news, Kenh14,...",
+            "Apps: Grab, Be, Xanh SM, Bee Taskee,...",
+          ],
         },
-        { label: "Offline", value: "Out-of-home, Bill-board, LCD, Car Branding" },
+        {
+          label: "Offline",
+          value: ["Out-of-home: Bill-board, LCD, Car Branding,..."],
+        },
       ],
     },
     {
       img: "/images/business_3.png",
       title: "Creative Planning & Deployment",
       desc: [
-        // { label: "Proposal Development", value: "Alignment with Client, Deployment Detailed Plan" },
-        { label: "Proposal Development" },
-        { label: "Alignment with Client" },
-        { label: "Deployment Detailed Plan" },
+        {
+          value: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
+        },
       ],
     },
   ];
@@ -73,13 +90,28 @@ export default function OurSolutions() {
                 <h3 className="text-xl font-semibold text-[var(--color-main-500)] md:text-4xl">
                   {solution.title}
                 </h3>
-                <ul className="mt-6 space-y-4 text-lg text-gray-700">
+                <ul className="mt-6 space-y-4 text-base text-gray-700">
                   {solution.desc.map((item, i) => (
                     <li key={i} className="text-left">
-                      <span className="font-semibold text-[var(--color-main-500)]">
-                        {item.label} {item.value ? "" : ""}
-                      </span>
-                      {item.value && <span className="text-gray-800"> {item.value}</span>}
+                      {item.label && (
+                        <span className="mb-1 block font-semibold text-[var(--color-main-500)]">
+                          {item.label}
+                        </span>
+                      )}
+
+                      {item.value && Array.isArray(item.value) && (
+                        <ul
+                          className={`ml-4 list-disc ${
+                            index === 0 ? "grid grid-cols-2 gap-x-6 gap-y-1" : "space-y-1"
+                          }`}
+                        >
+                          {item.value.map((subItem, idx) => (
+                            <li key={idx} className="text-gray-800">
+                              {subItem}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>

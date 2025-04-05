@@ -44,7 +44,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            </div>
+          </div>
 
           {/* CỘT PHẢI: Địa chỉ, liên hệ */}
           <div className="ml-10 flex h-full flex-col justify-between">
@@ -52,16 +52,14 @@ export default function Footer() {
             <div>
               <h3 className="mb-2 text-xl tracking-wide text-gray-500 uppercase">SOCIAL</h3>
               {/* (Tuỳ ý) Chèn icon mạng xã hội nếu cần */}
-            <div className="mt-4 flex space-x-4">
-              <img src="/images/icons/facebook.avif" alt="Facebook" className="h-10 w-10" />
-              <img src="/images/icons/linkedin.avif" alt="LinkedIn" className="h-10 w-10" />
-              <img src="/images/icons/instagram.avif" alt="Instagram" className="h-10 w-10" />
-            </div>
+              <div className="mt-4 flex space-x-4">
+                <img src="/images/icons/facebook.avif" alt="Facebook" className="h-10 w-10" />
+                <img src="/images/icons/linkedin.avif" alt="LinkedIn" className="h-10 w-10" />
+                <img src="/images/icons/instagram.avif" alt="Instagram" className="h-10 w-10" />
+              </div>
             </div>
 
             {/* Khối giữa: Phone, Email */}
-
-            
 
             {/* Khối dưới: Bản quyền */}
             <div className="mt-8">
