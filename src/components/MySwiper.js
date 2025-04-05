@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function MySwiper() {
   return (
     <div className="flex w-full justify-center overflow-hidden">
-      <div className="w-full max-w-2xl rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+      <div className="w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg">
         <div className="mx-auto w-full max-w-2xl">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
