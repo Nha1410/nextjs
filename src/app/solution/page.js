@@ -1,5 +1,6 @@
 import OurSolutions from "@/components/OurSolution";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Solution() {
   return (
@@ -16,9 +17,12 @@ export default function Solution() {
                   <span className="text-red-500">#1 </span>
                   influencer platform and celeb network in vietnam
                 </h1>
-                <button className="mt-4 rounded-full bg-red-500 px-6 py-3 text-white">
+                <Link
+                  href="/contact"
+                  className="inline-block mt-4 rounded-full bg-red-500 px-6 py-3 text-white"
+                >
                   CONTACT US
-                </button>
+                </Link>
               </div>
             </div>
           </div>

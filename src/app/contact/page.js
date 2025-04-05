@@ -31,7 +31,7 @@ export default function Contact() {
   }, [charIndex, topRef.isInView]);
 
   return (
-    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center">
+    <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         {/* Header */}
         <div className="text-left">

@@ -21,7 +21,7 @@ const SolutionBlock = ({
     className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
   >
     <div className="flex justify-center overflow-hidden md:w-1/2">
-      <div className="max-w-screen rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+      <div className="max-w-screen rounded-lg bg-white p-6">
         <MySwiper />
       </div>
     </div>
@@ -29,50 +29,50 @@ const SolutionBlock = ({
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg md:text-xl">{appendTitle}</p>
+      <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl text-black">{description}</p>
+      <p className="text-lg text-gray-700 md:text-xl">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
-      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, idx) => (
-            <li key={idx} className="text-gray-300">
+            <li key={idx} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
       </div>
 
-      <p className="text-justify text-lg md:text-xl">{secondApppendTitle}</p>
+      <p className="text-justify text-gray-700 text-lg md:text-xl">{secondApppendTitle}</p>
 
       {/* Grid cho thirdItems */}
-      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[0]?.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[1]?.map((item, idx) => (
-            <li key={idx} className="text-gray-300">
+            <li key={idx} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
       </div>
 
-      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+      <Link href={'/solution'} className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
-      </button>
+      </Link>
     </div>
   </div>
 );
@@ -90,37 +90,37 @@ const CustomSolutionBlock = ({
   <div
     className={`mb-16 hidden md:flex flex-col md:flex-row items-center gap-12`}
   >
-    <div className="text-white md:ml-18">
+    <div className="text-white md:ml-12">
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
         {title}
       </h3>
-      <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg md:text-xl">{secondTitle}</p>
+      <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
+      <p className="text-lg text-gray-700 md:text-xl">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <p className="text-lg md:text-xl">{thirdTitle}</p>
-      <div className="mt-2 flex md:gap-18 lg:gap-24">
+      <p className="text-lg text-gray-700 md:text-xl">{thirdTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+      <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
-      </button>
+      </Link>
     </div>
-    <div className="flex justify-center md:ml-8">
-      <div className="max-w-screen rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+    <div className="flex justify-center md:ml-14">
+      <div className="max-w-screen rounded-lg bg-white p-6">
         <MySwiper />
       </div>
     </div>
@@ -130,7 +130,7 @@ const CustomSolutionBlock = ({
     className={`mb-16 flex md:hidden flex-col md:flex-row items-center gap-12`}
   >
     <div className="flex justify-center md:ml-8">
-      <div className="max-w-screen rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+      <div className="max-w-screen rounded-lg bg-white p-6">
         <MySwiper />
       </div>
     </div>
@@ -143,7 +143,7 @@ const CustomSolutionBlock = ({
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
@@ -153,15 +153,15 @@ const CustomSolutionBlock = ({
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
-            <li key={index} className="text-gray-300">
+            <li key={index} className="text-gray-700">
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+      <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
-      </button>
+      </Link>
     </div>
   </div>
   </div>
@@ -188,18 +188,13 @@ export default function Home() {
                 bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng.
               </span>
             </p>
-            <Link href="/contact">
-              <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
+            <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
                 Contact Us
-                {/* <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
-                  ↗
-                </span> */}
-              </button>
             </Link>
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-[var(--color-bg-main)] py-16">
+      <section className="overflow-hidden bg-white py-16">
         <div className="container mx-auto flex flex-col items-start px-4 md:flex-row md:items-center">
           {/* Left Content */}
           <div className="md:w-1/2">
@@ -211,15 +206,15 @@ export default function Home() {
                 We make your brand speak in feelings!!
               </span>
             </h2>
-            <p className="mb-6 text-lg text-gray-300 text-justify">
+            <p className="mb-6 text-lg text-black text-justify">
               Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
             </p>
-            <p className="mb-6 text-lg text-gray-300 text-justify">
+            <p className="mb-6 text-lg text-black text-justify">
               Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.
             </p>
-            <button className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+            <Link href={'/about'} className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
               Discover More
-            </button>
+            </Link>
           </div>
 
           {/* Right Image */}
@@ -235,7 +230,7 @@ export default function Home() {
         </div>
       </section>
       {/* SECTION 2: OUR SOLUTIONS */}
-      <section className="bg-[var(--color-bg-main)] py-16 text-white">
+      <section className="bg-white py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
@@ -244,11 +239,11 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col justify-center md:justify-end">
-              <p className="mb-4 text-justify leading-relaxed text-gray-300 md:text-xl">
+              <p className="mb-4 text-justify leading-relaxed text-black md:text-xl">
                 Thương hiệu cần nổi bật? Phải khác biệt – đủ sáng tạo – và lan xa.
                 <br />
               </p>
-              <p className="mb-6 text-justify leading-relaxed text-gray-300 md:text-xl">
+              <p className="mb-6 text-justify leading-relaxed text-black md:text-xl">
                 ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu
                 nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và
                 ghi dấu ấn bền vững trong tâm trí người tiêu dùng.
@@ -358,9 +353,9 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Discovering where to expand?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
-              </button>
+              </Link>
             </div>
 
             <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
@@ -369,9 +364,9 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Decided on a market?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
-              </button>
+              </Link>
             </div>
 
             <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
@@ -380,9 +375,9 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Know exactly what you need?
               </h3>
-              <button className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
                 LET&lsquo;S GET TO WORK
-              </button>
+              </Link>
             </div>
           </div>
         </div>
