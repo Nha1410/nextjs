@@ -34,6 +34,9 @@ export default function Header() {
           </div>
 
           <nav className="hidden space-x-6 md:flex">
+            <Link href="/" className="text-white transition hover:text-gray-200">
+              Home
+            </Link>
             <Link href="/about" className="text-white transition hover:text-gray-200">
               About Us
             </Link>
@@ -144,13 +147,13 @@ export default function Header() {
             ))}
 
             {/* Nút Contact Us ngay sau các nav item */}
-            <Link
+            {/* <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-2 inline-block w-fit rounded-md bg-[var(--color-text-red-theme-500)] px-6 py-2 font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
             >
               Contact Us ↗
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </div>

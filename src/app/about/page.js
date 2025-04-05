@@ -65,11 +65,13 @@ export default function About() {
               className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
               style={{ width: "max-content" }}
             >
-              <span className="text-[20px] md:text-[40px] text-[#fffffffff]">
+              <p className="text-[20px] md:text-[40px] text-[#fffffffff]">
                 Mark your brand name
-              </span>
+              </p>
               <br />
-              <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
+              <span className="text-[20px] md:text-[40px] hidden md:block">By right message - at right moment</span>
+              <p className="text-[20px] md:text-[40px] md:hidden">By right message</p>
+              <p className="text-[20px] md:text-[40px] md:hidden" >- at right moment</p>
             </h3>
             <p className="text-justify text-base leading-relaxed text-black md:text-lg">
               Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng

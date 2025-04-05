@@ -25,7 +25,7 @@ export default function Solution() {
         </div>
 
         {/* Phần số liệu */}
-        <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20">
+        <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20 mt-6 md:mt-8 lg:mt-16">
           <div className="container mx-auto text-center">
             <h2 className="mb-10 text-4xl font-bold md:text-7xl text-red-500 ml-4 md:ml-6">
               our <span className="text-black">elite™</span> network
