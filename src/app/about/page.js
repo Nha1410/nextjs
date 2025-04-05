@@ -65,7 +65,7 @@ export default function About() {
               className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
               style={{ width: "max-content" }}
             >
-              <span className="text-[20px] text-[#fffffffff] md:text-[40px]">
+              <span className="text-[20px] md:text-[40px] text-[#fffffffff]">
                 Mark your brand name
               </span>
               <br />
