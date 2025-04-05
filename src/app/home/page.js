@@ -138,8 +138,8 @@ const CustomSolutionBlock = ({
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
         {title}
       </h3>
-      <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg md:text-xl">{secondTitle}</p>
+      <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
+      <p className="text-lg md:text-xl text-black">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
@@ -149,7 +149,7 @@ const CustomSolutionBlock = ({
           ))}
         </ul>
       </div>
-      <p className="text-lg md:text-xl">{thirdTitle}</p>
+      <p className="text-lg md:text-xl text-black">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
