@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Solution() {
   return (
-    <main>
+    <main className="bg-white">
       <section className="relative min-h-screen w-screen">
         <div className="absolute inset-0 z-0 h-screen w-screen bg-[url('/images/socialelite.png')] bg-cover bg-center" />
 
@@ -13,10 +13,10 @@ export default function Solution() {
             <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
               <div className="md:w-1/2">
                 <h1 className="mb-4 text-3xl font-bold md:text-5xl">
-                  <span className="text-[var(--color-main-500)]">#1 </span>
+                  <span className="text-red-500">#1 </span>
                   influencer platform and celeb network in vietnam
                 </h1>
-                <button className="mt-4 rounded-full bg-[var(--color-main-500)] px-6 py-3 text-white">
+                <button className="mt-4 rounded-full bg-red-500 px-6 py-3 text-white">
                   CONTACT US
                 </button>
               </div>
@@ -27,8 +27,8 @@ export default function Solution() {
         {/* Phần số liệu */}
         <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20">
           <div className="container mx-auto text-center">
-            <h2 className="mb-10 text-4xl font-bold md:text-7xl">
-              our <span className="text-[var(--color-main-500)]">elite™</span> network
+            <h2 className="mb-10 text-4xl font-bold md:text-7xl text-red-500 ml-4 md:ml-6">
+              our <span className="text-black">elite™</span> network
             </h2>
             <div className="mx-auto flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0">
               {[
@@ -38,11 +38,11 @@ export default function Solution() {
                 { number: "50K+", label1: "KOL NETWORK", label2: "PLATFORM" },
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <h3 className="text-4xl font-bold text-[var(--color-main-500)] md:text-5xl">
+                  <h3 className="text-4xl font-bold text-red-500 md:text-5xl">
                     {item.number}
                   </h3>
-                  <p className="text-lg md:text-xl">{item.label1}</p>
-                  <p className="text-lg md:text-xl">{item.label2}</p>
+                  <p className="text-lg md:text-xl text-gray-400">{item.label1}</p>
+                  <p className="text-lg md:text-xl text-gray-400">{item.label2}</p>
                 </div>
               ))}
             </div>
