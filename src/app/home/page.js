@@ -191,9 +191,9 @@ export default function Home() {
             <Link href="/contact">
               <button className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
                 Contact Us
-                <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
+                {/* <span className="transform text-4xl transition-transform duration-300 group-hover:rotate-[45deg]">
                   ↗
-                </span>
+                </span> */}
               </button>
             </Link>
           </div>
@@ -305,16 +305,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20 text-[#03052e]">
+      {/* <section className="bg-white py-20 text-[#03052e]">
         <div className="container mx-auto px-4">
-          {/* Tiêu đề ABOUT US riêng, ở trên cùng */}
           <h2 className="mb-10 text-xl font-semibold tracking-wide text-gray-500 uppercase">
             ABOUT US
           </h2>
 
-          {/* Bố cục 2 cột: mũi tên (trái), đoạn text (phải) */}
           <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
-            {/* Cột trái: Mũi tên */}
             <div className="flex">
               <svg
                 preserveAspectRatio="none"
@@ -334,7 +331,6 @@ export default function Home() {
               </svg>
             </div>
 
-            {/* Cột phải: Text */}
             <div>
               <h2 className="text-2xl leading-snug font-medium md:text-3xl">
                 At Minto, we simplify market learning processes to increase your expansion velocity.
@@ -342,7 +338,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Phần video bên dưới */}
           <div className="mt-20 flex justify-center">
             <div className="aspect-video w-full">
               <iframe
@@ -355,7 +350,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">

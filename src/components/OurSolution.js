@@ -62,7 +62,7 @@ export default function OurSolutions() {
     <section className="w-screen justify-center py-16 md:py-24">
       <div className="container mx-auto w-4/5">
         <h2 className="mb-12 text-center text-5xl font-bold md:text-6xl">
-          our <span className="text-[var(--color-main-500)]">solutions</span>
+          our <span className="text-red-500">solutions</span>
         </h2>
 
         {/* Grid container */}
@@ -87,14 +87,14 @@ export default function OurSolutions() {
 
               {/* Title & Description */}
               <div className="mt-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-[var(--color-main-500)] md:text-4xl">
+                <h3 className="text-xl font-semibold text-red-500 md:text-4xl">
                   {solution.title}
                 </h3>
                 <ul className="mt-6 space-y-4 text-base text-gray-700">
                   {solution.desc.map((item, i) => (
                     <li key={i} className="text-left">
                       {item.label && (
-                        <span className="mb-1 block font-semibold text-[var(--color-main-500)]">
+                        <span className="mb-1 block font-semibold text-red-500">
                           {item.label}
                         </span>
                       )}
