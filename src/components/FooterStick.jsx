@@ -8,14 +8,14 @@ export default function Footer() {
       className="relative min-h-[416px]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed bottom-0 left-0 max-h-screen w-full overflow-y-auto">
+      <div className="max-h-screen w-full overflow-y-auto">
         <footer className="flex flex-col justify-between bg-black py-12 text-white">
           <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-0">
             {/* Left Side: Contact CTA */}
-            <div className="max-w-xl space-y-8 text-left md:text-left text-center md:text-start">
+            <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
                 <h4 className="mb-1 text-sm text-gray-300">Contact</h4>
-                <h2 className="text-4xl font-semibold leading-tight md:text-5xl">
+                <h2 className="text-4xl leading-tight font-semibold md:text-5xl">
                   Let’s start
                   <br />
                   creating together
@@ -30,9 +30,9 @@ export default function Footer() {
             </div>
 
             {/* Right Side: Info + Social */}
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 pt-6 md:pt-0">
+            <div className="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-4 md:pt-0">
               {/* Contact Info: 3/4 on sm+ */}
-              <div className="sm:col-span-3 space-y-4">
+              <div className="space-y-4 sm:col-span-3">
                 {/* Address */}
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-6 w-6 text-gray-400" />
@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
 
               {/* Social Links: 1/4 on sm+ */}
-              <div className="sm:col-span-1 flex flex-col gap-2 items-start">
+              <div className="flex flex-col items-start gap-2 sm:col-span-1">
                 {[
                   { name: "Facebook", href: "https://facebook.com" },
                   { name: "Linkedin", href: "https://linkedin.com" },
@@ -91,9 +91,8 @@ export default function Footer() {
           </div>
 
           {/* Footer Note */}
-          <div className="mx-auto mt-10 w-full max-w-6xl px-4 text-center text-sm text-gray-400 md:text-left md:px-0">
-            <hr className="my-4 border-t border-gray-700" />
-            © 2025 ANN Multimedia
+          <div className="mx-auto mt-10 w-full max-w-6xl px-4 text-center text-sm text-gray-400 md:px-0 md:text-left">
+            <hr className="my-4 border-t border-gray-700" />© 2025 ANN Multimedia
           </div>
         </footer>
       </div>

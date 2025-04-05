@@ -31,7 +31,7 @@ const SolutionBlock = ({
       </h3>
       <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl">{description}</p>
       <p className="text-lg md:text-xl">{appendTitle}</p>
-      
+
       {/* Sử dụng grid thay cho flex */}
       <div className="mt-2 grid grid-cols-1 md:grid-cols-2 md:gap-18 lg:grid-cols-2 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
@@ -100,7 +100,7 @@ const CustomSolutionBlock = ({
       </h3>
       <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
       <p className="text-lg md:text-xl">{secondTitle}</p>
-      <div className="mt-2 flex text-lg md:gap-18 md:text-xl lg:gap-24">
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
             <li key={index} className="text-gray-300">
@@ -110,7 +110,7 @@ const CustomSolutionBlock = ({
         </ul>
       </div>
       <p className="text-lg md:text-xl">{thirdTitle}</p>
-      <div className="mt-2 flex text-lg md:gap-18 md:text-xl lg:gap-24">
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
             <li key={index} className="text-gray-300">
@@ -206,7 +206,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <p className="mb-3 text-xl leading-tight font-normal font-semibold text-[var(--color-text-red-theme-500)] uppercase">
+              <p className="mb-3 text-xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] uppercase">
                 - WHAT WE DO
               </p>
             </div>
