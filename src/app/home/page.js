@@ -33,7 +33,7 @@ const SolutionBlock = ({
       <p className="text-lg md:text-xl">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
-      <div className="mt-2 grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
             <li key={index} className="text-gray-300">
@@ -53,7 +53,7 @@ const SolutionBlock = ({
       <p className="text-justify text-lg md:text-xl">{secondApppendTitle}</p>
 
       {/* Grid cho thirdItems */}
-      <div className="mt-2 grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[0]?.map((item, index) => (
             <li key={index} className="text-gray-300">
@@ -86,16 +86,56 @@ const CustomSolutionBlock = ({
   thirdTitle = "",
   secondItems = [],
 }) => (
+  <div>
   <div
-    className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
+    className={`mb-16 hidden md:flex flex-col md:flex-row items-center gap-12`}
   >
-    <div className="flex justify-center">
+    <div className="text-white md:ml-18">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
+        {title}
+      </h3>
+      <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
+      <p className="text-lg md:text-xl">{secondTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {items.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="text-lg md:text-xl">{thirdTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {secondItems.map((item, index) => (
+            <li key={index} className="text-gray-300">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        Xem thêm
+      </button>
+    </div>
+    <div className="flex justify-center md:ml-8">
       <div className="max-w-screen rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
         <MySwiper />
       </div>
     </div>
-    <div className="text-white">
-      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+  </div>
+
+  <div
+    className={`mb-16 flex md:hidden flex-col md:flex-row items-center gap-12`}
+  >
+    <div className="flex justify-center md:ml-8">
+      <div className="max-w-screen rounded-lg bg-[var(--color-bg-main)] p-6 shadow-lg">
+        <MySwiper />
+      </div>
+    </div>
+    <div className="text-white md:ml-18">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
         {title}
       </h3>
       <p className="mb-5 text-lg leading-relaxed md:text-xl">{description}</p>
@@ -124,6 +164,7 @@ const CustomSolutionBlock = ({
       </button>
     </div>
   </div>
+  </div>
 );
 
 export default function Home() {
@@ -139,7 +180,7 @@ export default function Home() {
               <br />
               <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
             </h1>
-            <p className="mb-6 text-justify text-lg">
+            <p className="mb-6 text-justify md:text-lg">
               <span className="font-semibold text-gray-300">
                 Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
                 tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
@@ -165,24 +206,16 @@ export default function Home() {
             <p className="mb-2 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               — WHO WE ARE
             </p>
-            <h2 className="mb-4 text-2xl leading-snug font-bold text-white lg:text-5xl">
+            <h2 className="mb-4 text-[20px] md:text-[40px] leading-snug font-bold text-white">
               <span className="text-[var(--color-text-red-theme-500)]">
-                Let your brand speak in feelings!!
+                We make your brand speak in feelings!!
               </span>
             </h2>
-            <p className="mb-6 text-lg text-gray-300">
-              ANN không chỉ giúp thương hiệu <strong>trông đẹp</strong> – mà còn giúp khách hàng{" "}
-              <strong>cảm nhận được</strong>. Chiến lược độc đáo, hình ảnh ấn tượng, nội dung sâu
-              sắc - tất cả tạo nên <strong>khoảnh khắc chạm</strong>, nơi khách hàng{" "}
-              <strong>không chỉ thấy</strong>, mà còn muốn <strong>tin tưởng</strong> và{" "}
-              <strong>thuộc về thương hiệu của bạn</strong>.
+            <p className="mb-6 text-lg text-gray-300 text-justify">
+              Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
             </p>
-            <p className="mb-6 text-lg text-gray-300">
-              Với sức mạnh đa nền tảng – từ{" "}
-              <strong>visual, motion, production đến chiến lược</strong> – ANN tạo nên một{" "}
-              <strong>ngôn ngữ riêng</strong> cho thương hiệu, một <strong>cảm xúc riêng</strong>,
-              và một <strong>chỗ đứng đáng nhớ</strong>
-              trong lòng khách hàng.
+            <p className="mb-6 text-lg text-gray-300 text-justify">
+              Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.
             </p>
             <button className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
               Discover More
@@ -206,7 +239,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <p className="mb-3 text-xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] uppercase">
+              <p className="mb-3 text-xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
                 - WHAT WE DO
               </p>
             </div>
