@@ -110,7 +110,7 @@ export default function NewsRecruitment() {
             categories.map((category) => (
               <button
                 key={category}
-                className="mr-5 w-full rounded px-4 py-2 text-left text-sm hover:cursor-pointer hover:bg-[var(--color-text-red-theme-500)]"
+                className="w-full rounded px-4 py-2 text-left text-sm hover:cursor-pointer hover:bg-[var(--color-text-red-theme-500)]"
               >
                 {category}
               </button>
