@@ -49,7 +49,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="text-gray-600 md:text-2xl">
+              <p className="md:text-2xl text-black text-justify">
                 ANN Multimedia đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai
                 thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 ưu thế sau:
               </p>
