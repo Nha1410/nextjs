@@ -5,14 +5,14 @@ import { MapPin, Phone, Mail } from "lucide-react";
 export default function Footer() {
   return (
     <div
-      className="relative min-h-[650px]" // giữ clipPath và padding tổng
+      className="relative min-h-[416px]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed bottom-0 left-0 max-h-screen w-full overflow-y-auto">
+      <div className="max-h-screen w-full overflow-y-auto">
         <footer className="flex flex-col justify-between bg-black py-12 text-white">
-          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-6 px-4 md:grid-cols-2 md:px-0">
-            {/* Left Side: Contact + CTA */}
-            <div className="max-w-xl space-y-8 text-left">
+          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-0">
+            {/* Left Side: Contact CTA */}
+            <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
                 <h4 className="mb-1 text-sm text-gray-300">Contact</h4>
                 <h2 className="text-4xl leading-tight font-semibold md:text-5xl">
@@ -21,20 +21,21 @@ export default function Footer() {
                   creating together
                 </h2>
               </div>
-
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-200"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-200"
               >
                 Let’s talk ↗
               </Link>
+            </div>
 
-              <hr className="my-4 border-t border-gray-700" />
-
-              {/* Contact Info */}
-              <div className="space-y-4 pt-2">
+            {/* Right Side: Info + Social */}
+            <div className="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-4 md:pt-0">
+              {/* Contact Info: 3/4 on sm+ */}
+              <div className="space-y-4 sm:col-span-3">
+                {/* Address */}
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 h-5 w-5 text-gray-400" />
+                  <MapPin className="mt-1 h-6 w-6 text-gray-400" />
                   <div>
                     <p className="text-sm font-medium text-gray-400">Address</p>
                     <p className="text-sm leading-relaxed text-white">
@@ -42,6 +43,7 @@ export default function Footer() {
                     </p>
                   </div>
                 </div>
+                {/* Phone */}
                 <div className="flex items-start gap-3">
                   <Phone className="mt-1 h-5 w-5 text-gray-400" />
                   <div>
@@ -53,6 +55,7 @@ export default function Footer() {
                     </p>
                   </div>
                 </div>
+                {/* Email */}
                 <div className="flex items-start gap-3">
                   <Mail className="mt-1 h-5 w-5 text-gray-400" />
                   <div>
@@ -65,27 +68,9 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Side: Navigation + Social */}
-            <div className="grid grid-cols-1 gap-8 pt-6 sm:grid-cols-2 md:pt-0">
-              {/* Navigation */}
-              <div className="flex flex-col gap-2">
-                {["Home", "About Us", "Why Choose Us", "Our Solutions", "Our Portfolio"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="text-sm hover:underline"
-                    >
-                      {item}
-                    </Link>
-                  )
-                )}
-              </div>
-
-              {/* Social Links */}
-              <div className="flex flex-col gap-2">
+              {/* Social Links: 1/4 on sm+ */}
+              <div className="flex flex-col items-start gap-2 sm:col-span-1">
                 {[
                   { name: "Facebook", href: "https://facebook.com" },
                   { name: "Linkedin", href: "https://linkedin.com" },
@@ -105,10 +90,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bottom note */}
-          <div className="mx-auto mt-10 w-full max-w-6xl px-4 text-left text-sm text-gray-400 md:px-0">
-            <hr className="my-4 border-t border-gray-700" />
-            2023 Pearl Framer template crafted with love by Dawid Pietrasiak
+          {/* Footer Note */}
+          <div className="mx-auto mt-10 w-full max-w-6xl px-4 text-center text-sm text-gray-400 md:px-0 md:text-left">
+            <hr className="my-4 border-t border-gray-700" />© 2025 ANN Multimedia
           </div>
         </footer>
       </div>

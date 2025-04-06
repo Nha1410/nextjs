@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -19,8 +18,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
-
   return (
     <html lang="en" className={poppins.variable}>
       <body className="font-sans text-gray-800">

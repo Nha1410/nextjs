@@ -16,8 +16,7 @@ export default function About() {
   const bottomRef = useInView();
   const valueRef = useInView();
 
-  // 🔡 Typewriter (character by character)
-  const fullHeadline = "Make Marketing Better for People";
+  const fullHeadline = "Right message - at the right moment";
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
@@ -28,15 +27,14 @@ export default function About() {
       const timeout = setTimeout(() => {
         setDisplayedText(fullHeadline.slice(0, charIndex));
         setCharIndex(charIndex + 1);
-      }, 70); // typing speed per character
+      }, 70);
 
       return () => clearTimeout(timeout);
     }
   }, [charIndex, topRef.isInView]);
 
   return (
-    <section className="relative w-full bg-[#dfeaff] bg-cover bg-center pt-24">
-      {/* Section Title */}
+    <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
           <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">_ WHO WE ARE</p>
@@ -47,13 +45,9 @@ export default function About() {
           </h2>
         </div>
 
-        {/* 🔼 Top Section */}
         <div ref={topRef.ref} className="mt-8 flex flex-col items-center gap-10 md:flex-row">
-          {/* Image */}
           <div
-            className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${
-              topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-            }`}
+            className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
               src="/about1.png"
@@ -64,75 +58,54 @@ export default function About() {
             />
           </div>
 
-          {/* Animated Headline + Description */}
           <div
-            className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${
-              topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
-            }`}
+            className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
           >
-            <h3 className="text-3xl leading-snug font-bold text-[var(--color-main-500)] md:text-6xl">
-              {displayedText}
-              <span className="animate-pulse">|</span>
+            <h3
+              className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
+              style={{ width: "max-content" }}
+            >
+              <p className="text-[20px] md:text-[40px] text-[#fffffffff]">
+                Mark your brand name
+              </p>
+              <br />
+              <span className="text-[20px] md:text-[40px] hidden md:block">By right message - at right moment</span>
+              <p className="text-[20px] md:text-[40px] md:hidden">By right message</p>
+              <p className="text-[20px] md:text-[40px] md:hidden" >- at right moment</p>
             </h3>
-            <p className="text-justify text-sm text-black md:text-base">
-              Our mission is to build an ecosystem of digital products & services to help customers
-              be more innovative, effective, and successful in Marketing & Sales.
+            <p className="text-justify text-base leading-relaxed text-black md:text-lg">
+              Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
+              tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
+              một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn:
+              đánh dấu tên tuổi - thành công trong lòng khách hàng.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Image src="/images/think-digital.svg" alt="Think Digital" width={70} height={40} />
-              <Image src="/images/media-lab.png" alt="Media Lab" width={100} height={30} />
-              <Image src="/images/AImarketing.png" alt="AI Marketing" width={130} height={50} />
-            </div>
           </div>
         </div>
 
-        {/* 🔽 Bottom Section */}
         <div ref={bottomRef.ref} className="mt-16 flex flex-col items-center gap-10 md:flex-row">
-          {/* Bottom Content with Top-to-Bottom Reveal */}
           <div
-            className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${
-              bottomRef.isInView ? "opacity-100" : "opacity-0"
-            }`}
+            className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
           >
-            {/* Line 1: Title */}
             <h3
-              className={`text-4xl leading-snug font-bold text-[var(--color-main-500)] transition-all duration-700 md:text-3xl ${
-                bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
-              }`}
+              className={`text-[20px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-[40px] ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
-              We’re Thinkers
+              Build brand with trust.
+              <br />
+              <span className="text-[var(--color-text-red-theme-500)]">Execute with heart.</span>
             </h3>
-
-            {/* Line 2: Paragraph 1 */}
             <p
-              className={`text-justify text-sm text-black transition-all delay-300 duration-700 md:text-base ${
-                bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
-              }`}
+              className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-lg ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
-              Phương châm làm việc của chúng tôi là làm{" "}
-              <span className="font-bold text-[var(--color-main-500)]">điều đúng đắn</span>, đặt lợi
-              ích của khách hàng lên hàng đầu, luôn cập nhật và ứng dụng các giải pháp mới nhất để
-              đáp ứng nhu cầu của khách hàng.
-            </p>
-
-            {/* Line 3: Paragraph 2 */}
-            <p
-              className={`text-justify text-sm text-black transition-all delay-600 duration-700 md:text-base ${
-                bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
-              }`}
-            >
-              Chúng tôi luôn{" "}
-              <span className="font-bold text-[var(--color-main-500)]">
-                đề cao tính đổi mới và hiệu quả trong công việc
-              </span>
-              , không ngừng học hỏi để nâng cao chất lượng sản phẩm và dịch vụ của chúng tôi.
+              ANN làm việc với một nguyên tắc rõ ràng: mọi quyết định đều phải mang lại giá trị thực
+              cho thương hiệu. Không chạy theo công thức, không lặp lại lối mòn, mỗi giải pháp đều
+              được tinh chỉnh dựa trên sự thấu hiểu sâu sắc về khách hàng, hành vi số và bản sắc
+              riêng của từng khách hàng. Luôn cập nhật, luôn đặt câu hỏi, luôn tiến về phía trước,
+              đó là DNA cốt lõi của ANN Multimedia.
             </p>
           </div>
 
           <div
-            className={`order-2 flex flex-1 justify-center transition-all duration-1000 ease-out ${
-              bottomRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-            }`}
+            className={`order-2 flex flex-1 justify-center transition-all duration-1000 ease-out ${bottomRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
               src="/about2.png"
@@ -145,81 +118,81 @@ export default function About() {
         </div>
       </div>
 
-      {/* Divider */}
       <div className="h-[1px] w-full bg-white/20"></div>
 
-      {/* Our Mission & Core Values */}
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">_ OUR VALUES</p>
+          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">
+            _ Our Mission
+          </p>
           <h2 className="text-2xl font-light text-black md:text-3xl">
-            Sứ mệnh và các giá trị cốt lõi tại Think Digital
+            Sứ mệnh và các giá trị cốt lõi tại ANN
           </h2>
         </div>
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
-          {/* Mission */}
-          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-main-500)] p-6 text-justify text-white md:p-8">
-            <h3 className="text-xl font-semibold">Our Mission</h3>
-            <h2 className="text-2xl leading-snug font-bold">Make Marketing Better for People.</h2>
+          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-text-red-theme-500)] p-6 text-justify text-white md:p-8">
+            <h2 className="text-2xl leading-snug font-bold md:text-3xl">
+              {/* Make brands matter —<br /> */}
+              Build brand with trust.
+              <br />
+              Execute with heart.
+              {/* <span className="text-white">in the right way, at the right time.</span> */}
+            </h2>
             <p>
-              Với sứ mệnh “Make Marketing Better for People”, đội ngũ chuyên gia của Think Digital
-              luôn nỗ lực để đưa đến cho khách hàng những sản phẩm và dịch vụ tốt nhất trong lĩnh
-              vực Marketing và Sale.
+              Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời
+              và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống
+              động, có chiến lược và đúng vibe.
             </p>
             <p>
-              Để làm được điều này, công ty luôn đặt lợi ích của khách hàng lên hàng đầu, tìm kiếm
-              và ứng dụng các giải pháp đổi mới và hiệu quả nhất để giúp khách hàng đạt được mục
-              tiêu kinh doanh của mình.
-            </p>
-            <p>
-              Mỗi thương hiệu trong hệ sinh thái của Think Digital sẽ là một mảnh ghép của sứ mệnh.
+              Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng tạo đúng
+              chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh hưởng lâu
+              dài hơn.
             </p>
           </div>
 
-          {/* Core Values */}
-          <div ref={valueRef.ref} className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-2">
+          <div
+            ref={valueRef.ref}
+            className="grid flex-1 grid-cols-1 gap-6 text-justify lg:grid-cols-2"
+          >
             {[
               {
                 number: "01",
-                title: "Do the right thing.",
-                desc: "Trong mọi hoàn cảnh, luôn làm điều đúng đắn và làm hết sức mình.",
+                title: "Think Clear",
+                desc: "Làm việc gì cũng bắt đầu từ một câu hỏi rõ ràng. Làm vì nó đúng với mục tiêu thương hiệu và xứng đáng để ghi dấu.",
               },
               {
                 number: "02",
-                title: "Bold & Innovative.",
-                desc: "Làm việc chuyên nghiệp, luôn đổi mới và đề cao tính hiệu quả.",
+                title: "Design Smart",
+                desc: "Từ chiến lược đến đến trải nghiệm, mọi thứ đều phải có mục tiêu rõ ràng , phải đúng và phải tạo cảm xúc thật.",
               },
               {
                 number: "03",
-                title: "Respect.",
-                desc: "Tôn trọng và biết quan tâm đến quyền lợi của tất cả các bên liên quan.",
+                title: "Stay Agile",
+                desc: "Luôn học, luôn lắng nghe, luôn cập nhật để không chỉ theo kịp mà còn đón đầu những thứ mới.",
               },
               {
                 number: "04",
-                title: "Truth worthy.",
-                desc: "Hãy trở thành một đối tác mà người khác có thể tin cậy vào được.",
+                title: "Always Strive",
+                desc: "Mỗi dự án là một phần tinh thần của team, được làm bằng sự hiểu, bằng sự thích và bằng sự tự hào khi nhìn lại.",
               },
             ].map((val, idx) => (
               <div
                 key={idx}
-                className={`rounded-lg bg-[var(--color-main-200)] p-6 transition-all duration-700 ease-out ${
-                  valueRef.isInView
-                    ? `translate-y-0 opacity-100 delay-[${idx * 400}ms]`
-                    : "translate-y-5 opacity-0"
-                }`}
-                style={{ transitionDelay: `${idx * 200}ms` }} // Tailwind doesn't support dynamic delay classes
+                className={`rounded-lg bg-[var(--color-text-red-theme-200)] p-6 transition-all duration-700 ease-out ${valueRef.isInView ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
+                style={{ transitionDelay: `${idx * 200}ms` }}
               >
                 <p className="mb-2 text-sm font-semibold text-black">{val.number}</p>
-                <h4 className="mb-1 text-lg font-bold text-black">{val.title}</h4>
-                <p className="text-sm text-black">{val.desc}</p>
+                <h4 className="text-lg leading-snug font-bold text-black md:text-xl">
+                  {val.title}
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-black md:text-base">{val.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Data Performance */}
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
           {[
@@ -240,12 +213,15 @@ export default function About() {
               label: "Our Team",
             },
           ].map((stat, idx) => (
-            <div key={idx} className="space-y- flex flex-col items-start text-black">
-              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-gray-100">
+            <div
+              key={idx}
+              className="flex flex-col items-center space-y-2 text-center text-black md:items-start md:text-left"
+            >
+              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border-1 border-gray-200 bg-gray-100 shadow-md">
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
-              <div className="text-center text-base font-medium">{stat.label}</div>
-              <div className="text-left text-3xl font-extrabold text-[var(--color-main-400)]">
+              <div className="text-base font-medium">{stat.label}</div>
+              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-400)]">
                 {idx === 0 && <StatCount end={90} suffix="%" />}
                 {idx === 1 && <StatCount end={8} suffix=" years" />}
                 {idx === 2 && <StatCount end={100} suffix="+" />}

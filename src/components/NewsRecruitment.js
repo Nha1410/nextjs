@@ -77,21 +77,25 @@ export default function NewsRecruitment() {
       <p className="mb-2 text-sm font-light tracking-wide text-gray-500 uppercase">
         _ DON&lsquo;T MISS OUT
       </p>
-      <h2 className="text-2xl font-bold text-slate-800">Tin tức và tuyển dụng</h2>
+      <h2 className="text-2xl font-bold text-white">Tin tức và tuyển dụng</h2>
 
       {/* Tab chọn Tin tức / Tuyển dụng */}
       <div className="mt-4 flex space-x-4">
         <button
-          className={`rounded px-4 py-2 ${
-            activeTab === "Tin tức" ? "bg-[var(--color-main-500)] text-white" : "bg-gray-200"
+          className={`rounded px-4 py-2 hover:cursor-pointer ${
+            activeTab === "Tin tức"
+              ? "bg-[var(--color-text-red-theme-500)] text-white"
+              : "bg-white text-[var(--color-text-red-theme-500)]"
           }`}
           onClick={() => setActiveTab("Tin tức")}
         >
           Tin tức
         </button>
         <button
-          className={`rounded px-4 py-2 ${
-            activeTab === "Tuyển dụng" ? "bg-[var(--color-main-500)] text-white" : "bg-gray-200"
+          className={`rounded px-4 py-2 hover:cursor-pointer ${
+            activeTab === "Tuyển dụng"
+              ? "bg-[var(--color-text-red-theme-500)] text-white"
+              : "bg-white text-[var(--color-text-red-theme-500)]"
           }`}
           onClick={() => setActiveTab("Tuyển dụng")}
         >
@@ -106,7 +110,7 @@ export default function NewsRecruitment() {
             categories.map((category) => (
               <button
                 key={category}
-                className="mr-5 w-full rounded px-4 py-2 text-left text-sm hover:bg-gray-100"
+                className="w-full rounded px-4 py-2 text-left text-sm hover:cursor-pointer hover:bg-[var(--color-text-red-theme-500)]"
               >
                 {category}
               </button>
@@ -119,7 +123,7 @@ export default function NewsRecruitment() {
           {activeTab === "Tuyển dụng" && (
             <>
               {/* FORM TÌM KIẾM VIỆC */}
-              <div className="rounded bg-gray-100 p-4 shadow-sm">
+              <div className="rounded bg-[var(--color-text-red-theme-400)] p-4 shadow-sm hover:cursor-pointer">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <input
                     type="text"
@@ -140,7 +144,7 @@ export default function NewsRecruitment() {
                   </label>
                 </div>
 
-                <button className="mt-3 rounded bg-[var(--color-main-500)] px-4 py-2 text-white transition hover:bg-blue-700">
+                <button className="mt-3 rounded bg-[var(--color-text-red-theme-500)] px-4 py-2 text-white transition hover:cursor-pointer hover:opacity-70">
                   Search Jobs
                 </button>
 
@@ -169,7 +173,10 @@ export default function NewsRecruitment() {
                     </label>
                   </div>
                   <div>
-                    <a href="#" className="text-sm text-[var(--color-main-500)] hover:underline">
+                    <a
+                      href="#"
+                      className="text-sm text-[var(--color-text-red-theme-500)] hover:underline"
+                    >
                       RSS
                     </a>
                   </div>
@@ -216,7 +223,7 @@ export default function NewsRecruitment() {
 
       {/* Nút xem tất cả */}
       <div className="mt-6 flex justify-center">
-        <button className="rounded bg-[var(--color-main-500)] px-6 py-3 text-white shadow-md hover:cursor-pointer hover:bg-[var(--color-main-400)]">
+        <button className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
           Xem tất cả
         </button>
       </div>
