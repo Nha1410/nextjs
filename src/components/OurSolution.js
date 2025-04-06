@@ -60,43 +60,41 @@ export default function OurSolutions() {
 
   return (
     <section className="w-screen justify-center py-16 md:py-24">
-      <div className="container mx-auto w-4/5">
-        <h2 className="mb-12 text-center text-5xl font-bold md:text-6xl">
+      <div className="container mx-auto lg:w-4/5">
+        <h2 className="mb-12 text-center text-4xl font-bold md:text-5xl lg:text-6xl">
           our <span className="text-red-500">solutions</span>
         </h2>
 
         {/* Grid container */}
-        <div className="flex flex-col flex-wrap items-start gap-4 md:grid md:grid-cols-3 md:gap-2">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className={`flex w-full flex-row items-center gap-5 p-6 md:w-auto md:flex-col md:items-start ${
+              className={`flex flex-col items-center md:items-start ${
                 index === 1 ? "md:flex-col-reverse" : ""
-              }`}
+              } p-4 sm:p-6`}
             >
               {/* Image */}
-              <div className="relative flex h-auto w-auto justify-center bg-transparent">
+              <div className="relative flex w-full items-center justify-center bg-transparent">
                 <Image
                   src={solution.img}
                   alt={solution.title}
-                  width={500}
-                  height={500}
-                  className="img-fluid"
+                  width={400}
+                  height={400}
+                  className="h-auto object-contain"
                 />
               </div>
 
               {/* Title & Description */}
-              <div className="mt-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-red-500 md:text-4xl">
+              <div className="mt-4 w-full text-center md:text-left">
+                <h3 className="text-xl font-semibold text-red-500 md:text-2xl lg:text-3xl">
                   {solution.title}
                 </h3>
                 <ul className="mt-6 space-y-4 text-base text-gray-700">
                   {solution.desc.map((item, i) => (
                     <li key={i} className="text-left">
                       {item.label && (
-                        <span className="mb-1 block font-semibold text-red-500">
-                          {item.label}
-                        </span>
+                        <span className="mb-1 block font-semibold text-red-500">{item.label}</span>
                       )}
 
                       {item.value && Array.isArray(item.value) && (
