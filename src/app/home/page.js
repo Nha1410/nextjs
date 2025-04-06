@@ -30,40 +30,40 @@ const SolutionBlock = ({
         {title}
       </h3>
       <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl text-black">{description}</p>
-      <p className="text-lg text-gray-700 md:text-xl">{appendTitle}</p>
+      <p className="text-lg font-semibold text-black md:text-xl">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, idx) => (
-            <li key={idx} className="text-gray-700">
+            <li key={idx} className="text-black">
               {item}
             </li>
           ))}
         </ul>
       </div>
 
-      <p className="text-justify text-gray-700 text-lg md:text-xl">{secondApppendTitle}</p>
+      <p className="text-justify font-semibold text-black text-lg md:text-xl">{secondApppendTitle}</p>
 
       {/* Grid cho thirdItems */}
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[0]?.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[1]?.map((item, idx) => (
-            <li key={idx} className="text-gray-700">
+            <li key={idx} className="text-black">
               {item}
             </li>
           ))}
@@ -91,25 +91,25 @@ const CustomSolutionBlock = ({
     className={`mb-16 hidden md:flex flex-col md:flex-row items-center gap-12`}
   >
     <div className="text-white md:ml-12">
-      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
       <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg text-gray-700 md:text-xl">{secondTitle}</p>
+      <p className="text-lg font-semibold text-black md:text-xl">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <p className="text-lg text-gray-700 md:text-xl">{thirdTitle}</p>
+      <p className="text-lg font-semibold text-black md:text-xl">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
@@ -139,21 +139,21 @@ const CustomSolutionBlock = ({
         {title}
       </h3>
       <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg md:text-xl text-black">{secondTitle}</p>
+      <p className="text-lg md:text-xl font-semibold text-black">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <p className="text-lg md:text-xl text-black">{thirdTitle}</p>
+      <p className="text-lg md:text-xl text-black font-semibold">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-black">
               {item}
             </li>
           ))}
@@ -240,7 +240,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center md:justify-end">
               <p className="mb-4 text-justify leading-relaxed text-black md:text-xl">
-                Thương hiệu cần nổi bật? Phải khác biệt – đủ sáng tạo – và lan xa.
+                Thương hiệu cần nổi bật? Phải khác biệt, đủ sáng tạo và lan xa.
                 <br />
               </p>
               <p className="mb-6 text-justify leading-relaxed text-black md:text-xl">
@@ -294,7 +294,7 @@ export default function Home() {
 
           <SolutionBlock
             title="Creative Planning & Deployment"
-            description="Lên ý tưởng, thống nhất chiến lược, triển khai chi tiết – đảm bảo sáng tạo đi đôi với hiệu quả"
+            description="Lên ý tưởng, thống nhất chiến lược, triển khai chi tiết, đảm bảo sáng tạo đi đôi với hiệu quả"
             items={["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"]}
           />
         </div>
