@@ -42,16 +42,16 @@ export default function Home() {
           <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
             <div className="w-full max-w-xl md:w-1/2">
               <h1 className="text-left">
-                <span className="block text-2xl md:text-6xl font-bold text-gray-900">Why</span>
-                <span className="block text-3xl md:text-7xl font-bold text-[var(--color-text-red-theme-500)]">
+                <span className="block text-2xl font-bold text-gray-900 md:text-6xl">Why</span>
+                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-7xl">
                   Choose Us
                 </span>
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="md:text-2xl text-gray-600">
-                ANN Multimedia đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai thực
-                chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 ưu thế sau:
+              <p className="text-gray-600 md:text-2xl">
+                ANN Multimedia đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai
+                thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 ưu thế sau:
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Evolution Section with rounded corner background */}
-      <section className="relative overflow-visible bg-white py-24">
+      <section className="relative overflow-visible overflow-x-hidden bg-white py-24">
         {/* Background with animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
