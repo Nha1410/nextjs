@@ -20,13 +20,13 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-black shadow-md">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <div className="container mx-auto flex h-22 items-center justify-between px-4">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-white">
               <Image
-                src="/images/logo_ann.jpg"
+                src="/images/logo/logo-ann_mode-dark@3x.png"
                 alt="Logo"
-                width={140}
+                width={150}
                 height={0}
                 className="mr-2"
               />
