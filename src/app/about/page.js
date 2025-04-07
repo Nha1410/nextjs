@@ -164,7 +164,7 @@ export default function About() {
               {
                 number: "02",
                 title: "Design Smart",
-                desc: "Từ chiến lược đến đến trải nghiệm, mọi thứ đều phải có mục tiêu rõ ràng , phải đúng và phải tạo cảm xúc thật.",
+                desc: "Từ chiến lược đến đến trải nghiệm, mọi thứ đều phải có mục tiêu rõ ràng, phải đúng và phải tạo cảm xúc thật.",
               },
               {
                 number: "03",
