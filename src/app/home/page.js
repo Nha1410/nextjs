@@ -178,14 +178,14 @@ export default function Home() {
                 Mark your brand name
               </span>
               <br />
-              <span className="text-[20px] md:text-[40px]">By right message - at right moment</span>
+              <span className="text-[20px] md:text-[40px]">By right message. At right moment</span>
             </h1>
-            <p className="mb-6 text-justify md:text-lg">
-              <span className="font-semibold text-gray-300">
+            <p className="mb-6 text-justify text-sm">
+              <span className="text-gray-300">
                 Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
                 tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
                 một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của
-                bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng.
+                bạn: đánh dấu tên tuổi, thành công trong lòng khách hàng.
               </span>
             </p>
             <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
@@ -203,13 +203,13 @@ export default function Home() {
             </p>
             <h2 className="mb-4 text-[20px] md:text-[40px] leading-snug font-bold text-white">
               <span className="text-[var(--color-text-red-theme-500)]">
-                We make your brand speak in feelings!!
+                We make your brand speak in feelings!
               </span>
             </h2>
-            <p className="mb-6 text-lg text-black text-justify">
+            <p className="mb-6 text-base text-black text-justify">
               Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
             </p>
-            <p className="mb-6 text-lg text-black text-justify">
+            <p className="mb-6 text-base text-black text-justify">
               Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.
             </p>
             <Link href={'/about'} className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
