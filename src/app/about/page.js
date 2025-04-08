@@ -221,7 +221,7 @@ export default function About() {
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
               <div className="text-base font-medium">{stat.label}</div>
-              <div className="text-3xl font-extrabold text-[#ED1C24]">
+              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-400)]">
                 {idx === 0 && <StatCount end={50} suffix="+" />}
                 {idx === 1 && <StatCount end={20} suffix="+" />}
                 {idx === 2 && <StatCount end={30} suffix="+" />}
