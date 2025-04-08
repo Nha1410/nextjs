@@ -65,13 +65,13 @@ export default function About() {
               className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
               style={{ width: "max-content" }}
             >
-              <p className="text-[20px] md:text-[40px] text-[#fffffffff]">
-                Mark your brand name
-              </p>
+              <p className="text-[20px] text-[#fffffffff] md:text-[40px]">Mark your brand name</p>
               <br />
-              <span className="text-[20px] md:text-[40px] hidden md:block">By right message - at right moment</span>
-              <p className="text-[20px] md:text-[40px] md:hidden">By right message</p>
-              <p className="text-[20px] md:text-[40px] md:hidden" >- at right moment</p>
+              <span className="hidden text-[20px] md:block md:text-[40px]">
+                By right message - at right moment
+              </span>
+              <p className="text-[20px] md:hidden md:text-[40px]">By right message</p>
+              <p className="text-[20px] md:hidden md:text-[40px]">- at right moment</p>
             </h3>
             <p className="text-justify text-base leading-relaxed text-black md:text-lg">
               Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
@@ -198,11 +198,11 @@ export default function About() {
           {[
             {
               icon: "/images/star.png",
-              label: "Customer Satisfaction",
+              label: "Media Partners",
             },
             {
               icon: "/images/experience.png",
-              label: "Experience",
+              label: "Year Experience",
             },
             {
               icon: "/images/campaign.png",
@@ -210,7 +210,7 @@ export default function About() {
             },
             {
               icon: "/images/ourteam.png",
-              label: "Our Team",
+              label: "Brands Collaborated",
             },
           ].map((stat, idx) => (
             <div
@@ -221,11 +221,11 @@ export default function About() {
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
               <div className="text-base font-medium">{stat.label}</div>
-              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-400)]">
-                {idx === 0 && <StatCount end={90} suffix="%" />}
-                {idx === 1 && <StatCount end={8} suffix=" years" />}
-                {idx === 2 && <StatCount end={100} suffix="+" />}
-                {idx === 3 && <StatCount end={30} prefix="+" suffix=" people" />}
+              <div className="text-3xl font-extrabold text-[#ED1C24]">
+                {idx === 0 && <StatCount end={50} suffix="+" />}
+                {idx === 1 && <StatCount end={20} suffix="+" />}
+                {idx === 2 && <StatCount end={30} suffix="+" />}
+                {idx === 3 && <StatCount end={100} suffix="+" />}
               </div>
             </div>
           ))}
