@@ -202,11 +202,11 @@ export default function About() {
             },
             {
               icon: "/images/experience.png",
-              label: "Year Experience",
+              label: "Years Experience",
             },
             {
               icon: "/images/campaign.png",
-              label: "Success Campaign",
+              label: "Success Campaigns",
             },
             {
               icon: "/images/ourteam.png",
