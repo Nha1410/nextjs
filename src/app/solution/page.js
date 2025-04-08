@@ -36,10 +36,10 @@ export default function Solution() {
             </h2>
             <div className="mx-auto flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0">
               {[
-                { number: "90%", label1: "CUSTOMER", label2: "SATISFACTION" },
-                { number: "8+", label1: "YEARS", label2: "EXPERIENCE" },
-                { number: "100+", label1: "SUCCESS", label2: "CAMPAIGNS" },
-                { number: "30+", label1: "PEOPLE", label2: "" },
+                { number: "50+", label1: "MEDIA", label2: "PARTNERS" },
+                { number: "20+", label1: "YEARS", label2: "EXPERIENCE" },
+                { number: "30+", label1: "SUCCESS", label2: "CAMPAIGNS" },
+                { number: "100+", label1: "BRANDS", label2: "COLLABORATED" },
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <h3 className="text-4xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">
