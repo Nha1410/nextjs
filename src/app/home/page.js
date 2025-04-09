@@ -29,8 +29,8 @@ const SolutionBlock = ({
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl text-black">{description}</p>
-      <p className="text-lg font-semibold text-black md:text-xl">{appendTitle}</p>
+      <p className="mb-5 text-justify text-lg leading-relaxed md:text-base text-black">{description}</p>
+      <p className="text-lg font-semibold text-black md:text-base">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
@@ -94,8 +94,8 @@ const CustomSolutionBlock = ({
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg font-semibold text-black md:text-xl">{secondTitle}</p>
+      <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
+      <p className="text-lg font-semibold text-black md:text-base">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
@@ -105,7 +105,7 @@ const CustomSolutionBlock = ({
           ))}
         </ul>
       </div>
-      <p className="text-lg font-semibold text-black md:text-xl">{thirdTitle}</p>
+      <p className="text-lg font-semibold text-black md:text-base">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
@@ -138,8 +138,8 @@ const CustomSolutionBlock = ({
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
         {title}
       </h3>
-      <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
-      <p className="text-lg md:text-xl font-semibold text-black">{secondTitle}</p>
+      <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
+      <p className="text-lg md:text-base font-semibold text-black">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
@@ -149,7 +149,7 @@ const CustomSolutionBlock = ({
           ))}
         </ul>
       </div>
-      <p className="text-lg md:text-xl text-black font-semibold">{thirdTitle}</p>
+      <p className="text-lg md:text-base text-black font-semibold">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
@@ -239,11 +239,11 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col justify-center md:justify-end">
-              <p className="mb-4 text-justify leading-relaxed text-black md:text-xl">
+              <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
                 Thương hiệu cần nổi bật? Phải khác biệt, đủ sáng tạo và lan xa.
                 <br />
               </p>
-              <p className="mb-6 text-justify leading-relaxed text-black md:text-xl">
+              <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
                 ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu
                 nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và
                 ghi dấu ấn bền vững trong tâm trí người tiêu dùng.

@@ -132,12 +132,12 @@ export default function About() {
               Execute with heart.
               {/* <span className="text-white">in the right way, at the right time.</span> */}
             </h2>
-            <p>
+            <p className="md:text-base">
               Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời
               và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống
               động, có chiến lược và đúng vibe.
             </p>
-            <p>
+            <p className="md:text-base">
               Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng tạo đúng
               chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh hưởng lâu
               dài hơn.

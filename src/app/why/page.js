@@ -42,14 +42,14 @@ export default function Home() {
           <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
             <div className="w-full max-w-xl md:w-1/2">
               <h1 className="text-left">
-                <span className="block text-2xl font-bold text-gray-900 md:text-6xl">Why</span>
-                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-7xl">
+                <span className="block text-2xl font-bold text-gray-900 md:text-4xl">Why</span>
+                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">
                   Choose Us
                 </span>
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="md:text-2xl text-black text-justify">
+              <p className="md:text-xl text-black text-justify">
                 ANN Multimedia đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai
                 thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 ưu thế sau:
               </p>

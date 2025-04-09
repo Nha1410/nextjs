@@ -43,7 +43,7 @@ const FeatureBlock = ({ number, title, description }) => {
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="text-justify text-base md:text-lg text-gray-800 leading-relaxed tracking-wide whitespace-pre-line"
+        className="text-justify md:text-base text-gray-800 leading-relaxed tracking-wide whitespace-pre-line"
       >
         {description}
       </motion.p>
