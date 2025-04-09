@@ -8,12 +8,6 @@ import { useLanguage } from "../../components/LanguageSwitcher";
 import vi from "../i18n/about.vi";
 import en from "../i18n/about.en";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-inter",
-});
-
 export default function About() {
   const { language } = useLanguage();
   const content = language === "vi" ? vi : en;
