@@ -1,15 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Inter } from "next/font/google";
 import useInView from "../hooks/useInView";
 import StatCount from "../../components/StatCount";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-inter",
-});
 
 export default function About() {
   const topRef = useInView();
@@ -39,7 +32,7 @@ export default function About() {
         <div className="text-left">
           <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">_ WHO WE ARE</p>
           <h2
-            className={`text-3xl font-light text-black md:text-5xl lg:text-6xl ${inter.variable}`}
+            className="text-3xl font-light text-black md:text-5xl lg:text-6xl"
           >
             About us
           </h2>

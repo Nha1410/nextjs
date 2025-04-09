@@ -1,14 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Inter } from "next/font/google";
 import useInView from "../hooks/useInView";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-inter",
-});
 
 export default function Contact() {
   const topRef = useInView();
@@ -39,7 +32,7 @@ export default function Contact() {
             _ DO YOU HAVE ANY QUESTIONS?
           </p>
           <h2
-            className={`text-3xl font-light text-black md:text-5xl lg:text-6xl ${inter.variable}`}
+            className="text-3xl font-light text-black md:text-5xl lg:text-6xl"
           >
             Contact us
           </h2>
