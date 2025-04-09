@@ -1,18 +1,22 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { useInView } from "@/hooks/useInView"; // Đường dẫn tuỳ bạn
+import { useInView } from "@/hooks/useInView";
+import { useLanguage } from "@/components/LanguageSwitcher";
+import vi from "../app/i18n/clients.vi";
+import en from "../app/i18n/clients.en";
 
 export default function ClientsSection() {
+  const { language } = useLanguage();
+  const content = language === "vi" ? vi : en;
+
   return (
     <section className="w-full bg-[var(--color-bg-main)] py-16 text-white">
-      {/* PHẦN TRÊN: Arrow + text */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
-          {/* Cột trái */}
           <div className="flex flex-col">
             <p className="mb-6 text-lg font-medium tracking-wide text-gray-400 uppercase sm:text-xl">
-              We work with top notch clients
+              {content.tag}
             </p>
             <div>
               <svg
@@ -36,26 +40,18 @@ export default function ClientsSection() {
               </svg>
             </div>
           </div>
-
-          {/* Cột phải (text căn giữa trên mobile) */}
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-semibold sm:text-2xl">
-              Partners who understand your business
-            </h3>
+            <h3 className="text-lg font-semibold sm:text-2xl">{content.title}</h3>
           </div>
         </div>
       </div>
 
-      {/* PHẦN GRID CÁC Ô LOGO */}
       <div className="mt-10 grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-        {/* Row 1 */}
         <LogoCell src="/images/krungsri.png" alt="Krungsri" />
         <LogoCell src="/images/nSys.png" alt="nSys" />
         <LogoCell src="/images/tiktok_shop.png" alt="TikTok Shop" />
         <LogoCell src="/images/viettel.png" alt="Viettel" />
         <LogoCell src="/images/tiktok.png" alt="TikTok" />
-
-        {/* Row 2 */}
         <LogoCell src="/images/krungsri.png" alt="Krungsri" />
         <LogoCell src="/images/nSys.png" alt="nSys" />
         <LogoCell src="/images/tiktok_shop.png" alt="TikTok Shop" />
@@ -66,12 +62,8 @@ export default function ClientsSection() {
   );
 }
 
-/**
- * Component 1 ô logo, có animation fade + slide lên khi vào viewport
- */
 function LogoCell({ src, alt }) {
   const { ref, isInView } = useInView();
-
   return (
     <div ref={ref} className="flex aspect-square items-center justify-center border border-white">
       <Image
