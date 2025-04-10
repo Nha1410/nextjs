@@ -29,8 +29,8 @@ const SolutionBlock = ({
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-justify text-lg leading-relaxed md:text-base text-black">{description}</p>
-      <p className="text-lg font-semibold text-black md:text-base">{appendTitle}</p>
+      <p className="mb-5 text-justify leading-relaxed md:text-base text-black">{description}</p>
+      <p className="font-semibold text-black md:text-base">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
@@ -50,7 +50,7 @@ const SolutionBlock = ({
         </ul>
       </div>
 
-      <p className="text-justify font-semibold text-black text-lg md:text-xl">{secondApppendTitle}</p>
+      <p className="text-justify font-semibold text-black md:text-base">{secondApppendTitle}</p>
 
       {/* Grid cho thirdItems */}
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
@@ -94,8 +94,8 @@ const CustomSolutionBlock = ({
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
-      <p className="text-lg font-semibold text-black md:text-base">{secondTitle}</p>
+      <p className="mb-5 text-black leading-relaxed md:text-base">{description}</p>
+      <p className="font-semibold text-black md:text-base">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
@@ -105,7 +105,7 @@ const CustomSolutionBlock = ({
           ))}
         </ul>
       </div>
-      <p className="text-lg font-semibold text-black md:text-base">{thirdTitle}</p>
+      <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
@@ -138,8 +138,8 @@ const CustomSolutionBlock = ({
       <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
         {title}
       </h3>
-      <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
-      <p className="text-lg md:text-base font-semibold text-black">{secondTitle}</p>
+      <p className="mb-5 text-black leading-relaxed md:text-base">{description}</p>
+      <p className="md:text-base font-semibold text-black">{secondTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
@@ -149,7 +149,7 @@ const CustomSolutionBlock = ({
           ))}
         </ul>
       </div>
-      <p className="text-lg md:text-base text-black font-semibold">{thirdTitle}</p>
+      <p className="md:text-base text-black font-semibold">{thirdTitle}</p>
       <div className="mt-2 flex md:gap-18 lg:gap-24">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, index) => (
@@ -212,7 +212,7 @@ export default function Home() {
             <p className="mb-6 text-base text-black text-justify">
               Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.
             </p>
-            <Link href={'/about'} className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+            <Link href={'/about'} className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 md:text-base font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
               Discover More
             </Link>
           </div>
