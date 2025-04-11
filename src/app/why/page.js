@@ -31,7 +31,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="md:text-2xl text-black text-justify">{content.description}</p>
+              <p className="text-justify text-black md:text-2xl">{content.description}</p>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* Evolution Section with rounded corner background */}
-      <section className="relative overflow-x-hidden bg-white py-24">
+      <section className="relative overflow-x-hidden bg-white py-23">
         {/* Background with animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
