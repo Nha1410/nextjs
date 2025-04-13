@@ -24,7 +24,7 @@ export default {
       },
       {
         number: "04",
-        title: "In-depth insight into the local market",
+        title: "In-depth insight in local market",
         description:
           "Không nhìn thị trường từ sau bàn làm việc. Mọi thấu hiểu đều đến từ việc sống cùng người dùng, lắng nghe, quan sát và cảm nhận từng chuyển động nhỏ nhất. ANN chọn cách đi cùng thị trường để giúp thương hiệu không nói như một kẻ ngoài cuộc, mà là như một người bạn đáng tin.",
       },

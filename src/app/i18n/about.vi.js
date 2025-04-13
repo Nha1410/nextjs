@@ -8,7 +8,7 @@ export default {
         "By right message - at right moment"
       ],
       description:
-        "Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn: đánh dấu tên tuổi - thành công trong lòng khách hàng."
+        "Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn: đánh dấu tên tuổi, thành công trong lòng khách hàng."
     },
     section2: {
       headline: ["Build brand with trust.", "Execute with heart."],
@@ -21,7 +21,7 @@ export default {
       mission: {
         title: ["Build brand with trust.", "Execute with heart."],
         paragraphs: [
-          "Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống động, có chiến lược và đúng vibe.",
+          "Sứ mệnh là giúp thương hiệu tìm thấy tiếng nói riêng, chọn đúng thời điểm để cất lời và dùng giải pháp truyền thông số & đa nền tảng như công cụ kể chuyện, một cách sống động, có chiến lược và đúng tinh thần.",
           "Hiểu đúng điều khách hàng đang nghĩ và đang cần, dùng đúng nền tảng, sáng tạo đúng chất riêng, đó là cách ANN giúp bạn trở nên thật hơn, đáng nhớ hơn và có ảnh hưởng lâu dài hơn."
         ]
       },
@@ -49,10 +49,10 @@ export default {
       ]
     },
     stats: [
-      { icon: "/images/star.png", label: "Media Partners", count: 50 },
-      { icon: "/images/experience.png", label: "Year Experience", count: 20 },
-      { icon: "/images/campaign.png", label: "Success Campaign", count: 30 },
-      { icon: "/images/ourteam.png", label: "Brands Collaborated", count: 100 }
+      { icon: "/images/star.png", label: "Đối tác truyền thông", count: 30 },
+      { icon: "/images/experience.png", label: "Nhân sự kinh nghiệm", count: 15 },
+      { icon: "/images/campaign.png", label: "Dự án thành công", count: 30 },
+      { icon: "/images/ourteam.png", label: "Thương hiệu cộng tác", count: 50 }
     ]
   };
   

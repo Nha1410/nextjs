@@ -49,10 +49,10 @@ export default {
       ]
     },
     stats: [
-      { icon: "/images/star.png", label: "Media Partners", count: 50 },
-      { icon: "/images/experience.png", label: "Year Experience", count: 20 },
+      { icon: "/images/star.png", label: "Media Partners", count: 30 },
+      { icon: "/images/experience.png", label: "Year Experience", count: 15 },
       { icon: "/images/campaign.png", label: "Success Campaign", count: 30 },
-      { icon: "/images/ourteam.png", label: "Brands Collaborated", count: 100 }
+      { icon: "/images/ourteam.png", label: "Brands Collaborated", count: 50 }
     ]
   };
   

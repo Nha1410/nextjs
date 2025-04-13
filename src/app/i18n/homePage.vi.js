@@ -24,10 +24,10 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
-        description: "Triển khai quảng cáo đa nền tảng với định dạng sáng tạo",
+        description: "Linh hoạt triển khai quảng cáo trên nhiều nền tảng với đa dạng định dạng sáng tạo",
         items: [
-          "Banner Chuẩn",
-          "Video Quảng Cáo",
+          "Banner Standard",
+          "Video Ad",
           "Native Ad",
           "Action Ad",
           "Animated 3D Cubes Interactive",
@@ -45,8 +45,8 @@ export default {
           ["Facebook", "Instagram", "LinkedIn"],
           ["Twitter", "Tiktok", "Zalo"],
         ],
-        appendTitle: "Định dạng quảng cáo:",
-        secondApppendTitle: "Vị trí hiển thị:",
+        appendTitle: "Advertisement Formats:",
+        secondApppendTitle: "Advertisement Placement:",
       },
       {
         type: "CustomSolutionBlock",
@@ -66,9 +66,10 @@ export default {
         title: "Creative Planning & Deployment",
         description:
           "Lên ý tưởng, thống nhất chiến lược, triển khai chi tiết, đảm bảo sáng tạo đi đôi với hiệu quả",
-        items: ["Phát triển proposal", "Thống nhất khách hàng", "Kế hoạch chi tiết"],
+          items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
       },
     ],
+    button: "Xem Thêm"
   },
   discover: [
     "Bạn đang tìm nơi để mở rộng?",

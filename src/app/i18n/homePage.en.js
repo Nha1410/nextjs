@@ -44,7 +44,8 @@ export default {
         description: "Concept development, strategy alignment, detailed execution ensuring creativity with effectiveness",
         items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"]
       }
-    ]
+    ],
+    button: "Discover More"
   },
   discover: [
     "Discovering where to expand?",

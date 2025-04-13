@@ -1,4 +1,5 @@
 'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import ClientsSection from "@/components/ClientsSection";
@@ -18,6 +19,7 @@ const SolutionBlock = ({
   appendTitle = "",
   secondApppendTitle,
   thirdItems = [],
+  content
 }) => (
   <div className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}>
     <div className="flex justify-center overflow-hidden md:w-1/2">
@@ -27,7 +29,7 @@ const SolutionBlock = ({
     </div>
     <div className="text-white md:w-1/2">
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">{title}</h3>
-      <p className="mb-5 text-justify text-lg leading-relaxed md:text-xl text-black">{description}</p>
+      <p className="mb-5 text-justify text-lg leading-relaxed md:text-base text-black">{description}</p>
       <p className="text-lg font-semibold text-black md:text-xl">{appendTitle}</p>
       <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
@@ -55,7 +57,7 @@ const SolutionBlock = ({
         </ul>
       </div>
       <Link href={'/solution'} className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
-      Discover
+        {content?.solutions?.button}
       </Link>
     </div>
   </div>
@@ -68,12 +70,13 @@ const CustomSolutionBlock = ({
   secondTitle = "",
   thirdTitle = "",
   secondItems = [],
+  content
 }) => (
   <div>
     <div className="mb-16 hidden md:flex flex-col md:flex-row items-center gap-12">
       <div className="text-white md:ml-12">
         <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">{title}</h3>
-        <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
+        <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
         <p className="text-lg font-semibold text-black md:text-xl">{secondTitle}</p>
         <div className="mt-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
@@ -91,7 +94,7 @@ const CustomSolutionBlock = ({
           </ul>
         </div>
         <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
-          Discover
+          {content?.solutions?.button}
         </Link>
       </div>
       <div className="flex justify-center md:ml-14">
@@ -108,7 +111,7 @@ const CustomSolutionBlock = ({
       </div>
       <div className="text-white md:ml-18">
         <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">{title}</h3>
-        <p className="mb-5 text-lg text-black leading-relaxed md:text-xl">{description}</p>
+        <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
         <p className="text-lg md:text-xl font-semibold text-black">{secondTitle}</p>
         <div className="mt-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
@@ -126,12 +129,13 @@ const CustomSolutionBlock = ({
           </ul>
         </div>
         <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
-          Xem thêm
+          {content?.solutions?.button}
         </Link>
       </div>
     </div>
   </div>
 );
+
 export default function Home() {
   const { language } = useLanguage();
   const content = language === "vi" ? vi : en;
@@ -193,9 +197,9 @@ export default function Home() {
           </div>
           {content.solutions.blocks.map((block, index) =>
             block.type === "CustomSolutionBlock" ? (
-              <CustomSolutionBlock key={index} {...block} />
+              <CustomSolutionBlock key={index} {...block} content={content} />
             ) : (
-              <SolutionBlock key={index} {...block} />
+              <SolutionBlock key={index} {...block} content={content} />
             )
           )}
         </div>

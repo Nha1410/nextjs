@@ -24,7 +24,7 @@ export default {
       },
       {
         number: "04",
-        title: "In-depth insight into the local market",
+        title: "In-depth insight in local market",
         description:
           "We don’t observe the market from behind a desk. True understanding comes from living alongside users, listening, observing, and sensing every small shift. ANN walks with the market so brands speak not like outsiders, but like a trusted friend.",
       },

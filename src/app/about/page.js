@@ -161,7 +161,7 @@ export default function About() {
                 <Image src={stat.icon} alt={stat.label} width={48} height={48} />
               </div>
               <div className="text-base font-medium">{stat.label}</div>
-              <div className="text-3xl font-extrabold text-[#ED1C24]">
+              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-500)]">
                 <StatCount end={stat.count} suffix="+" />
               </div>
             </div>
