@@ -36,9 +36,9 @@ export default function ClientsSection() {
             </div>
           </div>
 
-          {/* Cột phải (text căn giữa trên mobile) */}
+          {/* Cột phải */}
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-semibold sm:text-2xl">
+            <h3 className="text-lg font-semibold text-gray-400 sm:text-2xl">
               Partners who understand your business
             </h3>
           </div>
@@ -49,16 +49,13 @@ export default function ClientsSection() {
           <LogoCell src="/images/youtube.png" alt="YouTube" />
           <LogoCell src="/images/tiktok.png" alt="TikTok" />
           <LogoCell src="/images/X.png" alt="Twitter / X" />
-          {/* News Sites */}
           <LogoCell src="/images/kenh14.png" alt="Kenh14" />
           <LogoCell src="/images/vnexpress.png" alt="VNExpress" />
           <LogoCell src="/images/vtc.png" alt="VTC" />
           <LogoCell src="/images/zing.png" alt="Zing" />
-          {/* Apps */}
           <LogoCell src="/images/grab.png" alt="Grab" />
           <LogoCell src="/images/acer.png" alt="Xanh SM" />
           <LogoCell src="/images/xanhsm.png" alt="Bee Taskee" />
-          {/* Others */}
           <LogoCell src="/images/techcombank.png" alt="Techcombank" />
           <LogoCell src="/images/ocb.png" alt="OCB" />
           <LogoCell src="/images/vietinbank.png" alt="Vietinbank" />
@@ -74,7 +71,7 @@ function LogoCell({ src, alt }) {
   return (
     <div
       ref={ref}
-      className="flex aspect-square items-center justify-center rounded-xl border border-gray-200 bg-white p-3 transition-all duration-300 ease-in-out"
+      className="flex aspect-square items-center justify-center rounded-xl border border-gray-300 bg-white p-3 transition-all duration-300 ease-in-out"
     >
       <Image
         src={src}
