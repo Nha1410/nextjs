@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -19,44 +19,64 @@ const SolutionBlock = ({
   appendTitle = "",
   secondApppendTitle,
   thirdItems = [],
-  content
+  content,
 }) => (
-  <div className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}>
+  <div
+    className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
+  >
     <div className="flex justify-center overflow-hidden md:w-1/2">
       <div className="max-w-screen rounded-lg bg-white p-6">
         <MySwiper />
       </div>
     </div>
     <div className="text-white md:w-1/2">
-      <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">{title}</h3>
-      <p className="mb-5 text-justify text-lg leading-relaxed md:text-base text-black">{description}</p>
-      <p className="text-lg font-semibold text-black md:text-xl">{appendTitle}</p>
-      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
+      <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+        {title}
+      </h3>
+      <p className="mb-5 text-justify leading-relaxed text-black md:text-base">{description}</p>
+      <p className="font-semibold text-black md:text-base">{appendTitle}</p>
+
+      {/* Grid cho các mục items và secondItems */}
+      <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
+            <li key={index} className="text-black">
+              {item}
+            </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {secondItems.map((item, idx) => (
-            <li key={idx} className="text-black">{item}</li>
+            <li key={idx} className="text-black">
+              {item}
+            </li>
           ))}
         </ul>
       </div>
-      <p className="text-justify font-semibold text-black text-lg md:text-xl">{secondApppendTitle}</p>
-      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
+
+      <p className="text-justify font-semibold text-black md:text-base">{secondApppendTitle}</p>
+
+      {/* Grid cho thirdItems */}
+      <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[0]?.map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
+            <li key={index} className="text-black">
+              {item}
+            </li>
           ))}
         </ul>
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[1]?.map((item, idx) => (
-            <li key={idx} className="text-black">{item}</li>
+            <li key={idx} className="text-black">
+              {item}
+            </li>
           ))}
         </ul>
       </div>
-      <Link href={'/solution'} className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+      <Link
+        href={"/solution"}
+        className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+      >
         {content?.solutions?.button}
       </Link>
     </div>
@@ -70,30 +90,39 @@ const CustomSolutionBlock = ({
   secondTitle = "",
   thirdTitle = "",
   secondItems = [],
-  content
+  content,
 }) => (
   <div>
-    <div className="mb-16 hidden md:flex flex-col md:flex-row items-center gap-12">
+    <div className="mb-16 hidden flex-col items-center gap-12 md:flex md:flex-row">
       <div className="text-white md:ml-12">
-        <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">{title}</h3>
-        <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
-        <p className="text-lg font-semibold text-black md:text-xl">{secondTitle}</p>
+        <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+          {title}
+        </h3>
+        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
+        <p className="font-semibold text-black md:text-base">{secondTitle}</p>
         <div className="mt-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
             {items.map((item, index) => (
-              <li key={index} className="text-black">{item}</li>
+              <li key={index} className="text-black">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <p className="text-lg font-semibold text-black md:text-xl">{thirdTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
+        <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
+        <div className="mt-2 mb-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
             {secondItems.map((item, index) => (
-              <li key={index} className="text-black">{item}</li>
+              <li key={index} className="text-black">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        <Link
+          href={"/solution"}
+          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+        >
           {content?.solutions?.button}
         </Link>
       </div>
@@ -103,32 +132,41 @@ const CustomSolutionBlock = ({
         </div>
       </div>
     </div>
-    <div className="mb-16 flex md:hidden flex-col md:flex-row items-center gap-12">
+    <div className="mb-16 flex flex-col items-center gap-12 md:hidden md:flex-row">
       <div className="flex justify-center md:ml-8">
         <div className="max-w-screen rounded-lg bg-white p-6">
           <MySwiper />
         </div>
       </div>
       <div className="text-white md:ml-18">
-        <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">{title}</h3>
-        <p className="mb-5 text-lg text-black leading-relaxed md:text-base">{description}</p>
-        <p className="text-lg md:text-xl font-semibold text-black">{secondTitle}</p>
+        <h3 className="mb-4 ml-8 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+          {title}
+        </h3>
+        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
+        <p className="font-semibold text-black md:text-base">{secondTitle}</p>
         <div className="mt-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
             {items.map((item, index) => (
-              <li key={index} className="text-black">{item}</li>
+              <li key={index} className="text-black">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <p className="text-lg md:text-xl text-black font-semibold">{thirdTitle}</p>
+        <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
         <div className="mt-2 flex md:gap-18 lg:gap-24">
           <ul className="mb-5 list-disc space-y-2 pl-5">
             {secondItems.map((item, index) => (
-              <li key={index} className="text-black">{item}</li>
+              <li key={index} className="text-black">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        <Link
+          href={"/solution"}
+          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+        >
           {content?.solutions?.button}
         </Link>
       </div>
@@ -146,14 +184,19 @@ export default function Home() {
         <div className="flex h-full w-full items-center justify-center px-4">
           <div className="max-w-3xl text-center text-white drop-shadow-md">
             <h1 className="mb-6 leading-tight font-bold">
-              <span className="text-[20px] text-[#fffffffff] md:text-[40px]">{content.hero.title1}</span>
+              <span className="text-[20px] text-[#fffffffff] md:text-[40px]">
+                {content.hero.title1}
+              </span>
               <br />
               <span className="text-[20px] md:text-[40px]">{content.hero.title2}</span>
             </h1>
             <p className="mb-6 text-justify text-sm">
               <span className="text-gray-300">{content.hero.description}</span>
             </p>
-            <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+            >
               {content.hero.button}
             </Link>
           </div>
@@ -166,18 +209,31 @@ export default function Home() {
             <p className="mb-2 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               {content.whoWeAre.tag}
             </p>
-            <h2 className="mb-4 text-[20px] md:text-[40px] leading-snug font-bold text-white">
-              <span className="text-[var(--color-text-red-theme-500)]">{content.whoWeAre.title}</span>
+            <h2 className="mb-4 text-[20px] leading-snug font-bold text-white md:text-[40px]">
+              <span className="text-[var(--color-text-red-theme-500)]">
+                {content.whoWeAre.title}
+              </span>
             </h2>
             {content.whoWeAre.paragraphs.map((p, i) => (
-              <p key={i} className="mb-6 text-base text-black text-justify">{p}</p>
+              <p key={i} className="mb-6 text-justify text-base text-black">
+                {p}
+              </p>
             ))}
-            <Link href="/about" className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+            <Link
+              href="/about"
+              className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+            >
               {content.whoWeAre.button}
             </Link>
           </div>
           <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
-            <Image src="/images/home_solution.avif" alt="Let your brand speak" width={500} height={500} className="rounded-lg shadow-xl" />
+            <Image
+              src="/images/home_solution.avif"
+              alt="Let your brand speak"
+              width={500}
+              height={500}
+              className="rounded-lg shadow-xl"
+            />
           </div>
         </div>
       </section>
@@ -191,8 +247,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col justify-center md:justify-end">
-              <p className="mb-4 text-justify leading-relaxed text-black md:text-xl">{content.solutions.intro1}</p>
-              <p className="mb-6 text-justify leading-relaxed text-black md:text-xl">{content.solutions.intro2}</p>
+              <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
+                {content.solutions.intro1}
+              </p>
+              <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
+                {content.solutions.intro2}
+              </p>
             </div>
           </div>
           {content.solutions.blocks.map((block, index) =>
@@ -212,7 +272,10 @@ export default function Home() {
               <>
                 <div key={i} className="flex flex-col items-center justify-center px-5 text-center">
                   <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">{line}</h3>
-                  <Link href="/contact" className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+                  <Link
+                    href="/contact"
+                    className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+                  >
                     {content.cta}
                   </Link>
                 </div>

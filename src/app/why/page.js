@@ -22,16 +22,16 @@ export default function Home() {
           <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
             <div className="w-full max-w-xl md:w-1/2">
               <h1 className="text-left">
-                <span className="block text-2xl font-bold text-gray-900 md:text-6xl">
+                <span className="block text-2xl font-bold text-gray-900 md:text-4xl">
                   {content.title1}
                 </span>
-                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-7xl">
+                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">
                   {content.title2}
                 </span>
               </h1>
             </div>
             <div className="w-full max-w-xl md:w-1/2">
-              <p className="text-justify text-black md:text-2xl">{content.description}</p>
+              <p className="text-justify text-black md:text-xl">{content.description}</p>
             </div>
           </div>
 

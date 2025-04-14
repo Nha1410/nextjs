@@ -125,7 +125,9 @@ export default function About() {
               ))}
             </h2>
             {content.section3.mission.paragraphs.map((p, idx) => (
-              <p key={idx}>{p}</p>
+              <p className="md:text-base" key={idx}>
+                {p}
+              </p>
             ))}
           </div>
 
