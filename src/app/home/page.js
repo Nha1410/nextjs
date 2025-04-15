@@ -29,11 +29,11 @@ const SolutionBlock = ({
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-justify leading-relaxed text-black md:text-base">{description}</p>
+      <p className="mb-5 text-justify leading-relaxed md:text-base text-black">{description}</p>
       <p className="font-semibold text-black md:text-base">{appendTitle}</p>
 
       {/* Grid cho các mục items và secondItems */}
-      <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {items.map((item, index) => (
             <li key={index} className="text-black">
@@ -53,7 +53,7 @@ const SolutionBlock = ({
       <p className="text-justify font-semibold text-black md:text-base">{secondApppendTitle}</p>
 
       {/* Grid cho thirdItems */}
-      <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
+      <div className="mt-2 grid grid-cols-2 gap-10 md:grid-cols-2 mb-2">
         <ul className="mb-5 list-disc space-y-2 pl-5">
           {thirdItems[0]?.map((item, index) => (
             <li key={index} className="text-black">
@@ -70,10 +70,7 @@ const SolutionBlock = ({
         </ul>
       </div>
 
-      <Link
-        href={"/solution"}
-        className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-      >
+      <Link href={'/solution'} className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
         Xem thêm
       </Link>
     </div>
@@ -90,85 +87,83 @@ const CustomSolutionBlock = ({
   secondItems = [],
 }) => (
   <div>
-    <div className={`mb-16 hidden flex-col items-center gap-12 md:flex md:flex-row`}>
-      <div className="text-white md:ml-12">
-        <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
-          {title}
-        </h3>
-        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
-        <p className="font-semibold text-black md:text-base">{secondTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {items.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
-        <div className="mt-2 mb-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {secondItems.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Link
-          href={"/solution"}
-          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-        >
-          Xem thêm
-        </Link>
+  <div
+    className={`mb-16 hidden md:flex flex-col md:flex-row items-center gap-12`}
+  >
+    <div className="text-white md:ml-12">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
+        {title}
+      </h3>
+      <p className="mb-5 text-black leading-relaxed md:text-base">{description}</p>
+      <p className="font-semibold text-black md:text-base">{secondTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {items.map((item, index) => (
+            <li key={index} className="text-black">
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="flex justify-center md:ml-14">
-        <div className="max-w-screen rounded-lg bg-white p-6">
-          <MySwiper />
-        </div>
+      <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24 mb-2">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {secondItems.map((item, index) => (
+            <li key={index} className="text-black">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        Xem thêm
+      </Link>
+    </div>
+    <div className="flex justify-center md:ml-14">
+      <div className="max-w-screen rounded-lg bg-white p-6">
+        <MySwiper />
       </div>
     </div>
+  </div>
 
-    <div className={`mb-16 flex flex-col items-center gap-12 md:hidden md:flex-row`}>
-      <div className="flex justify-center md:ml-8">
-        <div className="max-w-screen rounded-lg bg-white p-6">
-          <MySwiper />
-        </div>
-      </div>
-      <div className="text-white md:ml-18">
-        <h3 className="mb-4 ml-8 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
-          {title}
-        </h3>
-        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
-        <p className="font-semibold text-black md:text-base">{secondTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {items.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {secondItems.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Link
-          href={"/solution"}
-          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-        >
-          Xem thêm
-        </Link>
+  <div
+    className={`mb-16 flex md:hidden flex-col md:flex-row items-center gap-12`}
+  >
+    <div className="flex justify-center md:ml-8">
+      <div className="max-w-screen rounded-lg bg-white p-6">
+        <MySwiper />
       </div>
     </div>
+    <div className="text-white md:ml-18">
+      <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] ml-8">
+        {title}
+      </h3>
+      <p className="mb-5 text-black leading-relaxed md:text-base">{description}</p>
+      <p className="md:text-base font-semibold text-black">{secondTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {items.map((item, index) => (
+            <li key={index} className="text-black">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="md:text-base text-black font-semibold">{thirdTitle}</p>
+      <div className="mt-2 flex md:gap-18 lg:gap-24">
+        <ul className="mb-5 list-disc space-y-2 pl-5">
+          {secondItems.map((item, index) => (
+            <li key={index} className="text-black">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Link href={'/solution'} className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+        Xem thêm
+      </Link>
+    </div>
+  </div>
   </div>
 );
 
@@ -193,11 +188,8 @@ export default function Home() {
                 bạn: đánh dấu tên tuổi, thành công trong lòng khách hàng.
               </span>
             </p>
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
-            >
-              Contact Us
+            <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600">
+                Contact Us
             </Link>
           </div>
         </div>
@@ -209,25 +201,18 @@ export default function Home() {
             <p className="mb-2 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               — WHO WE ARE
             </p>
-            <h2 className="mb-4 text-[20px] leading-snug font-bold text-white md:text-[40px]">
+            <h2 className="mb-4 text-[20px] md:text-[40px] leading-snug font-bold text-white">
               <span className="text-[var(--color-text-red-theme-500)]">
                 We make your brand speak in feelings!
               </span>
             </h2>
-            <p className="mb-6 text-justify text-base text-black">
-              Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN
-              tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn
-              tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
+            <p className="mb-6 text-base text-black text-justify">
+              Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
             </p>
-            <p className="mb-6 text-justify text-base text-black">
-              Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative
-              Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng,
-              và một chỗ đứng đáng nhớ trong tim khách hàng.
+            <p className="mb-6 text-base text-black text-justify">
+              Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.
             </p>
-            <Link
-              href={"/about"}
-              className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
-            >
+            <Link href={'/about'} className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 md:text-base font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
               Discover More
             </Link>
           </div>
@@ -368,31 +353,32 @@ export default function Home() {
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Discovering where to expand?
               </h3>
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+                LET&lsquo;S GET TO WORK
+              </Link>
             </div>
-            <div className="my-4 h-[1px] w-full bg-white md:hidden"></div>
+
             <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
+
             <div className="flex flex-col items-center justify-center px-5 text-center">
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Decided on a market?
               </h3>
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+                LET&lsquo;S GET TO WORK
+              </Link>
             </div>
 
-            <div className="my-4 h-[1px] w-full bg-white md:hidden"></div>
             <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
 
             <div className="flex flex-col items-center justify-center px-5 text-center">
               <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
                 Know exactly what you need?
               </h3>
+              <Link href={'/contact'} className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]">
+                LET&lsquo;S GET TO WORK
+              </Link>
             </div>
-          </div>
-          <div className="mt-8 flex justify-center">
-            <Link
-              href={"/contact"}
-              className="rounded border border-white bg-transparent px-8 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            >
-              LET&lsquo;S GET TO WORK
-            </Link>
           </div>
         </div>
       </section>
