@@ -39,7 +39,8 @@ export default function Footer() {
                   <div>
                     <p className="text-sm font-medium text-gray-400">Address</p>
                     <p className="text-sm leading-relaxed text-white">
-                      5 Nguyen Gia Thieu St., Vo Thi Sau ward, Dist. 3, Ho Chi Minh City, Vietnam
+                      Feliza Villa Khang Điền Số 2 <br></br> Đường 28B, Phước Long, TP Thủ Đức, TP
+                      Hồ Chí Minh.
                     </p>
                   </div>
                 </div>
@@ -49,8 +50,8 @@ export default function Footer() {
                   <div>
                     <p className="text-sm font-medium text-gray-400">Phone</p>
                     <p className="text-sm leading-relaxed text-white">
-                      <a href="tel:+84908886815" className="hover:underline">
-                        +84 908 886 815
+                      <a href="tel:0976305499" className="hover:underline">
+                        097 6305499
                       </a>
                     </p>
                   </div>
@@ -61,8 +62,8 @@ export default function Footer() {
                   <div>
                     <p className="text-sm font-medium text-gray-400">Email</p>
                     <p className="text-sm leading-relaxed text-white">
-                      <a href="mailto:info@minta.inc.jp" className="hover:underline">
-                        info@minta.inc.jp
+                      <a href="mailto:hello.annmultimedia@gmail.com" className="hover:underline">
+                        hello.annmultimedia@gmail.com
                       </a>
                     </p>
                   </div>
