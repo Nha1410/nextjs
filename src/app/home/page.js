@@ -93,7 +93,7 @@ const CustomSolutionBlock = ({
   content,
 }) => (
   <div>
-    <div className="mb-16 hidden flex-col items-center gap-12 md:flex md:flex-row">
+    <div className={`mb-16 hidden flex-col items-center gap-12 md:flex md:flex-row`}>
       <div className="text-white md:ml-12">
         <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
           {title}
@@ -123,7 +123,7 @@ const CustomSolutionBlock = ({
           href={"/solution"}
           className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
         >
-          {content?.solutions?.button}
+          Xem thêm
         </Link>
       </div>
       <div className="flex justify-center md:ml-14">
@@ -132,7 +132,8 @@ const CustomSolutionBlock = ({
         </div>
       </div>
     </div>
-    <div className="mb-16 flex flex-col items-center gap-12 md:hidden md:flex-row">
+
+    <div className={`mb-16 flex flex-col items-center gap-12 md:hidden md:flex-row`}>
       <div className="flex justify-center md:ml-8">
         <div className="max-w-screen rounded-lg bg-white p-6">
           <MySwiper />
@@ -167,7 +168,7 @@ const CustomSolutionBlock = ({
           href={"/solution"}
           className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
         >
-          {content?.solutions?.button}
+          Xem thêm
         </Link>
       </div>
     </div>
@@ -191,13 +192,18 @@ export default function Home() {
               <span className="text-[20px] md:text-[40px]">{content.hero.title2}</span>
             </h1>
             <p className="mb-6 text-justify text-sm">
-              <span className="text-gray-300">{content.hero.description}</span>
+              <span className="text-gray-300">
+                Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng
+                tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của
+                một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của
+                bạn: đánh dấu tên tuổi, thành công trong lòng khách hàng.
+              </span>
             </p>
             <Link
               href="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-xl font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
             >
-              {content.hero.button}
+              Contact Us
             </Link>
           </div>
         </div>
@@ -214,16 +220,21 @@ export default function Home() {
                 {content.whoWeAre.title}
               </span>
             </h2>
-            {content.whoWeAre.paragraphs.map((p, i) => (
-              <p key={i} className="mb-6 text-justify text-base text-black">
-                {p}
-              </p>
-            ))}
+            <p className="mb-6 text-justify text-base text-black">
+              Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN
+              tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn
+              tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.
+            </p>
+            <p className="mb-6 text-justify text-base text-black">
+              Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative
+              Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng,
+              và một chỗ đứng đáng nhớ trong tim khách hàng.
+            </p>
             <Link
-              href="/about"
+              href={"/about"}
               className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
             >
-              {content.whoWeAre.button}
+              Discover More
             </Link>
           </div>
           <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
@@ -268,20 +279,53 @@ export default function Home() {
       <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
-            {content.discover.map((line, i) => (
-              <>
-                <div key={i} className="flex flex-col items-center justify-center px-5 text-center">
-                  <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">{line}</h3>
-                  <Link
-                    href="/contact"
-                    className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-                  >
-                    {content.cta}
-                  </Link>
-                </div>
-                {i < 2 && <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />}
-              </>
-            ))}
+            <div className="flex flex-col items-center justify-center px-5 text-center">
+              <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
+                Discovering where to expand?
+              </h3>
+              <Link
+                href={"/contact"}
+                className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              >
+                LET&lsquo;S GET TO WORK
+              </Link>
+            </div>
+
+            <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
+
+            <div className="flex flex-col items-center justify-center px-5 text-center">
+              <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
+                Decided on a market?
+              </h3>
+              <Link
+                href={"/contact"}
+                className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              >
+                LET&lsquo;S GET TO WORK
+              </Link>
+            </div>
+
+            <div className="mx-auto hidden h-20 w-[2px] bg-white md:block"></div>
+
+            <div className="flex flex-col items-center justify-center px-5 text-center">
+              <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">
+                Know exactly what you need?
+              </h3>
+              <Link
+                href={"/contact"}
+                className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              >
+                LET&lsquo;S GET TO WORK
+              </Link>
+            </div>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href={"/contact"}
+              className="rounded border border-white bg-transparent px-8 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+            >
+              LET&lsquo;S GET TO WORK
+            </Link>
           </div>
         </div>
       </section>
