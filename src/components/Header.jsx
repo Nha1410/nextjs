@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { LanguageSelector } from "./LanguageSwitcher";
 
 export default function Header() {
   const pathname = usePathname();
@@ -20,20 +21,22 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-black shadow-md">
-        <div className="container mx-auto flex h-22 items-center justify-between px-4">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-4">
+          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-white">
+            <Link href="/">
               <Image
                 src="/images/logo/logo-ann_mode-dark@3x.png"
                 alt="Logo"
-                width={150}
-                height={0}
-                className="mr-2"
+                width={120}
+                height={40}
+                className="object-contain"
               />
             </Link>
           </div>
 
-          <nav className="hidden space-x-6 md:flex">
+          {/* Nav links */}
+          <nav className="hidden md:flex md:flex-1 md:justify-center md:space-x-6">
             <Link href="/" className="text-white transition hover:text-gray-200">
               Home
             </Link>
@@ -54,7 +57,8 @@ export default function Header() {
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4">
+          {/* Right utilities */}
+          <div className="flex items-center space-x-3">
             <div className="relative hidden sm:block">
               <input
                 type="text"
@@ -62,7 +66,7 @@ export default function Header() {
                 className="w-36 rounded-full bg-white/10 px-3 py-2 pl-9 text-white placeholder-gray-300 transition focus:bg-white/20 focus:outline-none"
               />
               <svg
-                className="absolute top-3 left-3 h-4 w-4 text-gray-300"
+                className="absolute top-2.5 left-3 h-4 w-4 text-gray-300"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -73,7 +77,10 @@ export default function Header() {
               </svg>
             </div>
 
-            {/* Hamburger Menu */}
+            <div className="">
+              <LanguageSelector />
+            </div>
+
             <button
               className="text-white hover:text-gray-200 md:hidden"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -110,7 +117,6 @@ export default function Header() {
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* Close Button */}
           <div className="flex justify-end p-4">
             <button onClick={() => setIsMobileMenuOpen(false)}>
               <svg
@@ -125,9 +131,7 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Navigation Items */}
           <nav className="flex flex-col space-y-6 px-6 py-4">
-            {/* Các navigation link */}
             {[
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
@@ -145,15 +149,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-
-            {/* Nút Contact Us ngay sau các nav item */}
-            {/* <Link
-              href="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-2 inline-block w-fit rounded-md bg-[var(--color-text-red-theme-500)] px-6 py-2 font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            >
-              Contact Us ↗
-            </Link> */}
           </nav>
         </div>
       </div>
