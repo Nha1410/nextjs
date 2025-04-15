@@ -8,12 +8,12 @@ const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
 
 export default function LanguageSwitcher({ children }) {
-  const [language, setLanguage] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("language") || "vi";
-    }
-    return "vi";
-  });
+  const [language, setLanguage] = useState("vi");
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (savedLang) setLanguage(savedLang);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -53,13 +53,10 @@ export function LanguageSelector({ className = "" }) {
   }, []);
 
   return (
-    <div
-      ref={dropdownRef}
-      className={`relative inline-block text-left ${className}`}
-    >
+    <div ref={dropdownRef} className={`relative inline-block text-left ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex w-full items-center justify-between rounded-md bg-white px-2 py-1.5 text-sm font-medium text-black shadow-sm hover:bg-gray-50 focus:outline-none min-w-[120px]"
+        className="inline-flex w-full min-w-[120px] items-center justify-between rounded-md bg-white px-2 py-1.5 text-sm font-medium text-black shadow-sm hover:bg-gray-50 focus:outline-none"
       >
         <Image
           src={selected.flag}
@@ -68,14 +65,8 @@ export function LanguageSelector({ className = "" }) {
           height={18}
           className="mr-1 inline-block rounded-sm"
         />
-        <span className="truncate text-left whitespace-nowrap">
-          {selected.label}
-        </span>
-        <svg
-          className="ml-1 h-4 w-4"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
+        <span className="truncate text-left whitespace-nowrap">{selected.label}</span>
+        <svg className="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
             d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.1 1.02l-4.25 4.65a.75.75 0 01-1.1 0l-4.25-4.65a.75.75 0 01.02-1.06z"
@@ -85,7 +76,7 @@ export function LanguageSelector({ className = "" }) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="ring-opacity-5 absolute right-0 z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black focus:outline-none">
           <div className="py-1">
             {options.map((opt) => (
               <button
@@ -94,7 +85,7 @@ export function LanguageSelector({ className = "" }) {
                   changeLanguage(opt.code);
                   setIsOpen(false);
                 }}
-                className="flex w-full items-center px-4 py-2 text-sm text-left text-black hover:bg-gray-100"
+                className="flex w-full items-center px-4 py-2 text-left text-sm text-black hover:bg-gray-100"
               >
                 <Image
                   src={opt.flag}

@@ -269,19 +269,26 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             {content.discover.map((line, i) => (
-              <>
-                <div key={i} className="flex flex-col items-center justify-center px-5 text-center">
+              <div key={i} className="contents">
+                <div className="flex flex-col items-center justify-center px-5 text-center">
                   <h3 className="mb-4 text-2xl leading-relaxed font-normal md:text-3xl">{line}</h3>
-                  <Link
-                    href="/contact"
-                    className="rounded border border-white bg-transparent px-5 py-2 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-                  >
-                    {content.cta}
-                  </Link>
                 </div>
-                {i < 2 && <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />}
-              </>
+                {i < content.discover.length - 1 && (
+                  <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />
+                )}
+                {i < content.discover.length - 1 && (
+                  <div className="my-1 h-[2px] w-full bg-white md:hidden"></div>
+                )}
+              </div>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href={"/contact"}
+              className="rounded border border-white bg-transparent px-8 py-3 font-medium text-white transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+            >
+              {content.cta}
+            </Link>
           </div>
         </div>
       </section>
