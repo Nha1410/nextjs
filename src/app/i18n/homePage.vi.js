@@ -1,19 +1,17 @@
 export default {
   hero: {
-    title1: "Mark your brand name",
-    title2: "By right message. At right moment",
-    description:
-      "Một chiến dịch truyền thông tích hợp hiệu quả với những điểm chạm đúng cảm xúc, đúng tâm lý của người tiêu dùng chính là những yếu tố tạo nên thành công cho hình ảnh của một thương hiệu. Đó chính là sứ mệnh của ANN là đồng hành và giúp thương hiệu của bạn: đánh dấu tên tuổi, thành công trong lòng khách hàng.",
-    button: "Liên hệ ngay",
+    title1: "MARK YOUR BRAND IN VIETNAM",
+    description: "With ANN - your multimedia agency partner in",
+    description2: "Branding | Advertisement | Creative",
+    button: "GET STARTED",
   },
   whoWeAre: {
     tag: "— WHO WE ARE",
     title: "We make your brand speak in feelings!",
     paragraphs: [
-      "Bằng tư duy chiến lược độc đáo, hình ảnh mang dấu ấn và nội dung giàu chiều sâu, ANN tạo nên những khoảnh khắc chạm đắt giá, nơi thương hiệu được nhìn bằng ánh mắt ấn tượng, được tin bằng cảm xúc thật và được gắn bó bằng sự kết nối tự nhiên.",
-      "Với thế mạnh chuyên sâu trong Social Advertisement, Branding Solution và Creative Planning & Deployment, ANN trao cho thương hiệu một ngôn ngữ riêng, một cảm xúc riêng, và một chỗ đứng đáng nhớ trong tim khách hàng.",
+      "ANN Multimedia cung cấp các dịch vụ toàn diện bao gồm chiến lược kỹ thuật số, sản xuất sáng tạo, tiếp thị mạng xã hội, lập kế hoạch truyền thông và phân tích hiệu suất. Năng lực của ANN còn mở rộng sang tiếp thị theo dữ liệu, tạo khách hàng tiềm năng và các chiến lược tiếp thị nội bộ được xây dựng để thu hút đúng đối tượng vào đúng thời điểm.",
     ],
-    button: "Khám phá thêm",
+    button: "Tìm hiểu thêm",
   },
   solutions: {
     sectionTitle: "— WHAT WE DO",
@@ -24,7 +22,8 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
-        description: "Linh hoạt triển khai quảng cáo trên nhiều nền tảng với đa dạng định dạng sáng tạo",
+        description:
+          "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
         items: [
           "Banner Standard",
           "Video Ad",
@@ -51,7 +50,8 @@ export default {
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
-        description: "Giải pháp thương hiệu đồng bộ, tối ưu cả online và offline",
+        description:
+          "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
         items: [
           "Social Media Ads",
           "Sites: E-news, Kenh14,...",
@@ -65,16 +65,16 @@ export default {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
         description:
-          "Lên ý tưởng, thống nhất chiến lược, triển khai chi tiết, đảm bảo sáng tạo đi đôi với hiệu quả",
-          items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
+          "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
+        items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
       },
     ],
-    button: "Xem Thêm"
+    button: "Tìm hiểu thêm",
   },
   discover: [
-    "Bạn đang tìm nơi để mở rộng?",
-    "Bạn đã xác định thị trường?",
-    "Bạn đã biết chính xác điều mình cần?",
+    "Nâng tầm sự hiện diện số",
+    "Xây dựng thương hiệu vươn xa",
+    "Tối ưu hiệu quả trên mọi kênh",
   ],
-  cta: "CÙNG BẮT ĐẦU NGAY",
+  cta: "Let’s start with us",
 };

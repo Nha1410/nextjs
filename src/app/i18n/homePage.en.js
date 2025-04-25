@@ -1,56 +1,80 @@
 export default {
   hero: {
-    title1: "Mark your brand name",
-    title2: "By right message. At right moment",
-    description: "An effective integrated communication campaign with emotionally resonant touchpoints is the key to a brand's image success. That is ANN's mission: to accompany and help your brand make its mark and win customers’ hearts.",
-    button: "Contact Us"
+    title1: "MARK YOUR BRAND IN VIETNAM",
+    description: "With ANN - your multimedia agency partner in",
+    description2: "Branding | Advertisement | Creative",
+    button: "GET STARTED",
   },
   whoWeAre: {
     tag: "— WHO WE ARE",
     title: "We make your brand speak in feelings!",
     paragraphs: [
-      "With strategic thinking, signature visuals and meaningful content, ANN creates valuable emotional moments, where your brand is seen with a striking impression, trusted through authentic emotions, and bonded naturally.",
-      "With strong expertise in Social Advertisement, Branding Solution and Creative Planning & Deployment, ANN empowers brands with their own language, emotions, and a memorable position in customers' minds."
+      "We provide full-funnel services including digital strategy, creative production, social media marketing, media planning, and performance analytics. Our capabilities also extend to data-driven marketing, lead generation, and inbound strategies built to engage the right audience at the right moment.",
     ],
-    button: "Discover More"
+    button: "Find out more",
   },
   solutions: {
     sectionTitle: "— WHAT WE DO",
     intro1: "Want your brand to stand out? Be different, creative, and far-reaching.",
-    intro2: "ANN Multimedia designs multi-platform digital media solutions that strategically elevate brand presence, build clear recognition, deliver the right message, and establish lasting impressions.",
+    intro2:
+      "ANN Multimedia designs multi-platform digital media solutions that strategically elevate brand presence, build clear recognition, deliver the right message, and establish lasting impressions.",
     blocks: [
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
-        description: "Flexible advertising deployment across platforms with diverse creative formats",
-        items: ["Banner Standard", "Video Ad", "Native Ad", "Action Ad", "Animated 3D Cubes Interactive", "Dancing 3D"],
-        secondItems: ["Glitch", "Carousel", "Card Swipe", "Countdown", "Scratch to Reveal", "Shake & Brake"],
-        thirdItems: [["Facebook", "Instagram", "LinkedIn"], ["Twitter", "Tiktok", "Zalo"]],
+        description:
+          "Multi-platform, high-impact campaigns using dynamic formats standard, video, native, 3D interactive, and more across Facebook, Instagram, TikTok, LinkedIn, Zalo, and beyond.",
+        items: [
+          "Banner Standard",
+          "Video Ad",
+          "Native Ad",
+          "Action Ad",
+          "Animated 3D Cubes Interactive",
+          "Dancing 3D",
+        ],
+        secondItems: [
+          "Glitch",
+          "Carousel",
+          "Card Swipe",
+          "Countdown",
+          "Scratch to Reveal",
+          "Shake & Brake",
+        ],
+        thirdItems: [
+          ["Facebook", "Instagram", "LinkedIn"],
+          ["Twitter", "Tiktok", "Zalo"],
+        ],
         appendTitle: "Advertisement Formats:",
-        secondApppendTitle: "Advertisement Placement:"
+        secondApppendTitle: "Advertisement Placement:",
       },
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
-        description: "Consistent brand solutions optimized for both online and offline presence",
-        items: ["Social Media Ads", "Sites: E-news, Kenh14,...", "Apps: Grab, Be, Xanh SM, Bee Taskee,..."],
+        description:
+          "Seamless brand presence across digital and physical touchpoints social ads, top apps, and editorial sites online; billboards, LCDs, and car wraps offline.",
+        items: [
+          "Social Media Ads",
+          "Sites: E-news, Kenh14,...",
+          "Apps: Grab, Be, Xanh SM, Bee Taskee,...",
+        ],
         secondTitle: "Online:",
         thirdTitle: "Offline:",
-        secondItems: ["Out-of-home: Billboard, LCD, Car Branding,..."]
+        secondItems: ["Out-of-home: Billboard, LCD, Car Branding,..."],
       },
       {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
-        description: "Concept development, strategy alignment, detailed execution ensuring creativity with effectiveness",
-        items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"]
-      }
+        description:
+          "From concept to execution strategic alignment, compelling proposals, and detail-driven rollouts that balance creativity with performance.",
+        items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
+      },
     ],
-    button: "Discover More"
+    button: "Find out more",
   },
   discover: [
-    "Discovering where to expand?",
-    "Decided on a market?",
-    "Know exactly what you need?"
+    "Elevate your digital presence",
+    "Build brand move forward",
+    "Make every channel count",
   ],
-  cta: "LET’S GET TO WORK"
+  cta: "Let’s start with us",
 };

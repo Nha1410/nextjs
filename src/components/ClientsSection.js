@@ -13,38 +13,7 @@ export default function ClientsSection() {
   return (
     <section className="w-full bg-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-center gap-6 pb-6 md:grid-cols-2">
-          {/* Cột trái */}
-          <div className="flex flex-col">
-            <p className="mb-6 text-lg font-medium tracking-wide text-gray-400 uppercase sm:text-xl">
-              {content.tag}
-            </p>
-            <div>
-              <svg
-                preserveAspectRatio="none"
-                data-bbox="19.588 20.146 159.561 159.541"
-                viewBox="19.588 20.146 159.561 159.541"
-                height="60"
-                width="60"
-                xmlns="http://www.w3.org/2000/svg"
-                data-type="shape"
-                role="presentation"
-                aria-hidden="true"
-                className="fill-current text-gray-400"
-              >
-                <g>
-                  <path
-                    d="M170.281 20.146v144.371L25.892 20.16l-6.27 6.268 144.421 144.393H19.588v8.866h159.561V20.146h-8.868z"
-                    fill="currentColor"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div className="text-center md:text-right">
-            <h3 className="text-lg font-semibold text-gray-400 sm:text-2xl">{content.title}</h3>
-          </div>
-        </div>
+        <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">{content.title}</h2>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
           <LogoCell src="/images/facebook.png" alt="Facebook" />
           <LogoCell src="/images/instagram.png" alt="Instagram" />
