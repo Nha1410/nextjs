@@ -44,11 +44,11 @@ export default function Contact() {
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/about1.png"
+              src="/images/contact/AU_ 2-Photoroom.png"
               alt="Main Team Image"
               width={500}
               height={500}
-              className="w-full max-w-xs rounded-xl md:max-w-sm lg:max-w-md"
+              className="w-full max-w-xs rounded-xl md:max-w-sm lg:max-w-md md:mb-[90px]"
             />
           </div>
 

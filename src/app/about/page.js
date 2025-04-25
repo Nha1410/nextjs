@@ -48,10 +48,10 @@ export default function About() {
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/about1.png"
+              src="/images/about/Pasadena.png"
               alt="Main Team Image"
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               className="w-full max-w-xs rounded-xl md:max-w-sm lg:max-w-md"
             />
           </div>
@@ -97,7 +97,7 @@ export default function About() {
             className={`order-2 flex flex-1 justify-center transition-all duration-1000 ease-out ${bottomRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/about2.png"
+              src="/images/contact/AU_ 2-Photoroom.png"
               alt="Thinkers"
               width={500}
               height={500}

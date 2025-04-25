@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function OurSolutions() {
   const solutions = [
     {
-      img: "/images/business_1.png",
+      img: "/images/solution/kokokokokoko.png",
       title: "Social Advertisement",
       desc: [
         {
@@ -30,7 +30,7 @@ export default function OurSolutions() {
       ],
     },
     {
-      img: "/images/business_2.png",
+      img: "/images/solution/OS_Branding_white_fixed.png",
       title: "Branding Solution",
       desc: [
         {
@@ -48,7 +48,7 @@ export default function OurSolutions() {
       ],
     },
     {
-      img: "/images/business_3.png",
+      img: "/images/solution/OS_Plan1_full_white_clean.png",
       title: "Creative Planning & Deployment",
       desc: [
         {

@@ -14,16 +14,21 @@ export default function SolutionContent() {
   return (
     <main className="bg-white">
       <section className="relative min-h-screen w-screen">
-        <div className="absolute inset-0 z-0 h-screen w-screen bg-[url('/images/socialelite.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 z-0 max-h-[900px] w-screen bg-[url('/images/solution/bgbgbg.png')] bg-cover bg-center" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-28 md:px-28">
           <div className="relative z-10 px-6 py-20 text-white">
-            <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
+            <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left ml-[-20px]">
               <div className="md:w-1/2">
-                <h1 className="mb-4 text-3xl font-bold md:text-5xl">
+                <h1 className="mb-4 text-2xl font-bold md:text-[30px]">
                   {language === 'vi' ? (
                     <>
-                      Đơn vị Branding thông qua Digital & Multimedia <span className="text-[var(--color-text-red-theme-500)]">Số 1</span> dành cho các thương hiệu tại Việt Nam
+                      <div className="md:whitespace-nowrap">
+                        Đơn vị Digital & Multimedia <span className="text-[var(--color-text-red-theme-500)]"><span className="text2xl md:text-5xl">Số 1</span></span>
+                      </div>
+                      <div className="md:whitespace-nowrap">
+                        dành cho các thương hiệu tại Việt Nam
+                      </div>
                     </>
                   ) : (
                     <>
@@ -43,12 +48,12 @@ export default function SolutionContent() {
           </div>
         </div>
 
-        <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20 mt-6 md:mt-8 lg:mt-16">
+        <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20 mt-6 md:mt-8 lg:mt-94">
           <div className="container mx-auto text-center">
-            <h2 className="mb-10 text-4xl font-bold md:text-7xl text-[var(--color-text-red-theme-500)] ml-4 md:ml-6">
+            <h2 className="mb-6 text-4xl font-bold md:text-7xl text-[var(--color-text-red-theme-500)] ml-4 md:ml-6">
               {content.networkTitle} <span className="text-black">ANN</span> network
             </h2>
-            <div className="mx-auto flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0">
+            <div className="mx-auto flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0 mt-10">
               {content.stats.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <h3 className="text-4xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">

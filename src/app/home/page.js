@@ -228,7 +228,7 @@ export default function Home() {
           </div>
           <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
             <Image
-              src="/images/home_solution.avif"
+              src="/images/home/improve_v2.png"
               alt="Let your brand speak"
               width={500}
               height={500}
