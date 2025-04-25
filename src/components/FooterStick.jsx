@@ -1,21 +1,18 @@
 // components/Footer.jsx
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <div
-      className="relative min-h-[416px]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
+    <div className="relative" style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="max-h-screen w-full overflow-y-auto">
         <footer className="flex flex-col justify-between bg-black py-12 text-white">
-          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-0">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-2 px-4 md:grid-cols-2 md:px-0">
             {/* Left Side: Contact CTA */}
             <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
                 <h4 className="mb-1 text-sm text-gray-300">Contact</h4>
-                <h2 className="text-4xl leading-tight font-semibold md:text-5xl">
+                <h2 className="text-2xl leading-tight font-semibold md:text-3xl">
                   Let’s start
                   <br />
                   creating together
@@ -39,8 +36,8 @@ export default function Footer() {
                   <div>
                     <p className="text-sm font-medium text-gray-400">Address</p>
                     <p className="text-sm leading-relaxed text-white">
-                      Feliza Villa Khang Điền Số 2 <br></br> Đường 28B, Phước Long, TP Thủ Đức, TP
-                      Hồ Chí Minh.
+                      Feliza Villa Khang Điền, <br />
+                      Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP Hồ Chí Minh.
                     </p>
                   </div>
                 </div>
@@ -72,21 +69,36 @@ export default function Footer() {
 
               {/* Social Links: 1/4 on sm+ */}
               <div className="flex flex-col items-start gap-2 sm:col-span-1">
-                {[
-                  { name: "Facebook", href: "https://facebook.com" },
-                  { name: "Linkedin", href: "https://linkedin.com" },
-                  { name: "Instagram", href: "https://instagram.com" },
-                ].map(({ name, href }) => (
-                  <a
-                    key={name}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
-                  >
-                    {name} ↗
-                  </a>
-                ))}
+                {/* Facebook */}
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
+                >
+                  <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
+                  Facebook
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
+                >
+                  <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
+                  LinkedIn
+                </a>
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
+                >
+                  <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
+                  Instagram
+                </a>
               </div>
             </div>
           </div>
