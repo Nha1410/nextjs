@@ -64,12 +64,12 @@ export default function About() {
               style={{ width: "max-content" }}
             >
               {content.section1.headline.map((line, idx) => (
-                <p key={idx} className="text-[20px] md:text-[40px]">
+                <p key={idx} className="text-[20px] md:text-[44px]">
                   {line}
                 </p>
               ))}
             </h3>
-            <p className="text-justify text-base leading-relaxed text-black md:text-lg">
+            <p className="text-justify text-base leading-relaxed text-black md:text-xl">
               {content.section1.description}
             </p>
           </div>
@@ -80,14 +80,14 @@ export default function About() {
             className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
           >
             <h3
-              className={`text-[20px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-[40px] ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+              className={`text-[20px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-[44px] ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
               {content.section2.headline.map((line, idx) => (
                 <div key={idx}>{line}</div>
               ))}
             </h3>
             <p
-              className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-lg ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+              className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-xl ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
             >
               {content.section2.description}
             </p>
@@ -119,7 +119,7 @@ export default function About() {
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
           <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-text-red-theme-500)] p-6 text-justify text-white md:p-8">
-            <h2 className="text-2xl leading-snug font-bold md:text-3xl">
+            <h2 className="text-xl leading-snug font-bold md:text-2xl">
               {content.section3.mission.title.map((line, idx) => (
                 <div key={idx}>{line}</div>
               ))}

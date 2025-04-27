@@ -201,7 +201,7 @@ export default function Home() {
               </span>
               <br />
             </h1>
-            <div className="mb-6 text-center text-xl text-gray-300">
+            <div className="mb-6 text-center text-xl font-semibold text-white">
               <p>{content.hero.description}</p>
               <p>{content.hero.description2}</p>
             </div>
@@ -216,12 +216,12 @@ export default function Home() {
       </section>
 
       <section ref={whoWeAreRef} className="overflow-hidden bg-white py-16">
-        <div className="container mx-auto flex flex-col items-start px-4 md:flex-row md:items-center">
-          <div className="md:w-1/2">
-            <p className="mb-2 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
+        <div className="mx-auto flex max-w-7xl flex-col items-start px-1 md:flex-row md:items-center">
+          <div className="md:w-7/12">
+            <p className="mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               {content.whoWeAre.tag}
             </p>
-            <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[42px]">
+            <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
               <span className="text-[var(--color-text-red-theme-500)]">
                 {content.whoWeAre.title}
               </span>
@@ -244,7 +244,7 @@ export default function Home() {
               alt="Let your brand speak"
               width={500}
               height={500}
-              className="rounded-lg shadow-xl"
+              className="rounded-lg"
             />
           </div>
         </div>
@@ -283,7 +283,7 @@ export default function Home() {
             {content.discover.map((line, i) => (
               <div key={i} className="contents">
                 <div className="flex flex-col items-center justify-center px-5 text-center">
-                  <h3 className="mb-4 text-xl leading-relaxed font-normal md:text-2xl">{line}</h3>
+                  <h3 className="mb-4 text-xl leading-relaxed font-semibold md:text-2xl">{line}</h3>
                 </div>
                 {i < content.discover.length - 1 && (
                   <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />

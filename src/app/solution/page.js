@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import OurSolutions from "../../components/OurSolution";
 import Image from "next/image";
@@ -18,13 +18,16 @@ export default function SolutionContent() {
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-28 md:px-28">
           <div className="relative z-10 px-6 py-20 text-white">
-            <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left ml-[-20px]">
+            <div className="container mx-auto ml-[-20px] flex flex-col items-center text-center md:flex-row md:text-left">
               <div className="md:w-1/2">
                 <h1 className="mb-4 text-2xl font-bold md:text-[30px]">
-                  {language === 'vi' ? (
+                  {language === "vi" ? (
                     <>
                       <div className="md:whitespace-nowrap">
-                        Đơn vị Digital & Multimedia <span className="text-[var(--color-text-red-theme-500)]"><span className="text2xl md:text-5xl">Số 1</span></span>
+                        Đơn vị Digital & Multimedia{" "}
+                        <span className="text-[var(--color-text-red-theme-500)]">
+                          <span className="text2xl md:text-5xl">Số 1</span>
+                        </span>
                       </div>
                       <div className="md:whitespace-nowrap">
                         dành cho các thương hiệu tại Việt Nam
@@ -39,7 +42,7 @@ export default function SolutionContent() {
                 </h1>
                 <Link
                   href="/contact"
-                  className="inline-block mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white"
+                  className="mt-4 inline-block rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white"
                 >
                   {content.button}
                 </Link>
@@ -48,19 +51,20 @@ export default function SolutionContent() {
           </div>
         </div>
 
-        <div className="relative z-20 mx-auto w-full max-w-screen px-4 md:py-20 mt-6 md:mt-8 lg:mt-94">
+        <div className="relative z-20 mx-auto mt-6 w-full max-w-screen px-4 md:mt-8 md:py-20 lg:mt-94">
           <div className="container mx-auto text-center">
-            <h2 className="mb-6 text-4xl font-bold md:text-7xl text-[var(--color-text-red-theme-500)] ml-4 md:ml-6">
-              {content.networkTitle} <span className="text-black">ANN</span> network
+            <h2 className="mb-6 ml-4 text-4xl font-bold text-black md:ml-6 md:text-7xl">
+              {content.networkTitle}{" "}
+              <span className="text-[var(--color-text-red-theme-500)]">ANN Multimedia</span> Network
             </h2>
-            <div className="mx-auto flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0 mt-10">
+            <div className="mx-auto mt-10 flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0">
               {content.stats.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <h3 className="text-4xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">
                     {item.number}
                   </h3>
-                  <p className="text-lg md:text-xl text-gray-400">{item.label1}</p>
-                  <p className="text-lg md:text-xl text-gray-400">{item.label2}</p>
+                  <p className="text-lg text-gray-400 md:text-xl">{item.label1}</p>
+                  <p className="text-lg text-gray-400 md:text-xl">{item.label2}</p>
                 </div>
               ))}
             </div>
@@ -68,7 +72,7 @@ export default function SolutionContent() {
         </div>
       </section>
 
-      <OurSolutions />
+      <OurSolutions content={content.solutionSection} />
     </main>
   );
 }

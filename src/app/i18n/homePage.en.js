@@ -7,7 +7,7 @@ export default {
   },
   whoWeAre: {
     tag: "— WHO WE ARE",
-    title: "We make your brand speak in feelings!",
+    title: "ANN Multimedia - Your brand growth partner",
     paragraphs: [
       "We provide full-funnel services including digital strategy, creative production, social media marketing, media planning, and performance analytics. Our capabilities also extend to data-driven marketing, lead generation, and inbound strategies built to engage the right audience at the right moment.",
     ],
