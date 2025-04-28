@@ -22,51 +22,26 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
+        image: "/images/home/Branding.jpeg",
         description:
           "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
-        items: [
-          "Banner Standard",
-          "Video Ad",
-          "Native Ad",
-          "Action Ad",
-          "Animated 3D Cubes Interactive",
-          "Dancing 3D",
-        ],
-        secondItems: [
-          "Glitch",
-          "Carousel",
-          "Card Swipe",
-          "Countdown",
-          "Scratch to Reveal",
-          "Shake & Brake",
-        ],
-        thirdItems: [
-          ["Facebook", "Instagram", "LinkedIn"],
-          ["Twitter", "Tiktok", "Zalo"],
-        ],
-        appendTitle: "Advertisement Formats:",
-        secondApppendTitle: "Advertisement Placement:",
+        reverse: false,
       },
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
+        image: "/images/home/Creative.jpeg",
         description:
           "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
-        items: [
-          "Social Media Ads",
-          "Sites: E-news, Kenh14,...",
-          "Apps: Grab, Be, Xanh SM, Bee Taskee,..",
-        ],
-        secondTitle: "Online:",
-        thirdTitle: "Offline:",
-        secondItems: ["Out - of - home: Bill - board, LCD, Car Branding,..."],
+        reverse: true,
       },
       {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
+        image: "/images/home/Social Ads.jpeg",
         description:
           "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
-        items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
+        reverse: false,
       },
     ],
     button: "Tìm hiểu thêm",

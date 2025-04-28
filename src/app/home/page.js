@@ -24,7 +24,7 @@ const SolutionBlock = ({ title, description, image, reverse, content }) => (
             alt="Slide 1"
             width={1200}
             height={800}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-lg object-cover"
           />
         ) : null}
       </div>
