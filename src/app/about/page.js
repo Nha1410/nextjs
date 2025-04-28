@@ -48,7 +48,7 @@ export default function About() {
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/images/about/Pasadena.png"
+              src="/images/about/Au1.png"
               alt="Main Team Image"
               width={600}
               height={600}
@@ -97,7 +97,7 @@ export default function About() {
             className={`order-2 flex flex-1 justify-center transition-all duration-1000 ease-out ${bottomRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/images/contact/AU_ 2-Photoroom.png"
+              src="/images/about/Au2.png"
               alt="Thinkers"
               width={500}
               height={500}

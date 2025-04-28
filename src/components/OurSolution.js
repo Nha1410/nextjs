@@ -7,7 +7,7 @@ export default function OurSolutions({ content }) {
     <section className="w-screen justify-center py-16 md:py-24">
       <div className="container mx-auto lg:w-4/5">
         <h2 className="mb-12 text-center text-4xl font-bold md:text-5xl lg:text-6xl">
-          {content.title} <span className="text-[var(--color-text-red-theme-500)]">solutions</span>
+          {content.title} <span className="text-[var(--color-text-red-theme-500)]">Solutions</span>
         </h2>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export default function OurSolutions({ content }) {
                   alt={solution.title}
                   width={400}
                   height={400}
-                  className="h-auto object-contain"
+                  className="h-auto rounded-lg object-contain"
                 />
               </div>
 

@@ -1,7 +1,7 @@
 export default {
   hero: {
     title1: "MARK YOUR BRAND IN VIETNAM",
-    description: "With ANN - your multimedia agency partner in",
+    description: "With ANN - Your multimedia agency partner in",
     description2: "Branding | Advertisement | Creative",
     button: "GET STARTED",
   },

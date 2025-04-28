@@ -12,23 +12,21 @@ import { useRef } from "react";
 import vi from "../i18n/homePage.vi";
 import en from "../i18n/homePage.en";
 
-const SolutionBlock = ({
-  title,
-  description,
-  items,
-  reverse,
-  secondItems = [],
-  appendTitle = "",
-  secondApppendTitle,
-  thirdItems = [],
-  content,
-}) => (
+const SolutionBlock = ({ title, description, image, reverse, content }) => (
   <div
     className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
   >
     <div className="flex justify-center overflow-hidden md:w-1/2">
       <div className="max-w-screen rounded-lg bg-white p-6">
-        <MySwiper />
+        {image ? (
+          <Image
+            src={image}
+            alt="Slide 1"
+            width={1200}
+            height={800}
+            className="h-full w-full object-cover"
+          />
+        ) : null}
       </div>
     </div>
     <div className="text-white md:w-1/2">
@@ -36,142 +34,12 @@ const SolutionBlock = ({
         {title}
       </h3>
       <p className="mb-5 text-justify leading-relaxed text-black md:text-base">{description}</p>
-      {/* <p className="font-semibold text-black md:text-base">{appendTitle}</p> */}
-
-      {/* Grid cho các mục items và secondItems */}
-      {/* <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
-        <ul className="mb-5 list-disc space-y-2 pl-5">
-          {items.map((item, index) => (
-            <li key={index} className="text-black">
-              {item}
-            </li>
-          ))}
-        </ul>
-        <ul className="mb-5 list-disc space-y-2 pl-5">
-          {secondItems.map((item, idx) => (
-            <li key={idx} className="text-black">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div> */}
-
-      {/* <p className="text-justify font-semibold text-black md:text-base">{secondApppendTitle}</p> */}
-
-      {/* Grid cho thirdItems */}
-      {/* <div className="mt-2 mb-2 grid grid-cols-2 gap-10 md:grid-cols-2">
-        <ul className="mb-5 list-disc space-y-2 pl-5">
-          {thirdItems[0]?.map((item, index) => (
-            <li key={index} className="text-black">
-              {item}
-            </li>
-          ))}
-        </ul>
-        <ul className="mb-5 list-disc space-y-2 pl-5">
-          {thirdItems[1]?.map((item, idx) => (
-            <li key={idx} className="text-black">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div> */}
       <Link
         href={"/solution"}
         className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
       >
         {content?.solutions?.button}
       </Link>
-    </div>
-  </div>
-);
-
-const CustomSolutionBlock = ({
-  title,
-  description,
-  items,
-  secondTitle = "",
-  thirdTitle = "",
-  secondItems = [],
-  content,
-}) => (
-  <div>
-    <div className="mb-16 hidden flex-col items-center gap-12 md:flex md:flex-row">
-      <div className="text-white md:ml-12">
-        <h3 className="mb-4 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
-          {title}
-        </h3>
-        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
-        {/* <p className="font-semibold text-black md:text-base">{secondTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {items.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div> */}
-        {/* <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
-        <div className="mt-2 mb-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {secondItems.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div> */}
-        <Link
-          href={"/solution"}
-          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-        >
-          {content?.solutions?.button}
-        </Link>
-      </div>
-      <div className="flex justify-center md:ml-14">
-        <div className="max-w-screen rounded-lg bg-white p-6">
-          <MySwiper />
-        </div>
-      </div>
-    </div>
-    <div className="mb-16 flex flex-col items-center gap-12 md:hidden md:flex-row">
-      <div className="flex justify-center md:ml-8">
-        <div className="max-w-screen rounded-lg bg-white p-6">
-          <MySwiper />
-        </div>
-      </div>
-      <div className="text-white md:ml-18">
-        <h3 className="mb-4 ml-8 text-justify text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
-          {title}
-        </h3>
-        <p className="mb-5 leading-relaxed text-black md:text-base">{description}</p>
-        <p className="font-semibold text-black md:text-base">{secondTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {items.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="font-semibold text-black md:text-base">{thirdTitle}</p>
-        <div className="mt-2 flex md:gap-18 lg:gap-24">
-          <ul className="mb-5 list-disc space-y-2 pl-5">
-            {secondItems.map((item, index) => (
-              <li key={index} className="text-black">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Link
-          href={"/solution"}
-          className="mt-2 rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-        >
-          {content?.solutions?.button}
-        </Link>
-      </div>
     </div>
   </div>
 );
@@ -267,13 +135,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          {content.solutions.blocks.map((block, index) =>
-            block.type === "CustomSolutionBlock" ? (
-              <CustomSolutionBlock key={index} {...block} content={content} />
-            ) : (
-              <SolutionBlock key={index} {...block} content={content} />
-            )
-          )}
+          {content.solutions.blocks.map((block, index) => (
+            <SolutionBlock key={index} {...block} content={content} />
+          ))}
         </div>
       </section>
 

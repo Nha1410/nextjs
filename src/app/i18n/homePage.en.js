@@ -1,7 +1,7 @@
 export default {
   hero: {
     title1: "MARK YOUR BRAND IN VIETNAM",
-    description: "With ANN - your multimedia agency partner in",
+    description: "With ANN - Your multimedia agency partner in",
     description2: "Branding | Advertisement | Creative",
     button: "GET STARTED",
   },
@@ -22,51 +22,26 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
+        image: "/images/home/Branding.jpeg",
         description:
           "Multi-platform, high-impact campaigns using dynamic formats standard, video, native, 3D interactive, and more across Facebook, Instagram, TikTok, LinkedIn, Zalo, and beyond.",
-        items: [
-          "Banner Standard",
-          "Video Ad",
-          "Native Ad",
-          "Action Ad",
-          "Animated 3D Cubes Interactive",
-          "Dancing 3D",
-        ],
-        secondItems: [
-          "Glitch",
-          "Carousel",
-          "Card Swipe",
-          "Countdown",
-          "Scratch to Reveal",
-          "Shake & Brake",
-        ],
-        thirdItems: [
-          ["Facebook", "Instagram", "LinkedIn"],
-          ["Twitter", "Tiktok", "Zalo"],
-        ],
-        appendTitle: "Advertisement Formats:",
-        secondApppendTitle: "Advertisement Placement:",
+        reverse: false,
       },
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
+        image: "/images/home/Creative.jpeg",
         description:
           "Seamless brand presence across digital and physical touchpoints social ads, top apps, and editorial sites online; billboards, LCDs, and car wraps offline.",
-        items: [
-          "Social Media Ads",
-          "Sites: E-news, Kenh14,...",
-          "Apps: Grab, Be, Xanh SM, Bee Taskee,...",
-        ],
-        secondTitle: "Online:",
-        thirdTitle: "Offline:",
-        secondItems: ["Out-of-home: Billboard, LCD, Car Branding,..."],
+        reverse: true,
       },
       {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
+        image: "/images/home/Social Ads.jpeg",
         description:
           "From concept to execution strategic alignment, compelling proposals, and detail-driven rollouts that balance creativity with performance.",
-        items: ["Proposal Development", "Alignment with Client", "Deployment Detailed Plan"],
+        reverse: false,
       },
     ],
     button: "Find out more",

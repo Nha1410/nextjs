@@ -57,13 +57,13 @@ export default function ClientsSection() {
 
 function LogoCell({ src, alt }) {
   return (
-    <div className="flex aspect-square items-center justify-center rounded-xl bg-white p-2 transition-all duration-300 ease-in-out">
+    <div className="relative h-30 w-30 overflow-hidden rounded-xl bg-white transition-all duration-300 ease-in-out">
       <Image
         src={src}
         alt={alt}
-        width={80}
-        height={32}
-        className={`object-contain grayscale transition-all duration-1000 ease-out hover:grayscale-0`}
+        fill
+        sizes="(max-width: 640px) 80px, (max-width: 768px) 100px, 120px"
+        className="object-contain grayscale transition-all duration-1000 ease-out hover:grayscale-0"
       />
     </div>
   );

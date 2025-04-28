@@ -14,7 +14,7 @@ export default function SolutionContent() {
   return (
     <main className="bg-white">
       <section className="relative min-h-screen w-screen">
-        <div className="absolute inset-0 z-0 max-h-[900px] w-screen bg-[url('/images/solution/bgbgbg.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 z-0 max-h-[750px] w-screen bg-[url('/images/solution/Cover.png')] bg-cover bg-center" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-28 md:px-28">
           <div className="relative z-10 px-6 py-20 text-white">
@@ -26,7 +26,7 @@ export default function SolutionContent() {
                       <div className="md:whitespace-nowrap">
                         Đơn vị Digital & Multimedia{" "}
                         <span className="text-[var(--color-text-red-theme-500)]">
-                          <span className="text2xl md:text-5xl">Số 1</span>
+                          <span className="text-2xl md:text-5xl">Số 1</span>
                         </span>
                       </div>
                       <div className="md:whitespace-nowrap">
@@ -42,7 +42,7 @@ export default function SolutionContent() {
                 </h1>
                 <Link
                   href="/contact"
-                  className="mt-4 inline-block rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
                 >
                   {content.button}
                 </Link>
@@ -51,13 +51,13 @@ export default function SolutionContent() {
           </div>
         </div>
 
-        <div className="relative z-20 mx-auto mt-6 w-full max-w-screen px-4 md:mt-8 md:py-20 lg:mt-94">
+        <div className="relative z-20 mx-auto mt-94 w-full max-w-screen px-4 md:mt-8 md:py-20 lg:mt-94">
           <div className="container mx-auto text-center">
             <h2 className="mb-6 ml-4 text-4xl font-bold text-black md:ml-6 md:text-7xl">
               {content.networkTitle}{" "}
               <span className="text-[var(--color-text-red-theme-500)]">ANN Multimedia</span> Network
             </h2>
-            <div className="mx-auto mt-10 flex w-full max-w-5xl flex-col justify-around space-y-8 md:flex-row md:space-y-0">
+            <div className="mx-auto mt-10 flex w-1/2 max-w-5xl flex-col justify-around space-y-8 md:w-full md:flex-row md:space-y-0">
               {content.stats.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <h3 className="text-4xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">

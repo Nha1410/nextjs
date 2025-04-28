@@ -18,7 +18,7 @@ export default {
     mission: {
       title: ["Where ideas ignite brand momentum"],
       paragraphs: [
-        "At ANN Multimedia, guided by the mission “Where ideas ignite brand momentum,” we support brands in navigating and thriving in a digital-first world where every idea inspires, every channel is optimized, and every interaction delivers impact. Through sharp strategy, compelling storytelling, and precise execution, we transform vision into momentum.",
+        "At ANN Multimedia, guided by the mission “Where ideas ignite brand momentum” we support brands in navigating and thriving in a digital-first world where every idea inspires, every channel is optimized, and every interaction delivers impact. Through sharp strategy, compelling storytelling, and precise execution, we transform vision into momentum.",
       ],
     },
     values: [

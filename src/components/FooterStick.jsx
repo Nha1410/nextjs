@@ -6,16 +6,14 @@ export default function Footer() {
   return (
     <div className="relative" style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="max-h-screen w-full overflow-y-auto">
-        <footer className="flex flex-col justify-between bg-black py-12 text-white">
-          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-2 px-4 md:grid-cols-2 md:px-0">
+        <footer className="flex flex-col justify-evenly bg-black py-12 text-white">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-2 px-4 md:grid-cols-2 md:px-1">
             {/* Left Side: Contact CTA */}
             <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
                 <h4 className="mb-1 text-sm text-gray-300">Contact</h4>
-                <h2 className="text-2xl leading-tight font-semibold md:text-3xl">
-                  Let’s start
-                  <br />
-                  creating together
+                <h2 className="text-3xl leading-tight font-semibold md:text-4xl">
+                  Let’s start creating together
                 </h2>
               </div>
               <Link
@@ -34,8 +32,8 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-6 w-6 text-gray-400" />
                   <div>
-                    <p className="text-sm font-medium text-gray-400">Address</p>
-                    <p className="text-sm leading-relaxed text-white">
+                    <p className="text-base font-medium text-gray-400">Address</p>
+                    <p className="text-base leading-relaxed text-white">
                       Feliza Villa Khang Điền, <br />
                       Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP Hồ Chí Minh.
                     </p>
@@ -45,8 +43,8 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <Phone className="mt-1 h-5 w-5 text-gray-400" />
                   <div>
-                    <p className="text-sm font-medium text-gray-400">Phone</p>
-                    <p className="text-sm leading-relaxed text-white">
+                    <p className="text-base font-medium text-gray-400">Phone</p>
+                    <p className="text-base leading-relaxed text-white">
                       <a href="tel:0976305499" className="hover:underline">
                         097 6305499
                       </a>
@@ -57,8 +55,8 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <Mail className="mt-1 h-5 w-5 text-gray-400" />
                   <div>
-                    <p className="text-sm font-medium text-gray-400">Email</p>
-                    <p className="text-sm leading-relaxed text-white">
+                    <p className="text-base font-medium text-gray-400">Email</p>
+                    <p className="text-base leading-relaxed text-white">
                       <a href="mailto:hello.annmultimedia@gmail.com" className="hover:underline">
                         hello.annmultimedia@gmail.com
                       </a>
@@ -104,7 +102,7 @@ export default function Footer() {
           </div>
 
           {/* Footer Note */}
-          <div className="mx-auto mt-10 w-full max-w-6xl px-4 text-center text-sm text-gray-400 md:px-0 md:text-left">
+          <div className="mx-auto mt-4 w-full max-w-6xl px-4 text-center text-sm text-gray-400 md:px-0 md:text-left">
             <hr className="my-4 border-t border-gray-700" />© 2025 ANN Multimedia
           </div>
         </footer>

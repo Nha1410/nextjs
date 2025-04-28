@@ -13,19 +13,19 @@ export default {
     solutions: [
       {
         img: "/images/solution/1_1.png",
-        title: "Quảng cáo Mạng xã hội",
+        title: "Social Advertisement",
         description:
           "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
       },
       {
         img: "/images/solution/1_2.png",
-        title: "Giải pháp Thương hiệu",
+        title: "Branding Solution",
         description:
           "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
       },
       {
         img: "/images/solution/1_3.png",
-        title: "Kế hoạch & Triển khai sáng tạo",
+        title: "Creative Planning & Deployment",
         description:
           "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
       },
