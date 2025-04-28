@@ -18,7 +18,7 @@ export default {
     mission: {
       title: ["Where ideas ignite brand momentum"],
       paragraphs: [
-        "Tại ANN Multimedia, với sứ mệnh “Where ideas ignite brand momentum,” ANN hỗ trợ các thương hiệu điều hướng và phát triển trong một thế giới số hóa, nơi mọi ý tưởng đều truyền cảm hứng, mọi kênh đều được tối ưu hóa và mọi tương tác đều mang lại tác động. Thông qua chiến lược sắc bén, cách kể chuyện hấp dẫn và triển khai chính xác, ANN sẽ biến tầm nhìn thành động lực.",
+        "Tại ANN Multimedia, với sứ mệnh “Where ideas ignite brand momentum” ANN hỗ trợ các thương hiệu điều hướng và phát triển trong một thế giới số hóa, nơi mọi ý tưởng đều truyền cảm hứng, mọi kênh đều được tối ưu hóa và mọi tương tác đều mang lại tác động. Thông qua chiến lược sắc bén, cách kể chuyện hấp dẫn và triển khai chính xác, ANN sẽ biến tầm nhìn thành động lực.",
       ],
     },
     values: [
@@ -35,7 +35,7 @@ export default {
       {
         number: "03",
         title: "Stay Agile",
-        desc: "Luôn học, luôn lắng nghe, luôn cập nhật để không chỉ theo kịp mà còn đón đầu những thứ mới.",
+        desc: "Luôn học hỏi, luôn lắng nghe và luôn luôn cập nhật để không chỉ theo kịp mà còn đón đầu những điều mới.",
       },
       {
         number: "04",

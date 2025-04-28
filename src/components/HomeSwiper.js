@@ -15,7 +15,10 @@ export default function HomeSwiper() {
         modules={[Navigation, Scrollbar, A11y, Autoplay]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        navigation
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         pagination={{ clickable: true }}
         slidesPerView={1}
         className="pointer-events-auto h-screen w-full"
@@ -92,6 +95,8 @@ export default function HomeSwiper() {
           </div>
         </SwiperSlide>
       </Swiper>
+      <div className="swiper-button-prev !text-white" />
+      <div className="swiper-button-next !text-white" />
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default {
     },
     {
       number: "04",
-      title: "In-Depth Insight in the Local Market",
+      title: "In-Depth Insight in The Local Market",
       description:
         "Our insights are built on direct engagement, observing, and experiencing the market alongside real users. This proximity allows brands to speak with relevance and authenticity, not as outsiders, but as trusted voices within the community.",
     },

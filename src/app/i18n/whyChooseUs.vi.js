@@ -20,11 +20,11 @@ export default {
       number: "03",
       title: "Well-Practiced Experiences",
       description:
-        "Tại ANN, trải nghiệm được định nghĩa bởi sự triển khai. Mỗi dự án là một chiến lược gắn liền với dữ liệu, được nâng tầm bởi sự sáng tạo, và được đo lường qua kết quả thực tế trên thị trường. Thành tích của ANN Multimedia không chỉ được ghi lại trong các nghiên cứu điển hình, mà còn thể hiện qua sự phát triển bền vững của các thương hiệu đã từng hợp tác.",
+        "Tại ANN, trải nghiệm được định nghĩa bởi sự triển khai. Mỗi dự án là một chiến lược gắn liền với dữ liệu, được nâng tầm bởi sự sáng tạo, và được đo lường qua kết quả thực tế. Thành tích không chỉ được ghi lại trong các báo cáo mà còn thể hiện qua sự phát triển bền vững của các thương hiệu đã từng hợp tác.",
     },
     {
       number: "04",
-      title: "In-Depth Insight in the Local Market",
+      title: "In-Depth Insight in The Local Market",
       description:
         "Những hiểu biết sâu sắc của ANN được xây dựng trên sự tham gia trực tiếp, quan sát và trải nghiệm thị trường cùng với người dùng thực tế. Sự gần gũi này giúp các thương hiệu giao tiếp một cách có liên quan và chân thực, không phải như những kẻ ngoài cuộc, mà là những tiếng nói đáng tin cậy trong cộng đồng.",
     },

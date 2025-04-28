@@ -37,7 +37,12 @@ export default function Home() {
 
           {/* Image */}
           <div className="mt-12 flex justify-center">
-            <Image src="/images/why-choose-us.png" alt="Main Image" width={900} height={600} />
+            <Image
+              src="/images/why-choose-us/Why_choose_us.png"
+              alt="Main Image"
+              width={900}
+              height={600}
+            />
           </div>
 
           {/* Feature Blocks */}
