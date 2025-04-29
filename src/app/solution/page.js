@@ -14,7 +14,7 @@ export default function SolutionContent() {
   return (
     <main className="bg-white">
       <section className="relative min-h-screen w-screen">
-        <div className="absolute inset-0 z-0 max-h-[750px] w-screen bg-[url('/images/solution/Cover.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 z-0 max-h-[800px] w-screen bg-[url('/images/solution/Cover.png')] bg-cover bg-center" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-28 md:px-28">
           <div className="relative z-10 px-6 py-20 text-white">
@@ -72,7 +72,7 @@ export default function SolutionContent() {
         </div>
       </section>
 
-      <OurSolutions content={content.solutionSection} />
+      <OurSolutions content={content.solutionSection} language={language} />
     </main>
   );
 }

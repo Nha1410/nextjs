@@ -9,7 +9,8 @@ export default {
     { number: "100+", label1: "BRANDS", label2: "COLLABORATED" },
   ],
   solutionSection: {
-    title: "Our",
+    title1: "Our",
+    title2: "Solutions",
     solutions: [
       {
         img: "/images/solution/1_1.png",

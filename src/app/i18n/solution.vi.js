@@ -9,7 +9,8 @@ export default {
     { number: "50+", label1: "THƯƠNG HIỆU", label2: "CỘNG TÁC" },
   ],
   solutionSection: {
-    title: "Giải pháp của chúng tôi",
+    title1: "Giải pháp",
+    title2: "của chúng tôi",
     solutions: [
       {
         img: "/images/solution/1_1.png",

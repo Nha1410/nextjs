@@ -22,7 +22,7 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
-        image: "/images/home/Branding.jpeg",
+        image: "/images/home/Social Ads.jpeg",
         description:
           "Multi-platform, high-impact campaigns using dynamic formats standard, video, native, 3D interactive, and more across Facebook, Instagram, TikTok, LinkedIn, Zalo, and beyond.",
         reverse: false,
@@ -30,7 +30,7 @@ export default {
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
-        image: "/images/home/Creative.jpeg",
+        image: "/images/home/Branding.jpeg",
         description:
           "Seamless brand presence across digital and physical touchpoints social ads, top apps, and editorial sites online; billboards, LCDs, and car wraps offline.",
         reverse: true,
@@ -38,7 +38,7 @@ export default {
       {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
-        image: "/images/home/Social Ads.jpeg",
+        image: "/images/home/Creative.jpeg",
         description:
           "From concept to execution strategic alignment, compelling proposals, and detail-driven rollouts that balance creativity with performance.",
         reverse: false,

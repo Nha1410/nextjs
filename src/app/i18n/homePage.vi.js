@@ -22,7 +22,7 @@ export default {
       {
         type: "SolutionBlock",
         title: "Social Advertisement",
-        image: "/images/home/Branding.jpeg",
+        image: "/images/home/Social Ads.jpeg",
         description:
           "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
         reverse: false,
@@ -30,7 +30,7 @@ export default {
       {
         type: "CustomSolutionBlock",
         title: "Branding Solution",
-        image: "/images/home/Creative.jpeg",
+        image: "/images/home/Branding.jpeg",
         description:
           "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
         reverse: true,
@@ -38,7 +38,7 @@ export default {
       {
         type: "SolutionBlock",
         title: "Creative Planning & Deployment",
-        image: "/images/home/Social Ads.jpeg",
+        image: "/images/home/Creative.jpeg",
         description:
           "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
         reverse: false,
