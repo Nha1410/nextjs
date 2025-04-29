@@ -81,7 +81,7 @@ export default function Contact() {
                     <MapPin className="mt-1 h-6 w-6 text-gray-400" />
                     <div>
                       <p className="text-sm font-medium text-gray-400">Address</p>
-                      <p className="text-sm leading-relaxed">
+                      <p className="text-sm leading-relaxed text-black">
                         Feliza Villa Khang Điền, <br />
                         Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP. HCM.
                       </p>
@@ -92,7 +92,7 @@ export default function Contact() {
                     <Phone className="mt-1 h-5 w-5 text-gray-400" />
                     <div>
                       <p className="text-sm font-medium text-gray-400">Phone</p>
-                      <p className="text-sm leading-relaxed">
+                      <p className="text-sm leading-relaxed text-black">
                         <a href="tel:0976305499" className="hover:underline">
                           097 6305499
                         </a>
@@ -104,7 +104,7 @@ export default function Contact() {
                     <Mail className="mt-1 h-5 w-5 text-gray-400" />
                     <div>
                       <p className="text-sm font-medium text-gray-400">Email</p>
-                      <p className="text-sm leading-relaxed">
+                      <p className="text-sm leading-relaxed text-black">
                         <a href="mailto:hello.annmultimedia@gmail.com" className="hover:underline">
                           hello.annmultimedia@gmail.com
                         </a>

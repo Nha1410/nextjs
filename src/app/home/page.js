@@ -11,12 +11,47 @@ import { useLanguage } from "@/components/LanguageSwitcher";
 import { useRef } from "react";
 import vi from "../i18n/homePage.vi";
 import en from "../i18n/homePage.en";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+const slideFromLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const slideFromRight = {
+  hidden: { opacity: 0, x: 100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
 const SolutionBlock = ({ title, description, image, reverse, content }) => (
-  <div
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeUp}
     className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
   >
-    <div className="flex justify-center md:w-1/2">
+    <motion.div
+      className="flex justify-center md:w-1/2"
+      variants={fadeUp}
+    >
       <div className="max-w-screen overflow-hidden rounded-2xl">
         {image ? (
           <Image
@@ -28,9 +63,9 @@ const SolutionBlock = ({ title, description, image, reverse, content }) => (
           />
         ) : null}
       </div>
-    </div>
+    </motion.div>
 
-    <div className="text-white md:w-1/2">
+    <motion.div className="text-white md:w-1/2" variants={fadeUp}>
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
@@ -41,8 +76,8 @@ const SolutionBlock = ({ title, description, image, reverse, content }) => (
       >
         {content?.solutions?.button}
       </Link>
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
 );
 
 export default function Home() {
@@ -55,38 +90,52 @@ export default function Home() {
 
   return (
     <main>
+      {/* Swiper section giữ nguyên */}
       <section className="relative -mt-16 h-screen w-full overflow-hidden">
-        {/* Swiper Background */}
         <div className="absolute inset-0 z-0">
           <HomeSwiper />
         </div>
 
-        {/* Foreground Content */}
         <div className="relative z-10 mx-10 flex h-full items-center justify-center pt-20">
-          <div className="max-w-4xl text-center text-white drop-shadow-md">
+          <motion.div
+            className="max-w-4xl text-center text-white drop-shadow-md"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             <h1 className="mb-6 leading-tight font-bold">
-              <span className="text-[26px] text-[#fffffffff] md:text-[50px]">
+              <motion.span
+                className="text-[26px] text-[#fffffffff] md:text-[50px]"
+                variants={fadeUp}
+              >
                 {content.hero.title1}
-              </span>
+              </motion.span>
               <br />
             </h1>
-            <div className="mb-6 text-center text-xl font-semibold text-white">
+            <motion.div className="mb-6 text-center text-xl font-semibold text-white" variants={fadeUp}>
               <p>{content.hero.description}</p>
               <p>{content.hero.description2}</p>
-            </div>
-            <button
+            </motion.div>
+            <motion.button
               onClick={scrollToWhoWeAre}
               className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+              variants={fadeUp}
             >
               {content.hero.button}
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </section>
 
       <section ref={whoWeAreRef} className="overflow-hidden bg-white py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-start px-1 md:flex-row md:items-center">
-          <div className="md:w-7/12">
+        <motion.div
+          className="mx-auto flex max-w-7xl flex-col items-start px-1 md:flex-row md:items-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={slideFromLeft}
+        >
+          <div className="md:w-7/12 p-4 md:p-0">
             <p className="mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               {content.whoWeAre.tag}
             </p>
@@ -96,9 +145,14 @@ export default function Home() {
               </span>
             </h2>
             {content.whoWeAre.paragraphs.map((p, i) => (
-              <p key={i} className="mb-6 text-justify text-base text-black">
+              <motion.p
+                key={i}
+                className="mb-6 text-justify text-base text-black"
+                custom={i}
+                variants={fadeUp}
+              >
                 {p}
-              </p>
+              </motion.p>
             ))}
             <Link
               href="/about"
@@ -107,7 +161,10 @@ export default function Home() {
               {content.whoWeAre.button}
             </Link>
           </div>
-          <div className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
+          <motion.div
+            className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
+            variants={fadeUp}
+          >
             <Image
               src="/images/home/improve_v3.png"
               alt="Let your brand speak"
@@ -115,46 +172,58 @@ export default function Home() {
               height={500}
               className="rounded-lg"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       <section className="bg-white py-16 text-white">
-        <div className="container mx-auto px-4">
+        <motion.div
+          className="container mx-auto px-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={slideFromRight}
+        >
           <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div>
+            <motion.div variants={fadeUp}>
               <p className="mb-3 text-xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
                 {content.solutions.sectionTitle}
               </p>
-            </div>
-            <div className="flex flex-col justify-center md:justify-end">
+            </motion.div>
+            <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
               <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro1}
               </p>
               <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro2}
               </p>
-            </div>
+            </motion.div>
           </div>
           {content.solutions.blocks.map((block, index) => (
             <SolutionBlock key={index} {...block} content={content} />
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
-        <div className="container mx-auto">
+        <motion.div
+          className="container mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={slideFromLeft}
+        >
           <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             {content.discover.map((line, i) => (
               <div key={i} className="contents">
-                <div className="flex flex-col items-center justify-center px-5 text-center">
+                <motion.div className="flex flex-col items-center justify-center px-5 text-center" custom={i} variants={fadeUp}>
                   <h3 className="mb-4 text-xl leading-relaxed font-semibold md:text-2xl">{line}</h3>
-                </div>
+                </motion.div>
                 {i < content.discover.length - 1 && (
-                  <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />
-                )}
-                {i < content.discover.length - 1 && (
-                  <div className="my-1 h-[2px] w-full bg-white md:hidden"></div>
+                  <>
+                    <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />
+                    <div className="my-1 h-[2px] w-full bg-white md:hidden"></div>
+                  </>
                 )}
               </div>
             ))}
@@ -167,7 +236,7 @@ export default function Home() {
               {content.cta}
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <ClientsSection />

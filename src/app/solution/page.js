@@ -14,35 +14,33 @@ export default function SolutionContent() {
   return (
     <main className="bg-white">
       <section className="relative min-h-screen w-screen">
-        <div className="absolute inset-0 z-0 max-h-[800px] w-screen bg-[url('/images/solution/Cover.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 z-0 max-h-[600px] md:max-h-[800px] w-full md:w-screen bg-[url('/images/solution/Cover.png')] bg-cover bg-center animate-fadeIn" />
 
-        <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-28 md:px-28">
-          <div className="relative z-10 px-6 py-20 text-white">
-            <div className="container mx-auto ml-[-20px] flex flex-col items-center text-center md:flex-row md:text-left">
-              <div className="md:w-1/2">
+        <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:py-28 md:px-28">
+          <div className="relative z-10 px-6 md:py-20 text-white">
+            <div className="container mx-auto ml-[-35px] md:ml-[-20px] flex flex-col items-center text-center md:flex-row md:text-left">
+              <div className="md:w-1/2 animate-slideInLeft">
                 <h1 className="mb-4 text-2xl font-bold md:text-[30px]">
                   {language === "vi" ? (
                     <>
-                      <div className="md:whitespace-nowrap">
-                        Đơn vị Digital & Multimedia{" "}
-                        <span className="text-[var(--color-text-red-theme-500)]">
-                          <span className="text-2xl md:text-5xl">Số 1</span>
-                        </span>
+                      <div className="md:whitespace-nowrap animate-fadeInUp">
+                        <span className="text-[var(--color-text-red-theme-500)] hover:scale-110 transition-transform duration-300">#1 </span>
+                        Digital & Multimedia{" "}
                       </div>
-                      <div className="md:whitespace-nowrap">
+                      <div className="md:whitespace-nowrap animate-fadeInUp delay-200">
                         dành cho các thương hiệu tại Việt Nam
                       </div>
                     </>
                   ) : (
                     <>
-                      <span className="text-[var(--color-text-red-theme-500)]">#1 </span>
+                      <span className="text-[var(--color-text-red-theme-500)] hover:scale-110 transition-transform duration-300">#1 </span>
                       Digital & Multimedia Branding Agency for brands in Viet Nam
                     </>
                   )}
                 </h1>
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-red-600 hover:scale-105 animate-fadeInUp delay-300"
                 >
                   {content.button}
                 </Link>
@@ -73,6 +71,43 @@ export default function SolutionContent() {
       </section>
 
       <OurSolutions content={content.solutionSection} language={language} />
+
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        @keyframes slideInLeft {
+          from { transform: translateX(-100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+          from { transform: translateY(20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out;
+        }
+        
+        .animate-slideInLeft {
+          animation: slideInLeft 1s ease-out;
+        }
+        
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .delay-200 {
+          animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+      `}</style>
     </main>
   );
 }
