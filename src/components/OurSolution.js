@@ -42,7 +42,7 @@ export default function OurSolutions({ content, language }) {
                 <h3 className="text-xl font-semibold text-[var(--color-text-red-theme-500)] md:text-2xl lg:text-3xl">
                   {solution.title}
                 </h3>
-                <p className="mt-6 text-base text-gray-700">{solution.description}</p>
+                <p className="mt-6 text-justify text-base text-gray-700">{solution.description}</p>
               </div>
             </div>
           ))}

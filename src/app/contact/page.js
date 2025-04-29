@@ -83,7 +83,7 @@ export default function Contact() {
                       <p className="text-sm font-medium text-gray-400">Address</p>
                       <p className="text-sm leading-relaxed">
                         Feliza Villa Khang Điền, <br />
-                        Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP Hồ Chí Minh.
+                        Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP. HCM.
                       </p>
                     </div>
                   </div>

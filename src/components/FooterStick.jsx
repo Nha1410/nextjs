@@ -35,7 +35,7 @@ export default function Footer() {
                     <p className="text-base font-medium text-gray-400">Address</p>
                     <p className="text-base leading-relaxed text-white">
                       Feliza Villa Khang Điền, <br />
-                      Số 2 Đường 28B, Phước Long, Thủ Đức, TP. Hồ Chí Minh
+                      Số 2 Đường 28B, Phước Long, Thủ Đức, TP. HCM
                     </p>
                   </div>
                 </div>

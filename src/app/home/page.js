@@ -17,18 +17,19 @@ const SolutionBlock = ({ title, description, image, reverse, content }) => (
     className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
   >
     <div className="flex justify-center md:w-1/2">
-      <div className="max-w-screen rounded-lg">
+      <div className="max-w-screen overflow-hidden rounded-2xl">
         {image ? (
           <Image
             src={image}
             alt="Slide 1"
             width={1400}
             height={1000}
-            className="h-full w-full rounded-2xl object-cover shadow-2xl"
+            className="h-full w-full rounded-2xl object-cover shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110"
           />
         ) : null}
       </div>
     </div>
+
     <div className="text-white md:w-1/2">
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
