@@ -20,28 +20,38 @@ export default {
       "ANN Multimedia designs multi-platform digital media solutions that strategically elevate brand presence, build clear recognition, deliver the right message, and establish lasting impressions.",
     blocks: [
       {
-        type: "SolutionBlock",
-        title: "Social Advertisement",
+        isList: false,
+        title: "Mobile Ads",
         image: "/images/home/Social Ads.jpeg",
         description:
           "Multi-platform, high-impact campaigns using dynamic formats standard, video, native, 3D interactive, and more across Facebook, Instagram, TikTok, LinkedIn, Zalo, and beyond.",
         reverse: false,
       },
       {
-        type: "CustomSolutionBlock",
-        title: "Branding Solution",
+        isList: false,
+        title: "Integrated Brand Activation",
         image: "/images/home/Branding.jpeg",
         description:
           "Seamless brand presence across digital and physical touchpoints social ads, top apps, and editorial sites online; billboards, LCDs, and car wraps offline.",
         reverse: true,
       },
       {
-        type: "SolutionBlock",
+        isList: false,
         title: "Creative Planning & Deployment",
         image: "/images/home/Creative.jpeg",
         description:
           "From concept to execution strategic alignment, compelling proposals, and detail-driven rollouts that balance creativity with performance.",
         reverse: false,
+      },
+      {
+        isList: true,
+        title: "Branding Service",
+        image: "/images/home/Branding.jpeg",
+        description: [
+          "Indoor OOH including: Cinema, Shopping mall LCD / Frame, POSM, Airport",
+          "Moving including: Bus, train, airplane, Taxi, Grab, Bus stop, Roadshow",
+        ],
+        reverse: true,
       },
     ],
     button: "Find out more",

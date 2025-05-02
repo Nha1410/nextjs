@@ -40,38 +40,51 @@ const slideFromRight = {
   },
 };
 
-const SolutionBlock = ({ title, description, image, reverse, content }) => (
+const SolutionBlock = ({ title, description, image, reverse, content, isList }) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     variants={fadeUp}
-    className={`mb-16 flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-12`}
+    className="mb-16 grid grid-cols-1 items-center gap-8 md:grid-cols-2"
   >
+    {/* Image block */}
     <motion.div
-      className="flex justify-center md:w-1/2"
+      className={`flex w-full justify-center ${reverse ? "md:order-2" : "md:order-1"}`}
       variants={fadeUp}
     >
-      <div className="max-w-screen overflow-hidden rounded-2xl">
-        {image ? (
+      <div className="w-full overflow-hidden rounded-2xl">
+        {image && (
           <Image
             src={image}
-            alt="Slide 1"
+            alt="Slide"
             width={1400}
             height={1000}
             className="h-full w-full rounded-2xl object-cover shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110"
           />
-        ) : null}
+        )}
       </div>
     </motion.div>
 
-    <motion.div className="text-white md:w-1/2" variants={fadeUp}>
+    {/* Text block */}
+    <motion.div
+      className={`w-full text-white ${reverse ? "md:order-1" : "md:order-2"}`}
+      variants={fadeUp}
+    >
       <h3 className="mb-4 text-3xl leading-tight font-semibold text-[var(--color-text-red-theme-500)]">
         {title}
       </h3>
-      <p className="mb-5 text-justify leading-relaxed text-black md:text-base">{description}</p>
+      {isList ? (
+        <ul className="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-black md:text-base">
+          {description.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mb-5 text-justify leading-relaxed text-black md:text-base">{description}</p>
+      )}
       <Link
-        href={"/solution"}
+        href="/solution"
         className="rounded bg-[var(--color-text-red-theme-500)] px-6 py-3 text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
       >
         {content?.solutions?.button}
@@ -91,14 +104,14 @@ export default function Home() {
   return (
     <main>
       {/* Swiper section giữ nguyên */}
-      <section className="relative -mt-16 h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-[calc(100vh-5rem)] w-full overflow-hidden">
+        <div className="absolute inset-0 z-2">
           <HomeSwiper />
         </div>
 
-        <div className="relative z-10 mx-10 flex h-full items-center justify-center pt-20">
+        <div className="relative z-10 mx-10 -mt-16 flex h-full items-center justify-center">
           <motion.div
-            className="max-w-4xl text-center text-white drop-shadow-md"
+            className="max-w-4xl text-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             initial="hidden"
             animate="visible"
             variants={fadeUp}
@@ -112,7 +125,10 @@ export default function Home() {
               </motion.span>
               <br />
             </h1>
-            <motion.div className="mb-6 text-center text-xl font-semibold text-white" variants={fadeUp}>
+            <motion.div
+              className="mb-6 text-center text-xl font-semibold text-white"
+              variants={fadeUp}
+            >
               <p>{content.hero.description}</p>
               <p>{content.hero.description2}</p>
             </motion.div>
@@ -135,7 +151,7 @@ export default function Home() {
           viewport={{ once: true }}
           variants={slideFromLeft}
         >
-          <div className="md:w-7/12 p-4 md:p-0">
+          <div className="p-4 md:w-7/12 md:p-0">
             <p className="mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
               {content.whoWeAre.tag}
             </p>
@@ -147,7 +163,7 @@ export default function Home() {
             {content.whoWeAre.paragraphs.map((p, i) => (
               <motion.p
                 key={i}
-                className="mb-6 text-justify text-base text-black"
+                className="mb-6 text-justify text-base text-black md:max-w-[620px]"
                 custom={i}
                 variants={fadeUp}
               >
@@ -190,14 +206,14 @@ export default function Home() {
                 {content.solutions.sectionTitle}
               </p>
             </motion.div>
-            <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
+            {/* <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
               <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro1}
               </p>
               <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro2}
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
           {content.solutions.blocks.map((block, index) => (
             <SolutionBlock key={index} {...block} content={content} />
@@ -216,7 +232,11 @@ export default function Home() {
           <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
             {content.discover.map((line, i) => (
               <div key={i} className="contents">
-                <motion.div className="flex flex-col items-center justify-center px-5 text-center" custom={i} variants={fadeUp}>
+                <motion.div
+                  className="flex flex-col items-center justify-center px-5 text-center"
+                  custom={i}
+                  variants={fadeUp}
+                >
                   <h3 className="mb-4 text-xl leading-relaxed font-semibold md:text-2xl">{line}</h3>
                 </motion.div>
                 {i < content.discover.length - 1 && (

@@ -95,8 +95,8 @@ export default function HomeSwiper() {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="swiper-button-prev !text-white" />
-      <div className="swiper-button-next !text-white" />
+      <div className="swiper-button-prev !-mt-16 !text-white" />
+      <div className="swiper-button-next !-mt-16 !text-white" />
     </div>
   );
 }
