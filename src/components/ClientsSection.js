@@ -15,7 +15,9 @@ export default function ClientsSection() {
   return (
     <section className="w-full bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">{content.title}</h2>
+        <h2 className="mb-8 text-center text-3xl font-bold text-[var(--color-text-red-theme-500)]">
+          {content.title}
+        </h2>
 
         <Swiper
           slidesPerView={2}
@@ -63,7 +65,7 @@ function LogoCell({ src, alt }) {
         alt={alt}
         fill
         sizes="(max-width: 640px) 80px, (max-width: 768px) 100px, 120px"
-        className="object-contain grayscale transition-all duration-1000 ease-out hover:grayscale-0"
+        className="object-contain transition-all duration-1000 ease-out"
       />
     </div>
   );
