@@ -32,8 +32,8 @@ export default function Contact() {
     <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
-          <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">Get in Touch</p>
-          <h2 className="text-3xl font-light text-black md:text-5xl lg:text-6xl">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">Get in Touch</p>
+          <h2 className="text-3xl font-semibold text-[var(--color-text-red-theme-500)] md:text-5xl lg:text-6xl">
             Contact Information
           </h2>
         </div>

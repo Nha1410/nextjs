@@ -30,9 +30,9 @@ export default function Footer() {
               <div className="space-y-4 sm:col-span-3">
                 {/* Address */}
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 h-6 w-6 text-gray-400" />
+                  <MapPin className="mt-1 h-6 w-6 text-white" />
                   <div>
-                    <p className="text-base font-medium text-gray-400">Address</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Address</p>
                     <p className="text-base leading-relaxed text-white">
                       Feliza Villa Khang Điền, <br />
                       Số 2 Đường 28B, Phước Long, Thủ Đức, TP. HCM
@@ -41,9 +41,9 @@ export default function Footer() {
                 </div>
                 {/* Phone */}
                 <div className="flex items-start gap-3">
-                  <Phone className="mt-1 h-5 w-5 text-gray-400" />
+                  <Phone className="mt-1 h-5 w-5 text-white" />
                   <div>
-                    <p className="text-base font-medium text-gray-400">Phone</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Phone</p>
                     <p className="text-base leading-relaxed text-white">
                       <a href="tel:0976305499" className="hover:underline">
                         097 6305499
@@ -53,9 +53,9 @@ export default function Footer() {
                 </div>
                 {/* Email */}
                 <div className="flex items-start gap-3">
-                  <Mail className="mt-1 h-5 w-5 text-gray-400" />
+                  <Mail className="mt-1 h-5 w-5 text-white" />
                   <div>
-                    <p className="text-base font-medium text-gray-400">Email</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Email</p>
                     <p className="text-base leading-relaxed text-white">
                       <a href="mailto:hello.annmultimedia@gmail.com" className="hover:underline">
                         hello.annmultimedia@gmail.com

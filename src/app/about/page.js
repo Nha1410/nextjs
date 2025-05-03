@@ -35,10 +35,10 @@ export default function About() {
     <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
-          <p className="mb-4 text-sm font-light tracking-wide text-black uppercase">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
             {content.section1.tag}
           </p>
-          <h2 className="text-3xl font-light text-black md:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-semibold text-[var(--color-text-red-theme-500)] md:text-5xl lg:text-6xl">
             {content.section1.title}
           </h2>
         </div>
@@ -111,24 +111,38 @@ export default function About() {
 
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-light tracking-wide text-black uppercase">
+          <p className="mb-3 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
             {content.section3.tag}
           </p>
-          <h2 className="text-2xl font-light text-black md:text-3xl">{content.section3.title}</h2>
+          <h2 className="text-2xl font-semibold text-[var(--color-text-red-theme-500)] md:text-3xl">
+            {content.section3.title}
+          </h2>
         </div>
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
-          <div className="flex-1 space-y-4 rounded-lg bg-[var(--color-text-red-theme-500)] p-6 text-justify text-white md:p-8">
-            <h2 className="text-xl leading-snug font-bold md:text-2xl">
-              {content.section3.mission.title.map((line, idx) => (
-                <div key={idx}>{line}</div>
+          <div className="relative flex-1 overflow-hidden rounded-lg bg-[var(--color-text-red-theme-500)] px-6 pt-8 pb-32 text-white md:px-8 md:pt-8 md:pb-8">
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold md:text-2xl">
+                {content.section3.mission.title.map((line, idx) => (
+                  <div key={idx}>{line}</div>
+                ))}
+              </h2>
+              {content.section3.mission.paragraphs.map((p, idx) => (
+                <p className="md:text-base" key={idx}>
+                  {p}
+                </p>
               ))}
-            </h2>
-            {content.section3.mission.paragraphs.map((p, idx) => (
-              <p className="md:text-base" key={idx}>
-                {p}
-              </p>
-            ))}
+            </div>
+
+            {/* ONE image used for all screen sizes */}
+            <Image
+              src="/images/about/phone.png"
+              alt="Phone in Hand"
+              width={320}
+              height={320}
+              className="absolute right-0 bottom-0 w-[220px] md:w-[280px] lg:w-[400px]"
+              style={{ zIndex: 10 }}
+            />
           </div>
 
           <div
@@ -149,25 +163,6 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
-        <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-          {content.stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center space-y-2 text-center text-black md:items-start md:text-left"
-            >
-              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border-1 border-gray-200 bg-gray-100 shadow-md">
-                <Image src={stat.icon} alt={stat.label} width={48} height={48} />
-              </div>
-              <div className="text-base font-medium">{stat.label}</div>
-              <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-500)]">
-                <StatCount end={stat.count} suffix="+" />
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
