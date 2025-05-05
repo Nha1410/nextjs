@@ -9,7 +9,7 @@
   font-weight: 800;
   font-size: 3rem; /* Mặc định cho mobile */
   text-align: center;
-  -webkit-text-stroke: 3px #e90000;
+  -webkit-text-stroke: 2px #e90000;
   color: transparent;
 }
 
