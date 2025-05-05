@@ -5,6 +5,14 @@
   --foreground: #171717;
 }
 
+.outline-text {
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  -webkit-text-stroke: 2px #e90000; /* màu viền */
+  color: transparent; /* phần trong rỗng */
+}
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
