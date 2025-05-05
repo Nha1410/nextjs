@@ -17,29 +17,28 @@ export default {
         items: [
           {
             label: "Video Ad",
-            description: "Deliver brand stories with high-impact video across digital channels.",
+            description: "Truyền tải thông điệp qua video trên đa nền tảng số.",
             icon: "/images/solution/icons/video.svg",
           },
           {
             label: "Display Ad",
-            description:
-              "Reach the right audience with banners, animations, and visuals that drive action.",
+            description: "Thu hút khách hàng với banner, animation, hình ảnh hấp dẫn.",
             icon: "/images/solution/icons/imasvg.svg",
           },
           {
             label: "Social Ad",
-            description: "Execute scalable campaigns across Facebook, Instagram, TikTok, and more.",
+            description:
+              "Triển khai chiến dịch hiệu quả trên Facebook, Instagram, TikTok và nhiều nền tảng khác.",
             icon: "/images/solution/icons/net.svg",
           },
           {
             label: "Search Ad",
-            description: "Capture demand with keyword-targeted ads on top search engines.",
+            description: "Nắm bắt nhu cầu người dùng thông qua quảng cáo tìm kiếm.",
             icon: "/images/solution/icons/search.svg",
           },
           {
             label: "PR & Booking",
-            description:
-              "Access premium media placements and publisher deals with maximum visibility.",
+            description: "Tiếp cận premium inventory cùng ưu đãi tốt từ các publisher hàng đầu.",
             icon: "/images/solution/icons/pr.svg",
           },
         ],
@@ -49,13 +48,12 @@ export default {
         items: [
           {
             label: "Performance Marketing",
-            description: "Optimize campaigns by KPI CPC, CPL, CPS, CPA for measurable results.",
+            description: "Tối ưu theo KPI thực tế như CPC, CPL, CPS, CPA để tăng hiệu quả đầu tư.",
             icon: "/images/solution/icons/perfor.svg",
           },
           {
             label: "Analytics & Reporting",
-            description:
-              "Real-time, cross-channel dashboards tailored for fast campaign decisions.",
+            description: "Theo dõi realtime từ đa kênh và báo cáo.",
             icon: "/images/solution/icons/perfor2.svg",
           },
         ],
@@ -65,25 +63,24 @@ export default {
         items: [
           {
             label: "Digital Communication Planning",
-            description: "Shape fresh narratives that connect brand and audience meaningfully.",
+            description: "Lên chiến lược truyền thông sáng tạo đúng theo insight khách hàng.",
             icon: "/images/solution/icons/strategy.svg",
           },
           {
             label: "Social Management",
-            description:
-              "Build and manage your voice across every social platform with clarity and consistency.",
+            description: "Xây dựng và quản lý nội dung thương hiệu trên mạng xã hội.",
             icon: "/images/solution/icons/social.svg",
           },
           {
             label: "IMC Plan & Content Strategy",
             description:
-              "Create an integrated IMC plan and content strategy that aligns messaging across all channels to reinforce the brand's identity and goals.",
+              "Tạo kế hoạch truyền thông tích hợp) và chiến lược nội dung đồng bộ thông điệp trên tất cả các kênh nhằm củng cố nhận diện và mục tiêu của thương hiệu.",
             icon: "/images/solution/icons/idea1.svg",
           },
           {
             label: "Influencer Management",
             description:
-              "Identify and manage key influencers (KOLs/KOCs) to boost the brand’s image and support marketing objectives.",
+              "Xác định và quản lý các influencer chủ chốt (KOLs/KOCs) để nâng cao hình ảnh thương hiệu và hỗ trợ các mục tiêu marketing.",
             icon: "/images/solution/icons/influ.svg",
           },
         ],
@@ -94,12 +91,12 @@ export default {
           {
             label: "Multi-Platform Delivery",
             description:
-              "Activate dynamic formats video, native, 3D on apps like Grab, MoMo, Zalo, TikTok.",
+              "Hiển thị trên các app phổ biến như Grab, MoMo, TikTok, Zalo với đa định dạng premium.",
             icon: "/images/solution/icons/software.svg",
           },
           {
             label: "User-First Targeting",
-            description: "Reach consumers where they scroll, swipe, and spend the most time.",
+            description: "Tiếp cận người dùng đúng thời điểm.",
             icon: "/images/solution/icons/youtuber.svg",
           },
         ],
@@ -109,14 +106,12 @@ export default {
         items: [
           {
             label: "Indoor OOH",
-            description:
-              "Cinema, malls, airports, POSM reach audiences in prime indoor environments.",
+            description: "Quảng cáo tại rạp phim, trung tâm thương mại, sân bay, POSM.",
             icon: "/images/solution/icons/Vector.svg",
           },
           {
             label: "Moving Media",
-            description:
-              "Amplify presence with branding on taxis, buses, trains, roadshows, and more.",
+            description: "Phủ sóng bằng branding trên taxi, xe buýt, xe lửa, roadshow ngoài trời.",
             icon: "/images/solution/icons/web-07.svg",
           },
         ],
