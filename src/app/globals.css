@@ -7,10 +7,31 @@
 
 .outline-text {
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 3rem; /* Mặc định cho mobile */
   text-align: center;
-  -webkit-text-stroke: 2px #e90000; /* màu viền */
-  color: transparent; /* phần trong rỗng */
+  -webkit-text-stroke: 3px #e90000;
+  color: transparent;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .outline-text {
+    font-size: 4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .outline-text {
+    font-size: 5rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+  .outline-text {
+    font-size: 6rem;
+  }
 }
 
 @theme {
