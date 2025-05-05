@@ -1,52 +1,76 @@
-import Image from "next/image";
+import { useState } from "react";
 
-export default function OurSolutions({ content, language }) {
+export default function OurSolutions({ content }) {
   const { solutions } = content;
+  const [activeItems, setActiveItems] = useState({}); // key: sectionIndex, value: array of itemIndex
+
+  const handleItemClick = (sectionIndex, itemIndex) => {
+    setActiveItems((prev) => {
+      const sectionItems = prev[sectionIndex] || [];
+      if (sectionItems.includes(itemIndex)) return prev;
+
+      return {
+        ...prev,
+        [sectionIndex]: [...sectionItems, itemIndex],
+      };
+    });
+  };
 
   return (
-    <section className="w-screen justify-center py-16 md:py-24">
-      <div className="container mx-auto lg:w-4/5">
+    <section className="w-full py-12 md:py-20">
+      <div className="mx-auto">
         <h2 className="mb-12 text-center text-4xl font-bold md:text-5xl lg:text-6xl">
-          {language === "vi" ? (
-            <>
-              <span className="text-[var(--color-text-red-theme-500)]">{content.title1}</span>{" "}
-              {content.title2}
-            </>
-          ) : (
-            <>
-              {content.title1}{" "}
-              <span className="text-[var(--color-text-red-theme-500)]">{content.title2}</span>
-            </>
-          )}
+          {content.title1}{" "}
+          <span className="text-[var(--color-text-red-theme-500)]">{content.title2}</span>
         </h2>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className={`flex flex-col items-center md:items-start ${
-                index === 1 ? "md:flex-col-reverse" : ""
-              } p-4 sm:p-6`}
-            >
-              <div className="relative flex w-full items-center justify-center bg-transparent">
-                <Image
-                  src={solution.img}
-                  alt={solution.title}
-                  width={400}
-                  height={400}
-                  className="h-auto rounded-lg object-contain"
-                />
-              </div>
+        {solutions.map((solution, sectionIndex) => (
+          <div key={sectionIndex} className="relative mb-40">
+            <div className="relative overflow-visible bg-gradient-to-br from-[#FAA6FF] to-[#E90000] pt-10">
+              <h2 className="outline-text mb-12 text-center tracking-wide uppercase">
+                {solution.title}
+              </h2>
 
-              <div className="mt-4 w-full text-center md:text-left">
-                <h3 className="text-xl font-semibold text-[var(--color-text-red-theme-500)] md:text-2xl lg:text-3xl">
-                  {solution.title}
-                </h3>
-                <p className="mt-6 text-justify text-base text-gray-700">{solution.description}</p>
+              <div className="relative h-[60px]">
+                <div className="absolute top-full left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-row justify-center gap-4 px-2 sm:gap-6 sm:px-4">
+                  {solution.items.map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className="flex h-[90px] w-[90px] cursor-pointer flex-col items-center justify-center space-y-2 rounded-3xl bg-white/80 text-center shadow-lg backdrop-blur-md transition duration-300 hover:bg-gradient-to-br hover:from-[#FAA6FF] hover:to-[#E90000] sm:h-[140px] sm:w-[140px]"
+                      onClick={() => handleItemClick(sectionIndex, itemIndex)}
+                    >
+                      <img src={item.icon} alt={item.label} className="h-7 w-7 sm:h-8 sm:w-8" />
+                      <span className="text-sm font-semibold text-gray-800 sm:text-base">
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+
+            {activeItems[sectionIndex]?.length > 0 && (
+              <div className="mt-32 px-2 sm:px-4">
+                <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2">
+                  {activeItems[sectionIndex].map((itemIndex) => {
+                    const item = solution.items[itemIndex];
+                    return (
+                      <div
+                        key={itemIndex}
+                        className="rounded-xl bg-white/90 p-4 text-left text-gray-700 shadow-md sm:p-6"
+                      >
+                        <p className="mb-1 text-lg font-bold text-[var(--color-text-red-theme-500)] sm:text-xl">
+                          {item.label}
+                        </p>
+                        <p className="text-sm font-medium sm:text-base">{item.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

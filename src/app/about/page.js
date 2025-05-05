@@ -35,7 +35,7 @@ export default function About() {
     <section className="relative w-full bg-white bg-cover bg-center">
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
-          <p className="mb-4 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
+          <p className="mb-4 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
             {content.section1.tag}
           </p>
           <h2 className="text-3xl font-semibold text-[var(--color-text-red-theme-500)] md:text-5xl lg:text-6xl">
@@ -111,7 +111,7 @@ export default function About() {
 
       <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
         <div className="text-left">
-          <p className="mb-3 text-sm font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase">
+          <p className="mb-3 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
             {content.section3.tag}
           </p>
           <h2 className="text-2xl font-semibold text-[var(--color-text-red-theme-500)] md:text-3xl">

@@ -11,7 +11,7 @@ export default function Footer() {
             {/* Left Side: Contact CTA */}
             <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
-                <h4 className="mb-1 text-sm text-gray-300">Contact</h4>
+                <h4 className="mb-1 text-xl text-gray-300">Contact</h4>
                 <h2 className="text-3xl leading-tight font-semibold md:text-4xl">
                   Let’s start creating together
                 </h2>
@@ -32,7 +32,9 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-6 w-6 text-white" />
                   <div>
-                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Address</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">
+                      Address
+                    </p>
                     <p className="text-base leading-relaxed text-white">
                       Feliza Villa Khang Điền, <br />
                       Số 2 Đường 28B, Phước Long, Thủ Đức, TP. HCM
@@ -43,7 +45,9 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <Phone className="mt-1 h-5 w-5 text-white" />
                   <div>
-                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Phone</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">
+                      Phone
+                    </p>
                     <p className="text-base leading-relaxed text-white">
                       <a href="tel:0976305499" className="hover:underline">
                         097 6305499
@@ -55,7 +59,9 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <Mail className="mt-1 h-5 w-5 text-white" />
                   <div>
-                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">Email</p>
+                    <p className="text-base font-semibold text-[var(--color-text-red-theme-500)]">
+                      Email
+                    </p>
                     <p className="text-base leading-relaxed text-white">
                       <a href="mailto:hello.annmultimedia@gmail.com" className="hover:underline">
                         hello.annmultimedia@gmail.com

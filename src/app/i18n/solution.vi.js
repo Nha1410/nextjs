@@ -3,32 +3,123 @@ export default {
   button: "LIÊN HỆ NGAY",
   networkTitle: "Our",
   stats: [
-    { number: "30+", label1: "ĐỐI TÁC", label2: "TRUYỀN THÔNG" },
-    { number: "15+", label1: "NHÂN SỰ", label2: "KINH NGHIỆM" },
-    { number: "30+", label1: "DỰ ÁN", label2: "THÀNH CÔNG" },
-    { number: "50+", label1: "THƯƠNG HIỆU", label2: "CỘNG TÁC" },
+    { icon: "/images/star.png", label: "Đối tác truyền thông", count: 30 },
+    { icon: "/images/experience.png", label: "Nhân sự kinh nghiệm", count: 15 },
+    { icon: "/images/campaign.png", label: "Dự án thành công", count: 30 },
+    { icon: "/images/ourteam.png", label: "Thương hiệu cộng tác", count: 50 },
   ],
   solutionSection: {
-    title1: "Giải pháp",
-    title2: "của chúng tôi",
+    title1: "Our",
+    title2: "Solutions",
     solutions: [
       {
-        img: "/images/solution/1_1.png",
-        title: "Social Advertisement",
-        description:
-          "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
+        title: "Branding Solutions",
+        items: [
+          {
+            label: "Video Ad",
+            description: "Deliver brand stories with high-impact video across digital channels.",
+            icon: "/images/solution/icons/video.svg",
+          },
+          {
+            label: "Display Ad",
+            description:
+              "Reach the right audience with banners, animations, and visuals that drive action.",
+            icon: "/images/solution/icons/imasvg.svg",
+          },
+          {
+            label: "Social Ad",
+            description: "Execute scalable campaigns across Facebook, Instagram, TikTok, and more.",
+            icon: "/images/solution/icons/net.svg",
+          },
+          {
+            label: "Search Ad",
+            description: "Capture demand with keyword-targeted ads on top search engines.",
+            icon: "/images/solution/icons/search.svg",
+          },
+          {
+            label: "PR & Booking",
+            description:
+              "Access premium media placements and publisher deals with maximum visibility.",
+            icon: "/images/solution/icons/pr.svg",
+          },
+        ],
       },
       {
-        img: "/images/solution/1_2.png",
-        title: "Branding Solution",
-        description:
-          "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
+        title: "Digital Performance",
+        items: [
+          {
+            label: "Performance Marketing",
+            description: "Optimize campaigns by KPI CPC, CPL, CPS, CPA for measurable results.",
+            icon: "/images/solution/icons/perfor.svg",
+          },
+          {
+            label: "Analytics & Reporting",
+            description:
+              "Real-time, cross-channel dashboards tailored for fast campaign decisions.",
+            icon: "/images/solution/icons/perfor2.svg",
+          },
+        ],
       },
       {
-        img: "/images/solution/1_3.png",
-        title: "Creative Planning & Deployment",
-        description:
-          "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
+        title: "Creative Strategy",
+        items: [
+          {
+            label: "Digital Communication Planning",
+            description: "Shape fresh narratives that connect brand and audience meaningfully.",
+            icon: "/images/solution/icons/strategy.svg",
+          },
+          {
+            label: "Social Management",
+            description:
+              "Build and manage your voice across every social platform with clarity and consistency.",
+            icon: "/images/solution/icons/social.svg",
+          },
+          {
+            label: "IMC Plan & Content Strategy",
+            description:
+              "Create an integrated IMC plan and content strategy that aligns messaging across all channels to reinforce the brand's identity and goals.",
+            icon: "/images/solution/icons/idea1.svg",
+          },
+          {
+            label: "Influencer Management",
+            description:
+              "Identify and manage key influencers (KOLs/KOCs) to boost the brand’s image and support marketing objectives.",
+            icon: "/images/solution/icons/influ.svg",
+          },
+        ],
+      },
+      {
+        title: "Mobile Advertising",
+        items: [
+          {
+            label: "Multi-Platform Delivery",
+            description:
+              "Activate dynamic formats video, native, 3D on apps like Grab, MoMo, Zalo, TikTok.",
+            icon: "/images/solution/icons/software.svg",
+          },
+          {
+            label: "User-First Targeting",
+            description: "Reach consumers where they scroll, swipe, and spend the most time.",
+            icon: "/images/solution/icons/youtuber.svg",
+          },
+        ],
+      },
+      {
+        title: "Activation Service",
+        items: [
+          {
+            label: "Indoor OOH",
+            description:
+              "Cinema, malls, airports, POSM reach audiences in prime indoor environments.",
+            icon: "/images/solution/icons/Vector.svg",
+          },
+          {
+            label: "Moving Media",
+            description:
+              "Amplify presence with branding on taxis, buses, trains, roadshows, and more.",
+            icon: "/images/solution/icons/web-07.svg",
+          },
+        ],
       },
     ],
   },
