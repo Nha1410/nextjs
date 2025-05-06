@@ -32,19 +32,21 @@ export default function OurSolutions({ content }) {
               </h2>
 
               <div className="relative h-[60px]">
-                <div className="absolute top-full left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-row justify-center gap-4 px-2 sm:gap-6 sm:px-4">
-                  {solution.items.map((item, itemIndex) => (
-                    <div
-                      key={itemIndex}
-                      className="flex h-[90px] w-[90px] cursor-pointer flex-col items-center justify-center space-y-2 rounded-3xl bg-white/80 text-center shadow-lg backdrop-blur-md transition duration-300 hover:bg-gradient-to-br hover:from-[#FAA6FF] hover:to-[#E90000] sm:h-[140px] sm:w-[140px]"
-                      onClick={() => handleItemClick(sectionIndex, itemIndex)}
-                    >
-                      <img src={item.icon} alt={item.label} className="h-7 w-7 sm:h-8 sm:w-8" />
-                      <span className="text-sm font-semibold text-gray-800 sm:text-base">
-                        {item.label}
-                      </span>
-                    </div>
-                  ))}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen px-4 sm:w-auto sm:px-4">
+                  <div className="flex flex-row gap-4 overflow-x-auto pb-4 scrollbar-hide sm:gap-6">
+                    {solution.items.map((item, itemIndex) => (
+                      <div
+                        key={itemIndex}
+                        className="p-2 md:p-0 flex h-[90px] min-w-[90px] cursor-pointer flex-col items-center justify-center space-y-2 rounded-3xl bg-white/80 text-center shadow-lg backdrop-blur-md transition duration-300 hover:bg-gradient-to-br hover:from-[#FAA6FF] hover:to-[#E90000] sm:h-[140px] sm:w-[140px]"
+                        onClick={() => handleItemClick(sectionIndex, itemIndex)}
+                      >
+                        <img src={item.icon} alt={item.label} className="h-7 w-7 sm:h-8 sm:w-8" />
+                        <span className="text-sm font-semibold text-gray-800 sm:text-base">
+                          {item.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
