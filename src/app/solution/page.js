@@ -18,7 +18,7 @@ export default function SolutionContent() {
         <div className="animate-fadeIn absolute inset-0 z-0 max-h-[600px] w-full bg-[url('/images/solution/Cover.png')] bg-cover bg-center md:max-h-[800px] md:w-screen" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
-          <div className="relative z-10 px-6 text-white md:py-20">
+          <div className="relative z-10 px-6 text-white md:py-10">
             <div className="container mx-auto ml-[-35px] flex flex-col items-center text-center md:ml-[-20px] md:flex-row md:text-left">
               <div className="animate-slideInLeft md:w-1/2">
                 <h1 className="mb-4 text-2xl font-bold md:text-[30px]">
@@ -54,7 +54,7 @@ export default function SolutionContent() {
           </div>
         </div>
 
-        <div className="relative z-20 mx-auto mt-94 w-full max-w-screen px-4 md:mt-60 md:py-20 lg:mt-70">
+        <div className="relative z-20 mx-auto mt-94 w-full max-w-screen px-4 md:mt-60 md:pt-20 lg:mt-70">
           <div className="text-center">
             <h2 className="mb-4 text-4xl font-bold text-black md:text-6xl">
               {content.networkTitle}{" "}

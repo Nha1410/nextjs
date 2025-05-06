@@ -19,7 +19,7 @@ export default function OurSolutions({ content }) {
   return (
     <section className="w-full py-12 md:py-20">
       <div className="mx-auto">
-        <h2 className="mb-12 text-center text-4xl font-bold md:text-5xl lg:text-6xl">
+        <h2 className="mb-12 text-center text-4xl font-bold md:text-6xl lg:text-7xl">
           {content.title1}{" "}
           <span className="text-[var(--color-text-red-theme-500)]">{content.title2}</span>
         </h2>
@@ -32,12 +32,12 @@ export default function OurSolutions({ content }) {
               </h2>
 
               <div className="relative h-[60px]">
-                <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen px-4 sm:w-auto sm:px-4">
-                  <div className="flex flex-row gap-4 overflow-x-auto pb-4 scrollbar-hide sm:gap-6">
+                <div className="absolute top-full left-1/2 w-screen -translate-x-1/2 -translate-y-1/2 px-4 sm:w-auto sm:px-4">
+                  <div className="scrollbar-hide flex flex-row gap-4 overflow-x-auto pb-4 sm:gap-6">
                     {solution.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className="p-2 md:p-0 flex h-[90px] min-w-[90px] cursor-pointer flex-col items-center justify-center space-y-2 rounded-3xl bg-white/80 text-center shadow-lg backdrop-blur-md transition duration-300 hover:bg-gradient-to-br hover:from-[#FAA6FF] hover:to-[#E90000] sm:h-[140px] sm:w-[140px]"
+                        className="flex h-[90px] min-w-[90px] cursor-pointer flex-col items-center justify-center space-y-2 rounded-3xl bg-white/80 p-2 text-center shadow-lg backdrop-blur-md transition duration-300 hover:bg-gradient-to-br hover:from-[#FAA6FF] hover:to-[#E90000] sm:h-[140px] sm:w-[140px] md:p-0"
                         onClick={() => handleItemClick(sectionIndex, itemIndex)}
                       >
                         <img src={item.icon} alt={item.label} className="h-7 w-7 sm:h-8 sm:w-8" />
