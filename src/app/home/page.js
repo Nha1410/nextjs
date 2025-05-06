@@ -182,7 +182,7 @@ export default function Home() {
             variants={fadeUp}
           >
             <Image
-              src="/images/home/improve_v3.png"
+              src="/images/home/1.png"
               alt="Let your brand speak"
               width={500}
               height={500}

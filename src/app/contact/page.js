@@ -46,7 +46,7 @@ export default function Contact() {
             className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
             <Image
-              src="/images/contact/Contact_Us.png"
+              src="/images/contact/2.png"
               alt="Main Team Image"
               width={500}
               height={500}
