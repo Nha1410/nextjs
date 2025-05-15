@@ -59,7 +59,7 @@ export default function ClientsSection() {
 
 function LogoCell({ src, alt }) {
   return (
-    <div className="relative h-30 w-30 overflow-hidden rounded-xl bg-white transition-all duration-300 ease-in-out">
+    <div className="relative h-20 w-20 overflow-hidden rounded-xl bg-white transition-all duration-300 ease-in-out">
       <Image
         src={src}
         alt={alt}

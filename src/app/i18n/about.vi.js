@@ -1,7 +1,7 @@
 export default {
   headline: "Right message - at the right moment",
   section1: {
-    tag: "_ WHO WE ARE",
+    // tag: "_ WHO WE ARE",
     title: "About us",
     headline: ["Your Brand Growth Partner"],
     description:
@@ -13,7 +13,7 @@ export default {
       "ANN là đơn vị với thế mạnh là phương tiện truyền thông kỹ thuật số, sản xuất sáng tạo, xây dựng thương hiệu đa kênh và tiếp thị dựa trên dữ liệu, được thiết kế để kết nối, chuyển đổi và mở rộng tầm ảnh hưởng. Dù bạn đang mở rộng sang thị trường mới hay tăng cường sự hiện diện của thương hiệu, ANN là đối tác chiến lược của bạn để mang lại tác động ở mọi điểm chạm.",
   },
   section3: {
-    tag: "_ Our Mission",
+    // tag: "_ Our Mission",
     title: "Sứ mệnh và các giá trị cốt lõi tại ANN",
     mission: {
       title: ["Where ideas ignite brand momentum"],

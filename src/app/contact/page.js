@@ -33,7 +33,7 @@ export default function Contact() {
       <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
         <div className="text-left">
           <p className="mb-4 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
-            _ Get in Touch
+            {/* _ Get in Touch */}
           </p>
           <h2 className="text-3xl font-semibold text-[var(--color-text-red-theme-500)] md:text-5xl lg:text-6xl">
             Contact Information

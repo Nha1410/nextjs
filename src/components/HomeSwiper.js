@@ -27,7 +27,7 @@ export default function HomeSwiper() {
         <SwiperSlide>
           <div className="relative h-screen w-full">
             <Image
-              src="/images/home/opt 1.png"
+              src="/images/home/2.png"
               alt="Slide 1"
               fill
               className="object-cover"
@@ -40,7 +40,7 @@ export default function HomeSwiper() {
         <SwiperSlide>
           <div className="relative h-screen w-full">
             <Image
-              src="/images/home/opt 2.png"
+              src="/images/home/3.png"
               alt="Slide 2"
               fill
               className="object-cover"
@@ -53,7 +53,7 @@ export default function HomeSwiper() {
         <SwiperSlide>
           <div className="relative h-screen w-full">
             <Image
-              src="/images/home/opt 3.png"
+              src="/images/home/4.png"
               alt="Slide 3"
               fill
               className="object-cover"
@@ -61,10 +61,10 @@ export default function HomeSwiper() {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="relative h-screen w-full">
             <Image
-              src="/images/home/opt 5.png"
+              src="/images/home/4.png"
               alt="Slide 5"
               fill
               className="object-cover"
@@ -93,7 +93,7 @@ export default function HomeSwiper() {
               priority
             />
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
       <div className="swiper-button-prev !-mt-16 !text-white" />
       <div className="swiper-button-next !-mt-16 !text-white" />

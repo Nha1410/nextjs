@@ -182,7 +182,7 @@ export default function Home() {
             variants={fadeUp}
           >
             <Image
-              src="/images/home/1.png"
+              src="/images/home/AI 1 (3).png"
               alt="Let your brand speak"
               width={500}
               height={500}
@@ -192,7 +192,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="bg-white py-16 text-white">
+      {/* <section className="bg-white py-16 text-white">
         <motion.div
           className="container mx-auto px-4"
           initial="hidden"
@@ -206,20 +206,20 @@ export default function Home() {
                 {content.solutions.sectionTitle}
               </p>
             </motion.div>
-            {/* <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
+            <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
               <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro1}
               </p>
               <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
                 {content.solutions.intro2}
               </p>
-            </motion.div> */}
+            </motion.div>
           </div>
           {content.solutions.blocks.map((block, index) => (
             <SolutionBlock key={index} {...block} content={content} />
           ))}
         </motion.div>
-      </section>
+      </section> */}
 
       <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
         <motion.div

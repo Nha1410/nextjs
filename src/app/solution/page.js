@@ -15,7 +15,7 @@ export default function SolutionContent() {
   return (
     <main className="bg-white">
       <section className="relative min-h-screen w-screen">
-        <div className="animate-fadeIn absolute inset-0 z-0 max-h-[600px] w-full bg-[url('/images/solution/Cover.png')] bg-cover bg-center md:max-h-[800px] md:w-screen" />
+        <div className="animate-fadeIn absolute inset-0 z-0 max-h-[350px] w-full bg-[url('/images/solution/background.png')] bg-cover bg-center md:max-h-[450px] md:w-screen" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
           <div className="relative z-10 px-6 text-white md:py-10">
