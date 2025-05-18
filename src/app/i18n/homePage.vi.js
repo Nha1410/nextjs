@@ -6,8 +6,8 @@ export default {
     button: "GET STARTED",
   },
   whoWeAre: {
-    // tag: "WHO WE ARE",
-    title: "ANN Multimedia - Your brand growth partner",
+    tag: "About Us",
+    title: "WE ARE YOUR BRAND GROWTH PARTNER",
     paragraphs: [
       "ANN Multimedia cung cấp các dịch vụ toàn diện bao gồm chiến lược kỹ thuật số, sản xuất sáng tạo, tiếp thị mạng xã hội, lập kế hoạch truyền thông và phân tích hiệu suất. Năng lực của ANN còn mở rộng sang tiếp thị theo dữ liệu, tạo khách hàng tiềm năng và các chiến lược tiếp thị nội bộ được xây dựng để thu hút đúng đối tượng vào đúng thời điểm.",
     ],

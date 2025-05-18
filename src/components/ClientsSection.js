@@ -21,7 +21,7 @@ export default function ClientsSection() {
 
         <Swiper
           slidesPerView={2}
-          spaceBetween={30}
+          spaceBetween={10}
           loop={true}
           speed={8000}
           autoplay={{
@@ -48,7 +48,7 @@ export default function ClientsSection() {
         >
           {logos.map((logo, index) => (
             <SwiperSlide key={index}>
-              <LogoCell src={logo.src} alt={logo.alt} />
+              <LogoCell src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -59,12 +59,11 @@ export default function ClientsSection() {
 
 function LogoCell({ src, alt }) {
   return (
-    <div className="relative h-20 w-20 overflow-hidden rounded-xl bg-white transition-all duration-300 ease-in-out">
+    <div className="relative h-26 w-auto overflow-hidden rounded-xl bg-white transition-all duration-300 ease-in-out">
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 640px) 80px, (max-width: 768px) 100px, 120px"
         className="object-contain transition-all duration-1000 ease-out"
       />
     </div>
@@ -72,19 +71,19 @@ function LogoCell({ src, alt }) {
 }
 
 const logos = [
-  { src: "/images/facebook.png", alt: "Facebook" },
-  { src: "/images/instagram.png", alt: "Instagram" },
-  { src: "/images/youtube.png", alt: "YouTube" },
-  { src: "/images/tiktok.png", alt: "TikTok" },
-  { src: "/images/X.png", alt: "Twitter / X" },
-  { src: "/images/kenh14.png", alt: "Kenh14" },
-  { src: "/images/vnexpress.png", alt: "VNExpress" },
-  { src: "/images/vtc.png", alt: "VTC" },
-  { src: "/images/zing.png", alt: "Zing" },
-  { src: "/images/grab.png", alt: "Grab" },
-  { src: "/images/acer.png", alt: "Acer" },
-  { src: "/images/xanhsm.png", alt: "Xanh SM" },
-  { src: "/images/techcombank.png", alt: "Techcombank" },
-  { src: "/images/ocb.png", alt: "OCB" },
-  { src: "/images/vietinbank.png", alt: "Vietinbank" },
+  { src: "/images/introduce/1.png", alt: "Facebook", width: 100, height: 100 },
+  { src: "/images/introduce/2.png", alt: "Instagram", width: 100, height: 100 },
+  { src: "/images/youtube.png", alt: "YouTube", width: 100, height: 100 },
+  { src: "/images/introduce/5.png", alt: "TikTok", width: 100, height: 100 },
+  // { src: "/images/X.png", alt: "Twitter / X", width: 100, height: 100 },
+  { src: "/images/introduce/kenh14_logo_upscaled.png", alt: "Kenh14", width: 100, height: 100 },
+  { src: "/images/vnexpress.png", alt: "VNExpress", width: 100, height: 100 },
+  { src: "/images/vtc.png", alt: "VTC", width: 100, height: 100 },
+  // { src: "/images/zing.png", alt: "Zing", width: 100, height: 100 },
+  { src: "/images/introduce/6.png", alt: "Grab", width: 100, height: 100 },
+  // { src: "/images/acer.png", alt: "Acer" },
+  { src: "/images/xanhsm.png", alt: "Xanh SM", width: 100, height: 100 },
+  { src: "/images/techcombank.png", alt: "Techcombank", width: 100, height: 100 },
+  { src: "/images/ocb.png", alt: "OCB", width: 100, height: 100 },
+  { src: "/images/vietinbank.png", alt: "Vietinbank", width: 100, height: 100 },
 ];

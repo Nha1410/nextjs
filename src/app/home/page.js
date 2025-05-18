@@ -143,36 +143,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section ref={whoWeAreRef} className="overflow-hidden bg-white py-16">
+      {/* Section who we are */}
+      <section
+        ref={whoWeAreRef}
+        className="overflow-hidden bg-[#FFF8F8] bg-[url('/images/home/about-us-bg.png')] bg-cover bg-center bg-no-repeat py-16"
+      >
         <motion.div
-          className="mx-auto flex max-w-7xl flex-col items-start px-1 md:flex-row md:items-center"
+          className="md:items-left mx-auto flex w-full flex-col items-start px-2 md:grid md:grid-cols-2 md:px-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={slideFromLeft}
         >
-          <div className="p-4 md:w-7/12 md:p-0">
-            <p className="mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
+          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
+            <div className="ml-[-420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
               {content.whoWeAre.tag}
-            </p>
-            <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
-              <span className="text-[var(--color-text-red-theme-500)]">
-                {content.whoWeAre.title}
-              </span>
-            </h2>
+            </div>
+            <div className="ml-[-70px]">
+              <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
+                <span className="text-[var(--color-text-red-theme-500)]">
+                  {content.whoWeAre.title}
+                </span>
+              </h2>
+            </div>
             {content.whoWeAre.paragraphs.map((p, i) => (
-              <motion.p
-                key={i}
-                className="mb-6 text-justify text-base text-black md:max-w-[620px]"
-                custom={i}
-                variants={fadeUp}
-              >
-                {p}
-              </motion.p>
+              <div className="ml-[-90px]" key={i}>
+                <motion.p
+                  className="mb-6 text-justify text-[18px] text-black md:max-w-[550px]"
+                  custom={i}
+                  variants={fadeUp}
+                >
+                  {p}
+                </motion.p>
+              </div>
             ))}
             <Link
               href="/about"
-              className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+              className="ml-[-90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
             >
               {content.whoWeAre.button}
             </Link>
@@ -181,47 +188,103 @@ export default function Home() {
             className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
             variants={fadeUp}
           >
-            <Image
-              src="/images/home/AI 1 (3).png"
-              alt="Let your brand speak"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
           </motion.div>
         </motion.div>
       </section>
 
-      {/* <section className="bg-white py-16 text-white">
+      {/* Section why choose us */}
+      <section
+        ref={whoWeAreRef}
+        className="overflow-hidden bg-[#FFF8F8] bg-[url('/images/home/why-choose-us.png')] bg-cover bg-center bg-no-repeat py-16"
+      >
         <motion.div
-          className="container mx-auto px-4"
+          className="md:items-left mx-auto flex w-full flex-col items-start px-2 md:grid md:grid-cols-2 md:px-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={slideFromRight}
+          variants={slideFromLeft}
         >
-          <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <motion.div variants={fadeUp}>
-              <p className="mb-3 text-xl leading-tight font-semibold text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
-                {content.solutions.sectionTitle}
-              </p>
-            </motion.div>
-            <motion.div className="flex flex-col justify-center md:justify-end" variants={fadeUp}>
-              <p className="mb-4 text-justify leading-relaxed text-black md:text-base">
-                {content.solutions.intro1}
-              </p>
-              <p className="mb-6 text-justify leading-relaxed text-black md:text-base">
-                {content.solutions.intro2}
-              </p>
-            </motion.div>
+          <motion.div
+            className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
+            variants={fadeUp}
+          >
+          </motion.div>
+          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
+            <div className="ml-[420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
+              {content.whoWeAre.tag}
+            </div>
+            <div className="ml-[70px]">
+              <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
+                <span className="text-[var(--color-text-red-theme-500)]">
+                  {content.whoWeAre.title}
+                </span>
+              </h2>
+            </div>
+            {content.whoWeAre.paragraphs.map((p, i) => (
+              <div className="ml-[50px]" key={i}>
+                <motion.p
+                  className="mb-6 text-justify text-[18px] text-black md:max-w-[550px]"
+                  custom={i}
+                  variants={fadeUp}
+                >
+                  {p}
+                </motion.p>
+              </div>
+            ))}
+            <Link
+              href="/about"
+              className="ml-[90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+            >
+              {content.whoWeAre.button}
+            </Link>
           </div>
-          {content.solutions.blocks.map((block, index) => (
-            <SolutionBlock key={index} {...block} content={content} />
-          ))}
         </motion.div>
-      </section> */}
+      </section>
 
-      <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
+      {/* Section video */}
+      <section className="relative h-screen overflow-hidden mt-10 p-10">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover"
+          >
+            <source src="/videos/our solution video.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay để làm tối video và làm nổi bật nội dung */}
+          {/* <div className="absolute inset-0 bg-black/50"></div> */}
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 flex h-full items-center justify-center px-4">
+          <motion.div 
+            className="text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            {/* <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+              {content.video?.title || "Discover Our Creative Process"}
+            </h2>
+            <p className="mb-8 max-w-2xl text-lg text-white/90">
+              {content.video?.description || "Watch how we bring ideas to life through innovation and creativity"}
+            </p>
+            <button 
+              className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              onClick={() => {}}
+            >
+              {content.video?.button || "Watch Video"}
+            </button> */}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section discover */}
+      {/* <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
         <motion.div
           className="container mx-auto"
           initial="hidden"
@@ -257,7 +320,7 @@ export default function Home() {
             </Link>
           </div>
         </motion.div>
-      </section>
+      </section> */}
 
       <ClientsSection />
       <NewsRecruitment />

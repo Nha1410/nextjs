@@ -54,7 +54,7 @@ export default function SolutionContent() {
           </div>
         </div>
 
-        <div className="relative z-20 mx-auto mt-94 w-full max-w-screen px-4 md:mt-60 md:pt-20 lg:mt-70">
+        <div className="relative z-20 mx-auto mt-30 w-full max-w-screen px-4 md:pt-20 lg:mt-[-10px]">
           <div className="text-center">
             <h2 className="mb-4 text-4xl font-bold text-black md:text-6xl">
               {content.networkTitle}{" "}
