@@ -7,6 +7,12 @@ import en from "../app/i18n/clients.en";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function ClientsSection() {
   const { language } = useLanguage();
@@ -15,7 +21,9 @@ export default function ClientsSection() {
   return (
     <section className="w-full bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-center text-3xl font-bold text-[var(--color-text-red-theme-500)]">
+        <h2
+          className={`${oswald.className} mb-8 text-center text-3xl font-bold text-[var(--color-text-red-theme-500)] uppercase`}
+        >
           {content.title}
         </h2>
 
@@ -75,15 +83,19 @@ const logos = [
   { src: "/images/introduce/2.png", alt: "Instagram", width: 100, height: 100 },
   { src: "/images/youtube.png", alt: "YouTube", width: 100, height: 100 },
   { src: "/images/introduce/5.png", alt: "TikTok", width: 100, height: 100 },
+  { src: "/images/introduce/zalo.png", alt: "Zalo", width: 70, height: 70 },
+  { src: "/images/introduce/google.png", alt: "Google", width: 100, height: 100 },
+  { src: "/images/introduce/viber.png", alt: "Viber", width: 100, height: 100 },
   // { src: "/images/X.png", alt: "Twitter / X", width: 100, height: 100 },
-  { src: "/images/introduce/kenh14_logo_upscaled.png", alt: "Kenh14", width: 100, height: 100 },
-  { src: "/images/vnexpress.png", alt: "VNExpress", width: 100, height: 100 },
-  { src: "/images/vtc.png", alt: "VTC", width: 100, height: 100 },
+  // { src: "/images/introduce/kenh14_logo_upscaled.png", alt: "Kenh14", width: 100, height: 100 },
+  // { src: "/images/vnexpress.png", alt: "VNExpress", width: 100, height: 100 },
+  // { src: "/images/vtc.png", alt: "VTC", width: 100, height: 100 },
   // { src: "/images/zing.png", alt: "Zing", width: 100, height: 100 },
   { src: "/images/introduce/6.png", alt: "Grab", width: 100, height: 100 },
+  { src: "/images/introduce/momo.png", alt: "Momo", width: 80, height: 80 },
   // { src: "/images/acer.png", alt: "Acer" },
-  { src: "/images/xanhsm.png", alt: "Xanh SM", width: 100, height: 100 },
-  { src: "/images/techcombank.png", alt: "Techcombank", width: 100, height: 100 },
-  { src: "/images/ocb.png", alt: "OCB", width: 100, height: 100 },
-  { src: "/images/vietinbank.png", alt: "Vietinbank", width: 100, height: 100 },
+  // { src: "/images/xanhsm.png", alt: "Xanh SM", width: 100, height: 100 },
+  // { src: "/images/techcombank.png", alt: "Techcombank", width: 100, height: 100 },
+  // { src: "/images/ocb.png", alt: "OCB", width: 100, height: 100 },
+  // { src: "/images/vietinbank.png", alt: "Vietinbank", width: 100, height: 100 },
 ];

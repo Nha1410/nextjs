@@ -1,7 +1,7 @@
 export default {
   hero: {
     title1: "MARK YOUR BRAND IN VIETNAM",
-    description: "With ANN - Your multimedia agency partner in",
+    description: "With ANN - Your Multimedia Agency Partner in",
     description2: "Branding | Advertisement | Creative",
     button: "GET STARTED",
   },
@@ -13,11 +13,14 @@ export default {
     ],
     button: "Tìm hiểu thêm",
   },
+  video: {
+    button: "Tìm hiểu thêm",
+  },
   solutions: {
     // sectionTitle: "WHAT WE DO",
     // intro1: "Thương hiệu cần nổi bật? Phải khác biệt, đủ sáng tạo và lan xa.",
     // intro2:
-      // "ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và ghi dấu ấn bền vững trong tâm trí người tiêu dùng.",
+    // "ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và ghi dấu ấn bền vững trong tâm trí người tiêu dùng.",
     blocks: [
       {
         isList: false,

@@ -5,6 +5,7 @@ import Link from "next/link";
 import ClientsSection from "@/components/ClientsSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
+import { Oswald } from "next/font/google";
 import HomeSwiper from "@/components/HomeSwiper";
 import NewsRecruitment from "@/components/NewsRecruitment";
 import { useLanguage } from "@/components/LanguageSwitcher";
@@ -12,6 +13,11 @@ import { useRef } from "react";
 import vi from "../i18n/homePage.vi";
 import en from "../i18n/homePage.en";
 import { motion } from "framer-motion";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -116,7 +122,7 @@ export default function Home() {
             animate="visible"
             variants={fadeUp}
           >
-            <h1 className="mb-6 leading-tight font-bold">
+            <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
               <motion.span
                 className="text-[26px] text-[#fffffffff] md:text-[50px]"
                 variants={fadeUp}
@@ -155,8 +161,8 @@ export default function Home() {
           viewport={{ once: true }}
           variants={slideFromLeft}
         >
-          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
-            <div className="ml-[-420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
+          <div className="items-start p-4 md:flex md:flex-col md:p-0 xl:items-center">
+            <div className="mb-10 ml-[-420px] text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
               {content.whoWeAre.tag}
             </div>
             <div className="ml-[-70px]">
@@ -179,7 +185,7 @@ export default function Home() {
             ))}
             <Link
               href="/about"
-              className="ml-[-90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+              className="mt-4 ml-[-90px] rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
             >
               {content.whoWeAre.button}
             </Link>
@@ -187,8 +193,7 @@ export default function Home() {
           <motion.div
             className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
             variants={fadeUp}
-          >
-          </motion.div>
+          ></motion.div>
         </motion.div>
       </section>
 
@@ -207,10 +212,9 @@ export default function Home() {
           <motion.div
             className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
             variants={fadeUp}
-          >
-          </motion.div>
-          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
-            <div className="ml-[420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
+          ></motion.div>
+          <div className="items-start p-4 md:flex md:flex-col md:p-0 xl:items-center">
+            <div className="mb-10 ml-[420px] text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
               {content.whoWeAre.tag}
             </div>
             <div className="ml-[70px]">
@@ -233,7 +237,7 @@ export default function Home() {
             ))}
             <Link
               href="/about"
-              className="ml-[90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+              className="mt-4 ml-[90px] rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
             >
               {content.whoWeAre.button}
             </Link>
@@ -242,16 +246,17 @@ export default function Home() {
       </section>
 
       {/* Section video */}
-      <section className="relative h-screen overflow-hidden mt-10 p-10">
+      <section className="relative mt-10 h-screen overflow-hidden p-10">
+        <Link
+          className="absolute bottom-14 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+          href="/solution"
+        >
+          {content.video.button}
+        </Link>
+
         {/* Video Background */}
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover"
-          >
+          <video autoPlay loop muted playsInline className="h-full w-full object-cover">
             <source src="/videos/our solution video.mp4" type="video/mp4" />
           </video>
           {/* Overlay để làm tối video và làm nổi bật nội dung */}
@@ -260,7 +265,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex h-full items-center justify-center px-4">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial="hidden"
             whileInView="visible"
@@ -273,7 +278,7 @@ export default function Home() {
             <p className="mb-8 max-w-2xl text-lg text-white/90">
               {content.video?.description || "Watch how we bring ideas to life through innovation and creativity"}
             </p>
-            <button 
+            <button
               className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               onClick={() => {}}
             >
