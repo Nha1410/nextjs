@@ -13,12 +13,20 @@ export default {
       "We specialize in digital media, creative production, multi-channel branding, and data-driven marketing built to connect, convert, and scale. Whether you're expanding into new markets or amplifying your brand presence, ANN is your strategic partner for impact at every touchpoint.",
   },
   section3: {
-    tag: "_ Our Mission",
-    title: "Our mission and core values at ANN",
+    // tag: "OUR MISSIONS & CORE VALUES",
+    header: {
+      value: "YOUR BRAND GROWTH PARTNER",
+      subValue:
+        "We deliver end-to-end marketing solutions from integrated brand activations and performance-led social campaigns to creative strategy and deployment.",
+    },
+    header: "YOUR BRAND GROWTH PARTNER",
+    subHeader:
+      "We deliver end-to-end marketing solutions from integrated brand activations and performance-led social campaigns to creative strategy and deployment.",
+    title: "OUR MISSIONS & CORE VALUES",
     mission: {
       title: ["Where ideas ignite brand momentum"],
       paragraphs: [
-        "At ANN Multimedia, guided by the mission “Where ideas ignite brand momentum” we support brands in navigating and thriving in a digital-first world where every idea inspires, every channel is optimized, and every interaction delivers impact. Through sharp strategy, compelling storytelling, and precise execution, we transform vision into momentum.",
+        "Our mission is to ignite brand’s momentum”, where every idea inspires, every channel is optimized, and every interaction delivers impact. Through sharp strategy, compelling storytelling, and precise execution, we transform vision into momentum.",
       ],
     },
     values: [
@@ -35,7 +43,7 @@ export default {
       {
         number: "03",
         title: "Stay Agile",
-        desc: "Always learn, listen, and update — not just to catch up, but to lead the way.",
+        desc: "Always learn, listen and update. Not just to catch up, but to lead the way.",
       },
       {
         number: "04",

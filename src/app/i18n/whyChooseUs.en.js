@@ -1,4 +1,7 @@
 export default {
+  header: "WE ARE YOUR TRUSTED PARTNER",
+  subHeader:
+    "ANN Multimedia is a media partner who understands the market, delivers real results, and always aims for clear impact through 4 core strengths:",
   title1: "Why",
   title2: "Choose Us",
   description:

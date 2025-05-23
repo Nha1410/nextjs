@@ -14,11 +14,14 @@ export default {
   },
   section3: {
     // tag: "_ Our Mission",
-    title: "Sứ mệnh và các giá trị cốt lõi tại ANN",
+    title: "Sứ mệnh và các giá trị cốt lõi",
+    header: "ĐỐI TÁC PHÁT TRIỂN THƯƠNG HIỆU CỦA BẠN",
+    subHeader:
+      "Chúng tôi cung cấp giải pháp marketing toàn diện, từ kích hoạt thương hiệu tích hợp và chiến dịch mạng xã hội định hướng hiệu quả đến chiến lược sáng tạo và triển khai thực tế.",
     mission: {
       title: ["Where ideas ignite brand momentum"],
       paragraphs: [
-        "Tại ANN Multimedia, với sứ mệnh “Where ideas ignite brand momentum” ANN hỗ trợ các thương hiệu điều hướng và phát triển trong một thế giới số hóa, nơi mọi ý tưởng đều truyền cảm hứng, mọi kênh đều được tối ưu hóa và mọi tương tác đều mang lại tác động. Thông qua chiến lược sắc bén, cách kể chuyện hấp dẫn và triển khai chính xác, ANN sẽ biến tầm nhìn thành động lực.",
+        "Sứ mệnh của chúng tôi là khơi dậy đà phát triển cho thương hiệu – nơi mỗi ý tưởng đều truyền cảm hứng, mỗi kênh truyền thông đều được tối ưu hóa, và mỗi tương tác đều tạo ra tác động. Thông qua chiến lược sắc bén, câu chuyện lôi cuốn và sự thực thi chính xác, chúng tôi biến tầm nhìn thành động lực thực tiễn.",
       ],
     },
     values: [
@@ -35,7 +38,7 @@ export default {
       {
         number: "03",
         title: "Stay Agile",
-        desc: "Luôn học hỏi, luôn lắng nghe và luôn luôn cập nhật để không chỉ theo kịp mà còn đón đầu những điều mới.",
+        desc: "Luôn học hỏi, lắng nghe và cập nhật. Không chỉ để theo kịp, mà để dẫn đầu.",
       },
       {
         number: "04",

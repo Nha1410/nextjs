@@ -1,7 +1,7 @@
 export default {
   tag: "_ DO YOU HAVE ANY QUESTIONS?",
   title: "Contact us",
-  headline: "Send us a message",
+  headline: "CONTACT US",
   form: {
     name: "Your full name *",
     email: "Contact email *",
@@ -13,8 +13,8 @@ export default {
       { value: "under-200m", label: "Under 200 million VND" },
       { value: "200-500m", label: "200 - 500 million VND" },
       { value: "500-1B", label: "500 million - 1 billion VND" },
-      { value: "1B+", label: "Over 1 billion VND" }
+      { value: "1B+", label: "Over 1 billion VND" },
     ],
-    submit: "Submit Request"
-  }
+    submit: "Submit Request",
+  },
 };

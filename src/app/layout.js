@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 import LanguageSwitcher, { LanguageSelector } from "@/components/LanguageSwitcher";
 
-
 const openSans = Open_Sans({
   subsets: ["latin", "vietnamese"],
   weight: ["400", "600", "700"],
@@ -22,12 +21,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.variable}>
-      <body className="font-sans text-gray-800">
+      <body className="flex h-full min-h-screen flex-col justify-between font-sans text-gray-800">
         <LanguageSwitcher>
-          <Header /> {/* <-- use header here */}
+          <Header className="Shrine-0" /> {/* <-- use header here */}
           {children}
-          <ContactButtons />
-          <FooterStick />
+          <FooterStick className="Shrink-0" />
         </LanguageSwitcher>
       </body>
     </html>

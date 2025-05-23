@@ -33,78 +33,38 @@ export default function About() {
 
   return (
     <section className="relative w-full bg-white bg-cover bg-center">
-      <div className="container mx-auto px-6 py-16 md:px-24 lg:px-24">
-        <div className="text-left">
-          <p className="mb-4 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
-            {content.section1.tag}
-          </p>
-          <h2 className="text-3xl font-semibold text-[var(--color-text-red-theme-500)] md:text-5xl lg:text-6xl">
-            {content.section1.title}
-          </h2>
-        </div>
+      <div className="w-full">
+        <Image
+          src="/images/about/about_header.png"
+          alt="About Us Header"
+          width={1920}
+          height={800}
+          layout="responsive"
+          className="w-full"
+          priority
+        />
+      </div>
 
-        <div ref={topRef.ref} className="mt-8 flex flex-col items-center gap-10 md:flex-row">
-          <div
-            className={`order-1 flex flex-1 justify-center transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
-          >
-            <Image
-              src="/images/about/Au1.png"
-              alt="Main Team Image"
-              width={600}
-              height={600}
-              className="w-full max-w-xs rounded-xl md:max-w-sm lg:max-w-md"
-            />
-          </div>
-
-          <div
-            className={`order-2 flex-1 space-y-6 text-left transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
-          >
-            <h3
-              className="mb-6 leading-tight font-bold text-[var(--color-text-red-theme-500)]"
-              style={{ width: "max-content" }}
-            >
-              {content.section1.headline.map((line, idx) => (
-                <p key={idx} className="text-[20px] md:text-[44px]">
-                  {line}
-                </p>
-              ))}
-            </h3>
-            <p className="text-justify text-base leading-relaxed text-black md:text-xl">
-              {content.section1.description}
-            </p>
-          </div>
-        </div>
-
-        <div ref={bottomRef.ref} className="mt-16 flex flex-col items-center gap-10 md:flex-row">
-          <div
-            className={`order-1 flex-1 space-y-6 px-0 text-left transition-all duration-1000 ease-out ${bottomRef.isInView ? "opacity-100" : "opacity-0"}`}
-          >
-            <h3
-              className={`text-[20px] leading-snug font-bold text-[var(--color-text-red-theme-500)] transition-all duration-700 md:text-[44px] ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
-            >
-              {content.section2.headline.map((line, idx) => (
-                <div key={idx}>{line}</div>
-              ))}
-            </h3>
-            <p
-              className={`text-justify text-base leading-relaxed text-black transition-all delay-300 duration-700 md:text-xl ${bottomRef.isInView ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
-            >
-              {content.section2.description}
-            </p>
-          </div>
-
-          <div
-            className={`order-2 flex flex-1 justify-center transition-all duration-1000 ease-out ${bottomRef.isInView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
-          >
-            <Image
-              src="/images/about/Au2.png"
-              alt="Thinkers"
-              width={500}
-              height={500}
-              className="w-full max-w-xs rounded-xl md:max-w-sm lg:max-w-md"
-            />
-          </div>
-        </div>
+      <div className="flex w-full flex-col items-center bg-[var(--color-text-red-theme-500)] px-4 py-12 text-center md:px-0">
+        <h1
+          className="text-2xl font-bold text-white uppercase md:text-4xl lg:text-5xl"
+          style={{
+            fontFamily: '"Oswald", sans-serif',
+            fontWeight: 700,
+            letterSpacing: "0.5px",
+          }}
+        >
+          {content.section3.header}
+        </h1>
+        <p
+          className="mt-4 max-w-3xl text-base text-white md:text-lg lg:text-xl"
+          style={{
+            fontFamily: '"Oswald", sans-serif',
+            fontWeight: 400,
+          }}
+        >
+          {content.section3.subHeader}
+        </p>
       </div>
 
       <div className="h-[1px] w-full bg-white/20"></div>
@@ -114,7 +74,14 @@ export default function About() {
           <p className="mb-3 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
             {content.section3.tag}
           </p>
-          <h2 className="text-2xl font-semibold text-[var(--color-text-red-theme-500)] md:text-3xl">
+          <h2
+            className="text-2xl font-semibold text-[var(--color-text-red-theme-500)] md:text-3xl"
+            style={{
+              fontFamily: '"Oswald", sans-serif',
+              fontWeight: 700,
+              letterSpacing: "0.5px",
+            }}
+          >
             {content.section3.title}
           </h2>
         </div>
@@ -147,7 +114,7 @@ export default function About() {
 
           <div
             ref={valueRef.ref}
-            className="grid flex-1 grid-cols-1 gap-6 text-justify lg:grid-cols-2"
+            className="grid flex-1 grid-cols-1 gap-6 tracking-normal lg:grid-cols-2"
           >
             {content.section3.values.map((val, idx) => (
               <div
@@ -156,10 +123,12 @@ export default function About() {
                 style={{ transitionDelay: `${idx * 200}ms` }}
               >
                 <p className="mb-2 text-sm font-semibold text-black">{val.number}</p>
-                <h4 className="text-lg leading-snug font-bold text-black md:text-xl">
+                <h4 className="mb-2 text-lg font-bold whitespace-pre-wrap text-black md:text-xl">
                   {val.title}
                 </h4>
-                <p className="mt-2 text-sm leading-relaxed text-black md:text-base">{val.desc}</p>
+                <p className="text-sm leading-relaxed break-words whitespace-pre-wrap text-black md:text-base">
+                  {val.desc.trim().replace(/\s+/g, " ")}
+                </p>
               </div>
             ))}
           </div>

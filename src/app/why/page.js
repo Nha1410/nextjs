@@ -16,35 +16,44 @@ export default function Home() {
 
   return (
     <>
+      <section className="relative w-full bg-white bg-cover bg-center">
+        <div className="w-full">
+          <Image
+            src="/images/why-choose-us/why_choose_us.png"
+            alt="About Us Header"
+            width={1920}
+            height={800}
+            layout="responsive"
+            className="w-full"
+            priority
+          />
+        </div>
+
+        <div className="flex w-full flex-col items-center bg-[var(--color-text-red-theme-500)] px-4 py-12 text-center md:px-0">
+          <h1
+            className="text-2xl font-bold text-white uppercase md:text-4xl lg:text-5xl"
+            style={{
+              fontFamily: '"Oswald", sans-serif',
+              fontWeight: 700,
+              letterSpacing: "0.5px",
+            }}
+          >
+            {content.header}
+          </h1>
+          <p
+            className="mt-4 max-w-3xl text-base text-white md:text-lg lg:text-xl"
+            style={{
+              fontFamily: '"Oswald", sans-serif',
+              fontWeight: 400,
+            }}
+          >
+            {content.subHeader}
+          </p>
+        </div>
+      </section>
+
       <section className="relative w-full bg-white bg-cover bg-center pb-16">
         <div className="container mx-auto px-8 py-16 sm:px-12 md:px-20 lg:px-32 xl:px-48">
-          {/* Section Title */}
-          <div className="mt-10 flex w-full flex-col items-start gap-8 pb-24 md:flex-row">
-            <div className="w-full max-w-xl md:w-1/2">
-              <h1 className="text-left">
-                <span className="block text-2xl font-bold text-gray-900 md:text-4xl">
-                  {content.title1}
-                </span>
-                <span className="block text-3xl font-bold text-[var(--color-text-red-theme-500)] md:text-5xl">
-                  {content.title2}
-                </span>
-              </h1>
-            </div>
-            <div className="w-full max-w-xl md:w-1/2">
-              <p className="text-justify text-black md:text-xl">{content.description}</p>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="mt-12 flex justify-center">
-            <Image
-              src="/images/why-choose-us/Why_choose_us.png"
-              alt="Main Image"
-              width={900}
-              height={600}
-            />
-          </div>
-
           {/* Feature Blocks */}
           <div className="mt-24 grid grid-cols-1 gap-x-32 gap-y-16 md:grid-cols-2">
             {content.features.map((feature) => (
@@ -100,20 +109,27 @@ export default function Home() {
             className="z-30 flex w-full -translate-y-6 flex-col justify-center text-center text-white md:w-1/2 md:-translate-y-12 md:pl-16 md:text-left"
           >
             <div className="flex items-center justify-center gap-4 md:justify-start">
-              <h2 className="text-5xl leading-tight font-extrabold md:text-6xl">Our</h2>
-              <Link href="/solution">
-                <motion.div
-                  animate={{ x: [0, 20, 0, 4, 0] }}
-                  transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-black hover:bg-[#4b4b4b] md:h-12 md:w-12"
-                >
-                  <div className="h-2 w-2 rotate-135 border-t-2 border-l-2 border-white" />
-                </motion.div>
-              </Link>
+              <h2
+                className="text-5xl leading-tight font-extrabold md:text-6xl"
+                style={{
+                  fontFamily: '"Oswald", sans-serif',
+                  fontWeight: 400,
+                }}
+              >
+                OUR
+              </h2>
             </div>
 
             <div className="mt-2">
-              <h2 className="text-5xl leading-tight font-extrabold md:text-6xl">Solution</h2>
+              <h2
+                className="text-5xl leading-tight font-extrabold md:text-6xl"
+                style={{
+                  fontFamily: '"Oswald", sans-serif',
+                  fontWeight: 400,
+                }}
+              >
+                SOLUTIONS
+              </h2>
             </div>
 
             <div className="mt-4">
@@ -122,9 +138,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 text-lg font-medium text-white md:text-xl"
               >
                 <Rounded>
-                  <p>
-                    Read now <span className="text-2xl">→</span>
-                  </p>
+                  <p>Find More</p>
                 </Rounded>
               </Link>
             </div>
