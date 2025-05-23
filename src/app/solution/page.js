@@ -14,10 +14,37 @@ export default function SolutionContent() {
 
   return (
     <main className="bg-white">
-      <section className="relative min-h-screen w-screen">
-        <div className="animate-fadeIn absolute inset-0 z-0 max-h-[350px] w-full bg-[url('/images/solution/background.png')] bg-cover bg-center md:max-h-[450px] md:w-screen" />
+      <section className="relative w-full bg-white bg-cover bg-center">
+        <div className="w-full">
+          <Image
+            src="/images/solution/title_our_solutions.png"
+            alt="About Us Header"
+            width={1920}
+            height={800}
+            layout="responsive"
+            className="w-full"
+            priority
+          />
+        </div>
 
-        <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
+        <div className="flex w-full flex-col items-center bg-white px-4 py-12 text-center md:px-0">
+          <h1
+            className="text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-4xl lg:text-5xl"
+            style={{
+              fontFamily: '"Oswald", sans-serif',
+              fontWeight: 700,
+              letterSpacing: "0.5px",
+            }}
+          >
+            {content.header}
+          </h1>
+        </div>
+      </section>
+
+      <section className="relative w-screen">
+        {/* <div className="animate-fadeIn absolute inset-0 z-0 max-h-[350px] w-full bg-[url('/images/solution/background.png')] bg-cover bg-center md:max-h-[450px] md:w-screen" /> */}
+
+        {/* <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
           <div className="relative z-10 px-6 text-white md:py-10">
             <div className="container mx-auto ml-[-35px] flex flex-col items-center text-center md:ml-[-20px] md:flex-row md:text-left">
               <div className="animate-slideInLeft md:w-1/2">
@@ -52,15 +79,10 @@ export default function SolutionContent() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="relative z-20 mx-auto mt-30 w-full max-w-screen px-4 md:pt-20 lg:mt-[-10px]">
           <div className="text-center">
-            <h2 className="mb-4 text-4xl font-bold text-black md:text-6xl">
-              {content.networkTitle}{" "}
-              <span className="text-[var(--color-text-red-theme-500)]">ANN Multimedia</span> Network
-            </h2>
-
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {content.stats.map((stat, idx) => (
                 <div

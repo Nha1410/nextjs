@@ -1,6 +1,7 @@
 export default {
   title: "Nền tảng influencer và mạng lưới celeb hàng đầu tại Việt Nam",
   button: "LIÊN HỆ NGAY",
+  header: "DIGITAL & BRANDING AGENCY FOR BRANDS IN VIETNAM",
   networkTitle: "Our",
   stats: [
     { icon: "/images/star.png", label: "Đối tác truyền thông", count: 30 },
@@ -85,22 +86,22 @@ export default {
           },
         ],
       },
-      {
-        title: "Mobile Advertising",
-        items: [
-          {
-            label: "Multi-Platform Delivery",
-            description:
-              "Hiển thị trên các app phổ biến như Grab, MoMo, TikTok, Zalo với đa định dạng premium.",
-            icon: "/images/solution/icons/software.svg",
-          },
-          {
-            label: "User-First Targeting",
-            description: "Tiếp cận người dùng đúng thời điểm.",
-            icon: "/images/solution/icons/youtuber.svg",
-          },
-        ],
-      },
+      // {
+      //   title: "Mobile Advertising",
+      //   items: [
+      //     {
+      //       label: "Multi-Platform Delivery",
+      //       description:
+      //         "Hiển thị trên các app phổ biến như Grab, MoMo, TikTok, Zalo với đa định dạng premium.",
+      //       icon: "/images/solution/icons/software.svg",
+      //     },
+      //     {
+      //       label: "User-First Targeting",
+      //       description: "Tiếp cận người dùng đúng thời điểm.",
+      //       icon: "/images/solution/icons/youtuber.svg",
+      //     },
+      //   ],
+      // },
       {
         title: "Activation Service",
         items: [

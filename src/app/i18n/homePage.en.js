@@ -1,7 +1,7 @@
 export default {
   hero: {
     title1: "MARK YOUR BRAND IN VIETNAM",
-    description: "With ANN - Your multimedia agency partner in",
+    description: "With ANN - Your Multimedia Agency Partner in",
     description2: "Branding | Advertisement | Creative",
     button: "GET STARTED",
   },
@@ -12,6 +12,9 @@ export default {
       "We provide full-funnel services including digital strategy, creative production, social media marketing, media planning, and performance analytics. Our capabilities also extend to data-driven marketing, lead generation, and inbound strategies built to engage the right audience at the right moment.",
     ],
     button: "Find out more",
+  },
+  video: {
+    button: "Find more",
   },
   solutions: {
     sectionTitle: "WHAT WE DO",

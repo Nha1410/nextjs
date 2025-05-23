@@ -1,6 +1,13 @@
 // components/Footer.jsx
 import Link from "next/link";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-oswald",
+});
 
 export default function Footer() {
   return (
@@ -11,9 +18,10 @@ export default function Footer() {
             {/* Left Side: Contact CTA */}
             <div className="max-w-xl space-y-8 text-left md:text-start">
               <div>
-                <h4 className="mb-1 text-xl text-gray-300">Contact</h4>
-                <h2 className="text-3xl leading-tight font-semibold md:text-4xl">
-                  Let’s start creating together
+                <h2
+                  className={`text-3xl leading-tight font-bold tracking-wide md:text-4xl ${oswald.className}`}
+                >
+                  LET’S START TOGETHER
                 </h2>
               </div>
               <Link

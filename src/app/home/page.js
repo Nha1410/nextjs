@@ -5,6 +5,7 @@ import Link from "next/link";
 import ClientsSection from "@/components/ClientsSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import MySwiper from "@/components/MySwiper";
+import { Oswald } from "next/font/google";
 import HomeSwiper from "@/components/HomeSwiper";
 import NewsRecruitment from "@/components/NewsRecruitment";
 import { useLanguage } from "@/components/LanguageSwitcher";
@@ -12,6 +13,11 @@ import { useRef } from "react";
 import vi from "../i18n/homePage.vi";
 import en from "../i18n/homePage.en";
 import { motion } from "framer-motion";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -116,7 +122,7 @@ export default function Home() {
             animate="visible"
             variants={fadeUp}
           >
-            <h1 className="mb-6 leading-tight font-bold">
+            <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
               <motion.span
                 className="text-[26px] text-[#fffffffff] md:text-[50px]"
                 variants={fadeUp}
@@ -143,115 +149,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section who we are */}
-      <section
-        ref={whoWeAreRef}
-        className="overflow-hidden bg-[#FFF8F8] bg-[url('/images/home/about-us-bg.png')] bg-cover bg-center bg-no-repeat py-16"
-      >
-        <motion.div
-          className="md:items-left mx-auto flex w-full flex-col items-start px-2 md:grid md:grid-cols-2 md:px-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideFromLeft}
-        >
-          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
-            <div className="ml-[-420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
-              {content.whoWeAre.tag}
-            </div>
-            <div className="ml-[-70px]">
-              <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
-                <span className="text-[var(--color-text-red-theme-500)]">
-                  {content.whoWeAre.title}
-                </span>
-              </h2>
-            </div>
-            {content.whoWeAre.paragraphs.map((p, i) => (
-              <div className="ml-[-90px]" key={i}>
-                <motion.p
-                  className="mb-6 text-justify text-[18px] text-black md:max-w-[550px]"
-                  custom={i}
-                  variants={fadeUp}
-                >
-                  {p}
-                </motion.p>
-              </div>
-            ))}
-            <Link
-              href="/about"
-              className="ml-[-90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
-            >
-              {content.whoWeAre.button}
-            </Link>
-          </div>
-          <motion.div
-            className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
-            variants={fadeUp}
-          >
-          </motion.div>
-        </motion.div>
-      </section>
+      {/* Section who we are  and why choose us */}
+      <section className="relative w-full">
+        <Image
+          src="/images/home/who_we_are-why-choose-us.png"
+          alt="Who we are and why choose us"
+          width={4600}
+          height={1800}
+          className="h-full w-full object-cover"
+          priority
+        />
 
-      {/* Section why choose us */}
-      <section
-        ref={whoWeAreRef}
-        className="overflow-hidden bg-[#FFF8F8] bg-[url('/images/home/why-choose-us.png')] bg-cover bg-center bg-no-repeat py-16"
-      >
-        <motion.div
-          className="md:items-left mx-auto flex w-full flex-col items-start px-2 md:grid md:grid-cols-2 md:px-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideFromLeft}
-        >
-          <motion.div
-            className="mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end"
-            variants={fadeUp}
-          >
-          </motion.div>
-          <div className="items-start xl:items-center p-4 md:flex md:flex-col md:p-0">
-            <div className="ml-[420px] mb-10 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] md:text-5xl">
-              {content.whoWeAre.tag}
-            </div>
-            <div className="ml-[70px]">
-              <h2 className="mb-4 text-[20px] leading-snug font-bold md:text-[28px]">
-                <span className="text-[var(--color-text-red-theme-500)]">
-                  {content.whoWeAre.title}
-                </span>
-              </h2>
-            </div>
-            {content.whoWeAre.paragraphs.map((p, i) => (
-              <div className="ml-[50px]" key={i}>
-                <motion.p
-                  className="mb-6 text-justify text-[18px] text-black md:max-w-[550px]"
-                  custom={i}
-                  variants={fadeUp}
-                >
-                  {p}
-                </motion.p>
-              </div>
-            ))}
-            <Link
-              href="/about"
-              className="ml-[90px] mt-4 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+        {/* WHO WE ARE - Top Left (giữ nguyên nếu cần) */}
+        <div className="absolute top-0 left-0 flex h-[calc(50%)] w-1/2 flex-col justify-between rounded-md bg-white p-8">
+          <div>
+            <h2
+              className={`mb-6 text-5xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
             >
-              {content.whoWeAre.button}
+              Who We Are
+            </h2>
+            <p className="text-xl leading-relaxed text-[var(--color-text-red-theme-500)]">
+              ANN Multimedia - Your brand growth partner. We provide full-funnel services including
+              digital strategy, creative production, social media marketing, media planning, and
+              performance analytics.
+            </p>
+          </div>
+          <div className="mt-6 self-end">
+            <Link
+              className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              href="/about"
+            >
+              Find more
             </Link>
           </div>
-        </motion.div>
+        </div>
+
+        {/* WHY CHOOSE US - Bottom Right (góc phần tư thứ 4) */}
+        <div className="absolute right-0 bottom-0 flex h-[calc(50%)] w-1/2 flex-col justify-between p-8 text-white">
+          <div>
+            <h2 className={`mb-6 text-5xl font-extrabold text-white uppercase ${oswald.className}`}>
+              Why Choose Us
+            </h2>
+            <p className="text-xl leading-relaxed">
+              ANN Multimedia is a media partner who understands the market, delivers real impact
+              through 4 core strengths: People, Model, Well-practiced experiences, In-depth insight
+              in local market.
+            </p>
+          </div>
+          <div className="mt-6 self-end">
+            <Link
+              className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+              href="/why"
+            >
+              Find more
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Section video */}
-      <section className="relative h-screen overflow-hidden mt-10 p-10">
+      <section className="relative mt-10 h-screen overflow-hidden p-10">
+        <Link
+          className="absolute bottom-14 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+          href="/solution"
+        >
+          {content.video.button}
+        </Link>
+
         {/* Video Background */}
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover"
-          >
+          <video autoPlay loop muted playsInline className="h-full w-full object-cover">
             <source src="/videos/our solution video.mp4" type="video/mp4" />
           </video>
           {/* Overlay để làm tối video và làm nổi bật nội dung */}
@@ -260,7 +227,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex h-full items-center justify-center px-4">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial="hidden"
             whileInView="visible"
@@ -273,7 +240,7 @@ export default function Home() {
             <p className="mb-8 max-w-2xl text-lg text-white/90">
               {content.video?.description || "Watch how we bring ideas to life through innovation and creativity"}
             </p>
-            <button 
+            <button
               className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               onClick={() => {}}
             >
