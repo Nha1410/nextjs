@@ -19,7 +19,7 @@ export default function Home() {
       <section className="relative w-full bg-white bg-cover bg-center">
         <div className="w-full">
           <Image
-            src="/images/why-choose-us/why_choose_us.png"
+            src="/images/why-choose-us/Why_choose_us.png"
             alt="About Us Header"
             width={1920}
             height={800}
