@@ -14,7 +14,7 @@ export default {
     button: "Find out more",
   },
   video: {
-    button: "Find out more",
+    button: "Find more",
   },
   solutions: {
     sectionTitle: "WHAT WE DO",

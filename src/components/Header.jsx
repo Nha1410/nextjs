@@ -47,7 +47,7 @@ export default function Header() {
               Why Choose Us
             </Link>
             <Link href="/solution" className="text-white transition hover:text-gray-200">
-              Our solutions
+              Our Solutions
             </Link>
             <Link href="/portfolio" className="text-white transition hover:text-gray-200">
               Our Portfolio
@@ -136,7 +136,7 @@ export default function Header() {
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
               { label: "Why Choose Us", href: "/why" },
-              { label: "Our solutions", href: "/solution" },
+              { label: "Our Solutions", href: "/solution" },
               { label: "Our Portfolio", href: "/portfolio" },
               { label: "Contact Us", href: "/contact" },
             ].map((link) => (
