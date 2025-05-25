@@ -72,7 +72,7 @@ function LogoCell({ src, alt }) {
         src={src}
         alt={alt}
         fill
-        className="object-contain transition-all duration-1000 ease-out"
+        className={`object-contain transition-all duration-1000 ease-out ${alt === "Zalo" ? "p-6" : ""}`}
       />
     </div>
   );
@@ -83,7 +83,7 @@ const logos = [
   { src: "/images/introduce/2.png", alt: "Instagram", width: 100, height: 100 },
   { src: "/images/youtube.png", alt: "YouTube", width: 100, height: 100 },
   { src: "/images/introduce/5.png", alt: "TikTok", width: 100, height: 100 },
-  { src: "/images/introduce/zalo.png", alt: "Zalo", width: 70, height: 70 },
+  { src: "/images/introduce/zalo.png", alt: "Zalo", width: 100, height: 100 },
   { src: "/images/introduce/google.png", alt: "Google", width: 100, height: 100 },
   { src: "/images/introduce/viber.png", alt: "Viber", width: 100, height: 100 },
   // { src: "/images/X.png", alt: "Twitter / X", width: 100, height: 100 },
@@ -92,7 +92,7 @@ const logos = [
   // { src: "/images/vtc.png", alt: "VTC", width: 100, height: 100 },
   // { src: "/images/zing.png", alt: "Zing", width: 100, height: 100 },
   { src: "/images/introduce/6.png", alt: "Grab", width: 100, height: 100 },
-  { src: "/images/introduce/momo.png", alt: "Momo", width: 80, height: 80 },
+  { src: "/images/introduce/momo.jpg", alt: "Momo", width: 100, height: 100 },
   // { src: "/images/acer.png", alt: "Acer" },
   // { src: "/images/xanhsm.png", alt: "Xanh SM", width: 100, height: 100 },
   // { src: "/images/techcombank.png", alt: "Techcombank", width: 100, height: 100 },
