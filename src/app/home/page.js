@@ -161,20 +161,20 @@ export default function Home() {
         />
 
         {/* WHO WE ARE - Top Left (giữ nguyên nếu cần) */}
-        <div className="absolute top-0 left-0 flex h-[calc(50%)] w-1/2 flex-col justify-between rounded-md bg-white p-8">
+        <div className="absolute top-0 left-0 flex h-[calc(50%)] w-1/2 flex-col justify-between rounded-md bg-white p-6">
           <div>
             <h2
-              className={`mb-6 text-5xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
+              className={`mb-2 text-4xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
             >
               Who We Are
             </h2>
-            <p className="text-xl leading-relaxed text-[var(--color-text-red-theme-500)]">
+            <p className="text-lg leading-relaxed text-[var(--color-text-red-theme-500)]">
               ANN Multimedia - Your brand growth partner. We provide full-funnel services including
               digital strategy, creative production, social media marketing, media planning, and
               performance analytics.
             </p>
           </div>
-          <div className="mt-6 self-end">
+          <div className="mt-3 self-end">
             <Link
               className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               href="/about"
@@ -185,18 +185,18 @@ export default function Home() {
         </div>
 
         {/* WHY CHOOSE US - Bottom Right (góc phần tư thứ 4) */}
-        <div className="absolute right-0 bottom-0 flex h-[calc(50%)] w-1/2 flex-col justify-between p-8 text-white">
+        <div className="absolute right-0 bottom-0 flex h-[calc(50%)] w-1/2 flex-col justify-between p-6 text-white">
           <div>
-            <h2 className={`mb-6 text-5xl font-extrabold text-white uppercase ${oswald.className}`}>
+            <h2 className={`mb-2 text-4xl font-extrabold text-white uppercase ${oswald.className}`}>
               Why Choose Us
             </h2>
-            <p className="text-xl leading-relaxed">
+            <p className="text-lg leading-relaxed">
               ANN Multimedia is a media partner who understands the market, delivers real impact
               through 4 core strengths: People, Model, Well-practiced experiences, In-depth insight
               in local market.
             </p>
           </div>
-          <div className="mt-6 self-end">
+          <div className="mt-3 self-end">
             <Link
               className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               href="/why"
