@@ -1,7 +1,10 @@
 // components/Footer.jsx
+"use client";
+
 import Link from "next/link";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Oswald } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -10,6 +13,9 @@ const oswald = Oswald({
 });
 
 export default function Footer() {
+  const pathname = usePathname();
+  // Hide footer on contact page
+  if (pathname === "/contact") return null;
   return (
     <div className="relative" style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="max-h-screen w-full overflow-y-auto">

@@ -32,7 +32,7 @@ export default function Contact() {
     <section className="relative flex w-full flex-1 overflow-auto overflow-hidden bg-white bg-cover bg-center">
       <div
         ref={topRef.ref}
-        className="flex w-full flex-col items-center justify-center gap-10 md:flex-row"
+        className="flex w-full flex-col items-center justify-center md:flex-row"
       >
         {/* Hình ảnh bên trái */}
         <div
@@ -51,7 +51,14 @@ export default function Contact() {
         <div
           className={`order-2 w-full max-w-full flex-1 transition-all duration-1000 ease-out ${topRef.isInView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
         >
-          <h3 className="mb-6 text-3xl font-extrabold text-[var(--color-text-red-theme-500)] sm:text-4xl md:text-6xl">
+          <h3
+            className="mb-6 ml-8 text-3xl font-extrabold text-[var(--color-text-red-theme-500)] sm:text-4xl md:text-6xl"
+            style={{
+              fontFamily: '"Oswald", sans-serif',
+              fontWeight: 700,
+              letterSpacing: "0.5px",
+            }}
+          >
             {displayedText.split("-").map((part, idx) => (
               <span key={idx}>
                 {part}
@@ -66,7 +73,7 @@ export default function Contact() {
           </h3>
 
           {/* Box chứa thông tin */}
-          <div className="mx-4 rounded-xl border border-gray-200 bg-[var(--color-bg-dark-900)] p-8 shadow-lg transition-all">
+          <div className="mx-8 rounded-xl border border-gray-200 bg-[var(--color-bg-dark-900)] p-8 shadow-lg transition-all">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
               {/* Contact Info */}
               <div className="space-y-6 sm:col-span-3">
