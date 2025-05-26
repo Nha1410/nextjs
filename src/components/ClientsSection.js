@@ -72,7 +72,9 @@ function LogoCell({ src, alt }) {
         src={src}
         alt={alt}
         fill
-        className={`object-contain transition-all duration-1000 ease-out ${alt === "Zalo" ? "p-6" : ""}`}
+        className={`object-contain transition-all duration-1000 ease-out ${
+          alt === "Zalo" ? "p-6" : alt === "Momo" ? "p-3" : ""
+        }`}
       />
     </div>
   );
@@ -92,7 +94,7 @@ const logos = [
   // { src: "/images/vtc.png", alt: "VTC", width: 100, height: 100 },
   // { src: "/images/zing.png", alt: "Zing", width: 100, height: 100 },
   { src: "/images/introduce/6.png", alt: "Grab", width: 100, height: 100 },
-  { src: "/images/introduce/momo.jpg", alt: "Momo", width: 100, height: 100 },
+  { src: "/images/introduce/momo.png", alt: "Momo", width: 100, height: 100 },
   // { src: "/images/acer.png", alt: "Acer" },
   // { src: "/images/xanhsm.png", alt: "Xanh SM", width: 100, height: 100 },
   // { src: "/images/techcombank.png", alt: "Techcombank", width: 100, height: 100 },

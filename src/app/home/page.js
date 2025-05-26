@@ -208,46 +208,34 @@ export default function Home() {
       </section>
 
       {/* Section video */}
-      <section className="relative mt-10 h-screen overflow-hidden p-10">
+      <section className="relative mt-0 w-full overflow-hidden p-0">
         <Link
-          className="absolute bottom-14 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+          className="absolute bottom-5 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
           href="/solution"
         >
           {content.video.button}
         </Link>
 
         {/* Video Background */}
-        <div className="absolute inset-0">
-          <video autoPlay loop muted playsInline className="h-full w-full object-cover">
-            <source src="/videos/our solution video.mp4" type="video/mp4" />
+        <div className="relative w-full">
+          <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
+            <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
           </video>
-          {/* Overlay để làm tối video và làm nổi bật nội dung */}
-          {/* <div className="absolute inset-0 bg-black/50"></div> */}
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 flex h-full items-center justify-center px-4">
-          <motion.div
-            className="text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-          >
-            {/* <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
-              {content.video?.title || "Discover Our Creative Process"}
-            </h2>
-            <p className="mb-8 max-w-2xl text-lg text-white/90">
-              {content.video?.description || "Watch how we bring ideas to life through innovation and creativity"}
-            </p>
-            <button
-              className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-              onClick={() => {}}
-            >
-              {content.video?.button || "Watch Video"}
-            </button> */}
-          </motion.div>
-        </div>
+        {/* Overlay Title */}
+        <motion.div
+          className="absolute top-7 left-1/2 z-20 -translate-x-1/2 text-center"
+          initial="hidden"
+          animate="visible"
+          variants={slideFromRight}
+        >
+          <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
+            <motion.span className="text-[26px] text-[#ffffff] md:text-[60px]" variants={fadeUp}>
+              OUR SOLUTIONS
+            </motion.span>
+          </h1>
+        </motion.div>
       </section>
 
       {/* Section discover */}
