@@ -103,8 +103,14 @@ export default function Home() {
   const { language } = useLanguage();
   const whoWeAreRef = useRef(null);
   const scrollToWhoWeAre = () => {
-    whoWeAreRef.current?.scrollIntoView({ behavior: "smooth" });
+    const element = whoWeAreRef.current;
+    if (element) {
+      const yOffset = -80;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
+
   const content = language === "vi" ? vi : en;
 
   return (
@@ -140,7 +146,7 @@ export default function Home() {
             </motion.div>
             <motion.button
               onClick={scrollToWhoWeAre}
-              className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+              className="group z-20 inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
               variants={fadeUp}
             >
               {content.hero.button}
@@ -150,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* Section who we are  and why choose us */}
-      <section className="relative w-full">
+      <section ref={whoWeAreRef} className="relative w-full">
         <Image
           src="/images/home/who_we_are-why-choose-us.png"
           alt="Who we are and why choose us"
@@ -225,13 +231,13 @@ export default function Home() {
 
         {/* Overlay Title */}
         <motion.div
-          className="absolute top-7 left-1/2 z-20 -translate-x-1/2 text-center"
+          className="absolute top-4 left-1/2 z-20 -translate-x-1/2 text-center md:top-12"
           initial="hidden"
           animate="visible"
           variants={slideFromRight}
         >
           <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
-            <motion.span className="text-[26px] text-[#ffffff] md:text-[60px]" variants={fadeUp}>
+            <motion.span className="text-2xl text-[#ffffff] md:text-4xl" variants={fadeUp}>
               OUR SOLUTIONS
             </motion.span>
           </h1>

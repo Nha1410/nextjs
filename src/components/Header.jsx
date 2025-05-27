@@ -12,6 +12,12 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isSolution = pathname === "/solution";
+  const getNavItemClass = (href) => {
+    const isActive = pathname === href;
+    return `px-4 py-2 rounded transition hover:bg-gray-700 hover:text-white ${
+      isActive ? "bg-[var(--color-text-red-theme-500)] text-white " : "text-white"
+    }`;
+  };
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
@@ -36,25 +42,19 @@ export default function Header() {
           </div>
 
           {/* Nav links */}
-          <nav className="hidden md:flex md:flex-1 md:justify-center md:space-x-6">
-            <Link href="/" className="text-white transition hover:text-gray-200">
-              Home
-            </Link>
-            <Link href="/about" className="text-white transition hover:text-gray-200">
-              About Us
-            </Link>
-            <Link href="/why" className="text-white transition hover:text-gray-200">
-              Why Choose Us
-            </Link>
-            <Link href="/solution" className="text-white transition hover:text-gray-200">
-              Our Solutions
-            </Link>
-            <Link href="/portfolio" className="text-white transition hover:text-gray-200">
-              Our Portfolio
-            </Link>
-            <Link href="/contact" className="text-white transition hover:text-gray-200">
-              Contact Us
-            </Link>
+          <nav className="hidden md:flex md:flex-1 md:justify-center md:space-x-3">
+            {[
+              { label: "Home", href: "/" },
+              { label: "About Us", href: "/about" },
+              { label: "Why Choose Us", href: "/why" },
+              { label: "Our Solutions", href: "/solution" },
+              { label: "Our Portfolio", href: "/portfolio" },
+              { label: "Contact Us", href: "/contact" },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className={getNavItemClass(link.href)}>
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Right utilities */}
@@ -131,7 +131,7 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="flex flex-col space-y-6 px-6 py-4">
+          <nav className="flex flex-col space-y-4 px-6 py-4">
             {[
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
@@ -139,16 +139,21 @@ export default function Header() {
               { label: "Our Solutions", href: "/solution" },
               { label: "Our Portfolio", href: "/portfolio" },
               { label: "Contact Us", href: "/contact" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-lg hover:text-gray-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            ].map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded px-4 py-2 text-lg transition hover:bg-gray-700 hover:text-white ${
+                    isActive ? "bg-red-600 font-semibold text-white" : "text-white"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </div>
