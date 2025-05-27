@@ -19,11 +19,6 @@ export default function OurSolutions({ content }) {
   return (
     <section className="w-full py-12 md:py-20">
       <div className="mx-auto">
-        <h2 className="mb-12 text-center text-4xl font-bold md:text-6xl lg:text-7xl">
-          {content.title1}{" "}
-          <span className="text-[var(--color-text-red-theme-500)]">{content.title2}</span>
-        </h2>
-
         {solutions.map((solution, sectionIndex) => (
           <div key={sectionIndex} className="relative mb-40">
             <div className="relative overflow-visible bg-gradient-to-br from-[#FAA6FF] to-[#E90000] pt-10">
