@@ -107,7 +107,7 @@ export default function About() {
                 alt="Phone in Hand"
                 width={400}
                 height={400}
-                className="absolute right-0 bottom-0 h-[350px] w-[350px] md:h-[450px] md:w-[450px] lg:h-[600px] lg:w-[600px] xl:-bottom-14"
+                className="absolute right-0 bottom-0 h-[350px] w-[350px] md:h-[450px] md:w-[450px] lg:h-[600px] lg:w-[600px] xl:-right-5 xl:-bottom-16"
                 style={{ zIndex: 10 }}
               />
             </div>
