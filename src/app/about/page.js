@@ -87,29 +87,30 @@ export default function About() {
         </div>
 
         <div className="mt-10 flex flex-col gap-10 md:flex-row">
-          <div className="relative flex-1 overflow-hidden rounded-lg bg-[var(--color-text-red-theme-500)] px-6 pt-8 pb-32 text-white md:px-8 md:pt-8 md:pb-8">
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold md:text-2xl">
+          <div className="relative flex flex-1 flex-row overflow-hidden rounded-lg bg-[var(--color-text-red-theme-500)] px-4 pt-4 pb-20 text-white md:px-6 md:pt-6 md:pb-6">
+            <div className="flex-1 space-y-4">
+              <h2 className="text-2xl font-bold md:text-3xl">
                 {content.section3.mission.title.map((line, idx) => (
                   <div key={idx}>{line}</div>
                 ))}
               </h2>
               {content.section3.mission.paragraphs.map((p, idx) => (
-                <p className="md:text-base" key={idx}>
+                <p className="text-justify text-base leading-relaxed md:pr-40 md:text-lg" key={idx}>
                   {p}
                 </p>
               ))}
             </div>
 
-            {/* ONE image used for all screen sizes */}
-            <Image
-              src="/images/about/phone.png"
-              alt="Phone in Hand"
-              width={320}
-              height={320}
-              className="absolute right-0 bottom-0 w-[220px] md:w-[280px] lg:w-[400px]"
-              style={{ zIndex: 10 }}
-            />
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/about/phone.png"
+                alt="Phone in Hand"
+                width={400}
+                height={400}
+                className="absolute right-0 bottom-0 h-[350px] w-[350px] md:h-[450px] md:w-[450px] lg:h-[600px] lg:w-[600px] xl:-bottom-14"
+                style={{ zIndex: 10 }}
+              />
+            </div>
           </div>
 
           <div
