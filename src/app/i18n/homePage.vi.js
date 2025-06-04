@@ -1,68 +1,58 @@
 export default {
   hero: {
     title1: "MARK YOUR BRAND IN VIETNAM",
-    description: "With ANN - Your Multimedia Agency Partner in",
-    description2: "Branding | Advertisement | Creative",
-    button: "GET STARTED",
+    description: "ANN - Đối tác truyền thông đa phương tiện của bạn trong các lĩnh vực",
+    description2: "Branding | Quảng Cáo | Sáng Tạo",
+    button: "BẮT ĐẦU NGAY",
   },
   whoWeAre: {
-    tag: "About Us",
-    title: "WE ARE YOUR BRAND GROWTH PARTNER",
+    tag: "CHÚNG TÔI LÀ AI",
+    title: "VỀ CHÚNG TÔI",
     paragraphs: [
-      "ANN Multimedia cung cấp các dịch vụ toàn diện bao gồm chiến lược kỹ thuật số, sản xuất sáng tạo, tiếp thị mạng xã hội, lập kế hoạch truyền thông và phân tích hiệu suất. Năng lực của ANN còn mở rộng sang tiếp thị theo dữ liệu, tạo khách hàng tiềm năng và các chiến lược tiếp thị nội bộ được xây dựng để thu hút đúng đối tượng vào đúng thời điểm.",
+      "ANN Multimedia - Đối tác phát triển thương hiệu của bạn. Chúng tôi cung cấp dịch vụ toàn diện bao gồm chiến lược kỹ thuật số, sản xuất sáng tạo, tiếp thị trên mạng xã hội, lập kế hoạch truyền thông và phân tích hiệu suất.",
     ],
     button: "Tìm hiểu thêm",
   },
   video: {
-    button: "Tìm hiểu thêm",
+    button: "Khám phá thêm",
   },
   solutions: {
-    // sectionTitle: "WHAT WE DO",
-    // intro1: "Thương hiệu cần nổi bật? Phải khác biệt, đủ sáng tạo và lan xa.",
-    // intro2:
-    // "ANN Multimedia thiết kế các giải pháp truyền thông số & đa nền tảng giúp thương hiệu nổi bật một cách có chiến lược, được nhận diện rõ ràng, truyền tải đúng tinh thần và ghi dấu ấn bền vững trong tâm trí người tiêu dùng.",
     blocks: [
       {
         isList: false,
-        title: "Mobile Ads",
+        title: "TẠI SAO CHỌN CHÚNG TÔI",
         image: "/images/home/Mobile Ads.png",
         description:
-          "Các chiến dịch đa nền tảng, với tác động mạnh mẽ sử dụng các định dạng động tiêu chuẩn, video, native, tương tác 3D và nhiều hơn nữa trên Facebook, Instagram, TikTok, LinkedIn, Zalo và các nền tảng khác.",
+          "ANN Multimedia là đối tác truyền thông hiểu rõ thị trường, mang lại tác động thực sự qua 4 điểm mạnh cốt lõi: Con người, Mô hình, Kinh nghiệm thực tế, Kiến thức sâu sắc về thị trường địa phương.",
         reverse: false,
       },
       {
         isList: false,
-        title: "Integrated Brand Activation",
+        title: "KÍCH HOẠT THƯƠNG HIỆU TÍCH HỢP",
         image: "/images/home/Social Ads.jpeg",
         description:
-          "Sự hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo trên mạng xã hội, các ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
+          "Hiện diện thương hiệu liền mạch trên các điểm chạm kỹ thuật số và vật lý: quảng cáo xã hội, ứng dụng hàng đầu và các trang báo điện tử trực tuyến; bảng quảng cáo, màn hình LCD và quảng cáo xe hơi ngoại tuyến.",
         reverse: true,
       },
       {
         isList: false,
-        title: "Creative Planning & Deployment",
+        title: "LẬP KẾ HOẠCH & TRIỂN KHAI SÁNG TẠO",
         image: "/images/home/opt 5.png",
         description:
-          "Từ ý tưởng đến triển khai, sự đồng nhất trong chiến lược, những đề xuất hấp dẫn và kế hoạch chi tiết, luôn được cân bằng giữa sự sáng tạo và hiệu quả.",
+          "Từ ý tưởng đến triển khai, sự đồng nhất chiến lược, các đề xuất hấp dẫn và quy trình triển khai chi tiết, luôn cân bằng giữa tính sáng tạo và hiệu quả công việc.",
         reverse: false,
       },
       {
         isList: true,
-        title: "Branding Service",
+        title: "DỊCH VỤ XÂY DỰNG THƯƠNG HIỆU",
         image: "/images/home/Branding.jpeg",
         description: [
-          "OOH trong nhà: Rạp chiếu phim, LCD trung tâm mua sắm, POSM, Sân bay",
-          "Quảng cáo di động: Xe buýt, tàu, máy bay, Taxi, Grab, Trạm xe buýt",
+          "OOH trong nhà bao gồm: Rạp chiếu phim, Màn hình LCD trung tâm mua sắm, POSM, Sân bay",
+          "Quảng cáo di động bao gồm: Xe buýt, tàu, máy bay, Taxi, Grab, Trạm xe buýt, Roadshow",
         ],
         reverse: true,
       },
     ],
     button: "Tìm hiểu thêm",
   },
-  discover: [
-    "Nâng tầm sự hiện diện số",
-    "Xây dựng thương hiệu vươn xa",
-    "Tối ưu hiệu quả trên mọi kênh",
-  ],
-  cta: "Let’s start with us",
 };

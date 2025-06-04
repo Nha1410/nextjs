@@ -1,7 +1,7 @@
 export default {
   tag: "_ BẠN CÓ CÂU HỎI NÀO KHÔNG?",
   title: "Liên hệ với chúng tôi",
-  headline: "CONTACT US",
+  headline: "Liên hệ với chúng tôi",
   form: {
     name: "Quý danh của bạn *",
     email: "Email liên hệ *",

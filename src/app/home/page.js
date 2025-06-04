@@ -166,18 +166,16 @@ export default function Home() {
           priority
         />
 
-        {/* WHO WE ARE - Top Left (giữ nguyên nếu cần) */}
+        {/* WHO WE ARE - Top Left */}
         <div className="absolute top-0 left-0 flex h-[calc(50%)] w-1/2 flex-col justify-between rounded-md bg-white p-6">
           <div>
             <h2
               className={`mb-2 text-4xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
             >
-              Who We Are
+              {content.whoWeAre.title}
             </h2>
             <p className="text-lg leading-relaxed text-[var(--color-text-red-theme-500)]">
-              ANN Multimedia - Your brand growth partner. We provide full-funnel services including
-              digital strategy, creative production, social media marketing, media planning, and
-              performance analytics.
+              {content.whoWeAre.paragraphs[0]}
             </p>
           </div>
           <div className="mt-3 self-end">
@@ -185,21 +183,19 @@ export default function Home() {
               className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               href="/about"
             >
-              Find more
+              {content.whoWeAre.button}
             </Link>
           </div>
         </div>
 
-        {/* WHY CHOOSE US - Bottom Right (góc phần tư thứ 4) */}
+        {/* WHY CHOOSE US - Bottom Right */}
         <div className="absolute right-0 bottom-0 flex h-[calc(50%)] w-1/2 flex-col justify-between p-6 text-white">
           <div>
             <h2 className={`mb-2 text-4xl font-extrabold text-white uppercase ${oswald.className}`}>
-              Why Choose Us
+              {content.solutions.blocks[0].title}
             </h2>
             <p className="text-lg leading-relaxed">
-              ANN Multimedia is a media partner who understands the market, delivers real impact
-              through 4 core strengths: People, Model, Well-practiced experiences, In-depth insight
-              in local market.
+              {content.solutions.blocks[0].description}
             </p>
           </div>
           <div className="mt-3 self-end">
@@ -207,7 +203,7 @@ export default function Home() {
               className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
               href="/why"
             >
-              Find more
+              {content.whoWeAre.button}
             </Link>
           </div>
         </div>
@@ -243,45 +239,6 @@ export default function Home() {
           </h1>
         </motion.div>
       </section>
-
-      {/* Section discover */}
-      {/* <section className="bg-[var(--color-text-red-theme-500)] py-16 text-white">
-        <motion.div
-          className="container mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideFromLeft}
-        >
-          <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
-            {content.discover.map((line, i) => (
-              <div key={i} className="contents">
-                <motion.div
-                  className="flex flex-col items-center justify-center px-5 text-center"
-                  custom={i}
-                  variants={fadeUp}
-                >
-                  <h3 className="mb-4 text-xl leading-relaxed font-semibold md:text-2xl">{line}</h3>
-                </motion.div>
-                {i < content.discover.length - 1 && (
-                  <>
-                    <div className="mx-auto hidden h-20 w-[2px] bg-white md:block" />
-                    <div className="my-1 h-[2px] w-full bg-white md:hidden"></div>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex justify-center">
-            <Link
-              href={"/contact"}
-              className="rounded border border-white bg-transparent px-8 py-3 text-lg font-medium text-white italic transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            >
-              {content.cta}
-            </Link>
-          </div>
-        </motion.div>
-      </section> */}
 
       <ClientsSection />
       <NewsRecruitment />

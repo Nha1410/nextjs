@@ -7,27 +7,23 @@ export default {
   },
   whoWeAre: {
     tag: "WHO WE ARE",
-    title: "ANN Multimedia - Your brand growth partner",
+    title: "Who We Are",
     paragraphs: [
-      "We provide full-funnel services including digital strategy, creative production, social media marketing, media planning, and performance analytics. Our capabilities also extend to data-driven marketing, lead generation, and inbound strategies built to engage the right audience at the right moment.",
+      "ANN Multimedia - Your brand growth partner. We provide full-funnel services including digital strategy, creative production, social media marketing, media planning, and performance analytics.",
     ],
-    button: "Find out more",
+    button: "Find more",
   },
   video: {
     button: "Find more",
   },
   solutions: {
-    sectionTitle: "WHAT WE DO",
-    intro1: "Want your brand to stand out? Be different, creative, and far-reaching.",
-    intro2:
-      "ANN Multimedia designs multi-platform digital media solutions that strategically elevate brand presence, build clear recognition, deliver the right message, and establish lasting impressions.",
     blocks: [
       {
         isList: false,
-        title: "Mobile Ads",
+        title: "Why Choose Us",
         image: "/images/home/Mobile Ads.png",
         description:
-          "Multi-platform, high-impact campaigns using dynamic formats standard, video, native, 3D interactive, and more across Facebook, Instagram, TikTok, LinkedIn, Zalo, and beyond.",
+          "ANN Multimedia is a media partner who understands the market, delivers real impact through 4 core strengths: People, Model, Well-practiced experiences, In-depth insight in local market.",
         reverse: false,
       },
       {
@@ -59,10 +55,4 @@ export default {
     ],
     button: "Find out more",
   },
-  discover: [
-    "Elevate your digital presence",
-    "Build brand move forward",
-    "Make every channel count",
-  ],
-  cta: "Let’s start with us",
 };

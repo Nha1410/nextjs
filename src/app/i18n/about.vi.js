@@ -19,7 +19,7 @@ export default {
     subHeader:
       "Chúng tôi cung cấp giải pháp marketing toàn diện, từ kích hoạt thương hiệu tích hợp và chiến dịch mạng xã hội định hướng hiệu quả đến chiến lược sáng tạo và triển khai thực tế.",
     mission: {
-      title: ["Where ideas ignite brand momentum"],
+      title: ["Chắp cánh cho ý tưởng, thúc đẩy động lực thương hiệu."],
       paragraphs: [
         "Sứ mệnh của chúng tôi là khơi dậy đà phát triển cho thương hiệu – nơi mỗi ý tưởng đều truyền cảm hứng, mỗi kênh truyền thông đều được tối ưu hóa, và mỗi tương tác đều tạo ra tác động. Thông qua chiến lược sắc bén, câu chuyện lôi cuốn và sự thực thi chính xác, chúng tôi biến tầm nhìn thành động lực thực tiễn.",
       ],
