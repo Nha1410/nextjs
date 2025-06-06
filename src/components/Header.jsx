@@ -48,7 +48,7 @@ export default function Header() {
               { label: "About Us", href: "/about" },
               { label: "Why Choose Us", href: "/why" },
               { label: "Our Solutions", href: "/solution" },
-              { label: "Our Portfolio", href: "/portfolio" },
+              // { label: "Our Portfolio", href: "/portfolio" },
               { label: "Contact Us", href: "/contact" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className={getNavItemClass(link.href)}>
@@ -137,7 +137,7 @@ export default function Header() {
               { label: "About Us", href: "/about" },
               { label: "Why Choose Us", href: "/why" },
               { label: "Our Solutions", href: "/solution" },
-              { label: "Our Portfolio", href: "/portfolio" },
+              // { label: "Our Portfolio", href: "/portfolio" },
               { label: "Contact Us", href: "/contact" },
             ].map((link) => {
               const isActive = pathname === link.href;
