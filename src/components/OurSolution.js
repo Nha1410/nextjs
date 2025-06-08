@@ -28,7 +28,7 @@ export default function OurSolutions({ content }) {
 
               <div className="relative h-[60px]">
                 <div className="absolute top-full left-1/2 w-screen -translate-x-1/2 -translate-y-1/2 px-4 sm:w-auto sm:px-4">
-                  <div className="scrollbar-hide flex flex-row gap-4 overflow-x-auto pb-4 sm:gap-6">
+                  <div className="scrollbar-hide jutify-center flex flex-row items-center gap-4 overflow-x-auto pb-4 sm:gap-6">
                     {solution.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}

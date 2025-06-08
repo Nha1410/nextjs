@@ -27,7 +27,7 @@ export default function SolutionContent() {
           />
         </div>
 
-        <div className="flex w-full flex-col items-center bg-white px-4 py-12 text-center md:px-0">
+        <div className="flex w-full flex-col items-center bg-white px-4 py-4 text-center md:px-0 md:py-12">
           <h1
             className="text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-4xl lg:text-5xl"
             style={{
@@ -81,9 +81,9 @@ export default function SolutionContent() {
           </div>
         </div> */}
 
-        <div className="relative z-20 mx-auto mt-30 w-full max-w-screen px-4 md:pt-20 lg:mt-[-10px]">
+        <div className="relative z-20 mx-auto mt-10 w-full max-w-screen px-4 lg:mt-[-10px] lg:pt-20">
           <div className="text-center">
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {content.stats.map((stat, idx) => (
                 <div
                   key={idx}

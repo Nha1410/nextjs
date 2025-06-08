@@ -22,7 +22,7 @@ export default function ClientsSection() {
     <section className="w-full bg-white py-16">
       <div className="container mx-auto px-4">
         <h2
-          className={`${oswald.className} mb-8 text-center text-3xl font-bold text-[var(--color-text-red-theme-500)] uppercase`}
+          className={`${oswald.className} mb-8 text-center text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-3xl`}
         >
           {content.title}
         </h2>

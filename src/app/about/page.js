@@ -101,7 +101,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="flex-shrink-0">
+            <div className="hidden flex-shrink-0 md:block">
               <Image
                 src="/images/about/phone.png"
                 alt="Phone in Hand"

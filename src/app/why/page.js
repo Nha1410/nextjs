@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       <section className="relative w-full bg-white bg-cover bg-center pb-16">
-        <div className="container mx-auto px-8 py-16 sm:px-12 md:px-20 lg:px-32 xl:px-48">
+        <div className="container mx-auto px-8 py-10 sm:px-12 md:px-20 lg:px-32 xl:px-48">
           {/* Feature Blocks */}
           <div className="mt-24 grid grid-cols-1 gap-x-32 gap-y-16 md:grid-cols-2">
             {content.features.map((feature) => (
