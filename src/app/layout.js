@@ -21,11 +21,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.variable}>
-      <body className="flex h-full min-h-screen flex-col justify-between font-sans text-gray-800">
+      <body className="flex h-full flex-col justify-between font-sans text-gray-800">
         <LanguageSwitcher>
-          <Header className="Shrine-0" /> {/* <-- use header here */}
+          <Header className="Shrine-0" />
           {children}
-          <FooterStick className="Shrink-0" />
+          {/* <FooterStick className="Shrink-0" /> */}
         </LanguageSwitcher>
       </body>
     </html>
