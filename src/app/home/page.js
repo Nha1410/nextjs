@@ -276,9 +276,17 @@ export default function Home() {
         </Link>
 
         {/* Video Background */}
-        <div className="relative w-full">
+        {/* Video background - DESKTOP only */}
+        <div className="relative hidden w-full md:block">
           <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
-            <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
+            <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />{" "}
+          </video>
+        </div>
+
+        {/* Video background - MOBILE only */}
+        <div className="relative block w-full md:hidden">
+          <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
+            <source src="/videos/mobile_our solution.mp4" type="video/mp4" />
           </video>
         </div>
 
