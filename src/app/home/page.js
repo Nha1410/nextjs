@@ -269,7 +269,7 @@ export default function Home() {
       {/* Section video */}
       <section className="relative mt-0 w-full overflow-hidden p-0">
         <Link
-          className="absolute bottom-5 left-1/2 z-20 mt-4 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
+          className="absolute bottom-5 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
           href="/solution"
         >
           {content.video.button}
@@ -292,7 +292,7 @@ export default function Home() {
 
         {/* Overlay Title */}
         <motion.div
-          className="absolute top-4 left-1/2 z-20 hidden -translate-x-1/2 text-center md:top-12 md:block"
+          className="absolute top-10 left-1/2 z-20 -translate-x-1/2 text-center md:top-12"
           initial="hidden"
           animate="visible"
           variants={slideFromRight}
