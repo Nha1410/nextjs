@@ -3,7 +3,7 @@ export default {
     title1: "MARK YOUR BRAND IN VIETNAM",
     description: "ANN - Đối tác truyền thông đa phương tiện của bạn trong các lĩnh vực",
     description2: "Branding | Quảng Cáo | Sáng Tạo",
-    button: "BẮT ĐẦU NGAY",
+    button: "LIÊN HỆ NGAY",
   },
   whoWeAre: {
     tag: "CHÚNG TÔI LÀ AI",

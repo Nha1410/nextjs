@@ -60,6 +60,15 @@ export default function ClientsSection() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <Image
+          src="/images/introduce/background our partner (1).png"
+          alt="Our Partner"
+          width={1620}
+          height={300}
+          // layout="responsive"
+          className="w-full h-[200px] md:h-[430px]"
+          // priority
+        />
       </div>
     </section>
   );
