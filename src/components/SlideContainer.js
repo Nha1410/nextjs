@@ -111,7 +111,7 @@ const SlideContainer = ({ children }) => {
   }, [currentSlide, isScrolling, slides.length]);
 
   return (
-    <div ref={containerRef} className="relative h-screen w-full overflow-hidden">
+    <div ref={containerRef} className="relative h-screen w-full overflow-hidden sm:block hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
