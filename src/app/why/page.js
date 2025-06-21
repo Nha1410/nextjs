@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Evolution Section with rounded corner background */}
-      <section className="relative overflow-x-hidden bg-white py-23">
+      <section className="relative bg-white py-23">
         {/* Background with animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

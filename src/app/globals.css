@@ -62,7 +62,7 @@ body {
   color: var(--foreground);
   font-family: Avar(--font-sans), Arial, Helvetica, sans-serif;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 @layer utilities {

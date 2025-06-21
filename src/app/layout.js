@@ -6,6 +6,7 @@ import FooterStick from "../components/FooterStick";
 import Footer from "../components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 import LanguageSwitcher, { LanguageSelector } from "@/components/LanguageSwitcher";
+import RouteHandler from "./RouteHandler";
 
 const openSans = Open_Sans({
   subsets: ["latin", "vietnamese"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.variable}>
       <body className="flex h-full flex-col justify-between font-sans text-gray-800">
+        <RouteHandler />
         <LanguageSwitcher>
           <Header className="Shrine-0" />
           {children}
