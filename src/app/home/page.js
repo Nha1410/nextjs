@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ClientsSection from "@/components/ClientsSection";
-import SolutionsSection from "@/components/SolutionsSection";
-import MySwiper from "@/components/MySwiper";
 import { Oswald } from "next/font/google";
 import HomeSwiper from "@/components/HomeSwiper";
 import NewsRecruitment from "@/components/NewsRecruitment";
@@ -104,6 +102,8 @@ const SolutionBlock = ({ title, description, image, reverse, content, isList }) 
 export default function Home() {
   const { language } = useLanguage();
   const whoWeAreRef = useRef(null);
+  const slideContainerRef = useRef(null);
+  
   const scrollToWhoWeAre = () => {
     const element = whoWeAreRef.current;
     if (element) {
@@ -112,6 +112,13 @@ export default function Home() {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
+
+  const scrollToNextSlide = () => {
+    if (slideContainerRef.current) {
+      slideContainerRef.current.scrollToNext();
+    }
+  };
+
   const content = language === "vi" ? vi : en;
 
   return (
@@ -312,7 +319,7 @@ export default function Home() {
         <Footer />
       </div>
 
-      <SlideContainer>
+      <SlideContainer ref={slideContainerRef}>
         {/* Slide 1: Hero Section */}
         <section className="relative h-screen w-full overflow-hidden">
           <div className="absolute inset-0 z-2">
@@ -339,12 +346,13 @@ export default function Home() {
                 <p>{content.hero.description}</p>
                 <p>{content.hero.description2}</p>
               </motion.div>
-              <Link
-                href="/contact"
+              <motion.button
+                onClick={scrollToNextSlide}
                 className="group z-20 inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+                variants={fadeUp}
               >
                 {content.hero.button}
-              </Link>
+              </motion.button>
             </motion.div>
           </div>
         </section>

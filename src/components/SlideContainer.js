@@ -1,13 +1,38 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const SlideContainer = ({ children }) => {
+const SlideContainer = forwardRef(({ children }, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const containerRef = useRef(null);
   const slides = Array.isArray(children) ? children : [children];
+
+  // Expose scroll functions to parent component
+  useImperativeHandle(ref, () => ({
+    scrollToNext: () => {
+      if (currentSlide < slides.length - 1 && !isScrolling) {
+        setIsScrolling(true);
+        setCurrentSlide(prev => prev + 1);
+        setTimeout(() => setIsScrolling(false), 600);
+      }
+    },
+    scrollToPrevious: () => {
+      if (currentSlide > 0 && !isScrolling) {
+        setIsScrolling(true);
+        setCurrentSlide(prev => prev - 1);
+        setTimeout(() => setIsScrolling(false), 600);
+      }
+    },
+    scrollToSlide: (index) => {
+      if (index >= 0 && index < slides.length && !isScrolling) {
+        setIsScrolling(true);
+        setCurrentSlide(index);
+        setTimeout(() => setIsScrolling(false), 600);
+      }
+    }
+  }));
 
   useEffect(() => {
     const container = containerRef.current;
@@ -167,6 +192,6 @@ const SlideContainer = ({ children }) => {
       </div>
     </div>
   );
-};
+});
 
 export default SlideContainer; 
