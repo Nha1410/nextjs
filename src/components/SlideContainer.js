@@ -194,4 +194,6 @@ const SlideContainer = forwardRef(({ children }, ref) => {
   );
 });
 
+SlideContainer.displayName = 'SlideContainer';
+
 export default SlideContainer; 
