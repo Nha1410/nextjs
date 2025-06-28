@@ -116,7 +116,7 @@ export default function Home() {
 
   return (
     <main className="h-full w-full overflow-auto lg:overflow-hidden">
-      <div className="mobile-wrapper sm:hidden block">
+      <div className="mobile-wrapper block sm:hidden">
         {/* Swiper section giữ nguyên */}
         <section className="relative h-[calc(100vh-5rem)] w-full overflow-hidden">
           <div className="absolute inset-0 z-2">
@@ -268,44 +268,44 @@ export default function Home() {
           </div>
         </section>
 
-      {/* Section video */}
-      <section className="relative mt-0 w-full overflow-hidden p-0">
-        <Link
-          className="absolute bottom-5 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
-          href="/solution"
-        >
-          {content.video.button}
-        </Link>
+        {/* Section video */}
+        <section className="relative mt-0 w-full overflow-hidden p-0">
+          <Link
+            className="absolute bottom-5 left-1/2 z-20 mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:text-base"
+            href="/solution"
+          >
+            {content.video.button}
+          </Link>
 
-        {/* Video Background */}
-        {/* Video background - DESKTOP only */}
-        <div className="relative hidden w-full md:block">
-          <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
-            <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />{" "}
-          </video>
-        </div>
+          {/* Video Background */}
+          {/* Video background - DESKTOP only */}
+          <div className="relative hidden w-full md:block">
+            <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
+              <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />{" "}
+            </video>
+          </div>
 
-        {/* Video background - MOBILE only */}
-        <div className="relative block w-full md:hidden">
-          <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
-            <source src="/videos/mobile_our solution.mp4" type="video/mp4" />
-          </video>
-        </div>
+          {/* Video background - MOBILE only */}
+          <div className="relative block w-full md:hidden">
+            <video autoPlay loop muted playsInline className="h-auto w-full object-cover">
+              <source src="/videos/mobile_our solution.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-        {/* Overlay Title */}
-        <motion.div
-          className="absolute top-10 left-1/2 z-20 -translate-x-1/2 text-center md:top-12"
-          initial="hidden"
-          animate="visible"
-          variants={slideFromRight}
-        >
-          <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
-            <motion.span className="text-2xl text-[#ffffff] md:text-4xl" variants={fadeUp}>
-              OUR SOLUTIONS
-            </motion.span>
-          </h1>
-        </motion.div>
-      </section>
+          {/* Overlay Title */}
+          <motion.div
+            className="absolute top-10 left-1/2 z-20 -translate-x-1/2 text-center md:top-12"
+            initial="hidden"
+            animate="visible"
+            variants={slideFromRight}
+          >
+            <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
+              <motion.span className="text-2xl text-[#ffffff] md:text-4xl" variants={fadeUp}>
+                OUR SOLUTIONS
+              </motion.span>
+            </h1>
+          </motion.div>
+        </section>
 
         <ClientsSection />
         <NewsRecruitment />
@@ -313,187 +313,219 @@ export default function Home() {
       </div>
 
       <SlideContainer>
-  {/* Slide 1: Hero Section */}
-  <section className="relative h-screen w-full overflow-hidden">
-    <div className="absolute inset-0 z-2">
-      <HomeSwiper />
-    </div>
+        {/* Slide 1: Hero Section */}
+        <section className="relative h-screen w-full overflow-hidden">
+          <div className="absolute inset-0 z-2">
+            <HomeSwiper />
+          </div>
 
-    <div className="relative z-10 mx-10 -mt-16 flex h-full items-center justify-center">
-      <motion.div
-        className="max-w-4xl text-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-        initial="hidden"
-        animate="visible"
-        variants={fadeUp}
-      >
-        <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
-          <motion.span className="text-[26px] text-white md:text-[50px]" variants={fadeUp}>
-            {content.hero.title1}
-          </motion.span>
-          <br />
-        </h1>
-        <motion.div className="mb-6 text-center text-xl font-semibold text-white" variants={fadeUp}>
-          <p>{content.hero.description}</p>
-          <p>{content.hero.description2}</p>
-        </motion.div>
-        <Link
-          href="/contact"
-          className="group z-20 inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
-        >
-          {content.hero.button}
-        </Link>
-      </motion.div>
-    </div>
-  </section>
+          <div className="relative z-10 mx-10 -mt-16 flex h-full items-center justify-center">
+            <motion.div
+              className="max-w-4xl text-center text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+            >
+              <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
+                <motion.span className="text-[26px] text-white md:text-[50px]" variants={fadeUp}>
+                  {content.hero.title1}
+                </motion.span>
+                <br />
+              </h1>
+              <motion.div
+                className="mb-6 text-center text-xl font-semibold text-white"
+                variants={fadeUp}
+              >
+                <p>{content.hero.description}</p>
+                <p>{content.hero.description2}</p>
+              </motion.div>
+              <Link
+                href="/contact"
+                className="group z-20 inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
+              >
+                {content.hero.button}
+              </Link>
+            </motion.div>
+          </div>
+        </section>
 
-  {/* Slide 2: Who We Are + Why Choose Us */}
-  <section className="relative h-screen w-full">
-    <div className="relative hidden h-full w-full lg:block">
-      <Image
-        src="/images/home/who_we_are-why-choose-us.png"
-        alt="Who we are and why choose us"
-        width={4600}
-        height={1400}
-        className="h-full w-full object-cover"
-        priority
-      />
-      {/* WHO WE ARE - Top Left */}
-      <div className="absolute top-0 left-0 flex h-[40%] w-1/2 flex-col justify-between bg-white p-6">
-        <div>
-          <h2 className={`mb-2 text-4xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}>
-            {content.whoWeAre.title}
-          </h2>
-          <p className="text-lg leading-relaxed text-[var(--color-text-red-theme-500)]">
-            {content.whoWeAre.paragraphs[0]}
-          </p>
-        </div>
-        <div className="mt-3 self-end">
-          <Link
-            className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            href="/about"
-          >
-            {content.whoWeAre.button}
-          </Link>
-        </div>
-      </div>
+        {/* Slide 2: Who We Are + Why Choose Us */}
+        <section className="relative h-screen w-full -translate-y-10 overflow-hidden lg:-translate-y-7">
+          {/* Horizontal divider: chỉ hiện ở desktop */}
 
-      {/* WHY CHOOSE US - Bottom Right */}
-      <div className="absolute right-0 bottom-0 flex h-[50%] w-1/2 flex-col justify-between p-6 text-white">
-        <div>
-          <h2 className={`mb-2 text-4xl font-extrabold text-white uppercase ${oswald.className}`}>
-            {content.solutions.blocks[0].title}
-          </h2>
-          <p className="text-lg leading-relaxed">{content.solutions.blocks[0].description}</p>
-        </div>
-        <div className="mt-3 self-end">
-          <Link
-            className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            href="/why"
-          >
-            {content.whoWeAre.button}
-          </Link>
-        </div>
-      </div>
-    </div>
+          {/* Desktop layout */}
+          <div className="relative z-10 hidden h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_1fr]">
+            {/* TOP LEFT */}
+            <div className="bg-opacity-90 flex h-full flex-col justify-between bg-white p-6">
+              <div className="translate-y-8">
+                <h2
+                  className={`mb-2 text-4xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
+                >
+                  {content.whoWeAre.title}
+                </h2>
+                <p className="text-lg leading-relaxed text-[var(--color-text-red-theme-500)]">
+                  {content.whoWeAre.paragraphs[0]}
+                </p>
+              </div>
 
-    {/* Mobile Layout */}
-    <div className="flex h-full flex-col gap-10 px-4 py-8 lg:hidden">
-      {/* WHO WE ARE block */}
-      <div className="flex flex-col gap-4">
-        <Image
-          src="/images/home/res1.png"
-          alt="Who we are"
-          width={800}
-          height={600}
-          className="w-full rounded-md"
-        />
-        <div>
-          <h2 className={`text-2xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}>
-            {content.whoWeAre.title}
-          </h2>
-          <p className="mt-2 text-base leading-relaxed text-[var(--color-text-red-theme-500)]">
-            {content.whoWeAre.paragraphs[0]}
-          </p>
-          <Link
-            className="mt-4 inline-block rounded-full bg-[var(--color-text-red-theme-500)] px-5 py-2 text-base font-medium text-white italic transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
-            href="/about"
-          >
-            {content.whoWeAre.button}
-          </Link>
-        </div>
-      </div>
+              <div className="flex justify-end">
+                <Link
+                  href="/about"
+                  className="rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 text-lg font-medium text-white italic transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+                >
+                  {content.whoWeAre.button}
+                </Link>
+              </div>
+            </div>
 
-      {/* WHY CHOOSE US block */}
-      <div className="flex flex-col gap-4">
-        <Image
-          src="/images/home/res2.png"
-          alt="Why choose us"
-          width={800}
-          height={600}
-          className="w-full rounded-md"
-        />
-        <div className="rounded-md bg-[var(--color-text-red-theme-500)] p-4 text-white">
-          <h2 className={`text-2xl font-extrabold uppercase ${oswald.className}`}>
-            {content.solutions.blocks[0].title}
-          </h2>
-          <p className="mt-2 text-base leading-relaxed">
-            {content.solutions.blocks[0].description}
-          </p>
-          <Link
-            className="mt-4 inline-block rounded-full bg-white px-5 py-2 text-base font-medium text-[var(--color-text-red-theme-500)] italic transition hover:bg-[var(--color-text-red-theme-500)] hover:text-white"
-            href="/why"
-          >
-            {content.whoWeAre.button}
-          </Link>
-        </div>
-      </div>
-    </div>
-  </section>
+            {/* TOP RIGHT */}
+            <div className="relative h-full">
+              <Image
+                src="/images/home/res1.png"
+                alt="Top Right Visual"
+                fill
+                className="object-cover object-right" // 👈 chỉnh tại đây
+                priority
+              />
+            </div>
 
-  {/* Slide 3: Video Section */}
-  <section className="relative h-screen w-full overflow-hidden">
-    <Link
-      className="absolute bottom-5 left-1/2 z-20 mt-4 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
-      href="/solution"
+            {/* BOTTOM LEFT */}
+            <div className="relative h-full">
+              <Image
+                src="/images/home/res2.png"
+                alt="Bottom Left Visual"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* BOTTOM RIGHT */}
+            <div className="bg-opacity-90 flex h-full flex-col justify-between bg-[var(--color-text-red-theme-500)] p-6 text-white">
+              <div>
+                <h2 className={`mb-2 text-4xl font-extrabold uppercase ${oswald.className}`}>
+                  {content.solutions.blocks[0].title}
+                </h2>
+                <p className="text-lg leading-relaxed">{content.solutions.blocks[0].description}</p>
+              </div>
+              <div className="mt-4 mb-12 flex justify-end">
+                <Link
+                  href="/why"
+                  className="rounded-full bg-white px-6 py-3 text-lg font-medium text-[var(--color-text-red-theme-500)] italic transition hover:bg-[var(--color-text-red-theme-500)] hover:text-white"
+                >
+                  {content.whoWeAre.button}
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile layout */}
+          <div className="flex h-full flex-col gap-10 px-4 py-8 lg:hidden">
+            {/* WHO WE ARE */}
+            <div className="flex flex-col gap-4">
+              <Image
+                src="/images/home/res1.png"
+                alt="Who we are"
+                width={800}
+                height={600}
+                className="w-full rounded-md object-cover"
+              />
+              <div>
+                <h2
+                  className={`text-2xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
+                >
+                  {content.whoWeAre.title}
+                </h2>
+                <p className="mt-2 text-base leading-relaxed text-[var(--color-text-red-theme-500)]">
+                  {content.whoWeAre.paragraphs[0]}
+                </p>
+                <Link
+                  href="/about"
+                  className="mt-4 inline-block rounded-full bg-[var(--color-text-red-theme-500)] px-5 py-2 text-base font-medium text-white italic transition hover:bg-white hover:text-[var(--color-text-red-theme-500)]"
+                >
+                  {content.whoWeAre.button}
+                </Link>
+              </div>
+            </div>
+
+            {/* WHY CHOOSE US */}
+            <div className="flex flex-col gap-4">
+              <Image
+                src="/images/home/res2.png"
+                alt="Why choose us"
+                width={800}
+                height={600}
+                className="w-full rounded-md object-cover"
+              />
+              <div className="rounded-md bg-[var(--color-text-red-theme-500)] p-4 text-white">
+                <h2 className={`text-2xl font-extrabold uppercase ${oswald.className}`}>
+                  {content.solutions.blocks[0].title}
+                </h2>
+                <p className="mt-2 text-base leading-relaxed">
+                  {content.solutions.blocks[0].description}
+                </p>
+                <Link
+                  href="/why"
+                  className="mt-4 inline-block rounded-full bg-white px-5 py-2 text-base font-medium text-[var(--color-text-red-theme-500)] italic transition hover:bg-[var(--color-text-red-theme-500)] hover:text-white"
+                >
+                  {content.whoWeAre.button}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Slide 3: Video Section */}
+        <section className="relative h-screen w-full overflow-hidden pb-20">
+  {/* 📍 Bạn có thể chỉnh sửa vị trí nút tại đây: bottom-16 → bottom-12, bottom-20... tùy ý */}
+  <Link
+    className="absolute bottom-44 left-1/2 z-20 mt-4 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
+    href="/solution"
+  >
+    {content.video.button}
+  </Link>
+
+  {/* Video Background */}
+  <div className="relative h-full w-full">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="h-full w-full object-center -translate-y-12"
     >
-      {content.video.button}
-    </Link>
+      <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-    {/* Video Background */}
-    <div className="relative h-full w-full">
-      <video autoPlay loop muted playsInline className="h-full w-full object-cover">
-        <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
-      </video>
-    </div>
+  {/* Overlay Title */}
+  <motion.div
+    className="absolute top-4 left-1/2 z-20 hidden -translate-x-1/2 text-center md:top-12 md:block"
+    initial="hidden"
+    animate="visible"
+    variants={slideFromRight}
+  >
+    <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
+      <motion.span className="text-2xl text-white md:text-4xl" variants={fadeUp}>
+        OUR SOLUTIONS
+      </motion.span>
+    </h1>
+  </motion.div>
+</section>
 
-    {/* Overlay Title */}
-    <motion.div
-      className="absolute top-4 left-1/2 z-20 hidden -translate-x-1/2 text-center md:top-12 md:block"
-      initial="hidden"
-      animate="visible"
-      variants={slideFromRight}
-    >
-      <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
-        <motion.span className="text-2xl text-white md:text-4xl" variants={fadeUp}>
-          OUR SOLUTIONS
-        </motion.span>
-      </h1>
-    </motion.div>
-  </section>
 
-  {/* Slide 4: Clients Section */}
-  <section className="h-screen w-full bg-white">
-    <ClientsSection />
-  </section>
+        {/* Slide 4: Clients Section */}
+        <section className="h-screen w-full bg-white">
+          <ClientsSection />
+        </section>
 
-  {/* Optional Slide 5: News & Recruitment (uncomment if needed) */}
-  {/*
+        {/* Optional Slide 5: News & Recruitment (uncomment if needed) */}
+        {/*
   <section className="h-screen w-full">
     <NewsRecruitment />
   </section>
   */}
-</SlideContainer>
-
+      </SlideContainer>
     </main>
   );
 }
