@@ -105,11 +105,20 @@ export default function Home() {
   const slideContainerRef = useRef(null);
   
   const scrollToWhoWeAre = () => {
+    console.log('Scroll to Who We Are clicked');
     const element = whoWeAreRef.current;
+    console.log('Element found:', element);
     if (element) {
-      const yOffset = -80;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      console.log('Using scrollIntoView');
+      element.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "start",
+        inline: "nearest"
+      });
+    } else {
+      console.log('Element not found, trying alternative scroll');
+      // Fallback: scroll to a reasonable position
+      window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
     }
   };
 
@@ -153,13 +162,13 @@ export default function Home() {
                 <p>{content.hero.description}</p>
                 <p>{content.hero.description2}</p>
               </motion.div>
-              <Link
+              <motion.button
                 className="group z-20 inline-flex items-center gap-2 rounded-full bg-[var(--color-text-red-theme-500)] px-8 py-3 text-xl font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-red-600"
-                href="/contact"
+                onClick={scrollToWhoWeAre}
                 variants={fadeUp}
               >
                 {content.hero.button}
-              </Link>
+              </motion.button>
             </motion.div>
           </div>
         </section>
