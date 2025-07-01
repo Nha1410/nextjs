@@ -15,21 +15,21 @@ const SlideContainer = forwardRef(({ children }, ref) => {
       if (currentSlide < slides.length - 1 && !isScrolling) {
         setIsScrolling(true);
         setCurrentSlide(prev => prev + 1);
-        setTimeout(() => setIsScrolling(false), 600);
+        setTimeout(() => setIsScrolling(false), 1000);
       }
     },
     scrollToPrevious: () => {
       if (currentSlide > 0 && !isScrolling) {
         setIsScrolling(true);
         setCurrentSlide(prev => prev - 1);
-        setTimeout(() => setIsScrolling(false), 600);
+        setTimeout(() => setIsScrolling(false), 1000);
       }
     },
     scrollToSlide: (index) => {
       if (index >= 0 && index < slides.length && !isScrolling) {
         setIsScrolling(true);
         setCurrentSlide(index);
-        setTimeout(() => setIsScrolling(false), 600);
+        setTimeout(() => setIsScrolling(false), 1000);
       }
     }
   }));
@@ -65,7 +65,7 @@ const SlideContainer = forwardRef(({ children }, ref) => {
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 600);
+        }, 1000);
       }
 
       lastScrollTime = now;
@@ -96,7 +96,7 @@ const SlideContainer = forwardRef(({ children }, ref) => {
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 600);
+        }, 1000);
       }
     };
 
@@ -108,14 +108,14 @@ const SlideContainer = forwardRef(({ children }, ref) => {
         if (currentSlide < slides.length - 1) {
           setIsScrolling(true);
           setCurrentSlide(prev => prev + 1);
-          setTimeout(() => setIsScrolling(false), 600);
+          setTimeout(() => setIsScrolling(false), 1000);
         }
       } else if (e.key === "PageUp" || e.key === "ArrowUp") {
         e.preventDefault();
         if (currentSlide > 0) {
           setIsScrolling(true);
           setCurrentSlide(prev => prev - 1);
-          setTimeout(() => setIsScrolling(false), 600);
+          setTimeout(() => setIsScrolling(false), 1000);
         }
       }
     };
@@ -159,7 +159,7 @@ const SlideContainer = forwardRef(({ children }, ref) => {
               if (!isScrolling) {
                 setIsScrolling(true);
                 setCurrentSlide(index);
-                setTimeout(() => setIsScrolling(false), 600);
+                setTimeout(() => setIsScrolling(false), 1000);
               }
             }}
             className={`mb-3 block h-2 w-2 rounded-full transition-all md:mb-4 md:h-3 md:w-3 ${
