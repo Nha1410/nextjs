@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Oswald } from "next/font/google";
+import { motion } from "framer-motion";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -22,15 +23,21 @@ export default function ClientsSection() {
     <section className="w-full bg-white">
       <div className="container mx-auto px-4">
         <div className="mb-10">
-          <Image
-            src="/images/introduce/background our partner (1).png"
-            alt="Our Partner"
-            width={1620}
-            height={300}
-            // layout="responsive"
-            className="w-full h-[100px] md:h-[350px]"
-            // priority
-          />          
+          <motion.div
+            initial={{ opacity: 0, y: -60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <Image
+              src="/images/introduce/background our partner (1).png"
+              alt="Our Partner"
+              width={1620}
+              height={300}
+              // layout="responsive"
+              className="w-full h-[100px] md:h-[350px]"
+              // priority
+            />
+          </motion.div>
         </div>
 
         <h2
