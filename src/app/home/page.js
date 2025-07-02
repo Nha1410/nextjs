@@ -495,12 +495,14 @@ export default function Home() {
         {/* Slide 3: Video Section */}
         <section className="relative h-screen w-full overflow-hidden">
           {/* 📍 Bạn có thể chỉnh sửa vị trí nút tại đây: bottom-16 → bottom-12, bottom-20... tùy ý */}
-          <Link
-            className="absolute bottom-44 left-1/2 z-20 hidden mt-4 -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
-            href="/solution"
-          >
-            {content.video.button}
-          </Link>
+          <div className="md:mt-[-20px]">
+            <Link
+              className="absolute bottom-44 left-1/2 z-20 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
+              href="/solution"
+            >
+              {content.video.button}
+            </Link>            
+          </div>
 
           {/* Video Background */}
           <div className="relative h-full w-full">
