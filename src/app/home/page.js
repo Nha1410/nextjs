@@ -493,55 +493,48 @@ export default function Home() {
         </section>
 
         {/* Slide 3: Video Section */}
-        <section className="relative h-screen w-full overflow-hidden pb-20">
-  {/* 📍 Bạn có thể chỉnh sửa vị trí nút tại đây: bottom-16 → bottom-12, bottom-20... tùy ý */}
-  <Link
-    className="absolute bottom-44 left-1/2 z-20 mt-4 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
-    href="/solution"
-  >
-    {content.video.button}
-  </Link>
+        <section className="relative h-screen w-full overflow-hidden">
+          {/* 📍 Bạn có thể chỉnh sửa vị trí nút tại đây: bottom-16 → bottom-12, bottom-20... tùy ý */}
+          <Link
+            className="absolute bottom-44 left-1/2 z-20 hidden -translate-x-1/2 rounded-full bg-[var(--color-text-red-theme-500)] px-6 py-3 font-medium text-white italic shadow-md transition hover:cursor-pointer hover:bg-white hover:text-[var(--color-text-red-theme-500)] md:block md:text-base"
+            href="/solution"
+          >
+            {content.video.button}
+          </Link>
 
-  {/* Video Background */}
-  <div className="relative h-full w-full">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="h-full w-full object-center -translate-y-12"
-    >
-      <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
-    </video>
-  </div>
+          {/* Video Background */}
+          <div className="relative h-full w-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-contain -translate-y-12"
+            >
+              <source src="/videos/OUR SOLUTION.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-  {/* Overlay Title */}
-  <motion.div
-    className="absolute top-4 left-1/2 z-20 hidden -translate-x-1/2 text-center md:top-12 md:block"
-    initial="hidden"
-    animate="visible"
-    variants={slideFromRight}
-  >
-    <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
-      <motion.span className="text-2xl text-white md:text-4xl" variants={fadeUp}>
-        OUR SOLUTIONS
-      </motion.span>
-    </h1>
-  </motion.div>
-</section>
+          {/* Overlay Title */}
+          <motion.div
+            className="absolute top-4 left-1/2 z-20 hidden -translate-x-1/2 text-center md:top-18 md:block"
+            initial="hidden"
+            animate="visible"
+            variants={slideFromRight}
+          >
+            <h1 className={`mb-6 leading-tight font-bold tracking-wide ${oswald.className}`}>
+              <motion.span className="text-2xl text-white md:text-4xl" variants={fadeUp}>
+                OUR SOLUTIONS
+              </motion.span>
+            </h1>
+          </motion.div>
+        </section>
 
 
         {/* Slide 4: Clients Section */}
         <section className="h-screen w-full bg-white">
           <ClientsSection />
         </section>
-
-        {/* Optional Slide 5: News & Recruitment (uncomment if needed) */}
-        {/*
-  <section className="h-screen w-full">
-    <NewsRecruitment />
-  </section>
-  */}
       </SlideContainer>
     </main>
   );

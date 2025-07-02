@@ -174,7 +174,7 @@ const SlideContainer = forwardRef(({ children }, ref) => {
       {/* Scroll indicator - hidden on mobile */}
       <div className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 animate-bounce hidden md:flex">
         <div className="flex flex-col items-center text-white">
-          <span className="mb-2 text-sm">Scroll to navigate</span>
+          {/* <span className="mb-2 text-sm">Scroll to navigate</span> */}
           <svg
             className="h-6 w-6"
             fill="none"
