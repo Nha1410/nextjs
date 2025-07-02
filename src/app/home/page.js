@@ -534,7 +534,7 @@ export default function Home() {
 
 
         {/* Slide 4: Clients Section */}
-        <section className="h-screen w-full bg-white">
+        <section className="h-full w-full bg-white">
           <ClientsSection />
         </section>
       </SlideContainer>

@@ -19,8 +19,20 @@ export default function ClientsSection() {
   const content = language === "vi" ? vi : en;
 
   return (
-    <section className="w-full bg-white py-16">
+    <section className="w-full bg-white">
       <div className="container mx-auto px-4">
+        <div className="mb-10">
+          <Image
+            src="/images/introduce/background our partner (1).png"
+            alt="Our Partner"
+            width={1620}
+            height={300}
+            // layout="responsive"
+            className="w-full h-[100px] md:h-[350px]"
+            // priority
+          />          
+        </div>
+
         <h2
           className={`${oswald.className} mb-8 text-center text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-3xl`}
         >
@@ -60,15 +72,6 @@ export default function ClientsSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <Image
-          src="/images/introduce/background our partner (1).png"
-          alt="Our Partner"
-          width={1620}
-          height={300}
-          // layout="responsive"
-          className="w-full h-[200px] md:h-[430px]"
-          // priority
-        />
       </div>
     </section>
   );
