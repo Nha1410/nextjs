@@ -2,9 +2,6 @@ import Link from "next/link";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
-import FooterStick from "../components/FooterStick";
-import Footer from "../components/Footer";
-import ContactButtons from "@/components/ContactButtons";
 import LanguageSwitcher, { LanguageSelector } from "@/components/LanguageSwitcher";
 import RouteHandler from "./RouteHandler";
 

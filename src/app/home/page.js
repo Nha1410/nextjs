@@ -131,7 +131,7 @@ export default function Home() {
   const content = language === "vi" ? vi : en;
 
   return (
-    <main className="h-full w-full overflow-auto lg:overflow-hidden">
+    <main className="h-full w-full overflow-auto lg:overflow-hidden bg-black">
       <div className="mobile-wrapper block sm:hidden">
         {/* Swiper section giữ nguyên */}
         <section className="relative h-[calc(100vh-5rem)] w-full overflow-hidden">
@@ -531,7 +531,6 @@ export default function Home() {
             </h1>
           </motion.div>
         </section>
-
 
         {/* Slide 4: Clients Section */}
         <section className="h-full w-full bg-white">

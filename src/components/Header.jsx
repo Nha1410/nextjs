@@ -30,7 +30,13 @@ export default function Header() {
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/">
+            <button
+              onClick={() => {
+                  window.location.href = '/';
+              }}
+              className="focus:outline-none"
+              style={{ background: 'none', border: 'none', padding: 0 }}
+            >
               <Image
                 src="/images/logo/logo-ann_mode-dark@3x.png"
                 alt="Logo"
@@ -38,7 +44,7 @@ export default function Header() {
                 height={40}
                 className="object-contain"
               />
-            </Link>
+            </button>
           </div>
 
           {/* Nav links */}

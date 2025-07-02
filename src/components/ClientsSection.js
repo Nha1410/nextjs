@@ -20,10 +20,10 @@ export default function ClientsSection() {
   const content = language === "vi" ? vi : en;
 
   return (
-    <section className="w-full bg-white p-2 sm:p-0">
+    <section className="w-full bg-white p-2 sm:p-2 py-8">
       <div className="container mx-auto px-4">
         <div className="mb-10">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: -60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -37,7 +37,7 @@ export default function ClientsSection() {
               className="w-full h-[100px] md:h-[350px] hidden sm:block"
               // priority
             />
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <h2
@@ -80,7 +80,23 @@ export default function ClientsSection() {
           ))}
         </Swiper>
 
-        <Image
+        <motion.div
+          initial={{ opacity: 0, y: -60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Image
+            src="/images/introduce/background our partner (1).png"
+            alt="Our Partner"
+            width={1620}
+            height={300}
+            // layout="responsive"
+            className="w-full h-[200px] md:h-[350px] block"
+            // priority
+          />
+        </motion.div>
+
+        {/* <Image
           src="/images/introduce/background our partner (1).png"
           alt="Our Partner"
           width={1620}
@@ -88,7 +104,7 @@ export default function ClientsSection() {
           // layout="responsive"
           className="w-full h-[200px] md:h-[430px] block sm:hidden mb-10"
           // priority
-        />
+        /> */}
       </div>
     </section>
   );
