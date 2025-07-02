@@ -20,7 +20,7 @@ export default function ClientsSection() {
   const content = language === "vi" ? vi : en;
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white p-2 sm:p-0">
       <div className="container mx-auto px-4">
         <div className="mb-10">
           <motion.div
@@ -34,14 +34,14 @@ export default function ClientsSection() {
               width={1620}
               height={300}
               // layout="responsive"
-              className="w-full h-[100px] md:h-[350px]"
+              className="w-full h-[100px] md:h-[350px] hidden sm:block"
               // priority
             />
           </motion.div>
         </div>
 
         <h2
-          className={`${oswald.className} mb-8 text-center text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-3xl`}
+          className={`${oswald.className} mb-8 text-center text-xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-3xl`}
         >
           {content.title}
         </h2>
@@ -79,6 +79,16 @@ export default function ClientsSection() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <Image
+          src="/images/introduce/background our partner (1).png"
+          alt="Our Partner"
+          width={1620}
+          height={300}
+          // layout="responsive"
+          className="w-full h-[200px] md:h-[430px] block sm:hidden mb-10"
+          // priority
+        />
       </div>
     </section>
   );
