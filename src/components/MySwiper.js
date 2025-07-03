@@ -9,59 +9,59 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 export default function MySwiper() {
-  return (
-    <div className="flex w-full justify-center overflow-hidden">
-      <div className="w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg">
-        <div className="mx-auto w-full max-w-2xl">
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            navigation
-            pagination={{ clickable: true }}
-            slidesPerView={1} // Mặc định là 1 slide
-            spaceBetween={10} // Khoảng cách giữa các slide
-            className="h-auto w-full" // Tự động điều chỉnh chiều cao và chiều rộng cho Swiper
-          >
-            {/* Slide 1 */}
-            <SwiperSlide>
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/agency.jpg"
-                  alt="Slide 1"
-                  width={1200} // Maximum width of the image
-                  height={800} // Maximum height of the image
-                  className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
-                />
-              </div>
-            </SwiperSlide>
+    return (
+        <div className="flex w-full justify-center overflow-hidden">
+            <div className="w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg">
+                <div className="mx-auto w-full max-w-2xl">
+                    <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        navigation
+                        pagination={{ clickable: true }}
+                        slidesPerView={1} // Mặc định là 1 slide
+                        spaceBetween={10} // Khoảng cách giữa các slide
+                        className="h-auto w-full" // Tự động điều chỉnh chiều cao và chiều rộng cho Swiper
+                    >
+                        {/* Slide 1 */}
+                        <SwiperSlide>
+                            <div className="relative h-full w-full">
+                                <Image
+                                    src="/images/agency.jpg"
+                                    alt="Slide 1"
+                                    width={1200} // Maximum width of the image
+                                    height={800} // Maximum height of the image
+                                    className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
+                                />
+                            </div>
+                        </SwiperSlide>
 
-            {/* Slide 2 */}
-            <SwiperSlide>
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/agency_1.jpg"
-                  alt="Slide 2"
-                  width={1200}
-                  height={800}
-                  className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
-                />
-              </div>
-            </SwiperSlide>
+                        {/* Slide 2 */}
+                        <SwiperSlide>
+                            <div className="relative h-full w-full">
+                                <Image
+                                    src="/images/agency_1.jpg"
+                                    alt="Slide 2"
+                                    width={1200}
+                                    height={800}
+                                    className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
+                                />
+                            </div>
+                        </SwiperSlide>
 
-            {/* Slide 3 */}
-            <SwiperSlide>
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/agency-marketing.jpg"
-                  alt="Slide 3"
-                  width={1200}
-                  height={800}
-                  className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
-                />
-              </div>
-            </SwiperSlide>
-          </Swiper>
+                        {/* Slide 3 */}
+                        <SwiperSlide>
+                            <div className="relative h-full w-full">
+                                <Image
+                                    src="/images/agency-marketing.jpg"
+                                    alt="Slide 3"
+                                    width={1200}
+                                    height={800}
+                                    className="h-full w-full object-cover" // Sử dụng object-cover để hình ảnh không bị méo
+                                />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }

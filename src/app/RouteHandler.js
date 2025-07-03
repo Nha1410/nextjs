@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useRoute } from '../hooks/useRoute';
+import { useRoute } from "../hooks/useRoute";
 
 export default function RouteHandler() {
     useRoute();

@@ -9,42 +9,42 @@ import en from "../i18n/solution.en";
 import StatCount from "../../components/StatCount";
 
 export default function SolutionContent() {
-  const { language } = useLanguage();
-  const content = language === "vi" ? vi : en;
+    const { language } = useLanguage();
+    const content = language === "vi" ? vi : en;
 
-  return (
-    <main className="bg-white">
-      <section className="relative w-full bg-white bg-cover bg-center">
-        <div className="w-full">
-          <Image
-            src="/images/solution/title_our_solutions.png"
-            alt="About Us Header"
-            width={1920}
-            height={800}
-            layout="responsive"
-            className="w-full"
-            priority
-          />
-        </div>
+    return (
+        <main className="bg-white">
+            <section className="relative w-full bg-white bg-cover bg-center">
+                <div className="w-full">
+                    <Image
+                        src="/images/solution/title_our_solutions.png"
+                        alt="About Us Header"
+                        width={1920}
+                        height={800}
+                        layout="responsive"
+                        className="w-full"
+                        priority
+                    />
+                </div>
 
-        <div className="flex w-full flex-col items-center bg-white px-4 py-4 text-center md:px-0 md:py-12">
-          <h1
-            className="text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-4xl lg:text-5xl"
-            style={{
-              fontFamily: '"Oswald", sans-serif',
-              fontWeight: 700,
-              letterSpacing: "0.5px",
-            }}
-          >
-            {content.header}
-          </h1>
-        </div>
-      </section>
+                <div className="flex w-full flex-col items-center bg-white px-4 py-4 text-center md:px-0 md:py-12">
+                    <h1
+                        className="text-2xl font-bold text-[var(--color-text-red-theme-500)] uppercase md:text-4xl lg:text-5xl"
+                        style={{
+                            fontFamily: '"Oswald", sans-serif',
+                            fontWeight: 700,
+                            letterSpacing: "0.5px",
+                        }}
+                    >
+                        {content.header}
+                    </h1>
+                </div>
+            </section>
 
-      <section className="relative w-screen">
-        {/* <div className="animate-fadeIn absolute inset-0 z-0 max-h-[350px] w-full bg-[url('/images/solution/background.png')] bg-cover bg-center md:max-h-[450px] md:w-screen" /> */}
+            <section className="relative w-screen">
+                {/* <div className="animate-fadeIn absolute inset-0 z-0 max-h-[350px] w-full bg-[url('/images/solution/background.png')] bg-cover bg-center md:max-h-[450px] md:w-screen" /> */}
 
-        {/* <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
+                {/* <div className="relative z-10 mx-auto flex w-full flex-col items-start justify-between px-4 py-12 md:px-28 md:py-28">
           <div className="relative z-10 px-6 text-white md:py-10">
             <div className="container mx-auto ml-[-35px] flex flex-col items-center text-center md:ml-[-20px] md:flex-row md:text-left">
               <div className="animate-slideInLeft md:w-1/2">
@@ -81,82 +81,87 @@ export default function SolutionContent() {
           </div>
         </div> */}
 
-        <div className="relative z-20 mx-auto mt-10 w-full max-w-screen px-4 lg:mt-[-10px] lg:pt-20">
-          <div className="text-center">
-            <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-              {content.stats.map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center space-y-4 text-center text-black"
-                >
-                  <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border border-gray-200 bg-gray-100 shadow-md">
-                    <Image src={stat.icon} alt={stat.label} width={48} height={48} />
-                  </div>
-                  <div className="text-base font-medium">{stat.label}</div>
-                  <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-500)]">
-                    <StatCount end={stat.count} suffix="+" />
-                  </div>
+                <div className="relative z-20 mx-auto mt-10 w-full max-w-screen px-4 lg:mt-[-10px] lg:pt-20">
+                    <div className="text-center">
+                        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+                            {content.stats.map((stat, idx) => (
+                                <div
+                                    key={idx}
+                                    className="flex flex-col items-center space-y-4 text-center text-black"
+                                >
+                                    <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border border-gray-200 bg-gray-100 shadow-md">
+                                        <Image
+                                            src={stat.icon}
+                                            alt={stat.label}
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </div>
+                                    <div className="text-base font-medium">{stat.label}</div>
+                                    <div className="text-3xl font-extrabold text-[var(--color-text-red-theme-500)]">
+                                        <StatCount end={stat.count} suffix="+" />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      <OurSolutions content={content.solutionSection} language={language} />
+            <OurSolutions content={content.solutionSection} language={language} />
 
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
+            <style jsx global>{`
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
 
-        @keyframes slideInLeft {
-          from {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
+                @keyframes slideInLeft {
+                    from {
+                        transform: translateX(-100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
 
-        @keyframes fadeInUp {
-          from {
-            transform: translateY(20px);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
+                @keyframes fadeInUp {
+                    from {
+                        transform: translateY(20px);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
 
-        .animate-fadeIn {
-          animation: fadeIn 1s ease-out;
-        }
+                .animate-fadeIn {
+                    animation: fadeIn 1s ease-out;
+                }
 
-        .animate-slideInLeft {
-          animation: slideInLeft 1s ease-out;
-        }
+                .animate-slideInLeft {
+                    animation: slideInLeft 1s ease-out;
+                }
 
-        .animate-fadeInUp {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
+                .animate-fadeInUp {
+                    animation: fadeInUp 0.8s ease-out forwards;
+                }
 
-        .delay-200 {
-          animation-delay: 0.2s;
-        }
+                .delay-200 {
+                    animation-delay: 0.2s;
+                }
 
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-      `}</style>
-    </main>
-  );
+                .delay-300 {
+                    animation-delay: 0.3s;
+                }
+            `}</style>
+        </main>
+    );
 }

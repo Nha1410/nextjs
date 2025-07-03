@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export const useRoute = () => {
-  const pathname = usePathname();
+    const pathname = usePathname();
 
-  useEffect(() => {
-    const body = document.body;
+    useEffect(() => {
+        const body = document.body;
 
-    if (pathname === '/') {
-      body.style.overflow = 'hidden';
-    } else {
-      body.style.overflow = 'auto';
-    }
+        if (pathname === "/") {
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "auto";
+        }
 
-    // Cleanup function để reset overflow khi component unmount
-    return () => {
-      body.style.overflow = 'auto';
-    };
-  }, [pathname]);
+        // Cleanup function để reset overflow khi component unmount
+        return () => {
+            body.style.overflow = "auto";
+        };
+    }, [pathname]);
 
-  return pathname;
-}; 
+    return pathname;
+};
