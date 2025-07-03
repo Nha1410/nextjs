@@ -466,3 +466,32 @@ export default function Home() {
         </main>
     );
 }
+
+// Nếu file này là page entrypoint, thêm export metadata như sau:
+// export const metadata = {
+//   title: "ANN Multimedia - Home",
+//   description: "Trang chủ ANN Multimedia - Giải pháp truyền thông sáng tạo, hiệu quả cho doanh nghiệp.",
+//   openGraph: {
+//     title: "ANN Multimedia - Home",
+//     description: "Trang chủ ANN Multimedia - Giải pháp truyền thông sáng tạo, hiệu quả cho doanh nghiệp.",
+//     url: "https://your-domain.com/",
+//     siteName: "ANN Multimedia",
+//     images: [
+//       {
+//         url: "/images/logo/logo-ann_mode-dark@3x.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "ANN Multimedia Logo",
+//       },
+//     ],
+//     locale: "vi_VN",
+//     type: "website",
+//   },
+//   alternates: {
+//     canonical: "https://your-domain.com/",
+//   },
+//   robots: {
+//     index: true,
+//     follow: true,
+//   },
+// };
