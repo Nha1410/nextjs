@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import useInView from "../hooks/useInView";
-import StatCount from "../../components/StatCount";
 import { useLanguage } from "../../components/LanguageSwitcher";
 import vi from "../i18n/about.vi";
 import en from "../i18n/about.en";
@@ -13,7 +12,6 @@ export default function About() {
     const content = language === "vi" ? vi : en;
 
     const topRef = useInView();
-    const bottomRef = useInView();
     const valueRef = useInView();
 
     const fullHeadline = content.headline;

@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
-import LanguageSwitcher, { LanguageSelector } from "@/components/LanguageSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import RouteHandler from "./RouteHandler";
 
 const openSans = Open_Sans({

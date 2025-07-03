@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 // pages/pdf-viewer.js
 
 export default function PDFViewer() {
