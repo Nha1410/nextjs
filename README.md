@@ -14,6 +14,20 @@ pnpm dev
 bun dev
 ```
 
+## Run with Docker
+
+This project supports Docker for both development and production environments.
+
+Run the project using the included start.sh script:
+
+```bash
+# For development mode (hot reload)
+./start.sh dev
+
+# For production mode
+./start.sh prod
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
