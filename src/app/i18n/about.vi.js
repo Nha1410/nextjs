@@ -1,23 +1,11 @@
 export default {
-    headline: "Right message - at the right moment",
-    section1: {
-        // tag: "_ WHO WE ARE",
-        title: "About us",
-        headline: ["Your Brand Growth Partner"],
-        description:
-            "ANN cung cấp giải pháp tiếp thị toàn diện, từ các hoạt động thương hiệu tích hợp và chiến dịch xã hội hướng đến hiệu suất đến chiến lược sáng tạo và triển khai.",
-    },
-    section2: {
-        headline: ["Digital-First Thinkers"],
-        description:
-            "ANN là đơn vị với thế mạnh là phương tiện truyền thông kỹ thuật số, sản xuất sáng tạo, xây dựng thương hiệu đa kênh và tiếp thị dựa trên dữ liệu, được thiết kế để kết nối, chuyển đổi và mở rộng tầm ảnh hưởng. Dù bạn đang mở rộng sang thị trường mới hay tăng cường sự hiện diện của thương hiệu, ANN là đối tác chiến lược của bạn để mang lại tác động ở mọi điểm chạm.",
-    },
-    section3: {
-        // tag: "_ Our Mission",
-        title: "Sứ mệnh và các giá trị cốt lõi",
+    imageHeader: "/images/about/about_header.png",
+
+    section: {
         header: "ĐỐI TÁC PHÁT TRIỂN THƯƠNG HIỆU CỦA BẠN",
         subHeader:
             "Chúng tôi cung cấp giải pháp marketing toàn diện, từ kích hoạt thương hiệu tích hợp và chiến dịch mạng xã hội định hướng hiệu quả đến chiến lược sáng tạo và triển khai thực tế.",
+        title: "Sứ mệnh và các giá trị cốt lõi",
         mission: {
             title: ["Chắp cánh cho ý tưởng, thúc đẩy động lực thương hiệu."],
             paragraphs: [
@@ -47,10 +35,4 @@ export default {
             },
         ],
     },
-    stats: [
-        { icon: "/images/star.png", label: "Đối tác truyền thông", count: 30 },
-        { icon: "/images/experience.png", label: "Nhân sự kinh nghiệm", count: 15 },
-        { icon: "/images/campaign.png", label: "Dự án thành công", count: 30 },
-        { icon: "/images/ourteam.png", label: "Thương hiệu cộng tác", count: 50 },
-    ],
 };

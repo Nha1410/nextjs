@@ -14,26 +14,14 @@ export default function AboutPage() {
     const topRef = useInView();
     const valueRef = useInView();
 
-    const fullHeadline = content.headline;
     const [displayedText, setDisplayedText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
-
-    useEffect(() => {
-        if (!topRef.isInView) return;
-        if (charIndex <= fullHeadline.length) {
-            const timeout = setTimeout(() => {
-                setDisplayedText(fullHeadline.slice(0, charIndex));
-                setCharIndex(charIndex + 1);
-            }, 70);
-            return () => clearTimeout(timeout);
-        }
-    }, [charIndex, topRef.isInView]);
 
     return (
         <section className="relative w-full bg-white bg-cover bg-center">
             <div className="w-full">
                 <Image
-                    src="/images/about/about_header.png"
+                    src={content.imageHeader}
                     alt="About Us Header"
                     width={1920}
                     height={800}
@@ -52,7 +40,7 @@ export default function AboutPage() {
                         letterSpacing: "0.5px",
                     }}
                 >
-                    {content.section3.header}
+                    {content.section.header}
                 </h1>
                 <p
                     className="mt-4 max-w-3xl text-base text-white md:text-lg lg:text-xl"
@@ -61,7 +49,7 @@ export default function AboutPage() {
                         fontWeight: 400,
                     }}
                 >
-                    {content.section3.subHeader}
+                    {content.section.subHeader}
                 </p>
             </div>
 
@@ -70,7 +58,7 @@ export default function AboutPage() {
             <div className="container mx-auto px-6 py-16 md:px-12 lg:px-24">
                 <div className="text-left">
                     <p className="mb-3 text-xl font-semibold tracking-wide text-[var(--color-text-red-theme-500)] uppercase md:text-2xl">
-                        {content.section3.tag}
+                        {content.section.tag}
                     </p>
                     <h2
                         className="text-2xl font-semibold text-[var(--color-text-red-theme-500)] md:text-3xl"
@@ -80,7 +68,7 @@ export default function AboutPage() {
                             letterSpacing: "0.5px",
                         }}
                     >
-                        {content.section3.title}
+                        {content.section.title}
                     </h2>
                 </div>
 
@@ -88,11 +76,11 @@ export default function AboutPage() {
                     <div className="relative flex flex-1 flex-row overflow-hidden rounded-lg bg-[var(--color-text-red-theme-500)] px-4 pt-4 pb-20 text-white md:px-6 md:pt-6 md:pb-6">
                         <div className="flex-1 space-y-4">
                             <h2 className="text-2xl font-bold md:text-3xl">
-                                {content.section3.mission.title.map((line, idx) => (
+                                {content.section.mission.title.map((line, idx) => (
                                     <div key={idx}>{line}</div>
                                 ))}
                             </h2>
-                            {content.section3.mission.paragraphs.map((p, idx) => (
+                            {content.section.mission.paragraphs.map((p, idx) => (
                                 <p
                                     className="text-justify text-base leading-relaxed md:pr-40 md:text-lg"
                                     key={idx}
@@ -118,7 +106,7 @@ export default function AboutPage() {
                         ref={valueRef.ref}
                         className="grid flex-1 grid-cols-1 gap-6 tracking-normal lg:grid-cols-2"
                     >
-                        {content.section3.values.map((val, idx) => (
+                        {content.section.values.map((val, idx) => (
                             <div
                                 key={idx}
                                 className={`rounded-lg bg-[var(--color-text-red-theme-200)] p-6 transition-all duration-700 ease-out ${valueRef.isInView ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
