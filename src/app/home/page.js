@@ -125,13 +125,13 @@ export default function Home() {
                         {/* WHO WE ARE block */}
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/images/home/res1.png"
+                                src={content.whoWeAre.image}
                                 alt="Who we are"
                                 width={800}
                                 height={600}
                                 className="w-full rounded-md"
                             />
-                            <div className="p-2 rounded-sm bg-white">
+                            <div className="rounded-sm bg-white p-2">
                                 <h2
                                     className={`text-2xl font-extrabold text-[var(--color-text-red-theme-500)] uppercase ${oswald.className}`}
                                 >
@@ -152,8 +152,8 @@ export default function Home() {
                         {/* WHY CHOOSE US block */}
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/images/home/res2.png"
-                                alt="Why choose us"
+                                src={content.whyChooseUs.image}
+                                alt={content.whyChooseUs.title}
                                 width={800}
                                 height={600}
                                 className="w-full rounded-md"
@@ -162,16 +162,16 @@ export default function Home() {
                                 <h2
                                     className={`text-2xl font-extrabold uppercase ${oswald.className}`}
                                 >
-                                    {content.solutions.blocks[0].title}
+                                    {content.whyChooseUs.title}
                                 </h2>
                                 <p className="mt-2 text-base leading-relaxed">
-                                    {content.solutions.blocks[0].description}
+                                    {content.whyChooseUs.description}
                                 </p>
                                 <Link
                                     className="mt-4 inline-block rounded-full bg-white px-5 py-2 text-base font-medium text-[var(--color-text-red-theme-500)] italic transition hover:bg-[var(--color-text-red-theme-500)] hover:text-white"
                                     href="/why"
                                 >
-                                    {content.whoWeAre.button}
+                                    {content.whyChooseUs.button}
                                 </Link>
                             </div>
                         </div>
@@ -339,10 +339,10 @@ export default function Home() {
                                 <h2
                                     className={`mb-2 text-4xl font-extrabold uppercase ${oswald.className}`}
                                 >
-                                    {content.solutions.blocks[0].title}
+                                    {content.whyChooseUs.title}
                                 </h2>
                                 <p className="text-lg leading-relaxed">
-                                    {content.solutions.blocks[0].description}
+                                    {content.whyChooseUs.description}
                                 </p>
                             </div>
                             <div className="mt-4 mb-12 flex justify-end">
@@ -361,7 +361,7 @@ export default function Home() {
                         {/* WHO WE ARE */}
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/images/home/res1.png"
+                                src={content.whoWeAre.image}
                                 alt="Who we are"
                                 width={800}
                                 height={600}
@@ -388,7 +388,7 @@ export default function Home() {
                         {/* WHY CHOOSE US */}
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/images/home/res2.png"
+                                src={content.whyChooseUs.image}
                                 alt="Why choose us"
                                 width={800}
                                 height={600}
@@ -398,10 +398,10 @@ export default function Home() {
                                 <h2
                                     className={`text-2xl font-extrabold uppercase ${oswald.className}`}
                                 >
-                                    {content.solutions.blocks[0].title}
+                                    {content.whyChooseUs.title}
                                 </h2>
                                 <p className="mt-2 text-base leading-relaxed">
-                                    {content.solutions.blocks[0].description}
+                                    {content.whyChooseUs.description}
                                 </p>
                                 <Link
                                     href="/why"
