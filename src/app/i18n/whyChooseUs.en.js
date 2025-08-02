@@ -3,8 +3,6 @@ export default {
     imageHeader: "/images/why-choose-us/Why_choose_us.png",
     subHeader:
         "ANN Multimedia is a media partner who understands the market, delivers real results, and always aims for clear impact through 4 core strengths:",
-    description:
-        "ANN Multimedia is a media partner who understands the market, delivers real results, and always aims for clear impact through 4 core strengths:",
     features: [
         {
             number: "01",

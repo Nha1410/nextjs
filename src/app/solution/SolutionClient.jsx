@@ -16,8 +16,8 @@ export default function SolutionContentClient() {
             <section className="relative w-full bg-white bg-cover bg-center">
                 <div className="w-full">
                     <Image
-                        src="/images/solution/title_our_solutions.png"
-                        alt="About Us Header"
+                        src={content.imageHeader}
+                        alt="Our Solutions Header"
                         width={1920}
                         height={800}
                         layout="responsive"

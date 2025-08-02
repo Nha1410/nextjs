@@ -3,8 +3,6 @@ export default {
     header: "CHÚNG TÔI LÀ ĐỐI TÁC ĐÁNG TIN CẬY CỦA BẠN",
     subHeader:
         "ANN Multimedia là đối tác truyền thông am hiểu thị trường, mang lại kết quả thực tế và luôn hướng đến hiệu quả rõ ràng thông qua 4 thế mạnh cốt lõi:",
-    description:
-        "ANN Multimedia đồng hành như một đối tác truyền thông hiểu rõ thị trường, triển khai thực chiến và luôn hướng đến hiệu quả rõ ràng thông qua 4 ưu thế sau:",
     features: [
         {
             number: "01",
