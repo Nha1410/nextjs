@@ -25,7 +25,13 @@ export default function ContactClient() {
             }, 70);
             return () => clearTimeout(timeout);
         }
-    }, [charIndex, topRef.isInView]);
+    }, [charIndex, topRef.isInView, fullHeadline]);
+
+    // Reset animation when language changes
+    useEffect(() => {
+        setDisplayedText("");
+        setCharIndex(0);
+    }, [language]);
 
     return (
         <section className="relative flex w-full flex-1 overflow-auto bg-white bg-cover bg-center md:overflow-hidden">
@@ -80,13 +86,15 @@ export default function ContactClient() {
                                 <div className="flex items-start gap-3">
                                     <Mail className="mt-1 h-5 w-5 text-gray-400" />
                                     <div>
-                                        <p className="text-sm font-medium text-gray-400">Email</p>
+                                        <p className="text-sm font-medium text-gray-400">
+                                            {content.contactInfo.email.label}
+                                        </p>
                                         <p className="text-sm leading-relaxed text-black">
                                             <a
-                                                href="mailto:hello.annmultimedia@gmail.com"
+                                                href={`mailto:${content.contactInfo.email.value}`}
                                                 className="hover:underline"
                                             >
-                                                hello.annmultimedia@gmail.com
+                                                {content.contactInfo.email.value}
                                             </a>
                                         </p>
                                     </div>
@@ -95,10 +103,15 @@ export default function ContactClient() {
                                 <div className="flex items-start gap-3">
                                     <Phone className="mt-1 h-5 w-5 text-gray-400" />
                                     <div>
-                                        <p className="text-sm font-medium text-gray-400">Phone</p>
+                                        <p className="text-sm font-medium text-gray-400">
+                                            {content.contactInfo.phone.label}
+                                        </p>
                                         <p className="text-sm leading-relaxed text-black">
-                                            <a href="tel:0976305499" className="hover:underline">
-                                                097 6305499
+                                            <a
+                                                href={`tel:${content.contactInfo.phone.value.replace(/\s/g, "")}`}
+                                                className="hover:underline"
+                                            >
+                                                {content.contactInfo.phone.value}
                                             </a>
                                         </p>
                                     </div>
@@ -107,10 +120,12 @@ export default function ContactClient() {
                                 <div className="flex items-start gap-3">
                                     <MapPin className="mt-1 h-6 w-6 text-gray-400" />
                                     <div>
-                                        <p className="text-sm font-medium text-gray-400">Address</p>
+                                        <p className="text-sm font-medium text-gray-400">
+                                            {content.contactInfo.address.label}
+                                        </p>
                                         <p className="text-sm leading-relaxed text-black">
-                                            Feliza Villa Khang Điền, <br />
-                                            Số 2 Đường 28B, Phước Long, TP Thủ Đức, TP. HCM.
+                                            {content.contactInfo.address.value1} <br />
+                                            {content.contactInfo.address.value2}
                                         </p>
                                     </div>
                                 </div>
