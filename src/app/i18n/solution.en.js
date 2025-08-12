@@ -1,8 +1,6 @@
 export default {
-    title: "influencer platform and celeb network in vietnam",
-    button: "CONTACT US",
+    imageHeader: "/images/solution/title_our_solutions.png",
     header: "DIGITAL & BRANDING AGENCY FOR BRANDS IN VIETNAM",
-    networkTitle: "Our",
     stats: [
         { icon: "/images/star.png", label: "Media Partners", count: 30 },
         { icon: "/images/experience.png", label: "Year Experience", count: 15 },
@@ -10,8 +8,6 @@ export default {
         { icon: "/images/ourteam.png", label: "Brands Collaborated", count: 50 },
     ],
     solutionSection: {
-        title1: "Our",
-        title2: "Solutions",
         solutions: [
             {
                 title: "Branding Solutions",
@@ -94,22 +90,6 @@ export default {
                     },
                 ],
             },
-            // {
-            //   title: "Mobile Advertising",
-            //   items: [
-            //     {
-            //       label: "Multi-Platform Delivery",
-            //       description:
-            //         "Activate dynamic formats video, native, 3D on apps like Grab, MoMo, Zalo, TikTok.",
-            //       icon: "/images/solution/icons/software.svg",
-            //     },
-            //     {
-            //       label: "User-First Targeting",
-            //       description: "Reach consumers where they scroll, swipe, and spend the most time.",
-            //       icon: "/images/solution/icons/youtuber.svg",
-            //     },
-            //   ],
-            // },
             {
                 title: "Activation Service",
                 items: [
